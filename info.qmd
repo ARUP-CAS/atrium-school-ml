@@ -1,0 +1,82 @@
+---
+title: "General Information"
+---
+
+## Date and location
+
+The school will be held from **14 to 18 September 2026** at the **Institute of Archaeology, Czech Academy of Sciences, Brno** ([https://arub.cz/](https://arub.cz/){.external}) at the address given below:
+
+> Čechyňská 363/19  
+> 602 00 Brno  
+> Czech Republic
+
+::: {.callout-tip}
+
+## Note
+
+Please note that this is an on-site event only, and remote participation will **not** be possible.
+:::
+
+```{r}
+#| echo: false
+#| warning: false
+library(leaflet)
+
+# ARUB location
+arub <- c(16.6208208, 49.1892306)
+popup <- paste0("<a href=https://maps.app.goo.gl/puXXYwHgCfgB8Lg9A target=_external>Google Maps</a>")
+
+# places for lunches
+m <- read.csv("meals.csv") %>% 
+  dplyr::mutate(popup = paste0("<b>", place, "</b><br>", 
+                        cuisine, "<br>",
+                        "<i>", note, "</i>"))
+
+# map
+leaflet() %>% 
+  addTiles() %>% 
+  setView(lng = arub[1], lat = arub[2], zoom = 15) %>% 
+  addMarkers(lng = arub[1], lat = arub[2], popup = popup) %>% 
+  addCircleMarkers(lng = m$lng, lat = m$lat, popup = m$popup, 
+                   stroke = "", fillOpacity = 0.4)
+```
+
+
+## Grants
+
+Each participant of the school is eligible to receive a grant to cover travel expenses, housing, and daily subsistence during the meeting. 
+To receive the grant, participants need to:
+
+1. **Apply via the official form** of the ATRIUM Project (see the [Applications](applications.qmd) section for details).
+2. **Participate in person**, i.e. sign attendance sheets for each training day.
+3. **Submit a report** within a given time frame after the conclusion of the school with details of their participation. *Please note that the grant will be disbursed only upon the successful submission of this report*.
+
+
+## Prerequisites
+
+- **Bring your own laptop!**
+- More prerequisites coming soon...
+
+
+## Other information
+
+### Travelling to Brno
+
+Brno is easily reachable by trains or buses from Prague (approx. a 2 to 2.5-hour journey) and Vienna (approx. a 1.5 to 2-hour journey). 
+Many overnight trains crossing a large part of Europe start or end in Vienna, and we recommend taking these trains as an alternative to flying.
+
+### Accommodation
+
+No accommodation is provided to participants. Please arrange your accommodation in one of many cities hotels or hostels.
+
+### Food
+
+There are several places around the institute, see map above for locations. 
+
+```{r}
+#| echo: false
+read.csv("meals.csv") %>% 
+  dplyr::select(-lng, -lat) %>% 
+  dplyr::arrange(cuisine) %>% 
+  knitr::kable()
+```

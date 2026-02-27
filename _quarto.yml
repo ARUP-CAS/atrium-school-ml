@@ -1,0 +1,65 @@
+execute:
+  freeze: auto
+
+project:
+  type: website
+
+website:
+  title: "Computer Vision in Archaeology"
+  navbar:
+    logo: figs/aiscr-kolecko.png
+    background: "#000000"
+    foreground: "#FFFFFF"
+    pinned: true
+    left:
+      - href: index.qmd
+        text: Home
+        icon: house-door
+      - href: info.qmd
+        text: General info
+        icon: info-circle
+      - href: applications.qmd
+        text: Applications
+        icon: envelope-paper
+      # - href: programme.qmd
+      #   text: Programme
+      #   icon: calendar4
+      # - href: materials.qmd
+      #   text: Materials
+      #   icon: book
+      # - href: report.qmd
+      #   text: Recap
+      #   icon: lightbulb
+    # right: 
+      - href: about.qmd
+        text: About
+        icon: people
+  # sidebar:
+  #   style: docked
+  page-footer: 
+    background: "#000000"
+    foreground: "#FFFFFF"
+    left: 
+      - href: https://www.quarto.org/
+        text: "Built with &#9825; in Quarto."
+    center:
+      - text: "Licenses: MIT (code) & CC BY-SA 4.0 Int. (other content)."
+    right: 
+      - icon: github
+        href: https://github.com/arup-cas/atrium-school-ml
+  repo-url: https://github.com/arup-cas/atrium-school-ml
+  # repo-actions: [source, edit, issue]
+  back-to-top-navigation: false
+
+format:
+  html:
+    theme: 
+      light: flatly
+      dark: darkly
+    # mainfont: Barlow
+    css: styles.css
+    toc: true
+    toc-location: left
+    link-external-newwindow: true
+    # header-includes: |
+    #   <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">

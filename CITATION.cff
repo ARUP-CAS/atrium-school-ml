@@ -1,0 +1,34 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Computer Vision in Archaeology Training School
+message: 'If you use this software, please cite it as below.'
+type: software
+authors:
+  - given-names: Petr
+    family-names: Pajdla
+    email: pajdla@arub.cz
+    affiliation: >-
+      Czech Academy of Sciences, Institute of Archaeology,
+      Brno
+    orcid: 'https://orcid.org/0000-0001-7050-9572'
+  - given-names: Ronald
+    family-names: Harasim
+    email: harasim@arub.cz
+    affiliation: >-
+      Czech Academy of Sciences, Institute of Archaeology,
+      Brno
+repository-code: 'https://github.com/ARUP-CAS/atrium-school-ml/'
+url: 'https://arup-cas.github.io/atrium-school-ml/'
+abstract: >-
+  Repository contains an AIS CR Computer Vision in
+  Archaeology training school website and materials.
+keywords:
+  - AI
+  - ML
+  - Computer Vision
+  - Archaeology
+license: CC-BY-SA-4.0
+version: v1.0
+date-released: '2026-02-27'

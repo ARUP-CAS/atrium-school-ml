@@ -1,0 +1,47 @@
+---
+title: "Applications"
+---
+
+<!-- ::: {.callout-note}
+Apply using the online form [here](https://docs.google.com/forms/d/e/1FAIpQLSctI5Dw7VhUmVKQxSj7lPwGWCvEKU3oI5YlRi0Y1MihDKTXGg/viewform).
+::: -->
+
+More details about the transnational access scheme grants can be found on the [ATRIUM Project website](https://atrium-research.eu/travel-grants/){.external}.
+
+## Key dates 
+
+|                               |                                |
+|-----------------------------  |--------------------------------|
+| March 2026                    | Call for participants opens    |
+| **31 May 2026**               | **Deadline for applications**  |
+| July 2026 (?)                 | Acceptance notifications sent  |
+| **14--18 September 2026**     | **Training school**            |
+| mid-October 2026 (?)          | Deadline for submission of reports |
+| end of November 2026          | Grants paid before this date   |
+
+
+## Who should apply
+
+::: {.callout-tip}
+
+## Note
+
+Only applicants with institutional affiliation **outside of the Czech Republic** are eligible to receive funding due to the *trans-national* nature of the access to the infrastructure provided by the school.
+:::
+
+::: {.justify}
+We welcome applications from early-career researchers and students who are enthusiastic about exploring the potential of computer vision and machine learning in archaeological research. 
+This school will focus on the practical application of image analysis techniques to archaeological image data, from dataset preparation and model training to evaluation and emerging methods such as vision-language models.
+
+While applicants with prior experience in Python and/or machine learning are encouraged to apply, the first day of the training will be dedicated to the fundamentals of Python for image analysis tasks. 
+Participants should have basic experience with any programming or markup language (e.g. HTML, R, Python or similar) and a general comfort with working in digital environments. 
+No prior experience with Python or machine learning is required, but curiosity and a willingness to engage with technical material are essential.
+:::
+
+## How to apply
+
+Submit your applications through an [**online form**](https://docs.google.com/forms/d/e/1FAIpQLSctI5Dw7VhUmVKQxSj7lPwGWCvEKU3oI5YlRi0Y1MihDKTXGg/viewform){.external}. 
+On the 4th page of the application (*TNA Scheme*), choose **'Summer School Access'** and **'Archaeological Information System of the Czech Republic, Institute of Archaeology of the Czech Academy of Sciences, Brno -- AIS CR (ARUB)'** as the proposed host organisation.
+On the next page (*Summer School Application*) please explain why you believe this training would be valuable for your research and how you intend to integrate these newfound skills into your work.
+
+More details on how to apply can be found [here](https://atrium-research.eu/tna-summer-schools/){.external}.
