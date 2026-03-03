@@ -108,6 +108,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Applications</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./programme.html"> <i class="bi bi-calendar4" role="img">
+</i> 
+<span class="menu-text">Programme</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./about.html"> <i class="bi bi-people" role="img">
 </i> 
 <span class="menu-text">About</span></a>
@@ -181,10 +186,15 @@ The latter part of the school addresses model evaluation metrics, transfer learn
 The school is aimed at early-career researchers in archaeology having basic experience with any programming or markup language and a general comfort with working in digital environments. 
 No prior experience with machine learning is required, but curiosity and a willingness to engage with technical material are essential.
 ::: -->
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://atrium-research.eu"><img src="figs/Clay.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></a></p>
-</figure>
+<!-- [![](figs/Clay.png){fig-align="center" width=60%}](https://atrium-research.eu) -->
+<div class="columns">
+<div class="column" style="width:45%;">
+<p><a href="https://www.atrium-research.eu"><img src="figs/Clay.png" class="img-fluid"></a></p>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:45%;">
+<p><a href="https://www.maiacost.eu/"><img src="figs/maia.png" class="img-fluid"></a></p>
+</div>
 </div>
 <div class="columns">
 <div class="column" style="width:40%;">
@@ -196,7 +206,8 @@ No prior experience with machine learning is required, but curiosity and a willi
 </div>
 </div>
 <div class="justify">
-<p>The training school is part of a trans-national access scheme provided by the <a href="https://atrium-research.eu" class="external">ATRIUM Project</a>, hosted by the <a href="https://aiscr.cz/" class="external">Archaeological Information System of the Czech Republic (AIS CR)</a> research infrastructure at the <a href="https://arub.cz/" class="external">Institute of Archaeology, Czech Academy of Sciences, Brno</a>. To apply and learn more about TNA, visit the <a href="https://atrium-research.eu/tna-summer-schools/" class="external">ATRIUM TNA Application website</a>.</p>
+<p>The training school is part of a trans-national access scheme provided by the <a href="https://atrium-research.eu" class="external">ATRIUM Project</a>, hosted by the <a href="https://aiscr.cz/" class="external">Archaeological Information System of the Czech Republic (AIS CR)</a> research infrastructure at the <a href="https://arub.cz/" class="external">Institute of Archaeology, Czech Academy of Sciences, Brno</a>. The school is co-organized by the <a href="https://www.maiacost.eu/" class="external">MAIA COST Action</a> project. MAIA provides funding to several of the school instructors.</p>
+<p>To apply and learn more about the TNA, visit the <a href="https://atrium-research.eu/tna-summer-schools/" class="external">ATRIUM TNA Application website</a>.</p>
 </div>
 <!-- [![](flyer/atRium_A4.png){.shadow}](flyer/atRium_A4.pdf) -->
 <!-- Feel free to distribute the flyer in [PDF](flyer/atRium_A4.pdf) or [PNG](flyer/atRium_A4.png). -->
@@ -429,7 +440,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/ARUP-CAS\.github\.io\/atrium-school-ml\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

@@ -118,6 +118,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Applications</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./programme.html"> <i class="bi bi-calendar4" role="img">
+</i> 
+<span class="menu-text">Programme</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./about.html"> <i class="bi bi-people" role="img">
 </i> 
 <span class="menu-text">About</span></a>
@@ -544,7 +549,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/ARUP-CAS\.github\.io\/atrium-school-ml\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
