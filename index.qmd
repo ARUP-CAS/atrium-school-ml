@@ -32,7 +32,18 @@ The school is aimed at early-career researchers in archaeology having basic expe
 No prior experience with machine learning is required, but curiosity and a willingness to engage with technical material are essential.
 ::: -->
 
-[![](figs/Clay.png){fig-align="center" width=60%}](https://atrium-research.eu)
+<!-- [![](figs/Clay.png){fig-align="center" width=60%}](https://atrium-research.eu) -->
+
+:::: {.columns}
+::: {.column width=45%}
+[![](figs/Clay.png)](https://www.atrium-research.eu)
+:::
+::: {.column width=10%}
+:::
+::: {.column width=45%}
+[![](figs/maia.png)](https://www.maiacost.eu/)
+:::
+::::
 
 :::: {.columns}
 ::: {.column width=40%}
@@ -46,9 +57,10 @@ No prior experience with machine learning is required, but curiosity and a willi
 ::::
 
 ::: {.justify}
+The training school is part of a trans-national access scheme provided by the [ATRIUM Project](https://atrium-research.eu){.external}, hosted by the [Archaeological Information System of the Czech Republic (AIS CR)](https://aiscr.cz/){.external} research infrastructure at the [Institute of Archaeology, Czech Academy of Sciences, Brno](https://arub.cz/){.external}. 
+The school is co-organized by the [MAIA COST Action](https://www.maiacost.eu/){.external} project. MAIA provides funding to several of the school instructors.
 
-The training school is part of a trans-national access scheme provided by the [ATRIUM Project](https://atrium-research.eu){.external}, hosted by the [Archaeological Information System of the Czech Republic (AIS CR)](https://aiscr.cz/){.external} research infrastructure at the [Institute of Archaeology, Czech Academy of Sciences, Brno](https://arub.cz/){.external}. To apply and learn more about TNA, visit the [ATRIUM TNA Application website](https://atrium-research.eu/tna-summer-schools/){.external}.
-
+To apply and learn more about the TNA, visit the [ATRIUM TNA Application website](https://atrium-research.eu/tna-summer-schools/){.external}.
 :::
 
 <!-- [![](flyer/atRium_A4.png){.shadow}](flyer/atRium_A4.pdf) -->
