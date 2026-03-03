@@ -21,9 +21,9 @@ website:
       - href: applications.qmd
         text: Applications
         icon: envelope-paper
-      # - href: programme.qmd
-      #   text: Programme
-      #   icon: calendar4
+      - href: programme.qmd
+        text: Programme
+        icon: calendar4
       # - href: materials.qmd
       #   text: Materials
       #   icon: book
