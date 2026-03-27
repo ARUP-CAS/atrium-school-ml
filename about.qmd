@@ -7,24 +7,27 @@ title: "About the training school"
 **Petr Pajdla** [{{< ai orcid >}} 0000-0001-7050-9572](https://orcid.org/0000-0001-7050-9572)  
 *Czech Academy of Sciences, Institute of Archaeology, Brno*  
 
-::: {.justify}
+<!-- ::: {.justify}
 Petr is one of AIS CR infrastructure coordinators with expertise in Linked Open Data, archival data processing, and Open Science.
 Petr is the course convenor for this Training School and the main contact for your questions. 
-:::
+::: -->
 
 **Ronald Harasim**  
 *Czech Academy of Sciences, Institute of Archaeology, Brno*  
 
-::: {.justify}
+<!-- ::: {.justify}
 Ronald is a full-stack developer and ML-engineer.
-:::
+::: -->
+
+**Anastasia Eleftheriadou** [{{< ai orcid >}} 0000-0002-8649-3752](https://orcid.org/0000-0002-8649-3752)  
+*Ludwig-Maximilians-Universität München*
 
 **Filip Hájek** [{{< ai orcid >}} 0009-0007-5953-8840](https://orcid.org/0009-0007-5953-8840)  
 *Czech Academy of Sciences, Institute of Archaeology, Brno*  
 
-::: {.justify}
+<!-- ::: {.justify}
 Filip is a data specialist with background in maritime and digital geoarchaeology applying GIS, 3D modeling, remote sensing, and coding to study prehistoric human-sea interactions and environmental change.
-:::
+::: -->
 
 
 ### Support
@@ -40,7 +43,7 @@ And the **AIS CR** team members...
 
 ### Any questions?
 
-Please direct any of your possible questions or inquiries to **Zuzana Kopáčová** (kopacova [at] arub.cz), and/or **Petr Pajdla** (pajdla [at] arub.cz).
+Please direct any of your possible questions or inquiries to **Zuzana Kopáčová** ([kopacova [at] arub.cz](mailto:kopacova@arub.cz)), and/or **Petr Pajdla** ([pajdla [at] arub.cz](mailto:pajdla@arub.cz)).
 
 
 ## Organisations

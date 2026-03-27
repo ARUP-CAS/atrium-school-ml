@@ -19,6 +19,18 @@ authors:
     affiliation: >-
       Czech Academy of Sciences, Institute of Archaeology,
       Brno
+  - given-names: Anastasia
+    family-names: Eleftheriadou
+    email: A.Eleftheriadou@lmu.de
+    affiliation: >-
+      Ludwig-Maximilians-Universität München
+    orcid: 'https://orcid.org/0000-0002-8649-3752'
+  - given-names: Filip
+    family-names: Hájek
+    email: hajek@arub.cz
+    affiliation: >-
+      Czech Academy of Sciences, Institute of Archaeology,
+      Brno
 repository-code: 'https://github.com/ARUP-CAS/atrium-school-ml/'
 url: 'https://arup-cas.github.io/atrium-school-ml/'
 abstract: >-
