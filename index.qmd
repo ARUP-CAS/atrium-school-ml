@@ -3,7 +3,7 @@ title: "Computer Vision in Archaeology"
 subtitle: "Training School"
 ---
 
-::: {.callout-tip}
+::: {.callout-note}
 
 ### Basics
 
@@ -35,12 +35,12 @@ No prior experience with machine learning is required, but curiosity and a willi
 <!-- [![](figs/Clay.png){fig-align="center" width=60%}](https://atrium-research.eu) -->
 
 :::: {.columns}
-::: {.column width=45%}
+::: {.column width=50%}
 [![](figs/Clay.png)](https://www.atrium-research.eu)
 :::
 ::: {.column width=10%}
 :::
-::: {.column width=45%}
+::: {.column width=40%}
 [![](figs/maia.png)](https://www.maiacost.eu/)
 :::
 ::::
@@ -63,6 +63,4 @@ The school is co-organized by the [MAIA COST Action](https://www.maiacost.eu/){.
 To apply and learn more about the TNA, visit the [ATRIUM TNA Application website](https://atrium-research.eu/tna-summer-schools/){.external}.
 :::
 
-<!-- [![](flyer/atRium_A4.png){.shadow}](flyer/atRium_A4.pdf) -->
-
-<!-- Feel free to distribute the flyer in [PDF](flyer/atRium_A4.pdf) or [PNG](flyer/atRium_A4.png). -->
+[![](flyer/school-ml_A4.png){.shadow}](flyer/school-ml_A4.png)
