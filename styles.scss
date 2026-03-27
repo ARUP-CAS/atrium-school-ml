@@ -1,7 +1,12 @@
+/*-- scss:defaults --*/
+$link-color: #2c7be5;
+$primary: #2c7be5;
+
+/*-- scss:rules --*/
 /* css styles */
 
 .shadow {
-  drop-shadow(6px 6px)
+  drop-shadow: 6px 6px;
 }
 
 .tiny {

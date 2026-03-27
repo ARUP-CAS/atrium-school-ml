@@ -5,6 +5,12 @@
 
 Repository contains an AIS CR Computer Vision Training School website and materials.
 
+## Publish
+
+```shell
+quarto publish gh-pages
+```
+
 
 ## License 
 

@@ -54,10 +54,10 @@ website:
 format:
   html:
     theme: 
-      light: flatly
-      dark: darkly
+      light: [flatly, styles.scss]
+      dark: [darkly, styles.scss]
     # mainfont: Barlow
-    css: styles.css
+    # css: styles.css
     toc: true
     toc-location: left
     link-external-newwindow: true
