@@ -48,7 +48,7 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 
-# Quarto 
+# Quarto
 /.quarto/
 /_site/
 
@@ -64,3 +64,5 @@ rsconnect/
 
 # report comments
 /reports/*_comments.pdf
+
+**/*.quarto_ipynb

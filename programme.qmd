@@ -3,51 +3,56 @@ title: "Training school programme"
 ---
 
 The programme is organised by topics.
-Each topic builds on the previous one, guiding participants from foundational skills
-to advanced applications of computer vision in archaeology.
+Each topic builds on the previous one, guiding participants from foundational skills to advanced applications of computer vision in archaeology.
 
 ## Programme
 
-### 1. Python for Computer Vision: A Recap
+![Programme](figs/programme.svg)
+
+### Python for Computer Vision Tasks
 
 - Setting up a Python environment and Jupyter notebooks
-- Key libraries: NumPy, Matplotlib, OpenCV
+- Key libraries: `NumPy`, `Matplotlib`, `OpenCV`
 - Working with images in Python: reading, displaying, and basic manipulation
 
-### 2. Datasets and Annotation
+### Datasets and Annotation
 
 - Overview of computer vision tasks: classification, object detection, segmentation
-- Annotation tools and common formats (COCO, YOLO, PASCAL VOC)
+- Annotation tools and common formats (`COCO`, `YOLO` etc.)
 - Best practices for creating, managing, and documenting datasets
 
-### 3. Data Pre-processing
+### Data Pre-processing
 
 - Image transformations, colour normalisation, and data augmentation
 - Splitting data and handling class imbalance
 - Building data pipelines with PyTorch `Dataset` and `DataLoader`
 
-### 4. Training
+### Training
 
 - Core concepts: CNNs, transfer learning, pre-trained models (ResNet, YOLO)
 - Setting up training: loss functions, optimisers, and monitoring metrics
 - Practical session: training a model on an archaeological dataset
 
-### 5. Post-processing
+### Post-processing
 
 - Interpreting outputs: confidence scores, bounding boxes, masks
 - Evaluation metrics: precision, recall, mAP, IoU
 - Error analysis and visualising results
 
-### 6. Advanced Topics
+### Advanced Topics
 
-- Vision-language models: zero-shot classification, prompt-based detection (CLIP, Florence)
+- Vision-language models: zero-shot classification, prompt-based detection (CLIP)
 - Instance and semantic segmentation in detail
-- Deploying models and working with geospatial/drone imagery
+- Deploying models
 
 
 ## Case Studies
 
 Throughout the school, participants will apply the methods above to two real-world archaeological datasets:
 
-- **Artefact typology:** classification and detection of archaeological artefact types from photographs
-- **Microscopic use-wear analysis:** identifying and classifying wear traces on stone tools from microscopic images
+- **Artefact tzpes:** classification and detection of archaeological artefacts from photographs
+- **Microscopic use-wear analysis:** identifying and classifying wear traces from microscopic images
+
+## Keynote
+
+*Will be specified...*
