@@ -4,70 +4,35 @@
     "href": "programme.html",
     "title": "Training school programme",
     "section": "",
-    "text": "Coming soon!\n\n\n\nThe detailed programme is under preparation and will be published by mid-March(?)\nThe initial idea goes along these lines:\n\nPython for computer vision tasks\nDataset creation, basic computer vision tasks and datasets, formats etc.\nImage pre-processing\nTraining\nPost-processing and advanced topics"
+    "text": "The programme is organised by topics. Each topic builds on the previous one, guiding participants from foundational skills to advanced applications of computer vision in archaeology."
   },
   {
-    "objectID": "info.html",
-    "href": "info.html",
-    "title": "General Information",
+    "objectID": "programme.html#programme",
+    "href": "programme.html#programme",
+    "title": "Training school programme",
+    "section": "Programme",
+    "text": "Programme\n\n\n\nProgramme\n\n\n\nPython for Computer Vision Tasks\n\nSetting up a Python environment and Jupyter notebooks\nKey libraries: NumPy, Matplotlib, OpenCV\nWorking with images in Python: reading, displaying, and basic manipulation\n\n\n\nDatasets and Annotation\n\nOverview of computer vision tasks: classification, object detection, segmentation\nAnnotation tools and common formats (COCO, YOLO etc.)\nBest practices for creating, managing, and documenting datasets\n\n\n\nData Pre-processing\n\nImage transformations, colour normalisation, and data augmentation\nSplitting data and handling class imbalance\nBuilding data pipelines with PyTorch Dataset and DataLoader\n\n\n\nTraining\n\nCore concepts: CNNs, transfer learning, pre-trained models (ResNet, YOLO)\nSetting up training: loss functions, optimisers, and monitoring metrics\nPractical session: training a model on an archaeological dataset\n\n\n\nPost-processing\n\nInterpreting outputs: confidence scores, bounding boxes, masks\nEvaluation metrics: precision, recall, mAP, IoU\nError analysis and visualising results\n\n\n\nAdvanced Topics\n\nVision-language models: zero-shot classification, prompt-based detection (CLIP)\nInstance and semantic segmentation in detail\nDeploying models"
+  },
+  {
+    "objectID": "programme.html#case-studies",
+    "href": "programme.html#case-studies",
+    "title": "Training school programme",
+    "section": "Case Studies",
+    "text": "Case Studies\nThroughout the school, participants will apply the methods above to two real-world archaeological datasets:\n\nArtefact tzpes: classification and detection of archaeological artefacts from photographs\nMicroscopic use-wear analysis: identifying and classifying wear traces from microscopic images"
+  },
+  {
+    "objectID": "programme.html#keynote",
+    "href": "programme.html#keynote",
+    "title": "Training school programme",
+    "section": "Keynote",
+    "text": "Keynote\nWill be specified…"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Computer Vision in Archaeology",
     "section": "",
-    "text": "The school will be held from 14 to 18 September 2026 at the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/) at the address given below:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nNote\n\n\n\nPlease note that this is an on-site event only, and remote participation will not be possible."
-  },
-  {
-    "objectID": "info.html#date-and-location",
-    "href": "info.html#date-and-location",
-    "title": "General Information",
-    "section": "",
-    "text": "The school will be held from 14 to 18 September 2026 at the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/) at the address given below:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nNote\n\n\n\nPlease note that this is an on-site event only, and remote participation will not be possible."
-  },
-  {
-    "objectID": "info.html#grants",
-    "href": "info.html#grants",
-    "title": "General Information",
-    "section": "Grants",
-    "text": "Grants\nEach participant of the school is eligible to receive a grant to cover travel expenses, housing, and daily subsistence during the meeting. To receive the grant, participants need to:\n\nApply via the official form of the ATRIUM Project (see the Applications section for details).\nParticipate in person, i.e. sign attendance sheets for each training day.\nSubmit a report within a given time frame after the conclusion of the school with details of their participation. Please note that the grant will be disbursed only upon the successful submission of this report."
-  },
-  {
-    "objectID": "info.html#prerequisites",
-    "href": "info.html#prerequisites",
-    "title": "General Information",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nBring your own laptop!\nMore prerequisites coming soon…"
-  },
-  {
-    "objectID": "info.html#other-information",
-    "href": "info.html#other-information",
-    "title": "General Information",
-    "section": "Other information",
-    "text": "Other information\n\nTravelling to Brno\nBrno is easily reachable by trains or buses from Prague (approx. a 2 to 2.5-hour journey) and Vienna (approx. a 1.5 to 2-hour journey). Many overnight trains crossing a large part of Europe start or end in Vienna, and we recommend taking these trains as an alternative to flying.\n\n\nAccommodation\nNo accommodation is provided to participants. Please arrange your accommodation in one of many cities hotels or hostels.\n\n\nFood\nThere are several places around the institute, see map above for locations.\n\n\n\n\n\n\n\n\n\n\nplace\ncuisine\nnote\n\n\n\n\nLittle Saigon\nAsian/Vietnamese\nhas vegan/vegetarian options\n\n\nMasný růžek\nCzech\na lot of meaty foods and traditional heavy Czech cuisine\n\n\nBistro Nella\nCzech\nmight have vegetarian option\n\n\nJídelna Kocourek\nCzech\nmight have vegetarian option\n\n\nGrand Kitchen Vlněna\nCzech, International\nmight have vegetarian option\n\n\nBistro Bellavista\nItalian\nmostly does not have vegetarian/vegan options\n\n\nDelitree bistro\nItalian, Czech, Salads\nhas vegetarian options\n\n\nRamen Brno\nJapanese\nmight have vegetarian options\n\n\nLos Capolitos\nMexican\nhes vegetarian option\n\n\nSargam\nNepalese\nhas vegetarian options\n\n\nVeg8Cafe\nVegan\nvegan bistro\n\n\nForky’s Vlněna Foodtruck\nVegan\nvegan streetfood"
-  },
-  {
-    "objectID": "applications.html",
-    "href": "applications.html",
-    "title": "Applications",
-    "section": "",
-    "text": "More details about the transnational access scheme grants can be found on the ATRIUM Project website."
-  },
-  {
-    "objectID": "applications.html#key-dates",
-    "href": "applications.html#key-dates",
-    "title": "Applications",
-    "section": "Key dates",
-    "text": "Key dates\n\n\n\nMarch 2026\nCall for participants opens\n\n\n31 May 2026\nDeadline for applications\n\n\nJuly 2026 (?)\nAcceptance notifications sent\n\n\n14–18 September 2026\nTraining school\n\n\nmid-October 2026 (?)\nDeadline for submission of reports\n\n\nend of November 2026\nGrants paid before this date"
-  },
-  {
-    "objectID": "applications.html#who-should-apply",
-    "href": "applications.html#who-should-apply",
-    "title": "Applications",
-    "section": "Who should apply",
-    "text": "Who should apply\n\n\n\n\n\n\nNote\n\n\n\nOnly applicants with institutional affiliation outside of the Czech Republic are eligible to receive funding due to the trans-national nature of the access to the infrastructure provided by the school.\n\n\n\nWe welcome applications from early-career researchers and students who are enthusiastic about exploring the potential of computer vision and machine learning in archaeological research. This school will focus on the practical application of image analysis techniques to archaeological image data, from dataset preparation and model training to evaluation and emerging methods such as vision-language models.\nWhile applicants with prior experience in Python and/or machine learning are encouraged to apply, the first day of the training will be dedicated to the fundamentals of Python for image analysis tasks. Participants should have basic experience with any programming or markup language (e.g. HTML, R, Python or similar) and a general comfort with working in digital environments. No prior experience with Python or machine learning is required, but curiosity and a willingness to engage with technical material are essential."
-  },
-  {
-    "objectID": "applications.html#how-to-apply",
-    "href": "applications.html#how-to-apply",
-    "title": "Applications",
-    "section": "How to apply",
-    "text": "How to apply\nSubmit your applications through an online form. On the 4th page of the application (TNA Scheme), choose ‘Summer School Access’ and ‘Archaeological Information System of the Czech Republic, Institute of Archaeology of the Czech Academy of Sciences, Brno – AIS CR (ARUB)’ as the proposed host organisation. On the next page (Summer School Application) please explain why you believe this training would be valuable for your research and how you intend to integrate these newfound skills into your work.\nMore details on how to apply can be found here."
+    "text": "NoteBasics\n\n\n\nWhen? 14–18 September 2026\nWhere? Brno, Czech Republic\nWhat? Training school on computer vision and machine learning in archaeology\n\n\n\nJoin us for an intensive one-week training school dedicated to computer vision in archaeology, where you will learn how to harness the power of modern machine learning techniques to detect, classify, and analyse archaeological features and artefacts in images. As visual data — from drone surveys and excavation photography to museum collections — continues to grow in volume, the ability to process and interpret it computationally is becoming an increasingly valuable skill in the archaeologist’s toolkit. Our programme guides you from the very foundations of Python programming through to hands-on experience with state-of-the-art object detection and image segmentation models, with dedicated sessions on dataset creation, model training, and evaluation. Participants should have basic experience with any programming or markup language and a general comfort with working in digital environments. No prior experience with machine learning is required, but curiosity and a willingness to engage with technical material are essential.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe training school is part of a trans-national access scheme provided by the ATRIUM Project, hosted by the Archaeological Information System of the Czech Republic (AIS CR) research infrastructure at the Institute of Archaeology, Czech Academy of Sciences, Brno. The school is co-organized by the MAIA COST Action project. MAIA provides funding to several of the school instructors.\nTo apply and learn more about the TNA, visit the ATRIUM TNA Application website."
   },
   {
     "objectID": "about.html",
@@ -91,52 +56,66 @@
     "text": "Organisations\n\nATRIUM\n\nThe training school is organised as transnational access provision in the ATRIUM Project (Advancing Frontier Research in the Arts and Humanities) funded by the Horizon Europe research and innovation actions programme under grant agreement No. 101132163. ATRIUM project covers the organizational costs of the school and participator grants.\n\n\n\n\nMAIA\n\nMAIA (Managing Artificial Intelligence in Archaeology) is a COST Action (CA23141) funded by the European Union co-organizing the training school. MAIA COST Action covers travel and subsistence costs of two MAIA instructors.\n\n\n\n\nAIS CR\n\nThe Archaeological Information System of the Czech Republic (AIS CR) is a research infrastructure integrating digital resources and services on archaeology in the Czech Republic, and as such is one of many data providers in the ARIADNE Research Infrastructure. AIS CR is jointly operated by the Institutes of Archaeology of the Czech Academy of Sciences in Brno (IAB) and Prague (IAP). AIS CR/IAB provides the infrastructure and the venue for the training school."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Computer Vision in Archaeology",
+    "objectID": "applications.html",
+    "href": "applications.html",
+    "title": "Applications",
     "section": "",
-    "text": "Basics\n\n\n\nWhen? 14–18 September 2026\nWhere? Brno, Czech Republic\nWhat? Training school on computer vision and machine learning in archaeology\n\n\n\nJoin us for an intensive one-week training school dedicated to computer vision in archaeology, where you will learn how to harness the power of modern machine learning techniques to detect, classify, and analyse archaeological features and artefacts in images. As visual data — from drone surveys and excavation photography to museum collections — continues to grow in volume, the ability to process and interpret it computationally is becoming an increasingly valuable skill in the archaeologist’s toolkit. Our programme guides you from the very foundations of Python programming through to hands-on experience with state-of-the-art object detection and image segmentation models, with dedicated sessions on dataset creation, model training, and evaluation. Participants should have basic experience with any programming or markup language and a general comfort with working in digital environments. No prior experience with machine learning is required, but curiosity and a willingness to engage with technical material are essential.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe training school is part of a trans-national access scheme provided by the ATRIUM Project, hosted by the Archaeological Information System of the Czech Republic (AIS CR) research infrastructure at the Institute of Archaeology, Czech Academy of Sciences, Brno. The school is co-organized by the MAIA COST Action project. MAIA provides funding to several of the school instructors.\nTo apply and learn more about the TNA, visit the ATRIUM TNA Application website."
+    "text": "More details about the transnational access scheme grants can be found on the ATRIUM Project website."
   },
   {
-    "objectID": "materials.html",
-    "href": "materials.html",
-    "title": "Materials and data",
+    "objectID": "applications.html#key-dates",
+    "href": "applications.html#key-dates",
+    "title": "Applications",
+    "section": "Key dates",
+    "text": "Key dates\n\n\n\nMarch 2026\nCall for participants opens\n\n\n31 May 2026\nDeadline for applications\n\n\nJuly 2026 (?)\nAcceptance notifications sent\n\n\n14–18 September 2026\nTraining school\n\n\nmid-October 2026 (?)\nDeadline for submission of reports\n\n\nend of November 2026\nGrants paid before this date"
+  },
+  {
+    "objectID": "applications.html#who-should-apply",
+    "href": "applications.html#who-should-apply",
+    "title": "Applications",
+    "section": "Who should apply",
+    "text": "Who should apply\n\n\n\n\n\n\nNoteNote\n\n\n\nOnly applicants with institutional affiliation outside of the Czech Republic are eligible to receive funding due to the trans-national nature of the access to the infrastructure provided by the school.\n\n\n\nWe welcome applications from early-career researchers and students who are enthusiastic about exploring the potential of computer vision and machine learning in archaeological research. This school will focus on the practical application of image analysis techniques to archaeological image data, from dataset preparation and model training to evaluation and emerging methods such as vision-language models.\nWhile applicants with prior experience in Python and/or machine learning are encouraged to apply, the first day of the training will be dedicated to the fundamentals of Python for image analysis tasks. Participants should have basic experience with any programming or markup language (e.g. HTML, R, Python or similar) and a general comfort with working in digital environments. No prior experience with Python or machine learning is required, but curiosity and a willingness to engage with technical material are essential."
+  },
+  {
+    "objectID": "applications.html#how-to-apply",
+    "href": "applications.html#how-to-apply",
+    "title": "Applications",
+    "section": "How to apply",
+    "text": "How to apply\nSubmit your applications through an online form. On the 4th page of the application (TNA Scheme), choose ‘Summer School Access’ and ‘Archaeological Information System of the Czech Republic, Institute of Archaeology of the Czech Academy of Sciences, Brno – AIS CR (ARUB)’ as the proposed host organisation. On the next page (Summer School Application) please explain why you believe this training would be valuable for your research and how you intend to integrate these newfound skills into your work.\nMore details on how to apply can be found here."
+  },
+  {
+    "objectID": "info.html",
+    "href": "info.html",
+    "title": "General Information",
     "section": "",
-    "text": "(V. Nosek)\n\nPresentation\n\n\n\n\n(T. Chlup)\n\nPresentation\n\n\n\n\n(L. Starková)"
+    "text": "The school will be held from 14 to 18 September 2026 at the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/) at the address given below:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nTipNote\n\n\n\nPlease note that this is an on-site event only, and remote participation will not be possible."
   },
   {
-    "objectID": "materials.html#monday-15-sept.",
-    "href": "materials.html#monday-15-sept.",
-    "title": "Materials and data",
+    "objectID": "info.html#date-and-location",
+    "href": "info.html#date-and-location",
+    "title": "General Information",
     "section": "",
-    "text": "(V. Nosek)\n\nPresentation\n\n\n\n\n(T. Chlup)\n\nPresentation\n\n\n\n\n(L. Starková)"
+    "text": "The school will be held from 14 to 18 September 2026 at the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/) at the address given below:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nTipNote\n\n\n\nPlease note that this is an on-site event only, and remote participation will not be possible."
   },
   {
-    "objectID": "materials.html#tuesday-16-sept.",
-    "href": "materials.html#tuesday-16-sept.",
-    "title": "Materials and data",
-    "section": "Tuesday, 16 Sept.",
-    "text": "Tuesday, 16 Sept.\n\n3D documentation of historic monuments\n(D. Spáčil)\n\nPresentation\nDataset: Petrov1_subset (images only ~1.3 GB; project + images ~11 GB; Sketchfab)\n\nSample dataset used throughout the presentation\nOnly 97 out of 362 photos were used for processing speed increase (you can find all 362 photos here)\n\n\n\n\n\nModels scaling reference (PRO tip: don’t forget to bring your tape measure/scale bar/markers, so you don’t have to use the Sportisimo loyalty card)"
+    "objectID": "info.html#grants",
+    "href": "info.html#grants",
+    "title": "General Information",
+    "section": "Grants",
+    "text": "Grants\nEach participant of the school is eligible to receive a grant to cover travel expenses, housing, and daily subsistence during the meeting. To receive the grant, participants need to:\n\nApply via the official form of the ATRIUM Project (see the Applications section for details).\nParticipate in person, i.e. sign attendance sheets for each training day.\nSubmit a report within a given time frame after the conclusion of the school with details of their participation. Please note that the grant will be disbursed only upon the successful submission of this report."
   },
   {
-    "objectID": "materials.html#wednesday-17-sept.",
-    "href": "materials.html#wednesday-17-sept.",
-    "title": "Materials and data",
-    "section": "Wednesday, 17 Sept.",
-    "text": "Wednesday, 17 Sept.\n\n3D Documentation of Artefacts\n(V. Nosek)\n\n3D Scanning and Photogrammetry in Archaeology: Theory and Practice – presentation\nPhotogrammetry practical – presentation\nData"
+    "objectID": "info.html#prerequisites",
+    "href": "info.html#prerequisites",
+    "title": "General Information",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nBring your own laptop!\nMore prerequisites coming soon…"
   },
   {
-    "objectID": "materials.html#thursday-18-sept.",
-    "href": "materials.html#thursday-18-sept.",
-    "title": "Materials and data",
-    "section": "Thursday, 18 Sept.",
-    "text": "Thursday, 18 Sept.\n\nVirtual Archaeology\n(J. Unger)\n\nPresentations zip (~5.2 GB)\n\n\n\nFrom 3D scan to virtual reconstruction\n(M. Košťál)\n\nPresentation\nRecommended software/addons\n\nPureRef (reference image tool)\nMagnific AI (image upscaler/enhancer)\nBledner addons market\nGeoScatter and Botaniq for vegetation\nBlender Studio for paid but priceless tutorials\n\nFeel free to contact Martin at his email address (462845 [at] muni.cz), should you need something\n\n\n\nTexture creation with RealityScan\n\n\nFor a more serious workflow of a PBR texture creation using photogrammetry, see this tutorial"
-  },
-  {
-    "objectID": "materials.html#additional-resources",
-    "href": "materials.html#additional-resources",
-    "title": "Materials and data",
-    "section": "Additional resources",
-    "text": "Additional resources\n\nRealityScan YouTube channel with tutorials\nSketchFab, a platform for 3D model presentation"
+    "objectID": "info.html#other-information",
+    "href": "info.html#other-information",
+    "title": "General Information",
+    "section": "Other information",
+    "text": "Other information\n\nTravelling to Brno\nBrno is easily reachable by trains or buses from Prague (approx. a 2 to 2.5-hour journey) and Vienna (approx. a 1.5 to 2-hour journey). Many overnight trains crossing a large part of Europe start or end in Vienna, and we recommend taking these trains as an alternative to flying.\n\n\nAccommodation\nNo accommodation is provided to participants. Please arrange your accommodation in one of many cities hotels or hostels.\n\n\nFood\nThere are several places around the institute, see map above for locations.\n\n\n\n\n\n\n\n\n\n\nplace\ncuisine\nnote\n\n\n\n\nLittle Saigon\nAsian/Vietnamese\nhas vegan/vegetarian options\n\n\nMasný růžek\nCzech\na lot of meaty foods and traditional heavy Czech cuisine\n\n\nBistro Nella\nCzech\nmight have vegetarian option\n\n\nJídelna Kocourek\nCzech\nmight have vegetarian option\n\n\nGrand Kitchen Vlněna\nCzech, International\nmight have vegetarian option\n\n\nBistro Bellavista\nItalian\nmostly does not have vegetarian/vegan options\n\n\nDelitree bistro\nItalian, Czech, Salads\nhas vegetarian options\n\n\nRamen Brno\nJapanese\nmight have vegetarian options\n\n\nLos Capolitos\nMexican\nhes vegetarian option\n\n\nSargam\nNepalese\nhas vegetarian options\n\n\nVeg8Cafe\nVegan\nvegan bistro\n\n\nForky’s Vlněna Foodtruck\nVegan\nvegan streetfood"
   }
 ]
