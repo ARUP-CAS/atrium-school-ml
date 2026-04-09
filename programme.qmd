@@ -50,7 +50,7 @@ Each topic builds on the previous one, guiding participants from foundational sk
 
 Throughout the school, participants will apply the methods above to two real-world archaeological datasets:
 
-- **Artefact tzpes:** classification and detection of archaeological artefacts from photographs
+- **Artefact types:** classification and detection of archaeological artefacts from photographs
 - **Microscopic use-wear analysis:** identifying and classifying wear traces from microscopic images
 
 ## Keynote
