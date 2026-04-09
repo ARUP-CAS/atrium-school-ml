@@ -1,1 +1,1 @@
-Sitemap: https://ARUP-CAS.github.io/atrium-school-ml/sitemap.xml
+Sitemap: https://arup-cas.github.io/atrium-school-ml/sitemap.xml
