@@ -7,7 +7,9 @@ Each topic builds on the previous one, guiding participants from foundational sk
 
 ## Programme
 
-![Programme](figs/programme.svg)
+![Programme](figs/programme.svg){width="1200px" style="max-width: 1200px; width: 100%;"}
+
+
 
 ### Python for Computer Vision Tasks
 
