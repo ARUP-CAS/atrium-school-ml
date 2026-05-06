@@ -4,21 +4,21 @@
     "href": "programme.html",
     "title": "Training school programme",
     "section": "",
-    "text": "The programme is organised by topics. Each topic builds on the previous one, guiding participants from foundational skills to advanced applications of computer vision in archaeology."
+    "text": "The programme is organised by topics and dataset types. Each topic builds on the previous one, guiding participants from foundational skills to advanced applications of computer vision in archaeology."
   },
   {
     "objectID": "programme.html#programme",
     "href": "programme.html#programme",
     "title": "Training school programme",
     "section": "Programme",
-    "text": "Programme\n\n\n\nProgramme\n\n\n\nPython for Computer Vision Tasks\n\nSetting up a Python environment and Jupyter notebooks\nKey libraries: NumPy, Matplotlib, OpenCV\nWorking with images in Python: reading, displaying, and basic manipulation\n\n\n\nDatasets and Annotation\n\nOverview of computer vision tasks: classification, object detection, segmentation\nAnnotation tools and common formats (COCO, YOLO etc.)\nBest practices for creating, managing, and documenting datasets\n\n\n\nData Pre-processing\n\nImage transformations, colour normalisation, and data augmentation\nSplitting data and handling class imbalance\nBuilding data pipelines with PyTorch Dataset and DataLoader\n\n\n\nTraining\n\nCore concepts: CNNs, transfer learning, pre-trained models (ResNet, YOLO)\nSetting up training: loss functions, optimisers, and monitoring metrics\nPractical session: training a model on an archaeological dataset\n\n\n\nPost-processing\n\nInterpreting outputs: confidence scores, bounding boxes, masks\nEvaluation metrics: precision, recall, mAP, IoU\nError analysis and visualising results\n\n\n\nAdvanced Topics\n\nVision-language models: zero-shot classification, prompt-based detection (CLIP)\nInstance and semantic segmentation in detail\nDeploying models"
+    "text": "Programme\n\n\n\nProgramme\n\n\n\nMonday\nKick-off & Python for CV\nMorning\n\nKick-off, practicalities, and motivations\nIntroduction to the workshop structure\nIntroduction co computer vision and questions computer vision can answer\nSetting up the technical environment (Google Colab and tools)\n\nAfternoon\n\nCoding with agents\nPython fundamentals for computer vision\n\nEvening\n\nIce-breaker\n\n\n\nTuesday\nArtefacts Dataset\nMorning\n\nImage datasets and annotation – theory\nDatasets, licensing, controlled vocabularies, and annotation challenges\n\nAfternoon\n\nPractical part: annotating a dataset\n\n\n\nWednesday\nMicroscopy Dataset\nMorning\n\nData standardization (brightness, contrast, size, RGB/grayscale) and image pre-processing\nData pre-processing and augmentation\nOpenCV: detection masks and data augmentation\n\nAfternoon\n\nPractical part: data standardization and augmentation\n\n\n\nThursday\nSatellite Imagery\nMorning\n\nSatellite imagery and remote sensing in theory\nObject detection on satellite images\n\nAfternoon\n\nPractical part: satellite imagery analysis\n\n\n\nFriday\nCoins Dataset & Closing\nMorning\n\nAdvanced topics illustrated on coins dataset and combining methods\nLLMs and vision-language models\nBias, reproducibility, black-box models, attention maps, and causation–correlation problems\n\nAfternoon\n\nClosing and discussion"
   },
   {
     "objectID": "programme.html#case-studies",
     "href": "programme.html#case-studies",
     "title": "Training school programme",
     "section": "Case Studies",
-    "text": "Case Studies\nThroughout the school, participants will apply the methods above to two real-world archaeological datasets:\n\nArtefact types: classification and detection of archaeological artefacts from photographs\nMicroscopic use-wear analysis: identifying and classifying wear traces from microscopic images"
+    "text": "Case Studies\nThroughout the school, participants will work with four real-world archaeological datasets:\n\nArtefact types: classification and detection of archaeological artefacts from photographs\nMicroscopic use-wear analysis: identifying and classifying wear traces from microscopic images\nSatellite imagery: remote sensing and object detection on satellite data\nCoins: combining techniques on photographs and drawings of coins and exploring model interpretability"
   },
   {
     "objectID": "programme.html#keynote",
@@ -26,6 +26,13 @@
     "title": "Training school programme",
     "section": "Keynote",
     "text": "Keynote\nWill be specified…"
+  },
+  {
+    "objectID": "programme.html#social-events",
+    "href": "programme.html#social-events",
+    "title": "Training school programme",
+    "section": "Social Events",
+    "text": "Social Events\n\nIce-breaker on the first evening (Monday)\nSocial event on Wednesday evening"
   },
   {
     "objectID": "index.html",
