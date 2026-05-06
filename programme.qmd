@@ -2,14 +2,88 @@
 title: "Training school programme"
 ---
 
-The programme is organised by topics.
+The programme is organised by topics and dataset types.
 Each topic builds on the previous one, guiding participants from foundational skills to advanced applications of computer vision in archaeology.
 
 ## Programme
 
-![Programme](figs/programme.svg){width="1200px" style="max-width: 1200px; width: 100%;"}
+![Programme](figs/programme.svg){width="100%"}
 
+### Monday 
 
+*Kick-off & Python for CV*
+
+**Morning**
+
+- Kick-off, practicalities, and motivations
+- Introduction to the workshop structure 
+- Introduction co computer vision and questions computer vision can answer
+- Setting up the technical environment (Google Colab and tools)
+
+**Afternoon**
+
+- Coding with agents
+- Python fundamentals for computer vision
+
+**Evening** 
+
+- Ice-breaker
+
+### Tuesday 
+
+*Artefacts Dataset*
+
+**Morning**
+
+- Image datasets and annotation -- theory
+- Datasets, licensing, controlled vocabularies, and annotation challenges
+
+**Afternoon**
+
+- Practical part: annotating a dataset
+
+### Wednesday
+
+*Microscopy Dataset*
+
+**Morning**
+
+- Data standardization (brightness, contrast, size, RGB/grayscale) and image pre-processing
+- Data pre-processing and augmentation
+- OpenCV: detection masks and data augmentation
+
+**Afternoon**
+
+- Practical part: data standardization and augmentation
+
+### Thursday 
+
+*Satellite Imagery*
+
+**Morning**
+
+- Satellite imagery and remote sensing in theory
+- Object detection on satellite images
+
+**Afternoon**
+
+- Practical part: satellite imagery analysis
+
+### Friday
+
+*Coins Dataset & Closing*
+
+**Morning**
+
+- Advanced topics illustrated on coins dataset and combining methods
+- LLMs and vision-language models
+- Bias, reproducibility, black-box models, attention maps, and causation–correlation problems
+
+**Afternoon**
+
+- Closing and discussion
+
+<!-- ## Topics in Detail
 
 ### Python for Computer Vision Tasks
 
@@ -45,16 +119,22 @@ Each topic builds on the previous one, guiding participants from foundational sk
 
 - Vision-language models: zero-shot classification, prompt-based detection (CLIP)
 - Instance and semantic segmentation in detail
-- Deploying models
-
+- Deploying models -->
 
 ## Case Studies
 
-Throughout the school, participants will apply the methods above to two real-world archaeological datasets:
+Throughout the school, participants will work with four real-world archaeological datasets:
 
 - **Artefact types:** classification and detection of archaeological artefacts from photographs
 - **Microscopic use-wear analysis:** identifying and classifying wear traces from microscopic images
+- **Satellite imagery:** remote sensing and object detection on satellite data
+- **Coins:** combining techniques on photographs and drawings of coins and exploring model interpretability
 
 ## Keynote
 
 *Will be specified...*
+
+## Social Events
+
+- **Ice-breaker** on the first evening (Monday)
+- **Social event** on Wednesday evening

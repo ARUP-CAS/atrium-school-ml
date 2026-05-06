@@ -56,7 +56,7 @@ format:
     theme: 
       light: [flatly, styles.scss]
       dark: [darkly, styles.scss]
-    # mainfont: Barlow
+    mainfont: "Alegreya Sans"
     # css: styles.css
     toc: true
     toc-location: left
