@@ -63,4 +63,4 @@ The school is co-organized by the [MAIA COST Action](https://www.maiacost.eu/){.
 To apply and learn more about the TNA, visit the [ATRIUM TNA Application website](https://atrium-research.eu/tna-summer-schools/){.external}.
 :::
 
-[![](flyer/school-ml_A4.png){.shadow}](flyer/school-ml_A4.png)
+[![](flyer/school-ml.png){.shadow}](flyer/school-ml.png)
