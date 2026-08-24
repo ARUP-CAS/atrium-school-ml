@@ -7,7 +7,7 @@ Each topic builds on the previous one, guiding participants from foundational sk
 
 ## Programme
 
-![Programme](figs/programme.svg){width="100%"}
+![Final programme](figs/programme.svg){width="100%"}
 
 ### Monday 
 
@@ -23,24 +23,26 @@ Each topic builds on the previous one, guiding participants from foundational sk
 **Afternoon**
 
 - Coding with agents
-- Python fundamentals for computer vision
+- Python fundamentals for computer vision tasks
 
 **Evening** 
 
-- Ice-breaker
+- Ice-breaker event
 
 ### Tuesday 
 
-*Artefacts Dataset*
-
 **Morning**
 
-- Image datasets and annotation -- theory
+*Artefacts Dataset*
+
+- Image datasets and annotation -- *theory & practice*
 - Datasets, licensing, controlled vocabularies, and annotation challenges
 
 **Afternoon**
 
-- Practical part: annotating a dataset
+- **Presentations of participants' projects and datasets?**  
+
+    > Do you want to showcase anything? Present what you work on? Use this opportunity to showcase what you do and discuss the problems you encounter! We will discuss and try to find solutions together...
 
 ### Wednesday
 
@@ -58,22 +60,24 @@ Each topic builds on the previous one, guiding participants from foundational sk
 
 ### Thursday 
 
-*Satellite Imagery*
-
 **Morning**
 
-- Satellite imagery and remote sensing in theory
+*Satellite Imagery*
+
+- Satellite imagery and remote sensing in theory and analysis
 - Object detection on satellite images
 
 **Afternoon**
 
-- Practical part: satellite imagery analysis
+*Rock Art dataset*
+
+- 
 
 ### Friday
 
-*Coins Dataset & Closing*
-
 **Morning**
+
+*Coins Dataset*
 
 - Advanced topics illustrated on coins dataset and combining methods
 - LLMs and vision-language models
@@ -128,13 +132,12 @@ Throughout the school, participants will work with four real-world archaeologica
 - **Artefact types:** classification and detection of archaeological artefacts from photographs
 - **Microscopic use-wear analysis:** identifying and classifying wear traces from microscopic images
 - **Satellite imagery:** remote sensing and object detection on satellite data
+- **Rock art:** 
 - **Coins:** combining techniques on photographs and drawings of coins and exploring model interpretability
 
-## Keynote
-
-*Will be specified...*
 
 ## Social Events
 
 - **Ice-breaker** on the first evening (Monday)
+- **Walking meeting** on Tuesday evening, a short city *tour* of Brno
 - **Social event** on Wednesday evening

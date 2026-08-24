@@ -4,42 +4,45 @@ title: "About the training school"
 
 ## Instructors & organizers
 
+:::: {.columns} 
+::: {.column width=50%}
 **Petr Pajdla** [{{< ai orcid >}} 0000-0001-7050-9572](https://orcid.org/0000-0001-7050-9572)  
 *Czech Academy of Sciences, Institute of Archaeology, Brno*  
-
-<!-- ::: {.justify}
-Petr is one of AIS CR infrastructure coordinators with expertise in Linked Open Data, archival data processing, and Open Science.
-Petr is the course convenor for this Training School and the main contact for your questions. 
-::: -->
 
 **Ronald Harasim**  
 *Czech Academy of Sciences, Institute of Archaeology, Brno*  
 
-<!-- ::: {.justify}
-Ronald is a full-stack developer and ML-engineer.
-::: -->
-
+**Filip Hájek** [{{< ai orcid >}} 0009-0007-5953-8840](https://orcid.org/0009-0007-5953-8840)  
+*Czech Academy of Sciences, Institute of Archaeology, Brno*  
+::: 
+::: {.column width=50%}
 **Anastasia Eleftheriadou** [{{< ai orcid >}} 0000-0002-8649-3752](https://orcid.org/0000-0002-8649-3752)  
 *Ludwig-Maximilians-Universität München*
 
-**Filip Hájek** [{{< ai orcid >}} 0009-0007-5953-8840](https://orcid.org/0009-0007-5953-8840)  
-*Czech Academy of Sciences, Institute of Archaeology, Brno*  
-
-<!-- ::: {.justify}
-Filip is a data specialist with background in maritime and digital geoarchaeology applying GIS, 3D modeling, remote sensing, and coding to study prehistoric human-sea interactions and environmental change.
-::: -->
+**Ashely Green** [{{< ai orcid >}} 0009-0005-4625-801X](https://orcid.org/0009-0005-4625-801X)  
+*University of Gothenburg*
+:::
+::::
 
 
 ### Support
 
+:::: {.columns} 
+::: {.column width=50%}
 **Zuzana Kopáčová**  
 *Czech Academy of Sciences, Institute of Archaeology, Brno*  
 Finances, administration
 
+**Vít Kozák**  
+*Czech Academy of Sciences, Institute of Archaeology, Brno*  
+::: 
+::: {.column width=50%}
 **David Spáčil**  
 *Czech Academy of Sciences, Institute of Archaeology, Brno*  
+:::
+::::
 
-And the **AIS CR** team members...
+And other **AIS CR** team members...
 
 ### Any questions?
 

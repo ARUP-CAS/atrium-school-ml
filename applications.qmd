@@ -2,6 +2,12 @@
 title: "Applications"
 ---
 
+::: {.callout-important}
+- Both **ATRIUM** and **MAIA** calls for applications are closed.
+- There were over 80 applications to the training school.
+- All applicants were notified whether they were successful by the end of July.
+:::
+
 ::: {.justify}
 There are two options:
 
@@ -37,7 +43,7 @@ Only applicants with institutional affiliation **outside of the Czech Republic**
 |-----------------------------  |--------------------------------|
 | March 2026                    | Call for participants opens    |
 | **31 May 2026**               | **Deadline for applications**  |
-| July 2026 (?)                 | Acceptance notifications sent  |
+| End of July 2026              | Acceptance notifications sent  |
 | **14--18 September 2026**     | **Training school**            |
 | mid-October 2026 (?)          | Deadline for submission of reports |
 | end of November 2026          | Grants paid before this date   |
@@ -53,8 +59,6 @@ More details on how to apply can be found [here](https://atrium-research.eu/tna-
 
 
 ## MAIA Open Call 
-
-The call is not open yet, as soon as it will be available, details will be communicated to all members of MAIA network.
 
 ::: {.callout-note}
 ## Note
