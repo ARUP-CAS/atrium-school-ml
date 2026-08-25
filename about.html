@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.36">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -38,14 +41,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-502fb93be84e64a20036d0a0fe09f90a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-ca9d3bab283b3e4ab4a5d4ff6723742a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-502fb93be84e64a20036d0a0fe09f90a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-92d8d951cc1a76a9ffe7b03562e301de.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-19afae09bce6128314e5f6ba79dab40e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-92d8d951cc1a76a9ffe7b03562e301de.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -347,32 +350,36 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="instructors-organizers" class="level2">
 <h2 class="anchored" data-anchor-id="instructors-organizers">Instructors &amp; organizers</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <p><strong>Petr Pajdla</strong> <a href="https://orcid.org/0000-0001-7050-9572"><i class="ai  ai-orcid"></i> 0000-0001-7050-9572</a><br>
 <em>Czech Academy of Sciences, Institute of Archaeology, Brno</em></p>
-<!-- ::: {.justify}
-Petr is one of AIS CR infrastructure coordinators with expertise in Linked Open Data, archival data processing, and Open Science.
-Petr is the course convenor for this Training School and the main contact for your questions. 
-::: -->
 <p><strong>Ronald Harasim</strong><br>
 <em>Czech Academy of Sciences, Institute of Archaeology, Brno</em></p>
-<!-- ::: {.justify}
-Ronald is a full-stack developer and ML-engineer.
-::: -->
-<p><strong>Anastasia Eleftheriadou</strong> <a href="https://orcid.org/0000-0002-8649-3752"><i class="ai  ai-orcid"></i> 0000-0002-8649-3752</a><br>
-<em>Ludwig-Maximilians-Universität München</em></p>
 <p><strong>Filip Hájek</strong> <a href="https://orcid.org/0009-0007-5953-8840"><i class="ai  ai-orcid"></i> 0009-0007-5953-8840</a><br>
 <em>Czech Academy of Sciences, Institute of Archaeology, Brno</em></p>
-<!-- ::: {.justify}
-Filip is a data specialist with background in maritime and digital geoarchaeology applying GIS, 3D modeling, remote sensing, and coding to study prehistoric human-sea interactions and environmental change.
-::: -->
+</div><div class="column" style="width:50%;">
+<p><strong>Anastasia Eleftheriadou</strong> <a href="https://orcid.org/0000-0002-8649-3752"><i class="ai  ai-orcid"></i> 0000-0002-8649-3752</a><br>
+<em>Ludwig-Maximilians-Universität München</em></p>
+<p><strong>Ashely Green</strong> <a href="https://orcid.org/0009-0005-4625-801X"><i class="ai  ai-orcid"></i> 0009-0005-4625-801X</a><br>
+<em>University of Gothenburg</em></p>
+</div>
+</div>
 <section id="support" class="level3">
 <h3 class="anchored" data-anchor-id="support">Support</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
 <p><strong>Zuzana Kopáčová</strong><br>
 <em>Czech Academy of Sciences, Institute of Archaeology, Brno</em><br>
 Finances, administration</p>
+<p><strong>Vít Kozák</strong><br>
+<em>Czech Academy of Sciences, Institute of Archaeology, Brno</em></p>
+</div><div class="column" style="width:50%;">
 <p><strong>David Spáčil</strong><br>
 <em>Czech Academy of Sciences, Institute of Archaeology, Brno</em></p>
-<p>And the <strong>AIS CR</strong> team members…</p>
+</div>
+</div>
+<p>And other <strong>AIS CR</strong> team members…</p>
 </section>
 <section id="any-questions" class="level3">
 <h3 class="anchored" data-anchor-id="any-questions">Any questions?</h3>
