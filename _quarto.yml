@@ -24,6 +24,9 @@ website:
       - href: programme.qmd
         text: Programme
         icon: calendar4
+      - href: setup.qmd
+        text: Setup
+        icon: gear
       # - href: materials.qmd
       #   text: Materials
       #   icon: book

@@ -55,7 +55,7 @@ To receive the grant, participants need to:
 ## Prerequisites
 
 - **Bring your own laptop!**
-- More prerequisites coming soon...
+- See page [Setup](setup.qmd) for more info.
 
 
 ## Other information

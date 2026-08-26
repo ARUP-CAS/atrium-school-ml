@@ -1,0 +1,140 @@
+---
+title: "Setup Guide"
+---
+
+## Claude Code
+
+::: {.justify}
+During the school you will be granted access to [Claude Code](https://claude.com/product/claude-code) to support you in coding.
+Before the school starts, please install **Claude Code** and configure the API key you will be given by the organisers. 
+This takes about five minutes.
+:::
+
+::: {.callout-note}
+If you already use a different coding assistant or have a Claude subscription, you can use your own settings, we do not require you to use this.
+:::
+
+### Install Claude Code
+
+::: {.panel-tabset}
+## Windows
+
+Open PowerShell and run:
+
+```powershell
+irm https://claude.ai/install.ps1 | iex
+```
+
+Claude Code runs natively on Windows -- no WSL, Node.js, or npm required.
+
+::: {.callout-note}
+## Optional
+
+Installing [Git for Windows](https://gitforwindows.org/){.external} gives Claude Code a Bash shell to use, which some participants find nicer to work in. It's entirely optional — without it, Claude Code falls back to PowerShell, which works fine.
+:::
+
+## macOS
+
+Open Terminal and run:
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+## Linux
+
+Open a terminal and run:
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+This also applies if you're using WSL (Windows Subsystem for Linux) — run this inside your WSL terminal.
+:::
+
+Once installed, Claude Code updates itself automatically — no need to repeat this step.  
+Official install guide is [here](https://claude.com/product/claude-code).
+
+### Add your API key
+
+:::: {.panel-tabset}
+
+## Claude settings file
+
+*This method works the same way on every OS, and is the most reliable — it doesn't depend on which shell or terminal you use, and survives restarts.*
+
+Create/edit a file at `~/.claude/settings.json` (on Windows: `%USERPROFILE%\.claude\settings.json`), creating the `.claude` folder first if it doesn't exist yet. Add this line in the `JSON` -- replace the placeholder with the key you were given:
+
+```json
+{ "env": {
+    "ANTHROPIC_API_KEY": "sk-ant-api03-...",
+    "ENABLE_PROMPT_CACHING_1H": "1"
+} }
+```
+
+*Note that we also change caching to 1h, what saves a bit of tokens on the transfers.*
+
+After the training school, simply delete this line from `.claude/settings.json`.
+
+## Environment variable
+
+If you'd rather set an environment variable instead:
+
+::: {.panel-tabset}
+## Windows
+
+```powershell
+setx ANTHROPIC_API_KEY "sk-ant-api03-REPLACE-ME"
+```
+
+::: {.callout-warning}
+This command only takes effect in a **new** terminal window opened after you run it; your current window won't pick it up.
+:::
+
+*Note that env. variable written using `setx` is permanently saved.*
+
+## macOS
+
+```bash
+export ANTHROPIC_API_KEY="sk-ant-api03-REPLACE-ME"
+```
+
+(This assumes the default `zsh` shell.)
+
+Setting the env. var. this way is not permanent and you need to run this in each new terminal session.
+
+## Linux
+
+```bash
+export ANTHROPIC_API_KEY="sk-ant-api03-REPLACE-ME"
+```
+
+(This assumes the default `bash` shell.)
+
+Setting the env. var. this way is not permanent and you need to run this in each new terminal session.
+:::
+
+::::
+
+### First run
+
+Run in your terminal `claude`.
+
+Claude Code will detect the key and ask you to approve it once -- choose **Yes**. This choice is remembered, so you won't be asked again.
+
+::: {.callout-note}
+
+## Verify it worked
+
+Inside Claude Code, run `/status` — it should show that you're authenticating with the API key. If something still looks off, run `claude doctor` for a self-check.
+
+:::
+
+
+::: {.callout-important}
+# Attention
+
+- **Never** share your key or commit it to a repository.
+- The key is time-limited and will stop working after the school.
+- Only models **Claude Sonnet 5** and **Claude Haiku 4.x** are available to you.
+:::
