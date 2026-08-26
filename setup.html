@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Applications – Computer Vision in Archaeology</title>
+<title>Setup Guide – Computer Vision in Archaeology</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -25,6 +25,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -274,7 +309,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">General info</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./applications.html" aria-current="page"> <i class="bi bi-envelope-paper" role="img">
+    <a class="nav-link" href="./applications.html"> <i class="bi bi-envelope-paper" role="img">
 </i> 
 <span class="menu-text">Applications</span></a>
   </li>  
@@ -284,7 +319,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Programme</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./setup.html"> <i class="bi bi-gear" role="img">
+    <a class="nav-link active" href="./setup.html" aria-current="page"> <i class="bi bi-gear" role="img">
 </i> 
 <span class="menu-text">Setup</span></a>
   </li>  
@@ -309,13 +344,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#who-should-apply" id="toc-who-should-apply" class="nav-link active" data-scroll-target="#who-should-apply">Who should apply</a></li>
-  <li><a href="#atrium-tna-scheme" id="toc-atrium-tna-scheme" class="nav-link" data-scroll-target="#atrium-tna-scheme">ATRIUM TNA Scheme</a>
+  <li><a href="#claude-code" id="toc-claude-code" class="nav-link active" data-scroll-target="#claude-code">Claude Code</a>
   <ul class="collapse">
-  <li><a href="#key-dates" id="toc-key-dates" class="nav-link" data-scroll-target="#key-dates">Key dates</a></li>
-  <li><a href="#how-to-apply" id="toc-how-to-apply" class="nav-link" data-scroll-target="#how-to-apply">How to apply</a></li>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
+  <li><a href="#install-claude-code" id="toc-install-claude-code" class="nav-link" data-scroll-target="#install-claude-code">Install Claude Code</a></li>
+  <li><a href="#add-your-api-key" id="toc-add-your-api-key" class="nav-link" data-scroll-target="#add-your-api-key">Add your API key</a></li>
+  <li><a href="#first-run" id="toc-first-run" class="nav-link" data-scroll-target="#first-run">First run</a></li>
   </ul></li>
-  <li><a href="#maia-open-call" id="toc-maia-open-call" class="nav-link" data-scroll-target="#maia-open-call">MAIA Open Call</a></li>
   </ul>
 </nav>
 </nav>
@@ -329,7 +364,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Applications</h1>
+<h1 class="title">Setup Guide</h1>
 </div>
 
 
@@ -346,107 +381,155 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="claude-code" class="level2">
+<h2 class="anchored" data-anchor-id="claude-code">Claude Code</h2>
+<div class="justify">
+<p>During the school you will be granted access to <a href="https://claude.com/product/claude-code">Claude Code</a> to support you in coding. Before the school starts, please install <strong>Claude Code</strong> and configure the API key you will be given by the organisers. This takes about five minutes.</p>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you already use a different coding assistant or have a Claude subscription, you can use your own settings, we do not require you to use this.</p>
+</div>
+</div>
+<section id="requirements" class="level3">
+<h3 class="anchored" data-anchor-id="requirements">Requirements</h3>
+<ul>
+<li><strong>OS:</strong> macOS 13.0+, Windows 10+, or <em>preferably</em> a <strong>Linux</strong> distro of your choice.</li>
+<li><strong>Hardware:</strong> ~4 GB RAM (8 GB is more comfortable), and an internet connection.</li>
+<li><strong>An API key</strong> from the organisers, a string starting with <code>sk-ant-api...</code>. Keep it private — don’t paste it into shared documents or commit it to a git repository.</li>
+</ul>
+</section>
+<section id="install-claude-code" class="level3">
+<h3 class="anchored" data-anchor-id="install-claude-code">Install Claude Code</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">macOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Linux</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Open PowerShell and run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">irm</span> https<span class="op">://</span>claude<span class="op">.</span><span class="fu">ai</span><span class="op">/</span>install<span class="op">.</span><span class="fu">ps1</span> <span class="op">|</span> <span class="fu">iex</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Claude Code runs natively on Windows – no WSL, Node.js, or npm required.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Optional
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Installing <a href="https://gitforwindows.org/" class="external">Git for Windows</a> gives Claude Code a Bash shell to use, which some participants find nicer to work in. It’s entirely optional — without it, Claude Code falls back to PowerShell, which works fine.</p>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Open Terminal and run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://claude.ai/install.sh <span class="kw">|</span> <span class="fu">bash</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>Open a terminal and run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://claude.ai/install.sh <span class="kw">|</span> <span class="fu">bash</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This also applies if you’re using WSL (Windows Subsystem for Linux) — run this inside your WSL terminal.</p>
+</div>
+</div>
+</div>
+<p>Once installed, Claude Code updates itself automatically — no need to repeat this step.<br>
+Official install guide is <a href="https://claude.com/product/claude-code">here</a>.</p>
+</section>
+<section id="add-your-api-key" class="level3">
+<h3 class="anchored" data-anchor-id="add-your-api-key">Add your API key</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Claude settings file</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Environment variable</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p><em>This method works the same way on every OS, and is the most reliable — it doesn’t depend on which shell or terminal you use, and survives restarts.</em></p>
+<p>Create/edit a file at <code>~/.claude/settings.json</code> (on Windows: <code>%USERPROFILE%\.claude\settings.json</code>), creating the <code>.claude</code> folder first if it doesn’t exist yet. Add this line in the <code>JSON</code> – replace the placeholder with the key you were given:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span> <span class="dt">"env"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"ANTHROPIC_API_KEY"</span><span class="fu">:</span> <span class="st">"sk-ant-api03-REPLACE-ME"</span> <span class="fu">}</span> <span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>After the training school, simply delete this line from <code>.claude/settings.json</code>.</p>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p>If you’d rather set an environment variable instead:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">macOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Linux</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>setx ANTHROPIC_API_KEY <span class="st">"sk-ant-api03-REPLACE-ME"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This command only takes effect in a <strong>new</strong> terminal window opened after you run it; your current window won’t pick it up.</p>
+</div>
+</div>
+<p><em>Note that env. variable written using <code>setx</code> is permanently saved.</em></p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">ANTHROPIC_API_KEY</span><span class="op">=</span><span class="st">"sk-ant-api03-REPLACE-ME"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>(This assumes the default <code>zsh</code> shell.)</p>
+<p>Setting the env. var. this way is not permanent and you need to run this in each new terminal session.</p>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">ANTHROPIC_API_KEY</span><span class="op">=</span><span class="st">"sk-ant-api03-REPLACE-ME"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>(This assumes the default <code>bash</code> shell.)</p>
+<p>Setting the env. var. this way is not permanent and you need to run this in each new terminal session.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="first-run" class="level3">
+<h3 class="anchored" data-anchor-id="first-run">First run</h3>
+<p>Run in your terminal <code>claude</code>.</p>
+<p>Claude Code will detect the key and ask you to approve it once – choose <strong>Yes</strong>. This choice is remembered, so you won’t be asked again.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Verify it worked
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Inside Claude Code, run <code>/status</code> — it should show that you’re authenticating with the API key. If something still looks off, run <code>claude doctor</code> for a self-check.</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Important
+<span class="screen-reader-only">Important</span>Attention
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Both <strong>ATRIUM</strong> and <strong>MAIA</strong> calls for applications are closed.</li>
-<li>There were over 80 applications to the training school.</li>
-<li>All applicants were notified whether they were successful by the end of July.</li>
+<li><strong>Never</strong> share your key or commit it to a repository.</li>
+<li>The key is time-limited and will stop working after the school.</li>
+<li>Only models <strong>Claude Sonnet 5</strong> and <strong>Claude Haiku 4.x</strong> are available to you.</li>
 </ul>
-</div>
-</div>
-<div class="justify">
-<p>There are two options:</p>
-<ul>
-<li>apply via a TNA scheme of the <a href="https://atrium-research.eu/" class="external"><strong>ATRIUM</strong></a> project,</li>
-<li>apply via an open call of <a href="https://www.maiacost.eu/" class="external"><strong>MAIA</strong></a> COST action.</li>
-</ul>
-</div>
-<section id="who-should-apply" class="level2">
-<h2 class="anchored" data-anchor-id="who-should-apply">Who should apply</h2>
-<div class="justify">
-<p>We welcome applications from early-career researchers and students who are enthusiastic about exploring the potential of computer vision and machine learning in archaeological research. This school will focus on the practical application of image analysis techniques to archaeological image data, from dataset preparation and model training to evaluation and emerging methods such as vision-language models.</p>
-<p>While applicants with prior experience in Python and/or machine learning are encouraged to apply, the first day of the training will be dedicated to the fundamentals of Python for image analysis tasks. Participants should have basic experience with any programming or markup language (e.g.&nbsp;HTML, R, Python or similar) and a general comfort with working in digital environments. No prior experience with Python or machine learning is strictly required, but curiosity and a willingness to engage with technical material are essential.</p>
-</div>
-</section>
-<section id="atrium-tna-scheme" class="level2">
-<h2 class="anchored" data-anchor-id="atrium-tna-scheme">ATRIUM TNA Scheme</h2>
-<p>More details about the transnational access scheme (TNA) grants can be found on the <a href="https://atrium-research.eu/travel-grants/" class="external">ATRIUM Project website</a>.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Only applicants with institutional affiliation <strong>outside of the Czech Republic</strong> are eligible to receive funding from ATRIUM project due to the <em>trans-national</em> nature of the access to the infrastructure provided by the school.</p>
-</div>
-</div>
-<section id="key-dates" class="level3">
-<h3 class="anchored" data-anchor-id="key-dates">Key dates</h3>
-<table class="caption-top table">
-<tbody>
-<tr class="odd">
-<td>March 2026</td>
-<td>Call for participants opens</td>
-</tr>
-<tr class="even">
-<td><strong>31 May 2026</strong></td>
-<td><strong>Deadline for applications</strong></td>
-</tr>
-<tr class="odd">
-<td>End of July 2026</td>
-<td>Acceptance notifications sent</td>
-</tr>
-<tr class="even">
-<td><strong>14–18 September 2026</strong></td>
-<td><strong>Training school</strong></td>
-</tr>
-<tr class="odd">
-<td>mid-October 2026 (?)</td>
-<td>Deadline for submission of reports</td>
-</tr>
-<tr class="even">
-<td>end of November 2026</td>
-<td>Grants paid before this date</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="how-to-apply" class="level3">
-<h3 class="anchored" data-anchor-id="how-to-apply">How to apply</h3>
-<p>Submit your applications through an <a href="https://docs.google.com/forms/d/e/1FAIpQLSctI5Dw7VhUmVKQxSj7lPwGWCvEKU3oI5YlRi0Y1MihDKTXGg/viewform" class="external"><strong>online form</strong></a>. On the 4th page of the application (<em>TNA Scheme</em>), choose <strong>‘Summer School Access’</strong> and <strong>‘Archaeological Information System of the Czech Republic, Institute of Archaeology of the Czech Academy of Sciences, Brno – AIS CR (ARUB)’</strong> as the proposed host organisation. On the next page (<em>Summer School Application</em>) please explain why you believe this training would be valuable for your research and how you intend to integrate these newfound skills into your work.</p>
-<p>More details on how to apply can be found <a href="https://atrium-research.eu/tna-summer-schools/" class="external">here</a>.</p>
-</section>
-</section>
-<section id="maia-open-call" class="level2">
-<h2 class="anchored" data-anchor-id="maia-open-call">MAIA Open Call</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Only members of <strong>MAIA COST Action</strong> are eligible to apply.</p>
 </div>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

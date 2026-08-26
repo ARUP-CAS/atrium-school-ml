@@ -1,5 +1,40 @@
 [
   {
+    "objectID": "info.html",
+    "href": "info.html",
+    "title": "General Information",
+    "section": "",
+    "text": "The school will be held from 14 to 18 September 2026 at the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/) at the address given below:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nTipNote\n\n\n\nPlease note that this is an on-site event only, and remote participation will not be possible."
+  },
+  {
+    "objectID": "info.html#date-and-location",
+    "href": "info.html#date-and-location",
+    "title": "General Information",
+    "section": "",
+    "text": "The school will be held from 14 to 18 September 2026 at the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/) at the address given below:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nTipNote\n\n\n\nPlease note that this is an on-site event only, and remote participation will not be possible."
+  },
+  {
+    "objectID": "info.html#grants",
+    "href": "info.html#grants",
+    "title": "General Information",
+    "section": "Grants",
+    "text": "Grants\nEach participant of the school is eligible to receive a grant to cover travel expenses, housing, and daily subsistence during the meeting. To receive the grant, participants need to:\n\nApply via the official form of the ATRIUM Project (see the Applications section for details).\nParticipate in person, i.e. sign attendance sheets for each training day.\nSubmit a report within a given time frame after the conclusion of the school with details of their participation. Please note that the grant will be disbursed only upon the successful submission of this report."
+  },
+  {
+    "objectID": "info.html#prerequisites",
+    "href": "info.html#prerequisites",
+    "title": "General Information",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nBring your own laptop!\nPlease install Claude Code and configure your API key before arriving — see the Setup page for step-by-step instructions.\nMore prerequisites coming soon…"
+  },
+  {
+    "objectID": "info.html#other-information",
+    "href": "info.html#other-information",
+    "title": "General Information",
+    "section": "Other information",
+    "text": "Other information\n\nTravelling to Brno\nBrno is easily reachable by trains or buses from Prague (approx. a 2 to 2.5-hour journey) and Vienna (approx. a 1.5 to 2-hour journey). Many overnight trains crossing a large part of Europe start or end in Vienna, and we recommend taking these trains as an alternative to flying.\n\n\nAccommodation\nNo accommodation is provided to participants. Please arrange your accommodation in one of many cities hotels or hostels.\n\n\nFood\nThere are several places around the institute, see map above for locations.\n\n\n\n\n\n\n\n\n\n\nplace\ncuisine\nnote\n\n\n\n\nLittle Saigon\nAsian/Vietnamese\nhas vegan/vegetarian options\n\n\nMasný růžek\nCzech\na lot of meaty foods and traditional heavy Czech cuisine\n\n\nBistro Nella\nCzech\nmight have vegetarian option\n\n\nJídelna Kocourek\nCzech\nmight have vegetarian option\n\n\nGrand Kitchen Vlněna\nCzech, International\nmight have vegetarian option\n\n\nBistro Bellavista\nItalian\nmostly does not have vegetarian/vegan options\n\n\nDelitree bistro\nItalian, Czech, Salads\nhas vegetarian options\n\n\nRamen Brno\nJapanese\nmight have vegetarian options\n\n\nLos Capolitos\nMexican\nhes vegetarian option\n\n\nSargam\nNepalese\nhas vegetarian options\n\n\nVeg8Cafe\nVegan\nvegan bistro\n\n\nForky’s Vlněna Foodtruck\nVegan\nvegan streetfood"
+  },
+  {
     "objectID": "programme.html",
     "href": "programme.html",
     "title": "Training school programme",
@@ -26,34 +61,6 @@
     "title": "Training school programme",
     "section": "Social Events",
     "text": "Social Events\n\nIce-breaker on the first evening (Monday)\nWalking meeting on Tuesday evening, a short city tour of Brno\nSocial event on Wednesday evening"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Computer Vision in Archaeology",
-    "section": "",
-    "text": "NoteBasics\n\n\n\nWhen? 14–18 September 2026\nWhere? Brno, Czech Republic\nWhat? Training school on computer vision and machine learning in archaeology\n\n\n\nJoin us for an intensive one-week training school dedicated to computer vision in archaeology, where you will learn how to harness the power of modern machine learning techniques to detect, classify, and analyse archaeological features and artefacts in images. As visual data — from drone surveys and excavation photography to museum collections — continues to grow in volume, the ability to process and interpret it computationally is becoming an increasingly valuable skill in the archaeologist’s toolkit. Our programme guides you from the very foundations of Python programming through to hands-on experience with state-of-the-art object detection and image segmentation models, with dedicated sessions on dataset creation, model training, and evaluation. Participants should have basic experience with any programming or markup language and a general comfort with working in digital environments. No prior experience with machine learning is required, but curiosity and a willingness to engage with technical material are essential.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe training school is part of a trans-national access scheme provided by the ATRIUM Project, hosted by the Archaeological Information System of the Czech Republic (AIS CR) research infrastructure at the Institute of Archaeology, Czech Academy of Sciences, Brno. The school is co-organized by the MAIA COST Action project. MAIA provides funding to several of the school instructors.\nTo apply and learn more about the TNA, visit the ATRIUM TNA Application website."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About the training school",
-    "section": "",
-    "text": "Petr Pajdla  0000-0001-7050-9572\nCzech Academy of Sciences, Institute of Archaeology, Brno\nRonald Harasim\nCzech Academy of Sciences, Institute of Archaeology, Brno\nFilip Hájek  0009-0007-5953-8840\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\nAnastasia Eleftheriadou  0000-0002-8649-3752\nLudwig-Maximilians-Universität München\nAshely Green  0009-0005-4625-801X\nUniversity of Gothenburg\n\n\n\n\n\n\nZuzana Kopáčová\nCzech Academy of Sciences, Institute of Archaeology, Brno\nFinances, administration\nVít Kozák\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\nDavid Spáčil\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\n\nAnd other AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to Zuzana Kopáčová (kopacova [at] arub.cz), and/or Petr Pajdla (pajdla [at] arub.cz)."
-  },
-  {
-    "objectID": "about.html#instructors-organizers",
-    "href": "about.html#instructors-organizers",
-    "title": "About the training school",
-    "section": "",
-    "text": "Petr Pajdla  0000-0001-7050-9572\nCzech Academy of Sciences, Institute of Archaeology, Brno\nRonald Harasim\nCzech Academy of Sciences, Institute of Archaeology, Brno\nFilip Hájek  0009-0007-5953-8840\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\nAnastasia Eleftheriadou  0000-0002-8649-3752\nLudwig-Maximilians-Universität München\nAshely Green  0009-0005-4625-801X\nUniversity of Gothenburg\n\n\n\n\n\n\nZuzana Kopáčová\nCzech Academy of Sciences, Institute of Archaeology, Brno\nFinances, administration\nVít Kozák\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\nDavid Spáčil\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\n\nAnd other AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to Zuzana Kopáčová (kopacova [at] arub.cz), and/or Petr Pajdla (pajdla [at] arub.cz)."
-  },
-  {
-    "objectID": "about.html#organisations",
-    "href": "about.html#organisations",
-    "title": "About the training school",
-    "section": "Organisations",
-    "text": "Organisations\n\nATRIUM\n\nThe training school is organised as transnational access provision in the ATRIUM Project (Advancing Frontier Research in the Arts and Humanities) funded by the Horizon Europe research and innovation actions programme under grant agreement No. 101132163. ATRIUM project covers the organizational costs of the school and participator grants.\n\n\n\n\nMAIA\n\nMAIA (Managing Artificial Intelligence in Archaeology) is a COST Action (CA23141) funded by the European Union co-organizing the training school. MAIA COST Action covers travel and subsistence costs of two MAIA instructors.\n\n\n\n\nAIS CR\n\nThe Archaeological Information System of the Czech Republic (AIS CR) is a research infrastructure integrating digital resources and services on archaeology in the Czech Republic, and as such is one of many data providers in the ARIADNE Research Infrastructure. AIS CR is jointly operated by the Institutes of Archaeology of the Czech Academy of Sciences in Brno (IAB) and Prague (IAP). AIS CR/IAB provides the infrastructure and the venue for the training school."
   },
   {
     "objectID": "applications.html",
@@ -84,38 +91,45 @@
     "text": "MAIA Open Call\n\n\n\n\n\n\nNoteNote\n\n\n\nOnly members of MAIA COST Action are eligible to apply."
   },
   {
-    "objectID": "info.html",
-    "href": "info.html",
-    "title": "General Information",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About the training school",
     "section": "",
-    "text": "The school will be held from 14 to 18 September 2026 at the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/) at the address given below:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nTipNote\n\n\n\nPlease note that this is an on-site event only, and remote participation will not be possible."
+    "text": "Petr Pajdla  0000-0001-7050-9572\nCzech Academy of Sciences, Institute of Archaeology, Brno\nRonald Harasim\nCzech Academy of Sciences, Institute of Archaeology, Brno\nFilip Hájek  0009-0007-5953-8840\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\nAnastasia Eleftheriadou  0000-0002-8649-3752\nLudwig-Maximilians-Universität München\nAshely Green  0009-0005-4625-801X\nUniversity of Gothenburg\n\n\n\n\n\n\nZuzana Kopáčová\nCzech Academy of Sciences, Institute of Archaeology, Brno\nFinances, administration\nVít Kozák\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\nDavid Spáčil\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\n\nAnd other AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to Zuzana Kopáčová (kopacova [at] arub.cz), and/or Petr Pajdla (pajdla [at] arub.cz)."
   },
   {
-    "objectID": "info.html#date-and-location",
-    "href": "info.html#date-and-location",
-    "title": "General Information",
+    "objectID": "about.html#instructors-organizers",
+    "href": "about.html#instructors-organizers",
+    "title": "About the training school",
     "section": "",
-    "text": "The school will be held from 14 to 18 September 2026 at the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/) at the address given below:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nTipNote\n\n\n\nPlease note that this is an on-site event only, and remote participation will not be possible."
+    "text": "Petr Pajdla  0000-0001-7050-9572\nCzech Academy of Sciences, Institute of Archaeology, Brno\nRonald Harasim\nCzech Academy of Sciences, Institute of Archaeology, Brno\nFilip Hájek  0009-0007-5953-8840\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\nAnastasia Eleftheriadou  0000-0002-8649-3752\nLudwig-Maximilians-Universität München\nAshely Green  0009-0005-4625-801X\nUniversity of Gothenburg\n\n\n\n\n\n\nZuzana Kopáčová\nCzech Academy of Sciences, Institute of Archaeology, Brno\nFinances, administration\nVít Kozák\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\nDavid Spáčil\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\n\nAnd other AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to Zuzana Kopáčová (kopacova [at] arub.cz), and/or Petr Pajdla (pajdla [at] arub.cz)."
   },
   {
-    "objectID": "info.html#grants",
-    "href": "info.html#grants",
-    "title": "General Information",
-    "section": "Grants",
-    "text": "Grants\nEach participant of the school is eligible to receive a grant to cover travel expenses, housing, and daily subsistence during the meeting. To receive the grant, participants need to:\n\nApply via the official form of the ATRIUM Project (see the Applications section for details).\nParticipate in person, i.e. sign attendance sheets for each training day.\nSubmit a report within a given time frame after the conclusion of the school with details of their participation. Please note that the grant will be disbursed only upon the successful submission of this report."
+    "objectID": "about.html#organisations",
+    "href": "about.html#organisations",
+    "title": "About the training school",
+    "section": "Organisations",
+    "text": "Organisations\n\nATRIUM\n\nThe training school is organised as transnational access provision in the ATRIUM Project (Advancing Frontier Research in the Arts and Humanities) funded by the Horizon Europe research and innovation actions programme under grant agreement No. 101132163. ATRIUM project covers the organizational costs of the school and participator grants.\n\n\n\n\nMAIA\n\nMAIA (Managing Artificial Intelligence in Archaeology) is a COST Action (CA23141) funded by the European Union co-organizing the training school. MAIA COST Action covers travel and subsistence costs of two MAIA instructors.\n\n\n\n\nAIS CR\n\nThe Archaeological Information System of the Czech Republic (AIS CR) is a research infrastructure integrating digital resources and services on archaeology in the Czech Republic, and as such is one of many data providers in the ARIADNE Research Infrastructure. AIS CR is jointly operated by the Institutes of Archaeology of the Czech Academy of Sciences in Brno (IAB) and Prague (IAP). AIS CR/IAB provides the infrastructure and the venue for the training school."
   },
   {
-    "objectID": "info.html#prerequisites",
-    "href": "info.html#prerequisites",
-    "title": "General Information",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nBring your own laptop!\nMore prerequisites coming soon…"
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Computer Vision in Archaeology",
+    "section": "",
+    "text": "NoteBasics\n\n\n\nWhen? 14–18 September 2026\nWhere? Brno, Czech Republic\nWhat? Training school on computer vision and machine learning in archaeology\n\n\n\nJoin us for an intensive one-week training school dedicated to computer vision in archaeology, where you will learn how to harness the power of modern machine learning techniques to detect, classify, and analyse archaeological features and artefacts in images. As visual data — from drone surveys and excavation photography to museum collections — continues to grow in volume, the ability to process and interpret it computationally is becoming an increasingly valuable skill in the archaeologist’s toolkit. Our programme guides you from the very foundations of Python programming through to hands-on experience with state-of-the-art object detection and image segmentation models, with dedicated sessions on dataset creation, model training, and evaluation. Participants should have basic experience with any programming or markup language and a general comfort with working in digital environments. No prior experience with machine learning is required, but curiosity and a willingness to engage with technical material are essential.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe training school is part of a trans-national access scheme provided by the ATRIUM Project, hosted by the Archaeological Information System of the Czech Republic (AIS CR) research infrastructure at the Institute of Archaeology, Czech Academy of Sciences, Brno. The school is co-organized by the MAIA COST Action project. MAIA provides funding to several of the school instructors.\nTo apply and learn more about the TNA, visit the ATRIUM TNA Application website."
   },
   {
-    "objectID": "info.html#other-information",
-    "href": "info.html#other-information",
-    "title": "General Information",
-    "section": "Other information",
-    "text": "Other information\n\nTravelling to Brno\nBrno is easily reachable by trains or buses from Prague (approx. a 2 to 2.5-hour journey) and Vienna (approx. a 1.5 to 2-hour journey). Many overnight trains crossing a large part of Europe start or end in Vienna, and we recommend taking these trains as an alternative to flying.\n\n\nAccommodation\nNo accommodation is provided to participants. Please arrange your accommodation in one of many cities hotels or hostels.\n\n\nFood\nThere are several places around the institute, see map above for locations.\n\n\n\n\n\n\n\n\n\n\nplace\ncuisine\nnote\n\n\n\n\nLittle Saigon\nAsian/Vietnamese\nhas vegan/vegetarian options\n\n\nMasný růžek\nCzech\na lot of meaty foods and traditional heavy Czech cuisine\n\n\nBistro Nella\nCzech\nmight have vegetarian option\n\n\nJídelna Kocourek\nCzech\nmight have vegetarian option\n\n\nGrand Kitchen Vlněna\nCzech, International\nmight have vegetarian option\n\n\nBistro Bellavista\nItalian\nmostly does not have vegetarian/vegan options\n\n\nDelitree bistro\nItalian, Czech, Salads\nhas vegetarian options\n\n\nRamen Brno\nJapanese\nmight have vegetarian options\n\n\nLos Capolitos\nMexican\nhes vegetarian option\n\n\nSargam\nNepalese\nhas vegetarian options\n\n\nVeg8Cafe\nVegan\nvegan bistro\n\n\nForky’s Vlněna Foodtruck\nVegan\nvegan streetfood"
+    "objectID": "setup.html",
+    "href": "setup.html",
+    "title": "Setup Guide",
+    "section": "",
+    "text": "During the school you will be granted access to Claude Code to support you in coding. Before the school starts, please install Claude Code and configure the API key you will be given by the organisers. This takes about five minutes.\n\n\n\n\n\n\n\nNote\n\n\n\nIf you already use a different coding assistant or have a Claude subscription, you can use your own settings, we do not require you to use this.\n\n\n\n\n\nOS: macOS 13.0+, Windows 10+, or preferably a Linux distro of your choice.\nHardware: ~4 GB RAM (8 GB is more comfortable), and an internet connection.\nAn API key from the organisers, a string starting with sk-ant-api.... Keep it private — don’t paste it into shared documents or commit it to a git repository.\n\n\n\n\n\nWindowsmacOSLinux\n\n\nOpen PowerShell and run:\nirm https://claude.ai/install.ps1 | iex\nClaude Code runs natively on Windows – no WSL, Node.js, or npm required.\n\n\n\n\n\n\nNoteOptional\n\n\n\nInstalling Git for Windows gives Claude Code a Bash shell to use, which some participants find nicer to work in. It’s entirely optional — without it, Claude Code falls back to PowerShell, which works fine.\n\n\n\n\nOpen Terminal and run:\ncurl -fsSL https://claude.ai/install.sh | bash\n\n\nOpen a terminal and run:\ncurl -fsSL https://claude.ai/install.sh | bash\nThis also applies if you’re using WSL (Windows Subsystem for Linux) — run this inside your WSL terminal.\n\n\n\nOnce installed, Claude Code updates itself automatically — no need to repeat this step.\nOfficial install guide is here.\n\n\n\n\nClaude settings fileEnvironment variable\n\n\nThis method works the same way on every OS, and is the most reliable — it doesn’t depend on which shell or terminal you use, and survives restarts.\nCreate/edit a file at ~/.claude/settings.json (on Windows: %USERPROFILE%\\.claude\\settings.json), creating the .claude folder first if it doesn’t exist yet. Add this line in the JSON – replace the placeholder with the key you were given:\n{ \"env\": { \"ANTHROPIC_API_KEY\": \"sk-ant-api03-REPLACE-ME\" } }\nAfter the training school, simply delete this line from .claude/settings.json.\n\n\nIf you’d rather set an environment variable instead:\n\nWindowsmacOSLinux\n\n\nsetx ANTHROPIC_API_KEY \"sk-ant-api03-REPLACE-ME\"\n\n\n\n\n\n\nWarning\n\n\n\nThis command only takes effect in a new terminal window opened after you run it; your current window won’t pick it up.\n\n\nNote that env. variable written using setx is permanently saved.\n\n\nexport ANTHROPIC_API_KEY=\"sk-ant-api03-REPLACE-ME\"\n(This assumes the default zsh shell.)\nSetting the env. var. this way is not permanent and you need to run this in each new terminal session.\n\n\nexport ANTHROPIC_API_KEY=\"sk-ant-api03-REPLACE-ME\"\n(This assumes the default bash shell.)\nSetting the env. var. this way is not permanent and you need to run this in each new terminal session.\n\n\n\n\n\n\n\n\n\nRun in your terminal claude.\nClaude Code will detect the key and ask you to approve it once – choose Yes. This choice is remembered, so you won’t be asked again.\n\n\n\n\n\n\nNoteVerify it worked\n\n\n\nInside Claude Code, run /status — it should show that you’re authenticating with the API key. If something still looks off, run claude doctor for a self-check.\n\n\n\n\n\n\n\n\nImportantAttention\n\n\n\n\nNever share your key or commit it to a repository.\nThe key is time-limited and will stop working after the school.\nOnly models Claude Sonnet 5 and Claude Haiku 4.x are available to you."
+  },
+  {
+    "objectID": "setup.html#claude-code",
+    "href": "setup.html#claude-code",
+    "title": "Setup Guide",
+    "section": "",
+    "text": "During the school you will be granted access to Claude Code to support you in coding. Before the school starts, please install Claude Code and configure the API key you will be given by the organisers. This takes about five minutes.\n\n\n\n\n\n\n\nNote\n\n\n\nIf you already use a different coding assistant or have a Claude subscription, you can use your own settings, we do not require you to use this.\n\n\n\n\n\nOS: macOS 13.0+, Windows 10+, or preferably a Linux distro of your choice.\nHardware: ~4 GB RAM (8 GB is more comfortable), and an internet connection.\nAn API key from the organisers, a string starting with sk-ant-api.... Keep it private — don’t paste it into shared documents or commit it to a git repository.\n\n\n\n\n\nWindowsmacOSLinux\n\n\nOpen PowerShell and run:\nirm https://claude.ai/install.ps1 | iex\nClaude Code runs natively on Windows – no WSL, Node.js, or npm required.\n\n\n\n\n\n\nNoteOptional\n\n\n\nInstalling Git for Windows gives Claude Code a Bash shell to use, which some participants find nicer to work in. It’s entirely optional — without it, Claude Code falls back to PowerShell, which works fine.\n\n\n\n\nOpen Terminal and run:\ncurl -fsSL https://claude.ai/install.sh | bash\n\n\nOpen a terminal and run:\ncurl -fsSL https://claude.ai/install.sh | bash\nThis also applies if you’re using WSL (Windows Subsystem for Linux) — run this inside your WSL terminal.\n\n\n\nOnce installed, Claude Code updates itself automatically — no need to repeat this step.\nOfficial install guide is here.\n\n\n\n\nClaude settings fileEnvironment variable\n\n\nThis method works the same way on every OS, and is the most reliable — it doesn’t depend on which shell or terminal you use, and survives restarts.\nCreate/edit a file at ~/.claude/settings.json (on Windows: %USERPROFILE%\\.claude\\settings.json), creating the .claude folder first if it doesn’t exist yet. Add this line in the JSON – replace the placeholder with the key you were given:\n{ \"env\": { \"ANTHROPIC_API_KEY\": \"sk-ant-api03-REPLACE-ME\" } }\nAfter the training school, simply delete this line from .claude/settings.json.\n\n\nIf you’d rather set an environment variable instead:\n\nWindowsmacOSLinux\n\n\nsetx ANTHROPIC_API_KEY \"sk-ant-api03-REPLACE-ME\"\n\n\n\n\n\n\nWarning\n\n\n\nThis command only takes effect in a new terminal window opened after you run it; your current window won’t pick it up.\n\n\nNote that env. variable written using setx is permanently saved.\n\n\nexport ANTHROPIC_API_KEY=\"sk-ant-api03-REPLACE-ME\"\n(This assumes the default zsh shell.)\nSetting the env. var. this way is not permanent and you need to run this in each new terminal session.\n\n\nexport ANTHROPIC_API_KEY=\"sk-ant-api03-REPLACE-ME\"\n(This assumes the default bash shell.)\nSetting the env. var. this way is not permanent and you need to run this in each new terminal session.\n\n\n\n\n\n\n\n\n\nRun in your terminal claude.\nClaude Code will detect the key and ask you to approve it once – choose Yes. This choice is remembered, so you won’t be asked again.\n\n\n\n\n\n\nNoteVerify it worked\n\n\n\nInside Claude Code, run /status — it should show that you’re authenticating with the API key. If something still looks off, run claude doctor for a self-check.\n\n\n\n\n\n\n\n\nImportantAttention\n\n\n\n\nNever share your key or commit it to a repository.\nThe key is time-limited and will stop working after the school.\nOnly models Claude Sonnet 5 and Claude Haiku 4.x are available to you."
   }
 ]
