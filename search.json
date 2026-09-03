@@ -126,10 +126,31 @@
     "text": "ImportantPre-school survey\n\n\n\nIf you are among selected participants, please fill in a pre-school survey here."
   },
   {
+    "objectID": "setup.html#python",
+    "href": "setup.html#python",
+    "title": "Setup Guide",
+    "section": "Python",
+    "text": "Python\nInstall Python (3.10+), follow guidance on the official website or use your system’s package manager.\n\nJupyterLab\nInstall JupyterLab with pip:\npip install jupyterlab"
+  },
+  {
+    "objectID": "setup.html#git",
+    "href": "setup.html#git",
+    "title": "Setup Guide",
+    "section": "Git",
+    "text": "Git\nInstall Git, on Windows foolow this guide, on MacOS this one and on Linux you probably already have it and presumably know what you are doing."
+  },
+  {
     "objectID": "setup.html#claude-code",
     "href": "setup.html#claude-code",
     "title": "Setup Guide",
     "section": "Claude Code",
     "text": "Claude Code\n\nDuring the school you will be granted access to Claude Code to support you in coding. Before the school starts, please install Claude Code and configure the API key you will be given by the organisers. This takes about five minutes.\n\n\n\n\n\n\n\nNote\n\n\n\nIf you already use a different coding assistant or have a Claude subscription, you can use your own settings, we do not require you to use this.\n\n\n\nInstall Claude Code\n\nWindowsmacOSLinux\n\n\nOpen PowerShell and run:\nirm https://claude.ai/install.ps1 | iex\nClaude Code runs natively on Windows – no WSL, Node.js, or npm required.\n\n\n\n\n\n\nNoteOptional\n\n\n\nInstalling Git for Windows gives Claude Code a Bash shell to use, which some participants find nicer to work in. It’s entirely optional — without it, Claude Code falls back to PowerShell, which works fine.\n\n\n\n\nOpen Terminal and run:\ncurl -fsSL https://claude.ai/install.sh | bash\n\n\nOpen a terminal and run:\ncurl -fsSL https://claude.ai/install.sh | bash\nThis also applies if you’re using WSL (Windows Subsystem for Linux) — run this inside your WSL terminal.\n\n\n\nOnce installed, Claude Code updates itself automatically — no need to repeat this step.\nOfficial install guide is here.\n\n\nAdd your API key\n\nClaude settings fileEnvironment variable\n\n\nThis method works the same way on every OS, and is the most reliable — it doesn’t depend on which shell or terminal you use, and survives restarts.\nCreate/edit a file at ~/.claude/settings.json (on Windows: %USERPROFILE%\\.claude\\settings.json), creating the .claude folder first if it doesn’t exist yet. Add this line in the JSON – replace the placeholder with the key you were given:\n{ \"env\": {\n    \"ANTHROPIC_API_KEY\": \"sk-ant-api03-...\",\n    \"ENABLE_PROMPT_CACHING_1H\": \"1\"\n} }\nNote that we also change caching to 1h, what saves a bit of tokens on the transfers.\nAfter the training school, simply delete this line from .claude/settings.json.\n\n\nIf you’d rather set an environment variable instead:\n\nWindowsmacOSLinux\n\n\nsetx ANTHROPIC_API_KEY \"sk-ant-api03-REPLACE-ME\"\n\n\n\n\n\n\nWarning\n\n\n\nThis command only takes effect in a new terminal window opened after you run it; your current window won’t pick it up.\n\n\nNote that env. variable written using setx is permanently saved.\n\n\nexport ANTHROPIC_API_KEY=\"sk-ant-api03-REPLACE-ME\"\n(This assumes the default zsh shell.)\nSetting the env. var. this way is not permanent and you need to run this in each new terminal session.\n\n\nexport ANTHROPIC_API_KEY=\"sk-ant-api03-REPLACE-ME\"\n(This assumes the default bash shell.)\nSetting the env. var. this way is not permanent and you need to run this in each new terminal session.\n\n\n\n\n\n\n\n\nFirst run\nRun in your terminal claude.\nClaude Code will detect the key and ask you to approve it once – choose Yes. This choice is remembered, so you won’t be asked again.\n\n\n\n\n\n\nNoteVerify it worked\n\n\n\nInside Claude Code, run /status — it should show that you’re authenticating with the API key. If something still looks off, run claude doctor for a self-check.\n\n\n\n\n\n\n\n\nImportantAttention\n\n\n\n\nNever share your key or commit it to a repository.\nThe key is time-limited and will stop working after the school.\nOnly models Claude Sonnet 5 and Claude Haiku 4.x are available to you."
+  },
+  {
+    "objectID": "setup.html#docker-or-podman",
+    "href": "setup.html#docker-or-podman",
+    "title": "Setup Guide",
+    "section": "Docker or Podman",
+    "text": "Docker or Podman\nInstall Docker or Podman:\n\nDockerPodman\n\n\nFollow official documentation here. On Windows, Docker is probably easier to install.\n\n\nDocumentation here."
   }
 ]
