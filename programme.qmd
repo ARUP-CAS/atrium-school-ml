@@ -2,6 +2,14 @@
 title: "Training school programme"
 ---
 
+::: {.callout-important}
+
+## Pre-school survey
+
+If you are among selected participants, please **fill in a pre-school survey** [here](https://forms.gle/uBmkg5yMBCt1MSH18){.external}.
+
+:::
+
 The programme is organised by topics and dataset types.
 Each topic builds on the previous one, guiding participants from foundational skills to advanced applications of computer vision in archaeology.
 

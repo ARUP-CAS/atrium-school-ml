@@ -2,6 +2,14 @@
 title: "General Information"
 ---
 
+::: {.callout-important}
+
+## Pre-school survey
+
+If you are among selected participants, please **fill in a pre-school survey** [here](https://forms.gle/uBmkg5yMBCt1MSH18){.external}.
+
+:::
+
 ## Date and location
 
 The school will be held from **14 to 18 September 2026** at the **Institute of Archaeology, Czech Academy of Sciences, Brno** ([https://arub.cz/](https://arub.cz/){.external}) at the address given below:

@@ -13,6 +13,14 @@ subtitle: "Training School"
 
 :::
 
+::: {.callout-important}
+
+## Pre-school survey
+
+If you are among selected participants, please **fill in a pre-school survey** [here](https://forms.gle/uBmkg5yMBCt1MSH18){.external}.
+
+:::
+
 ::: {.justify}
 Join us for an intensive one-week training school dedicated to **computer vision in archaeology**, where you will learn how to harness the power of modern machine learning techniques to detect, classify, and analyse archaeological features and artefacts in images. 
 As visual data — from drone surveys and excavation photography to museum collections — continues to grow in volume, the ability to process and interpret it computationally is becoming an increasingly valuable skill in the archaeologist's toolkit. 

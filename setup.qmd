@@ -1,13 +1,45 @@
 ---
 title: "Setup Guide"
+date: 2026-09-03
 ---
+
+::: {.callout-important}
+
+## Alert!
+
+The instructions might change, please check this page shortly before the school begins. 
+
+:::
+
+
+## Python
+
+Install Python (3.10+), follow guidance on the official [website](https://www.python.org/){.external} or use your system's package manager.
+
+<!-- ### JupyterLab
+
+Install JupyterLab with `pip`:
+
+```python
+pip install jupyterlab
+``` -->
+
+
+## Git
+
+Install Git, on Windows foolow this [guide](https://gitforwindows.org/){.external}, on MacOS this [one](https://git-scm.com/install/mac){.external} and on Linux you probably already have it and presumably know what you are doing.
+
+
+## IDE
+
+Install and use an IDE of your choice, preferably [Zed](https://zed.dev/){.external} or [VSCode](https://code.visualstudio.com/){.external}.
+
 
 ## Claude Code
 
 ::: {.justify}
 During the school you will be granted access to [Claude Code](https://claude.com/product/claude-code) to support you in coding.
-Before the school starts, please install **Claude Code** and configure the API key you will be given by the organisers. 
-This takes about five minutes.
+Before the school starts, please install **Claude Code** and configure the API key you will be given by the organisers, or if using Zed, add the API key there.
 :::
 
 ::: {.callout-note}
@@ -138,3 +170,23 @@ Inside Claude Code, run `/status` — it should show that you're authenticating 
 - The key is time-limited and will stop working after the school.
 - Only models **Claude Sonnet 5** and **Claude Haiku 4.x** are available to you.
 :::
+
+
+## Docker or Podman
+
+Install Docker or Podman:
+
+::: {.panel-tabset}
+## Docker
+
+Follow official documentation [here](https://docs.docker.com/get-started/get-docker/){.external}. On Windows, Docker is probably easier to install.
+
+## Podman
+
+Documentation [here](https://podman.io/){.external}.
+:::
+
+
+## Accounts
+
+You might need a Google account (to access Google Colab) and a [HuggingFace](https://huggingface.co/){.external} account.
