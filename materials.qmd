@@ -1,0 +1,168 @@
+---
+title: "Materials"
+---
+
+Slides, notebooks and datasets used during the school.
+This page grows as the week progresses — check back for updates.
+
+## Three ways to run the notebooks
+
+Every notebook starts with the same setup cell. It works out where it is running,
+fetches the repository if it has to, installs only what is missing, and puts the
+caches somewhere sensible. **You do not have to edit anything to switch platforms.**
+
+:::: {.panel-tabset}
+
+## Google Colab
+
+Nothing to install. Click the *Open in Colab* badge on a notebook below, then run
+the first cell — it clones this repository into the session for you.
+
+Colab wipes its disk when the runtime is recycled, so model weights are
+re-downloaded in a new session. To keep them, change the last line of the setup
+cell to:
+
+```python
+setup("torch", "transformers", drive=True)
+```
+
+and approve the Google Drive prompt. The caches then live in `MyDrive/atrium-school`.
+
+::: {.callout-note}
+The restricted datasets (satellite, rock art) are mounted on the school
+JupyterHub and are not downloadable. Those case studies need the hub; everything
+else runs anywhere.
+:::
+
+## School JupyterHub
+
+Nothing to install, and nothing to spawn. We will give you a URL on the first
+morning; open it and you are in JupyterLab with the server already running and
+this repository already there.
+
+Open `materials/` in the file browser on the left and double-click the notebook
+you need. Run the first cell as usual — on the hub it finds everything in place
+and installs nothing.
+
+::: {.callout-tip}
+## Your work is saved, the machine is not
+Your home directory persists, so notebooks you edit and files you save are still
+there tomorrow. The server itself may be restarted between sessions; if a
+notebook stops responding, *Kernel → Restart Kernel* and re-run from the top.
+:::
+
+::: {.callout-note}
+If the URL asks you to choose a server configuration, or you land somewhere that
+looks nothing like the above, tell an instructor — do not guess.
+:::
+
+::: {.content-hidden}
+```
+ORGANISERS — this block is stripped from the rendered page.
+
+https://docs.cerit.io/en/docs/web-apps/jupyterhub
+
+Image      Pytorch 2.4.1  — NOT "NVIDIA Pytorch", which is the CUDA/NGC
+           build and is far larger than we need.
+CPU        2 cores        (4 for the Thursday satellite session)
+Memory     8 GB           (16 GB for Thursday)
+GPU        none           — everything this week runs on CPU in seconds
+Home       persistent, THE SAME directory on every spawn. Only /home/jovyan
+           survives a respawn: `pip install --user` puts packages in
+           ~/.local and model weights cache in ~/.cache/huggingface, both
+           inside it. A fresh home each spawn means every participant
+           re-downloads ~600 MB of CLIP weights in front of the room.
+
+Prepare each home once, before the school:
+  git clone --depth 1 https://github.com/ARUP-CAS/atrium-school-ml.git
+  cd atrium-school-ml && python -m pip install --user -r requirements.txt
+  python -c "from transformers import CLIPModel, CLIPProcessor; \
+    CLIPModel.from_pretrained('openai/clip-vit-base-patch32'); \
+    CLIPProcessor.from_pretrained('openai/clip-vit-base-patch32')"
+The last line warms ~/.cache/huggingface so Monday starts instantly.
+
+Restricted data (satellite, rock art) is mounted read-only at
+/home/jovyan/shared/<name> — the paths in case-studies/datasets.yml.
+Mount it before Thursday; get_dataset() fails with a clear message if it
+is missing, but that message is not a substitute for the data.
+
+If participants ever do have to spawn their own server, the settings above
+are what they must choose — the wrong image or a new home directory is the
+one failure mode that eats a session.
+```
+:::
+
+## Your own machine
+
+Follow the [setup guide](setup.qmd), then start Jupyter (or open the notebook in
+your IDE) anywhere inside the clone:
+
+```bash
+git clone --depth 1 https://github.com/ARUP-CAS/atrium-school-ml.git
+cd atrium-school-ml
+python -m venv .venv && source .venv/bin/activate   # .venv\Scripts\activate on Windows
+pip install -r requirements.txt \
+    --index-url https://download.pytorch.org/whl/cpu \
+    --extra-index-url https://pypi.org/simple
+```
+
+The setup cell finds the repository around it and installs nothing further.
+
+::::
+
+::: {.callout-tip}
+## Datasets are not in the repository
+They are too large, and some are not redistributable. Every notebook fetches its
+data the same way, and caches it so it is downloaded only once:
+
+```python
+from atrium_data import get_dataset
+path = get_dataset("coins")
+```
+
+Where each dataset actually lives is recorded in
+[`case-studies/datasets.yml`](https://github.com/ARUP-CAS/atrium-school-ml/blob/main/case-studies/datasets.yml){.external}.
+:::
+
+::: {.callout-important}
+## Work on a copy
+Copy a notebook before you edit it (`cp intro.ipynb my-intro.ipynb`). We will push
+updates during the week, and `git pull` on a notebook you have changed produces a
+merge conflict in raw JSON that nobody enjoys resolving.
+:::
+
+## Monday — Kick-off & Python for CV
+
+- [**Introduction to computer vision**](materials/intro.qmd) — 90 min. What computer vision is,
+  the family of tasks, discriminative vs. generative models, a live zero-shot demo with CLIP,
+  and three rounds of group discussion.
+- [**CLIP zero-shot classification**](materials/clip_zero_shot.ipynb) — the notebook behind
+  the demo. Classifying artefact photographs with no training and no annotation, and three
+  ways it misleads you.
+  [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ARUP-CAS/atrium-school-ml/blob/main/materials/clip_zero_shot.ipynb){.external}
+
+## Tuesday — Artefacts
+
+Classification and detection of artefact types from photographs.
+*Notebooks to follow.*
+
+## Wednesday — Microscopic use-wear
+
+Segmentation of use-wear traces in microscopic images.
+*Notebooks to follow.*
+
+## Thursday — Satellite imagery & rock art
+
+Object detection on remote-sensing data.
+*Notebooks to follow.*
+
+## Friday — Coins
+
+Combining methods, and vision-language models.
+*Notebooks to follow.*
+
+::: {.callout-note}
+## Reading
+The [MAIA COST Action Zotero library](https://www.zotero.org/groups/5991067/maia_managing_ai_in_archaeology/library){.external}
+is an open, shared bibliography on AI in archaeology. Most examples used in the slides come from there.
+:::

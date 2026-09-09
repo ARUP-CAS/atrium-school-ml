@@ -66,3 +66,21 @@ rsconnect/
 /reports/*_comments.pdf
 
 **/*.quarto_ipynb
+
+# Pre-school survey: raw responses stay local, only aggregates are committed
+survey/*
+!survey/README.md
+!survey/aggregate.R
+!survey/summary/
+survey/raw/
+
+# Local Python environment for the CLIP notebook (see materials/requirements.txt)
+.venv/
+
+# Case-study data: never committed. See case-studies/datasets.yml for where it
+# actually lives, and case-studies/atrium_data.py for how notebooks fetch it.
+case-studies/**/data/
+.cache/
+
+__pycache__/
+*.pyc

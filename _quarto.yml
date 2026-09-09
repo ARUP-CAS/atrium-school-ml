@@ -3,6 +3,12 @@ execute:
 
 project:
   type: website
+  # Explicit whitelist: without it Quarto also renders every README.md in
+  # case-studies/ as a website page.
+  render:
+    - "*.qmd"
+    - "materials/*.ipynb"
+    - "case-studies/**/*.ipynb"
 
 website:
   title: "Computer Vision in Archaeology"
@@ -27,9 +33,9 @@ website:
       - href: setup.qmd
         text: Setup
         icon: gear
-      # - href: materials.qmd
-      #   text: Materials
-      #   icon: book
+      - href: materials.qmd
+        text: Materials
+        icon: book
       # - href: report.qmd
       #   text: Recap
       #   icon: lightbulb

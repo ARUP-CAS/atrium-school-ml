@@ -1,0 +1,22 @@
+# Python environment for the training-school notebooks.
+#
+#   python3 -m venv .venv
+#   .venv/bin/python -m pip install -r requirements.txt \
+#       --index-url https://download.pytorch.org/whl/cpu \
+#       --extra-index-url https://pypi.org/simple
+#
+# The PyTorch CPU index matters: the default PyPI wheel bundles the CUDA
+# runtime (~2.5 GB) even on a machine with no NVIDIA card. The CPU wheel
+# installs in well under a minute.
+#
+# Verified on Fedora 44, Python 3.14.7, CPU only.
+
+torch>=2.4
+transformers>=4.40
+pillow
+matplotlib
+requests
+pyyaml          # reads case-studies/datasets.yml
+
+# Only if you want to run the notebook locally rather than on the hub:
+jupyterlab

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="340" viewBox="0 0 1150 340" role="img" aria-label="Same image: what a specialist sees vs. what the computer receives">
+  <defs>
+    <pattern id="d" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="16" height="16" fill="#f2f4f7"/>
+      <line x1="0" y1="0" x2="0" y2="16" stroke="#dfe3e8" stroke-width="6"/>
+    </pattern>
+  </defs>
+  <rect width="1150" height="340" fill="url(#d)"/>
+  <rect x="4" y="4" width="1142" height="332" fill="none" stroke="#2c7be5" stroke-width="3" stroke-dasharray="14 10"/>
+  <text x="575" y="130" font-family="Alegreya Sans, Helvetica, sans-serif" font-size="26" fill="#2c7be5" text-anchor="middle" font-weight="700" letter-spacing="1.5">PLACEHOLDER</text>
+  <text x="575" y="156" font-family="Alegreya Sans, Helvetica, sans-serif" font-size="20" fill="#5a6572" text-anchor="middle">Same image: what a specialist sees vs. what the computer receives</text>
+</svg>

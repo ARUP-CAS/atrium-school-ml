@@ -1,0 +1,83 @@
+# Where each dataset lives.
+#
+# This is the ONLY file that changes when a dataset moves, grows, or gains a DOI.
+# Notebooks always say `get_dataset("<name>")` and never care about the answer.
+#
+# source.kind:
+#   repo   — a folder committed in this repository (small, public data only)
+#   url    — a .zip / .tar.gz fetched once and cached in the persistent home
+#   hub    — a directory already mounted on the JupyterHub
+#   zenodo — a DOI, resolved to its files (use this once a dataset is archived)
+#
+# access:
+#   public     — anyone can fetch it
+#   restricted — not redistributable; `note` tells the participant what to do
+
+demo:
+  title: Demo images for the CLIP zero-shot session
+  day: Monday
+  instructor: Petr Pajdla
+  licence: CC BY-SA 4.0
+  access: public
+  source:
+    kind: repo
+    path: materials/demo-images
+
+artefacts:
+  title: Artefact photographs
+  day: Tuesday
+  instructor: TBC
+  licence: TBC
+  access: public
+  source:
+    kind: repo
+    path: case-studies/artefacts/data
+
+use-wear:
+  title: Microscopic use-wear images
+  day: Wednesday
+  instructor: TBC
+  licence: TBC
+  access: public
+  source:
+    kind: url
+    url: "https://example.invalid/use-wear.zip"   # TODO: real URL
+    sha256: null                                   # TODO: fill in once published
+
+satellite:
+  title: Satellite imagery
+  day: Thursday
+  instructor: TBC
+  licence: TBC
+  access: restricted
+  source:
+    kind: hub
+    path: /home/jovyan/shared/satellite
+  note: >-
+    Site locations make this dataset non-redistributable, so it is not in the
+    repository. It is mounted on the school JupyterHub for the week — ask an
+    instructor if the folder is missing.
+
+rock-art:
+  title: Rock art images
+  day: Thursday
+  instructor: TBC
+  licence: TBC
+  access: restricted
+  source:
+    kind: hub
+    path: /home/jovyan/shared/rock-art
+  note: >-
+    Provided on the school JupyterHub. Task and licensing still to be confirmed —
+    see case-studies/rock-art/README.md.
+
+coins:
+  title: Coin photographs and drawings
+  day: Friday
+  instructor: TBC
+  licence: TBC
+  access: public
+  source:
+    kind: url
+    url: "https://example.invalid/coins.zip"       # TODO: real URL
+    sha256: null
