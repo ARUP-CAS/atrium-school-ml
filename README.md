@@ -3,37 +3,31 @@
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 [![MIT][mit-shield]][mit]
 
-Repository contains an AIS CR Computer Vision Training School website and materials.
+Website for the AIS CR Computer Vision Training School: programme, practical
+information, setup guide and slides.
+
+The notebooks and case-study exercises are in a separate repository,
+[**atrium-school-ml-lessons**](https://github.com/arubrno/atrium-school-ml-lessons), so participants can clone and run them
+without the website's Quarto machinery.
 
 ## Layout
 
 ```
-*.qmd               the website
-materials/          slides (intro.qmd) and the Monday CLIP demo notebook
-case-studies/       one folder per case study
-  datasets.yml      where every dataset lives — the only file to edit when one moves
-  atrium_data.py    get_dataset(name) -> a local folder, cached in the persistent home
-requirements.txt    Python packages for the notebooks
+*.qmd               the website pages
+materials/          slides — one folder per session, e.g. intro/ (revealjs slides,
+                    images, bibliography and theme)
+figs/               figures used by the website
+flyer/              the printed flyer
 survey/             pre-school survey; raw responses are gitignored, aggregates are not
 ```
 
-**Datasets are never committed.** They are too large, and some are not
-redistributable. Notebooks call `get_dataset("name")`, which resolves the manifest
-entry — a folder in this repo, a directory mounted on the JupyterHub, or a download
-cached under `~/.cache/atrium-school`. Moving a dataset, or giving it a Zenodo DOI
-later, means editing one entry in `case-studies/datasets.yml` and no notebook.
+Slides are rendered as part of the site. Notebooks are not here — see the lessons
+repository above.
 
 ## Environment
 
-```shell
-python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt \
-    --index-url https://download.pytorch.org/whl/cpu \
-    --extra-index-url https://pypi.org/simple
-```
-
-The PyTorch CPU index avoids pulling ~2.5 GB of CUDA runtime onto machines with no
-NVIDIA card.
+Quarto, and R for the chunks in `materials/intro/intro.qmd`. No Python is needed to
+build this site.
 
 ## Publish
 

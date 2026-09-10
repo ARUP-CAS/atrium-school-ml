@@ -2,8 +2,16 @@
 title: "Materials"
 ---
 
-Slides, notebooks and datasets used during the school.
+Slides and notebooks used during the school.
 This page grows as the week progresses — check back for updates.
+
+::: {.callout-note}
+## Notebooks live in their own repository
+The notebooks and case-study exercises are in
+[**atrium-school-ml-lessons**](https://github.com/arubrno/atrium-school-ml-lessons){.external}, so you can clone them,
+open them in Colab, and keep working after the school without dragging this
+website along. The slides stay here.
+:::
 
 ## Three ways to run the notebooks
 
@@ -18,9 +26,15 @@ caches somewhere sensible. **You do not have to edit anything to switch platform
 Nothing to install. Click the *Open in Colab* badge on a notebook below, then run
 the first cell — it clones this repository into the session for you.
 
+::: {.callout-warning}
+## Save a copy before you edit
+A notebook opened from GitHub does not keep your changes. Use
+*File → Save a copy in Drive* first, and work in that copy.
+:::
+
 Colab wipes its disk when the runtime is recycled, so model weights are
 re-downloaded in a new session. To keep them, change the last line of the setup
-cell to:
+cell, before you run anything else, to:
 
 ```python
 setup("torch", "transformers", drive=True)
@@ -37,18 +51,33 @@ else runs anywhere.
 ## School JupyterHub
 
 Nothing to install, and nothing to spawn. We will give you a URL on the first
-morning; open it and you are in JupyterLab with the server already running and
-this repository already there.
+morning; open it and you are in JupyterLab with the server already running.
 
-Open `materials/` in the file browser on the left and double-click the notebook
-you need. Run the first cell as usual — on the hub it finds everything in place
-and installs nothing.
+Everyone's server shares the same home directory. In the file browser you will
+find:
+
+```
+_atrium-school-ml-lessons/   the notebooks — we keep this up to date, do not edit here
+_atrium-data/                the datasets, shared by everyone
+<your name>/                 your own folder: work here
+```
+
+Copy the notebook you need from the day's folder in `_atrium-school-ml-lessons/`
+into your own folder (right-click → *Copy*, then *Paste* in your folder), open
+the copy, and run the first cell as usual. It finds the shared repository and
+installs nothing — the packages, model weights and data are already in place.
 
 ::: {.callout-tip}
 ## Your work is saved, the machine is not
-Your home directory persists, so notebooks you edit and files you save are still
-there tomorrow. The server itself may be restarted between sessions; if a
-notebook stops responding, *Kernel → Restart Kernel* and re-run from the top.
+Your folder persists, so notebooks you edit and files you save are still there
+tomorrow. The server itself may be restarted between sessions; if a notebook
+stops responding, *Kernel → Restart Kernel* and re-run from the top.
+:::
+
+::: {.callout-warning}
+## Shared means shared
+Everyone can see — and delete — everything in the home directory. Stay in your
+own folder.
 :::
 
 ::: {.callout-note}
@@ -63,32 +92,34 @@ ORGANISERS — this block is stripped from the rendered page.
 https://docs.cerit.io/en/docs/web-apps/jupyterhub
 
 Image      Pytorch 2.4.1  — NOT "NVIDIA Pytorch", which is the CUDA/NGC
-           build and is far larger than we need.
+           build and is far larger than we need. (torch 2.4.1 is why the
+           lessons repo holds transformers below 5.)
 CPU        2 cores        (4 for the Thursday satellite session)
 Memory     8 GB           (16 GB for Thursday)
 GPU        none           — everything this week runs on CPU in seconds
-Home       persistent, THE SAME directory on every spawn. Only /home/jovyan
-           survives a respawn: `pip install --user` puts packages in
-           ~/.local and model weights cache in ~/.cache/huggingface, both
-           inside it. A fresh home each spawn means every participant
-           re-downloads ~600 MB of CLIP weights in front of the room.
+Home       ONE /home/jovyan shared by every participant's server.
+           ~/_atrium-school-ml-lessons   our clone; participants copy from it
+           ~/_atrium-data/<name>         every dataset
+           ~/<participant>/              their working folders
+           ~/.local, ~/.cache/huggingface  packages and model weights
 
-Prepare each home once, before the school:
-  git clone --depth 1 https://github.com/ARUP-CAS/atrium-school-ml.git
-  cd atrium-school-ml && python -m pip install --user -r requirements.txt
-  python -c "from transformers import CLIPModel, CLIPProcessor; \
-    CLIPModel.from_pretrained('openai/clip-vit-base-patch32'); \
-    CLIPProcessor.from_pretrained('openai/clip-vit-base-patch32')"
-The last line warms ~/.cache/huggingface so Monday starts instantly.
+Before each day, from a hub terminal:
+  git -C ~/_atrium-school-ml-lessons pull     (first time: git clone --depth 1
+      https://github.com/arubrno/atrium-school-ml-lessons.git ~/_atrium-school-ml-lessons)
+then run that day's notebooks top to bottom from inside the clone. Their setup
+cells install into ~/.local, download the weights and fetch the datasets into
+~/_atrium-data — once, for everyone.
 
-Restricted data (satellite, rock art) is mounted read-only at
-/home/jovyan/shared/<name> — the paths in case-studies/datasets.yml.
-Mount it before Thursday; get_dataset() fails with a clear message if it
-is missing, but that message is not a substitute for the data.
+Do NOT `pip install -r requirements.txt` on the hub: it includes jupyterlab,
+and a copy in the shared ~/.local would shadow the server's own.
 
-If participants ever do have to spawn their own server, the settings above
-are what they must choose — the wrong image or a new home directory is the
-one failure mode that eats a session.
+Restricted data (satellite, rock art) goes in by hand at
+~/_atrium-data/<name> — the paths in the lessons repo's datasets.yml. Put it
+there before Thursday; get_dataset() fails with a clear message if it is
+missing, but that message is not a substitute for the data.
+
+If the shared clone gets into a mess, delete it and clone again; participants'
+work is in their own folders.
 ```
 :::
 
@@ -98,8 +129,8 @@ Follow the [setup guide](setup.qmd), then start Jupyter (or open the notebook in
 your IDE) anywhere inside the clone:
 
 ```bash
-git clone --depth 1 https://github.com/ARUP-CAS/atrium-school-ml.git
-cd atrium-school-ml
+git clone --depth 1 https://github.com/arubrno/atrium-school-ml-lessons.git
+cd atrium-school-ml-lessons
 python -m venv .venv && source .venv/bin/activate   # .venv\Scripts\activate on Windows
 pip install -r requirements.txt \
     --index-url https://download.pytorch.org/whl/cpu \
@@ -121,25 +152,26 @@ path = get_dataset("coins")
 ```
 
 Where each dataset actually lives is recorded in
-[`case-studies/datasets.yml`](https://github.com/ARUP-CAS/atrium-school-ml/blob/main/case-studies/datasets.yml){.external}.
+[`datasets.yml`](https://github.com/arubrno/atrium-school-ml-lessons/blob/main/datasets.yml){.external}.
 :::
 
 ::: {.callout-important}
 ## Work on a copy
-Copy a notebook before you edit it (`cp intro.ipynb my-intro.ipynb`). We will push
-updates during the week, and `git pull` on a notebook you have changed produces a
-merge conflict in raw JSON that nobody enjoys resolving.
+Copy a notebook before you edit it (`cp clip_zero_shot.ipynb my-clip.ipynb`). We
+will push updates during the week, and `git pull` on a notebook you have changed
+produces a merge conflict in raw JSON that nobody enjoys resolving. On the hub,
+copy it into your own folder; on Colab, *Save a copy in Drive*.
 :::
 
 ## Monday — Kick-off & Python for CV
 
-- [**Introduction to computer vision**](materials/intro.qmd) — 90 min. What computer vision is,
+- [**Introduction to computer vision**](materials/intro/intro.qmd) — 90 min. What computer vision is,
   the family of tasks, discriminative vs. generative models, a live zero-shot demo with CLIP,
   and three rounds of group discussion.
-- [**CLIP zero-shot classification**](materials/clip_zero_shot.ipynb) — the notebook behind
-  the demo. Classifying artefact photographs with no training and no annotation, and three
-  ways it misleads you.
-  [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ARUP-CAS/atrium-school-ml/blob/main/materials/clip_zero_shot.ipynb){.external}
+- [**CLIP zero-shot classification**](https://github.com/arubrno/atrium-school-ml-lessons/blob/main/1-monday-intro/clip_zero_shot.ipynb){.external} —
+  the notebook behind the demo. Classifying artefact photographs with no training and no
+  annotation, and three ways it misleads you.
+  [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/arubrno/atrium-school-ml-lessons/blob/main/1-monday-intro/clip_zero_shot.ipynb){.external}
 
 ## Tuesday — Artefacts
 

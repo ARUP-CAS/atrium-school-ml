@@ -48,12 +48,13 @@ Install and use an IDE of your choice, preferably [Zed](https://zed.dev/){.exter
 
 ## Course materials and Python packages
 
-Once Python and Git are in place, clone the course repository and install the
-packages the notebooks need:
+Once Python and Git are in place, clone the lessons repository — the notebooks
+and exercises live there, separately from this website — and install the packages
+they need:
 
 ```bash
-git clone --depth 1 https://github.com/ARUP-CAS/atrium-school-ml.git
-cd atrium-school-ml
+git clone --depth 1 https://github.com/arubrno/atrium-school-ml-lessons.git
+cd atrium-school-ml-lessons
 python -m venv .venv
 ```
 

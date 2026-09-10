@@ -1,7 +1,7 @@
 # Pre-school survey
 
 Results of the participant pre-school survey, used on the "Who is in the room?"
-slides in [`materials/intro.qmd`](../materials/intro.qmd).
+slides in [`materials/intro/intro.qmd`](../materials/intro/intro.qmd).
 
 ## Rule
 
@@ -28,7 +28,7 @@ Drop a new export in as `survey/results_<date>.csv` and, from the project root:
 
 ```sh
 Rscript survey/aggregate.R          # picks up the newest results_*.csv
-quarto render materials/intro.qmd
+quarto render materials/intro/intro.qmd
 ```
 
 The script reads the questions **by column position**, not by name — the wording

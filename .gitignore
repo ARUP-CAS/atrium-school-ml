@@ -74,12 +74,11 @@ survey/*
 !survey/summary/
 survey/raw/
 
-# Local Python environment for the CLIP notebook (see materials/requirements.txt)
+# Local Python environment
 .venv/
 
-# Case-study data: never committed. See case-studies/datasets.yml for where it
-# actually lives, and case-studies/atrium_data.py for how notebooks fetch it.
-case-studies/**/data/
+# Datasets are never committed. They live in the lessons repository's
+# datasets.yml, and notebooks fetch them there.
 .cache/
 
 __pycache__/

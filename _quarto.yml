@@ -3,12 +3,11 @@ execute:
 
 project:
   type: website
-  # Explicit whitelist: without it Quarto also renders every README.md in
-  # case-studies/ as a website page.
+  # Notebooks and exercises live in a separate repository, atrium-school-ml-lessons.
+  # This site is the slides, the programme and the practical information.
   render:
     - "*.qmd"
-    - "materials/*.ipynb"
-    - "case-studies/**/*.ipynb"
+    - "materials/**/*.qmd"
 
 website:
   title: "Computer Vision in Archaeology"

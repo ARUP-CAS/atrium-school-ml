@@ -37,7 +37,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE,
 
 # Aggregates only — the raw survey export stays out of the repository.
 # Regenerate with:  Rscript survey/aggregate.R
-read_summary <- function(f) readr::read_csv(file.path("..", "survey", "summary", f),
+read_summary <- function(f) readr::read_csv(file.path("..", "..", "survey", "summary", f),
                                             show_col_types = FALSE)
 
 # Fall back cleanly on a machine without the font (or without systemfonts).
@@ -75,13 +75,13 @@ p_bar <- function(d, sort = TRUE, pad = 0.30) {
 ## {.center}
 
 ::: {.logos}
-[![](../figs/Clay.png)](https://www.atrium-research.eu)
-[![](../figs/maia.png)](https://www.maiacost.eu/)
+[![](../../figs/Clay.png)](https://www.atrium-research.eu)
+[![](../../figs/maia.png)](https://www.maiacost.eu/)
 :::
 
 ::: {.logos .logos-small}
-[![](../figs/aiscr.png)](https://www.aiscr.cz/en/)
-[![](../figs/arub.png)](https://www.arub.cz/)
+[![](../../figs/aiscr.png)](https://www.aiscr.cz/en/)
+[![](../../figs/arub.png)](https://www.arub.cz/)
 :::
 
 <!-- ::: {.aside}
@@ -753,7 +753,7 @@ probs = clip_zero_shot(image, labels)   # → [0.81, 0.05, 0.11, 0.03]
 :::
 
 ::: {.aside}
-Notebook: `materials/clip_zero_shot.ipynb`, on the [CERIT-SC JupyterHub](https://docs.cerit.io/en/docs/web-apps/jupyterhub){.external}.
+Notebook: `1-monday-intro/clip_zero_shot.ipynb` in the lessons repository, on the [CERIT-SC JupyterHub](https://docs.cerit.io/en/docs/web-apps/jupyterhub){.external}.
 :::
 
 ::: {.notes}
