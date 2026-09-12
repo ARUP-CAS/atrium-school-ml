@@ -2,11 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ARUP-CAS.github.io/atrium-school-ml/setup.html</loc>
-    <lastmod>2026-09-12T19:02:41.772Z</lastmod>
+    <lastmod>2026-09-12T22:54:11.804Z</lastmod>
   </url>
   <url>
-    <loc>https://ARUP-CAS.github.io/atrium-school-ml/programme.html</loc>
-    <lastmod>2026-09-03T12:02:45.477Z</lastmod>
+    <loc>https://ARUP-CAS.github.io/atrium-school-ml/materials/intro/intro.html</loc>
+    <lastmod>2026-09-12T22:54:11.802Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ARUP-CAS.github.io/atrium-school-ml/info.html</loc>
+    <lastmod>2026-09-03T12:02:53.467Z</lastmod>
   </url>
   <url>
     <loc>https://ARUP-CAS.github.io/atrium-school-ml/applications.html</loc>
@@ -21,7 +25,11 @@
     <lastmod>2026-09-03T12:03:02.008Z</lastmod>
   </url>
   <url>
-    <loc>https://ARUP-CAS.github.io/atrium-school-ml/info.html</loc>
-    <lastmod>2026-09-03T12:02:53.467Z</lastmod>
+    <loc>https://ARUP-CAS.github.io/atrium-school-ml/materials.html</loc>
+    <lastmod>2026-09-12T22:54:11.779Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ARUP-CAS.github.io/atrium-school-ml/programme.html</loc>
+    <lastmod>2026-09-03T12:02:45.477Z</lastmod>
   </url>
 </urlset>

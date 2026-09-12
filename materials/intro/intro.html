@@ -120,7 +120,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-1e69045433a0d89cc8a2756b1c19414a.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f0c3a6ded77c3baf34dc2c547babf3ea.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -323,11 +323,9 @@ and co-organised with the **MAIA** COST Action (*Managing AI in Archaeology*).
 </tbody>
 </table>
 </div>
-<div class="fragment">
-<blockquote>
-<p>Three short discussion rounds. You will be talking for a third of this session.</p>
-</blockquote>
-</div>
+<!-- ::: {.fragment}
+> Three short discussion rounds. You will be talking for a third of this session.
+::: -->
 <aside class="notes">
 <p>Say the structure out loud — people relax when they know a break from listening is never more than twelve minutes away.</p>
 <style type="text/css">
@@ -360,7 +358,7 @@ and co-organised with the **MAIA** COST Action (*Managing AI in Archaeology*).
 <p><strong>Use your own material</strong></p>
 </div>
 <div class="callout-content">
-<p>Where a question says <em>“your data”</em>, use a project you actually work on. If you have nothing to hand, borrow one of the five datasets we work with this week.</p>
+<p>Where a question says <em>“your data”</em>, use a project you actually work on. If you have nothing to hand, think about one of the datasets we are going to work with this week.</p>
 </div>
 </div>
 </div>
@@ -409,7 +407,7 @@ and co-organised with the **MAIA** COST Action (*Managing AI in Archaeology*).
 </div>
 </div></div>
 <div class="smaller">
-<p>Almost everyone has <strong>met</strong> machine learning; almost nobody <strong>does</strong> it. You know the vocabulary of detection and classification — and the two things this week actually turns on, <strong>annotation</strong> and <strong>evaluation</strong>, were not on the list.</p>
+<p>Almost everyone has <strong>met</strong> machine learning; almost nobody <strong>does</strong> it. You know the vocabulary of detection and classification.</p>
 </div>
 
 <aside class="notes">
@@ -426,26 +424,26 @@ and co-organised with the **MAIA** COST Action (*Managing AI in Archaeology*).
           display:block!important;
       }</style></aside>
 <aside><div>
-<p>Pre-school survey, n = 27. Aggregated; no individual responses shown.</p>
+<p>Pre-school survey, n = 29.</p>
 </div></aside></section>
 <section id="two-numbers-worth-pausing-on" class="slide level2">
 <h2>Two numbers worth pausing on</h2>
 <div class="columns">
 <div class="column" style="width:49%;">
 <div class="box box-disc">
-<p><span class="stat">52%</span></p>
-<p>use an AI coding assistant <strong>regularly</strong> — but only <strong>19%</strong> rate their Python 4 or 5 out of 5.</p>
+<p><span class="stat">50%</span></p>
+<p>use an AI coding assistant <strong>regularly</strong> – and <strong>19%</strong> rate their Python 4 or 5 out of 5.</p>
 </div>
 <div class="smaller">
 <p>More of you lean on an assistant daily than feel fluent in the language it writes. That is not a problem to apologise for; it is the working condition of this week, and it is why Monday afternoon is about <strong>coding with agents</strong> rather than syntax.</p>
 </div>
 </div><div class="column" style="width:49%;">
 <div class="box box-plain">
-<p><span class="stat">81%</span></p>
+<p><span class="stat">80%</span></p>
 <p>have <strong>never used an image annotation tool</strong>.</p>
 </div>
 <div class="smaller">
-<p>Annotation is the single largest cost in every project we will look at, and the one place where your expertise — not the model’s — decides the outcome. Most of the room is about to meet it for the first time on <strong>Tuesday</strong>.</p>
+<p>Annotation is probably the single largest cost in every project we will look at, and the one place where your expertise – not the model’s – decides the outcome.</p>
 </div>
 </div></div>
 <aside class="notes">
@@ -476,17 +474,17 @@ and co-organised with the **MAIA** COST Action (*Managing AI in Archaeology*).
 </div>
 </div>
 <div class="tiny">
-<p>Multiple answers allowed. <strong>48%</strong> have no dataset of their own to bring — borrow one of ours.</p>
+<p>Multiple answers allowed. <strong>48%</strong> have no dataset of their own to bring.</p>
 </div>
 </div><div class="column" style="width:55%;">
 <blockquote>
-<p>Confidently apply computer vision algorithms to detect archaeological features and micro-topographical anomalies, <strong>drastically reducing the manual processing time</strong>.</p>
+<p>Confidently apply computer vision algorithms to detect archaeological features and micro-topographical anomalies, <strong>drastically reducing the manual processing time</strong>. (Árpád)</p>
 </blockquote>
 <blockquote>
-<p>Better understand the <strong>inner workings</strong> of a machine learning model, by learning to develop and train it myself.</p>
+<p>Better understand the <strong>inner workings</strong> of a machine learning model, by learning to develop and train it myself. (Aaricia)</p>
 </blockquote>
 <blockquote>
-<p>Even if I don’t have a large corpus, I would like to <strong>test AI methods on my dataset</strong> by the end of the week.</p>
+<p>Even if I don’t have a large corpus, I would like to <strong>test AI methods on my dataset</strong> by the end of the week. (Hüseyin)</p>
 </blockquote>
 </div></div>
 
@@ -504,7 +502,7 @@ and co-organised with the **MAIA** COST Action (*Managing AI in Archaeology*).
           display:block!important;
       }</style></aside>
 <aside><div>
-<p>Anonymised, lightly trimmed. Artefact photographs and satellite imagery draw the largest interest — which is also where most published archaeological work sits.</p>
+<p>Artefact photographs and satellite imagery seem to draw the largest interest — which is also where most published archaeological work sits…</p>
 </div></aside></section></section>
 <section>
 <section id="what-is-computer-vision" class="title-slide slide level1 center" data-background-color="#111111">
@@ -530,11 +528,12 @@ and co-organised with the **MAIA** COST Action (*Managing AI in Archaeology*).
 </section>
 <section id="an-image-is-an-array-of-numbers" class="slide level2">
 <h2>An image is an array of numbers</h2>
-<div class="placeholder placeholder-lg">
-<p><img data-src="img/ph-image-as-array.svg"></p>
+<div class="figure figure-lg">
+<p><img data-src="img/image-as-array.png" alt="A terra sigillata sherd, a 36 by 36 pixel window of it, and an 8 by 8 grid of the red-channel values."></p>
+<p><span class="credit">Sherd: AMČR <a href="https://doi.org/10.71928/M-202300130-N00020">M-202300130-N00020</a>, CC BY-NC 4.0</span></p>
 </div>
 <div class="smaller">
-<p>A 4000 × 3000 photograph of a sherd is 12 million numbers per colour channel — 36 million in all. Nothing in that array says <em>sherd</em>, <em>rim</em>, or <em>Neolithic</em>.</p>
+<p>A 4000 × 3000 photograph of a sherd is 12 million numbers per colour channel — 36 million in all. Nothing in that array says <em>sherd</em>, <em>terra sigilata</em>, or <em>Roman period</em>.</p>
 </div>
 <aside class="notes">
 <p>Every method this week operates on exactly this. All the sophistication lies in how the numbers are summarised — there is no built-in understanding anywhere in the stack.</p>
@@ -552,16 +551,17 @@ and co-organised with the **MAIA** COST Action (*Managing AI in Archaeology*).
 </section>
 <section id="the-semantic-gap" class="slide level2">
 <h2>The semantic gap</h2>
-<div class="placeholder">
-<p><img data-src="img/ph-semantic-gap.svg"></p>
+<div class="figure">
+<p><img data-src="img/semantic-gap.png" alt="The same sherd as a colour photograph and as a map of brightness gradients."></p>
+<p><span class="credit">Sherd: AMČR <a href="https://doi.org/10.71928/M-202300130-N00020">M-202300130-N00020</a>, CC BY-NC 4.0</span></p>
 </div>
 <div class="columns">
 <div class="column" style="width:48%;">
 <p><strong>A specialist sees</strong></p>
 <ul>
-<li>a rim sherd, wheel-thrown</li>
-<li>probably Roman</li>
-<li>worth three more photographs</li>
+<li>a sherd, wheel-thrown</li>
+<li>Roman,terra sigilata – Rheinzabern</li>
+<li>2nd half of the 2nd century CE</li>
 </ul>
 </div><div class="column" style="width:48%;">
 <p><strong>The computer receives</strong></p>
@@ -577,8 +577,9 @@ and co-organised with the **MAIA** COST Action (*Managing AI in Archaeology*).
 </section>
 <section id="why-now" class="slide level2">
 <h2>Why now?</h2>
-<div class="placeholder">
-<p><img data-src="img/ph-data-deluge.svg"></p>
+<div class="figure">
+<p><img data-src="img/data-deluge.jpg" alt="An aerial photograph of vegetation marks in a field, an excavation trench being photographed from above, and a 1984 archive photograph of a burial in a circular pit."></p>
+<p><span class="credit">M. Gojda, AMČR <a href="https://doi.org/10.60585/C-DL-201000159">C-DL-201000159</a>; N. Profantová, AMČR <a href="https://doi.org/10.60585/C-200913914A-DT-05281">C-200913914A-DT-05281</a>; AMČR <a href="https://doi.org/10.60585/M-FT-900144861">M-FT-900144861</a> (1984); CC BY-NC 4.0</span></p>
 </div>
 <ul>
 <li class="fragment">Excavation photography is <strong>born-digital and effectively free</strong> — thousands of frames per season</li>
@@ -670,29 +671,29 @@ and co-organised with the **MAIA** COST Action (*Managing AI in Archaeology*).
 <h2>Four questions, four output shapes</h2>
 <div class="columns">
 <div class="column" style="width:25%;">
-<div class="placeholder">
-<p><img data-src="img/ph-task-classification.svg"></p>
+<div class="figure">
+<p><img data-src="img/task-classification.jpg" alt="A Roman bronze coin with the single label coin."></p>
 </div>
 <p><strong>Classification</strong></p>
 <p><em>What is this?</em></p>
 <p>One label per image</p>
 </div><div class="column" style="width:25%;">
-<div class="placeholder">
-<p><img data-src="img/ph-task-detection.svg"></p>
+<div class="figure">
+<p><img data-src="img/task-detection.jpg" alt="Twenty-four potsherds on graph paper, each inside a bounding box."></p>
 </div>
 <p><strong>Detection</strong></p>
 <p><em>What, and where?</em></p>
 <p>Boxes + labels</p>
 </div><div class="column" style="width:25%;">
-<div class="placeholder">
-<p><img data-src="img/ph-task-segmentation.svg"></p>
+<div class="figure">
+<p><img data-src="img/task-segmentation.jpg" alt="A rosary with its chain, loose beads and cross each covered by a coloured mask."></p>
 </div>
 <p><strong>Segmentation</strong></p>
 <p><em>Which pixels?</em></p>
 <p>Per-pixel mask</p>
 </div><div class="column" style="width:25%;">
-<div class="placeholder">
-<p><img data-src="img/ph-task-keypoints.svg"></p>
+<div class="figure">
+<p><img data-src="img/task-keypoints.png" alt="A vessel profile drawing with landmarks at the rim, neck, maximum diameter, base and base centre."></p>
 </div>
 <p><strong>Keypoints</strong></p>
 <p><em>Where are the landmarks?</em></p>
@@ -701,7 +702,10 @@ and co-organised with the **MAIA** COST Action (*Managing AI in Archaeology*).
 <div class="fragment smaller">
 <p>The choice is not technical. It follows from <strong>the question you asked</strong> — and it determines <strong>how much annotation you will have to pay for</strong>.</p>
 </div>
-</section>
+
+<aside><div>
+<p>Photographs: Z. Omelka, AMČR <a href="https://doi.org/10.71928/M-202101534-N00243">M-202101534-N00243</a>; M. Martinek, AMČR <a href="https://doi.org/10.71928/M-202300087-N00510">M-202300087-N00510</a>; J. Machan, AMČR <a href="https://doi.org/10.71928/M-202400071-N00083">M-202400071-N00083</a>; CC BY-NC 4.0. Boxes and masks from the AMČR-PAS annotations.</p>
+</div></aside></section>
 <section id="the-same-photograph-five-questions" class="slide level2">
 <h2>The same photograph, five questions</h2>
 <table class="caption-top">
@@ -764,7 +768,6 @@ and co-organised with the **MAIA** COST Action (*Managing AI in Archaeology*).
 </section>
 <section id="the-same-four-shapes-across-archaeology" class="slide level2 smaller scrollable">
 <h2>The same four shapes, across archaeology</h2>
-<div class="smaller">
 <table class="caption-top">
 <colgroup>
 <col style="width: 16%">
@@ -772,14 +775,14 @@ and co-organised with the **MAIA** COST Action (*Managing AI in Archaeology*).
 </colgroup>
 <thead>
 <tr class="header">
-<th>Shape</th>
-<th>Published examples</th>
+<th><em>Shape</em></th>
+<th><em>Published example</em></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><strong>Classification</strong></td>
-<td>decorated ceramic typology from photographs <span class="citation" data-cites="pawlowicz2021">(<a href="#/the-same-four-shapes-across-archaeology" role="doc-biblioref" onclick="">Pawlowicz and Downum 2021</a>)</span>; amphora and faience fabrics <span class="citation" data-cites="santos2024">(<a href="#/the-same-four-shapes-across-archaeology" role="doc-biblioref" onclick="">Santos et al. 2024</a>)</span>; Celtic coin classification and die studies <span class="citation" data-cites="deligio2024">(<a href="#/the-same-four-shapes-across-archaeology" role="doc-biblioref" onclick="">Deligio et al. 2024</a>)</span></td>
+<td>decorated ceramic typology from photographs <span class="citation" data-cites="pawlowicz2021">(<a href="#/the-same-four-shapes-across-archaeology" role="doc-biblioref" onclick="">Pawlowicz and Downum 2021</a>)</span></td>
 </tr>
 <tr class="even">
 <td><strong>Detection</strong></td>
@@ -787,22 +790,22 @@ and co-organised with the **MAIA** COST Action (*Managing AI in Archaeology*).
 </tr>
 <tr class="odd">
 <td><strong>Segmentation</strong></td>
-<td>hollow roads traced in LiDAR <span class="citation" data-cites="verschoofvan2021">(<a href="#/the-same-four-shapes-across-archaeology" role="doc-biblioref" onclick="">Verschoof-van der Vaart and Landauer 2021</a>)</span>; agrarian field systems from satellite imagery <span class="citation" data-cites="kucukdemirci2025">(<a href="#/the-same-four-shapes-across-archaeology" role="doc-biblioref" onclick="">Küçükdemirci 2025</a>)</span>; anomalies in geophysical survey images <span class="citation" data-cites="kucukdemirci2020">(<a href="#/the-same-four-shapes-across-archaeology" role="doc-biblioref" onclick="">Küçükdemirci and Sarris 2020</a>)</span></td>
+<td>hollow roads traced in LiDAR <span class="citation" data-cites="verschoofvan2021">(<a href="#/the-same-four-shapes-across-archaeology" role="doc-biblioref" onclick="">Verschoof-van der Vaart and Landauer 2021</a>)</span>; agrarian field systems from satellite imagery <span class="citation" data-cites="kucukdemirci2025">(<a href="#/the-same-four-shapes-across-archaeology" role="doc-biblioref" onclick="">Küçükdemirci 2025</a>)</span></td>
 </tr>
 <tr class="even">
+<td><strong>Keypoints</strong></td>
+<td>tracing a knapper’s movements, the motor side of knapping skill <span class="citation" data-cites="pargeter2022">(<a href="#/the-same-four-shapes-across-archaeology" role="doc-biblioref" onclick="">Pargeter et al. 2022</a>)</span></td>
+</tr>
+<tr class="odd">
 <td><strong>Retrieval</strong></td>
 <td>3D matching and retrieval of objects across collections <span class="citation" data-cites="jimenezbadil2023">(<a href="#/the-same-four-shapes-across-archaeology" role="doc-biblioref" onclick="">Jiménez-Badillo et al. 2023</a>)</span></td>
 </tr>
 </tbody>
 </table>
-</div>
 <div class="refs-inline">
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-berganzobesg2023" class="csl-entry" role="listitem">
 Berganzo-Besga, Iban, Hector A. Orengo, Felipe Lumbreras, et al. 2023. <span>“Curriculum Learning-Based Strategy for Low-Density Archaeological Mound Detection from Historical Maps in <span>India</span> and <span>Pakistan</span>.”</span> <em>Scientific Reports</em> 13 (1): 11257. <a href="https://doi.org/10.1038/s41598-023-38190-x">https://doi.org/10.1038/s41598-023-38190-x</a>.
-</div>
-<div id="ref-deligio2024" class="csl-entry" role="listitem">
-Deligio, Chrisowalandis, Caroline von Nicolai, Markus Möller, et al. 2024. <em><span>IT</span>- and Machine Learning-Based Methods of Classification: <span>The</span> Cooperative Project <span>ClaReNet</span> – <span>Classification</span> and <span>Representation</span> for <span>Networks</span></em>. Zenodo. <a href="https://doi.org/10.24072/pci.archaeo.10031">https://doi.org/10.24072/pci.archaeo.10031</a>.
 </div>
 <div id="ref-jimenezbadil2023" class="csl-entry" role="listitem">
 Jiménez-Badillo, Diego, Omar Mendoza-Montoya, and Salvador Ruiz-Correa. 2023. <span>“Application of Computer Vision Techniques for <span>3D</span> Matching and Retrieval of Archaeological Objects.”</span> <em>F1000Research</em> 12: 182. <a href="https://doi.org/10.12688/f1000research.127095.1">https://doi.org/10.12688/f1000research.127095.1</a>.
@@ -813,17 +816,14 @@ Klein, Kevin, Antoine Muller, Alyssa Wohde, et al. 2025. <span>“An <span>AI</s
 <div id="ref-kucukdemirci2025" class="csl-entry" role="listitem">
 Küçükdemirci, Melda. 2025. <span>“Tracing Past Agrarian Field Systems Through <span>AI</span>-Based Analysis of Satellite Imagery in <span>Konya</span>, <span>Central</span> <span>Anatolia</span>, <span>Türkiye</span>.”</span> <em>Archaeological Prospection</em> 32 (4): 881–97. <a href="https://doi.org/10.1002/arp.2001">https://doi.org/10.1002/arp.2001</a>.
 </div>
-<div id="ref-kucukdemirci2020" class="csl-entry" role="listitem">
-Küçükdemirci, Melda, and Apostolos Sarris. 2020. <span>“Deep Learning Based Automated Analysis of Archaeo-Geophysical Images.”</span> <em>Archaeological Prospection</em> 27 (2): 107–18. <a href="https://doi.org/10.1002/arp.1763">https://doi.org/10.1002/arp.1763</a>.
-</div>
 <div id="ref-orengo2019" class="csl-entry" role="listitem">
 Orengo, H. A., and A. Garcia-Molsosa. 2019. <span>“A Brave New World for Archaeological Survey: <span>Automated</span> Machine Learning-Based Potsherd Detection Using High-Resolution Drone Imagery.”</span> <em>Journal of Archaeological Science</em> 112: 105013. <a href="https://doi.org/10.1016/j.jas.2019.105013">https://doi.org/10.1016/j.jas.2019.105013</a>.
 </div>
+<div id="ref-pargeter2022" class="csl-entry" role="listitem">
+Pargeter, Justin, Cheng Liu, Megan Beney Kilgore, Aditi Majoe, and Dietrich Stout. 2022. <span>“Testing the Effect of Learning Conditions and Individual Motor/Cognitive Differences on Knapping Skill Acquisition.”</span> <em>Journal of Archaeological Method and Theory</em>, ahead of print. <a href="https://doi.org/10.1007/s10816-022-09592-4">https://doi.org/10.1007/s10816-022-09592-4</a>.
+</div>
 <div id="ref-pawlowicz2021" class="csl-entry" role="listitem">
 Pawlowicz, Leszek M., and Christian E. Downum. 2021. <span>“Applications of Deep Learning to Decorated Ceramic Typology and Classification: <span>A</span> Case Study Using <span>Tusayan</span> <span>White</span> <span>Ware</span> from <span>Northeast</span> <span>Arizona</span>.”</span> <em>Journal of Archaeological Science</em> 130: 105375. <a href="https://doi.org/10.1016/j.jas.2021.105375">https://doi.org/10.1016/j.jas.2021.105375</a>.
-</div>
-<div id="ref-santos2024" class="csl-entry" role="listitem">
-Santos, Joel, Diogo A. P. Nunes, Ruslan Padnevych, et al. 2024. <span>“Automatic Ceramic Identification Using Machine Learning. <span>Lusitanian</span> Amphorae and <span>Faience</span>. <span>Two</span> <span>Portuguese</span> Case Studies.”</span> <em>STAR: Science &amp; Technology of Archaeological Research</em> 10 (1): e2343214. <a href="https://doi.org/10.1080/20548923.2024.2343214">https://doi.org/10.1080/20548923.2024.2343214</a>.
 </div>
 <div id="ref-verschoofvan2019" class="csl-entry" role="listitem">
 Verschoof-van Der Vaart, Wouter Baernd, and Karsten Lambers. 2019. <span>“Learning to <span>Look</span> at <span>LiDAR</span>: <span>The</span> <span>Use</span> of <span>R</span>-<span>CNN</span> in the <span>Automated</span> <span>Detection</span> of <span>Archaeological</span> <span>Objects</span> in <span>LiDAR</span> <span>Data</span> from the <span>Netherlands</span>.”</span> <em>Journal of Computer Applications in Archaeology</em> 2 (1): 31–40. <a href="https://doi.org/10.5334/jcaa.32">https://doi.org/10.5334/jcaa.32</a>.
@@ -834,7 +834,7 @@ Verschoof-van der Vaart, Wouter B., and Juergen Landauer. 2021. <span>“Using <
 </div>
 </div>
 <aside class="notes">
-<p>The point to make out loud: almost all of this is remote sensing and artefact photography. Excavation-context imagery is still largely untouched — which is where several of you are working. All of these sit in the MAIA Zotero library.</p>
+<p>The point to make out loud: almost all of this is remote sensing and artefact photography.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -849,8 +849,8 @@ Verschoof-van der Vaart, Wouter B., and Juergen Landauer. 2021. <span>“Using <
 </section>
 <section id="the-pipeline-for-the-rest-of-the-week" class="slide level2">
 <h2>The pipeline for the rest of the week</h2>
-<div class="placeholder">
-<p><img data-src="img/ph-pipeline.svg"></p>
+<div class="figure">
+<p><img data-src="img/pipeline.png" alt="Six stages in a row: question, data and annotation, pre-processing, training, evaluation, interpretation. The first two are highlighted."></p>
 </div>
 <div class="smaller">
 <table class="caption-top">
@@ -991,15 +991,15 @@ Verschoof-van der Vaart, Wouter B., and Juergen Landauer. 2021. <span>“Using <
 <h2>The same idea, drawn</h2>
 <div class="columns">
 <div class="column" style="width:49%;">
-<div class="placeholder">
-<p><img data-src="img/ph-decision-boundary.svg"></p>
+<div class="figure">
+<p><img data-src="img/decision-boundary.png" alt="Two clusters of points, Neolithic and Iron Age, separated by a straight blue line."></p>
 </div>
 <div class="box box-disc">
 <p><span class="disc">Discriminative</span> — draw a line separating the classes. Anything far from the line is ignored.</p>
 </div>
 </div><div class="column" style="width:49%;">
-<div class="placeholder">
-<p><img data-src="img/ph-density.svg"></p>
+<div class="figure">
+<p><img data-src="img/density.png" alt="The same two clusters with orange density contours around each, and a few new points sampled from them."></p>
 </div>
 <div class="box box-gen">
 <p><span class="gen">Generative</span> — model where each class <em>lives</em>. You can then sample new points from it.</p>
@@ -1008,8 +1008,9 @@ Verschoof-van der Vaart, Wouter B., and Juergen Landauer. 2021. <span>“Using <
 </section>
 <section id="discriminative-the-working-horse-of-the-week" class="slide level2">
 <h2><span class="disc">Discriminative</span> — the working horse of the week</h2>
-<div class="placeholder placeholder-sm">
-<p><img data-src="img/ph-discriminative.svg"></p>
+<div class="figure figure-sm">
+<p><img data-src="img/discriminative.png" alt="A sherd photograph goes into a model, which returns a label, a bounding box, or a mask."></p>
+<p><span class="credit">Sherd: AMČR <a href="https://doi.org/10.71928/M-202300130-N00020">M-202300130-N00020</a>, CC BY-NC 4.0</span></p>
 </div>
 <ul>
 <li class="fragment"><strong>Artefact classification</strong> — a typological class for a photographed find</li>
@@ -1024,23 +1025,18 @@ Verschoof-van der Vaart, Wouter B., and Juergen Landauer. 2021. <span>“Using <
 </section>
 <section id="generative-a-smaller-part-of-the-picture" class="slide level2">
 <h2><span class="gen">Generative</span> — a smaller part of the picture</h2>
-<div class="columns">
+<div class="figure">
+<p><img data-src="img/gen-restoration.jpg" alt="Two damaged medieval frescoes, each next to a version in which a neural network has filled in the missing paint."></p>
+<p><span class="credit">Merizzi et al.&nbsp;2024, <em>Heritage Science</em> 12, 41, Figs. 12 &amp; 17, <a href="https://doi.org/10.1186/s40494-023-01116-x">doi:10.1186/s40494-023-01116-x</a>, CC BY 4.0, modified</span></p>
+</div>
+<div class="columns smaller">
 <div class="column" style="width:32%;">
-<div class="placeholder">
-<p><img data-src="img/ph-gen-restoration.svg"></p>
-</div>
 <p><strong>Restoration</strong></p>
-<p>Sharpening or completing degraded archive imagery</p>
+<p>Sharpening or completing degraded imagery, as above</p>
 </div><div class="column" style="width:32%;">
-<div class="placeholder">
-<p><img data-src="img/ph-gen-synthetic.svg"></p>
-</div>
 <p><strong>Synthetic training data</strong></p>
 <p>Manufacturing examples for rare classes</p>
 </div><div class="column" style="width:32%;">
-<div class="placeholder">
-<p><img data-src="img/ph-gen-vlm.svg"></p>
-</div>
 <p><strong>Vision-language models</strong></p>
 <p>Describing an image, answering questions about it</p>
 </div></div>
@@ -1050,6 +1046,7 @@ Verschoof-van der Vaart, Wouter B., and Juergen Landauer. 2021. <span>“Using <
 
 <aside class="notes">
 <p>Synthetic training data is where the two families meet productively: a generative model manufactures examples that train a discriminative one. Published work has done exactly this for Roman fine ware. Mention it, then move on — the room does not need a diffusion lecture.</p>
+<p>On the frescoes: ask the room which pixels in the “inpainted” panels are evidence. None of the filled areas are — they are the network’s guess at what paint was there.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1158,7 +1155,7 @@ Verschoof-van der Vaart, Wouter B., and Juergen Landauer. 2021. <span>“Using <
 <span id="cb1-6"><a aria-label="6"></a>image <span class="op">=</span> load(<span class="st">"find_0042.jpg"</span>)</span>
 <span id="cb1-7"><a aria-label="7"></a>probs <span class="op">=</span> clip_zero_shot(image, labels)   <span class="co"># → [0.81, 0.05, 0.11, 0.03]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="fragment">
-<p><strong>Watch first — you will run this yourself later in the week.</strong></p>
+<p>Try to run the notebook yourself…</p>
 </div>
 
 <aside class="notes">
@@ -1175,12 +1172,13 @@ Verschoof-van der Vaart, Wouter B., and Juergen Landauer. 2021. <span>“Using <
           display:block!important;
       }</style></aside>
 <aside><div>
-<p>Notebook: <code>1-monday-intro/clip_zero_shot.ipynb</code> in the lessons repository, on the <a href="https://docs.cerit.io/en/docs/web-apps/jupyterhub" class="external">CERIT-SC JupyterHub</a>.</p>
+<p>Notebook: <code>1-monday-intro/clip_zero_shot.ipynb</code> (alternatively <code>clip_zero_shot_v2.ipynb</code>) in the lessons repository.</p>
 </div></aside></section>
 <section id="what-just-happened" class="slide level2">
 <h2>What just happened?</h2>
-<div class="placeholder placeholder-sm">
-<p><img data-src="img/ph-clip-output.svg"></p>
+<div class="figure figure-sm">
+<p><img data-src="img/clip-output.png" alt="CLIP output for two sherds. Terra sigillata with five sensible labels: 95% potsherd. A coarse sherd with the same labels: 51% potsherd, 48% stone tool. The coarse sherd offered only coin, stone tool and bicycle: stone tool at 100%."></p>
+<p><span class="credit">Sherds: AMČR <a href="https://doi.org/10.71928/M-202300130-N00020">M-202300130-N00020</a>; M. Španěl, AMČR <a href="https://doi.org/10.71928/M-202300087-N00486">M-202300087-N00486</a>; CC BY-NC 4.0</span></p>
 </div>
 <ul>
 <li class="fragment">The model never saw an archaeological training set — it learned from <strong>image–caption pairs off the internet</strong></li>
@@ -1265,9 +1263,6 @@ Verschoof-van der Vaart, Wouter B., and Juergen Landauer. 2021. <span>“Using <
 </section>
 <section id="five-datasets-five-questions" class="slide level2">
 <h2>Five datasets, five questions</h2>
-<div class="placeholder">
-<p><img data-src="img/ph-week-datasets.svg"></p>
-</div>
 <div class="smaller">
 <table class="caption-top">
 <thead>
@@ -1349,7 +1344,7 @@ Verschoof-van der Vaart, Wouter B., and Juergen Landauer. 2021. <span>“Using <
 
 
 <aside><div>
-<p>Slides, notebooks and datasets: <a href="https://github.com/arup-cas/atrium-school-ml">github.com/arup-cas/atrium-school-ml</a> · Licences: MIT (code) &amp; CC BY-SA 4.0 International (other content).</p>
+<p>Slides: <a href="https://github.com/arup-cas/atrium-school-ml">github.com/arup-cas/atrium-school-ml</a> · Notebooks and datasets: <a href="https://github.com/arubrno/atrium-school-ml-lessons">github.com/arubrno/atrium-school-ml-lessons</a> · Licences: MIT (code) &amp; CC BY-SA 4.0 International (other content), if not stated otherwise.</p>
 </div></aside></section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
@@ -1674,7 +1669,7 @@ Verschoof-van der Vaart, Wouter B., and Juergen Landauer. 2021. <span>“Using <
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp('/' + window.location.host + '/');
+            var filterRegex = new RegExp("https:\/\/ARUP-CAS\.github\.io\/atrium-school-ml\/");
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }

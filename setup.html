@@ -325,6 +325,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Setup</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./materials.html"> <i class="bi bi-book" role="img">
+</i> 
+<span class="menu-text">Materials</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./about.html"> <i class="bi bi-people" role="img">
 </i> 
 <span class="menu-text">About</span></a>
@@ -358,6 +363,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#docker-or-podman" id="toc-docker-or-podman" class="nav-link" data-scroll-target="#docker-or-podman">Docker or Podman</a></li>
   <li><a href="#accounts" id="toc-accounts" class="nav-link" data-scroll-target="#accounts">Accounts</a></li>
+  <li><a href="#course-materials-and-python-packages" id="toc-course-materials-and-python-packages" class="nav-link" data-scroll-target="#course-materials-and-python-packages">Course materials and Python packages</a></li>
   </ul>
 </nav>
 </nav>
@@ -405,6 +411,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <p>The instructions might change, please check this page shortly before the school begins.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>In a hurry? You can skip most of this
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The notebooks run unchanged in <a href="https://colab.research.google.com/" class="external">Google Colab</a>, on the school JupyterHub, and on your own machine — see <a href="./materials.html">Materials</a>. If you only ever use Colab you need nothing on this page except a Google account, and Claude Code if you want coding help. Installing locally is still worth it: it is what you will use after the school.</p>
 </div>
 </div>
 <section id="python" class="level2">
@@ -576,6 +595,43 @@ Tip
 <section id="accounts" class="level2">
 <h2 class="anchored" data-anchor-id="accounts">Accounts</h2>
 <p>You might need a Google account (to access Google Colab) and a <a href="https://huggingface.co/" class="external">HuggingFace</a> account.</p>
+</section>
+<section id="course-materials-and-python-packages" class="level2">
+<h2 class="anchored" data-anchor-id="course-materials-and-python-packages">Course materials and Python packages</h2>
+<p>Once Python and Git are in place, clone the lessons repository — the notebooks and exercises live there, separately from this website — and install the packages they need:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="at">--depth</span> 1 https://github.com/arubrno/atrium-school-ml-lessons.git</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> atrium-school-ml-lessons</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv .venv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then, activate the environment (<code>.venv\Scripts\activate</code> on Windows, <code>source .venv/bin/activate</code> on macOS and Linux) and install:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt <span class="at">--index-url</span> https://download.pytorch.org/whl/cpu <span class="at">--extra-index-url</span> https://pypi.org/simple</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Use the CPU index for PyTorch
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>That <code>--index-url</code> matters. A plain <code>pip install torch</code> downloads the CUDA runtime — around <strong>2.5 GB</strong> — even on a laptop with no NVIDIA graphics card. With the CPU index the whole install finishes in well under a minute, and everything we do this week should run on a CPU.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Datasets come later
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Do <strong>not</strong> try to download the case-study data now. It is not in the repository — some of it is several gigabytes, and some cannot be redistributed. Each notebook fetches what it needs, and caches it so it downloads only once.</p>
+</div>
+</div>
+<p>Each notebook’s first cell then finds this repository around it and installs nothing further.</p>
+<p>If none of this works on your machine, do not worry — the same notebooks run in Google Colab (one click, nothing to install) and on a JupyterHub we will give you access to on the first day.</p>
 
 
 </section>

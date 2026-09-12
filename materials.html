@@ -349,12 +349,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#three-ways-to-run-the-notebooks" id="toc-three-ways-to-run-the-notebooks" class="nav-link active" data-scroll-target="#three-ways-to-run-the-notebooks">Three ways to run the notebooks</a></li>
-  <li><a href="#monday-kick-off-python-for-cv" id="toc-monday-kick-off-python-for-cv" class="nav-link" data-scroll-target="#monday-kick-off-python-for-cv">Monday — Kick-off &amp; Python for CV</a></li>
-  <li><a href="#tuesday-artefacts" id="toc-tuesday-artefacts" class="nav-link" data-scroll-target="#tuesday-artefacts">Tuesday — Artefacts</a></li>
-  <li><a href="#wednesday-microscopic-use-wear" id="toc-wednesday-microscopic-use-wear" class="nav-link" data-scroll-target="#wednesday-microscopic-use-wear">Wednesday — Microscopic use-wear</a></li>
-  <li><a href="#thursday-satellite-imagery-rock-art" id="toc-thursday-satellite-imagery-rock-art" class="nav-link" data-scroll-target="#thursday-satellite-imagery-rock-art">Thursday — Satellite imagery &amp; rock art</a></li>
-  <li><a href="#friday-coins" id="toc-friday-coins" class="nav-link" data-scroll-target="#friday-coins">Friday — Coins</a></li>
+  <li><a href="#monday" id="toc-monday" class="nav-link active" data-scroll-target="#monday">Monday</a></li>
   </ul>
 </nav>
 </nav>
@@ -386,100 +381,96 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Slides and notebooks used during the school. This page grows as the week progresses — check back for updates.</p>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Notebooks live in their own repository
+<span class="screen-reader-only">Tip</span>Notebooks with exercises
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The notebooks and case-study exercises are in <a href="https://github.com/arubrno/atrium-school-ml-lessons" class="external"><strong>atrium-school-ml-lessons</strong></a>, so you can clone them, open them in Colab, and keep working after the school without dragging this website along. The slides stay here.</p>
+<p><strong>Notebooks live in their own repository</strong><br>
+The notebooks and case-study exercises are in <a href="https://github.com/arubrno/atrium-school-ml-lessons" class="external"><strong>atrium-school-ml-lessons</strong></a>, so you can clone them, open them in Colab, and keep working after the school without dragging this website along. The slides stay here.</p>
+<p><strong>Most datasets are not in the repository</strong><br>
+Where each dataset actually lives is recorded in <a href="https://github.com/arubrno/atrium-school-ml-lessons/blob/main/datasets.yml" class="external"><code>datasets.yml</code></a>.</p>
 </div>
 </div>
-<section id="three-ways-to-run-the-notebooks" class="level2">
-<h2 class="anchored" data-anchor-id="three-ways-to-run-the-notebooks">Three ways to run the notebooks</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Three ways to run the notebooks
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>Every notebook starts with the same setup cell. It works out where it is running, fetches the repository if it has to, installs only what is missing, and puts the caches somewhere sensible. <strong>You do not have to edit anything to switch platforms.</strong></p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Google Colab</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">School JupyterHub</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Your own machine</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <p>Nothing to install. Click the <em>Open in Colab</em> badge on a notebook below, then run the first cell — it clones this repository into the session for you.</p>
-<p>Colab wipes its disk when the runtime is recycled, so model weights are re-downloaded in a new session. To keep them, change the last line of the setup cell to:</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Save a copy before you edit
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A notebook opened from GitHub does not keep your changes. Use <em>File → Save a copy in Drive</em> first, and work in that copy.</p>
+</div>
+</div>
+<p>Colab wipes its disk when the runtime is recycled, so model weights are re-downloaded in a new session. To keep them, change the last line of the setup cell, before you run anything else, to:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>setup(<span class="st">"torch"</span>, <span class="st">"transformers"</span>, drive<span class="op">=</span><span class="va">True</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>and approve the Google Drive prompt. The caches then live in <code>MyDrive/atrium-school</code>.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The restricted datasets (satellite, rock art) are mounted on the school JupyterHub and are not downloadable. Those case studies need the hub; everything else runs anywhere.</p>
-</div>
-</div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>Nothing to install, and nothing to spawn. We will give you a URL on the first morning; open it and you are in JupyterLab with the server already running and this repository already there.</p>
-<p>Open the folder for the day in the file browser on the left and double-click the notebook you need. Run the first cell as usual — on the hub it finds everything in place and installs nothing.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<p>Nothing to install, and nothing to spawn. We will give you a URL on the first morning; open it and you are in JupyterLab with the server already running.</p>
+<p>Everyone’s server shares the same home directory. In the file browser you will find:</p>
+<pre><code>_atrium-school-ml-lessons/   the notebooks — we keep this up to date, do not edit here
+_atrium-data/                the datasets, shared by everyone
+&lt;your name&gt;/                 your own folder: work here</code></pre>
+<p>Copy the notebook you need from the day’s folder in <code>_atrium-school-ml-lessons/</code> into your own folder (right-click → <em>Copy</em>, then <em>Paste</em> in your folder), open the copy, and run the first cell as usual. It finds the shared repository and installs nothing — the packages, model weights and data are already in place.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Your work is saved, the machine is not
+<span class="screen-reader-only">Warning</span>Caution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Your home directory persists, so notebooks you edit and files you save are still there tomorrow. The server itself may be restarted between sessions; if a notebook stops responding, <em>Kernel → Restart Kernel</em> and re-run from the top.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If the URL asks you to choose a server configuration, or you land somewhere that looks nothing like the above, tell an instructor — do not guess.</p>
+<p><strong>Your work is saved, the machine is not</strong><br>
+Your folder persists, so notebooks you edit and files you save are still there tomorrow. The server itself may be restarted between sessions; if a notebook stops responding, <em>Kernel → Restart Kernel</em> and re-run from the top.</p>
+<p><strong>Shared means shared</strong><br>
+Everyone can see — and delete — everything in the home directory. Stay in your own folder.</p>
+<p><strong>Something does not look right?</strong><br>
+If the URL asks you to choose a server configuration, or you land somewhere that looks nothing like the above, tell an instructor — do not guess.</p>
 </div>
 </div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <p>Follow the <a href="./setup.html">setup guide</a>, then start Jupyter (or open the notebook in your IDE) anywhere inside the clone:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="at">--depth</span> 1 https://github.com/arubrno/atrium-school-ml-lessons.git</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> atrium-school-ml-lessons</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv .venv <span class="kw">&amp;&amp;</span> <span class="bu">source</span> .venv/bin/activate   <span class="co"># .venv\Scripts\activate on Windows</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt <span class="dt">\</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">--index-url</span> https://download.pytorch.org/whl/cpu <span class="dt">\</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">--extra-index-url</span> https://pypi.org/simple</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="at">--depth</span> 1 https://github.com/arubrno/atrium-school-ml-lessons.git</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> atrium-school-ml-lessons</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv .venv <span class="kw">&amp;&amp;</span> <span class="bu">source</span> .venv/bin/activate   <span class="co"># .venv\Scripts\activate on Windows</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt <span class="dt">\</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">--index-url</span> https://download.pytorch.org/whl/cpu <span class="dt">\</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">--extra-index-url</span> https://pypi.org/simple</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The setup cell finds the repository around it and installs nothing further.</p>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Datasets are not in the repository
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>They are too large, and some are not redistributable. Every notebook fetches its data the same way, and caches it so it is downloaded only once:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> atrium_data <span class="im">import</span> get_dataset</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> get_dataset(<span class="st">"coins"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Where each dataset actually lives is recorded in <a href="https://github.com/arubrno/atrium-school-ml-lessons/blob/main/datasets.yml" class="external"><code>datasets.yml</code></a>.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -492,32 +483,40 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Copy a notebook before you edit it (<code>cp intro.ipynb my-intro.ipynb</code>). We will push updates during the week, and <code>git pull</code> on a notebook you have changed produces a merge conflict in raw JSON that nobody enjoys resolving.</p>
+<p>Copy a notebook before you edit it (<code>cp clip_zero_shot.ipynb my-clip.ipynb</code>). We will push updates during the week, and <code>git pull</code> on a notebook you have changed produces a merge conflict in raw JSON that nobody enjoys resolving. On the hub, copy it into your own folder; on Colab, <em>Save a copy in Drive</em>.</p>
 </div>
 </div>
-</section>
-<section id="monday-kick-off-python-for-cv" class="level2">
-<h2 class="anchored" data-anchor-id="monday-kick-off-python-for-cv">Monday — Kick-off &amp; Python for CV</h2>
+<section id="monday" class="level2">
+<h2 class="anchored" data-anchor-id="monday">Monday</h2>
+<ol type="1">
+<li><a href="./materials/intro/intro.html"><strong>Introduction to computer vision</strong></a> — What computer vision is, the family of tasks, discriminative vs.&nbsp;generative models, a live zero-shot demo with CLIP, and three rounds of group discussion.</li>
+<li><a href="https://github.com/arubrno/atrium-school-ml-lessons/blob/main/1-monday-intro/clip_zero_shot.ipynb" class="external"><strong>CLIP zero-shot classification</strong></a> — the notebook behind the demo. Classifying artefact photographs with no training and no annotation, and three ways it misleads you. <a href="https://colab.research.google.com/github/arubrno/atrium-school-ml-lessons/blob/main/1-monday-intro/clip_zero_shot.ipynb" class="external"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open in Colab"></a>
 <ul>
-<li><a href="./materials/intro/intro.html"><strong>Introduction to computer vision</strong></a> — 90 min. What computer vision is, the family of tasks, discriminative vs.&nbsp;generative models, a live zero-shot demo with CLIP, and three rounds of group discussion.</li>
-<li><a href="https://github.com/arubrno/atrium-school-ml-lessons/blob/main/1-monday-intro/clip_zero_shot.ipynb" class="external"><strong>CLIP zero-shot classification</strong></a> — the notebook behind the demo. Classifying artefact photographs with no training and no annotation, and three ways it misleads you. <a href="https://colab.research.google.com/github/arubrno/atrium-school-ml-lessons/blob/main/1-monday-intro/clip_zero_shot.ipynb" class="external"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open in Colab"></a></li>
-</ul>
-</section>
-<section id="tuesday-artefacts" class="level2">
-<h2 class="anchored" data-anchor-id="tuesday-artefacts">Tuesday — Artefacts</h2>
-<p>Classification and detection of artefact types from photographs. <em>Notebooks to follow.</em></p>
-</section>
-<section id="wednesday-microscopic-use-wear" class="level2">
-<h2 class="anchored" data-anchor-id="wednesday-microscopic-use-wear">Wednesday — Microscopic use-wear</h2>
-<p>Segmentation of use-wear traces in microscopic images. <em>Notebooks to follow.</em></p>
-</section>
-<section id="thursday-satellite-imagery-rock-art" class="level2">
-<h2 class="anchored" data-anchor-id="thursday-satellite-imagery-rock-art">Thursday — Satellite imagery &amp; rock art</h2>
-<p>Object detection on remote-sensing data. <em>Notebooks to follow.</em></p>
-</section>
-<section id="friday-coins" class="level2">
-<h2 class="anchored" data-anchor-id="friday-coins">Friday — Coins</h2>
-<p>Combining methods, and vision-language models. <em>Notebooks to follow.</em></p>
+<li><strong>New to Python?</strong> Use <a href="https://github.com/arubrno/atrium-school-ml-lessons/blob/main/1-monday-intro/clip_zero_shot_v2.ipynb" class="external"><strong>the beginner version</strong></a> — the same notebook with the code spelled out step by step and commented line by line, plus an optional look inside the model. <a href="https://colab.research.google.com/github/arubrno/atrium-school-ml-lessons/blob/main/1-monday-intro/clip_zero_shot_v2.ipynb" class="external"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open in Colab"></a></li>
+</ul></li>
+<li>Python for Computer Vision</li>
+<li>Coding with agents</li>
+</ol>
+<p><em>Ice-breaker event in the evening.</em></p>
+<!-- ## Tuesday — Artefacts
+
+Classification and detection of artefact types from photographs.
+*Notebooks to follow.*
+
+## Wednesday — Microscopic use-wear
+
+Segmentation of use-wear traces in microscopic images.
+*Notebooks to follow.*
+
+## Thursday — Satellite imagery & rock art
+
+Object detection on remote-sensing data.
+*Notebooks to follow.*
+
+## Friday — Coins
+
+Combining methods, and vision-language models.
+*Notebooks to follow.* -->
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -622,7 +621,7 @@ Note
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/ARUP-CAS\.github\.io\/atrium-school-ml\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
