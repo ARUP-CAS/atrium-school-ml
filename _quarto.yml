@@ -3,6 +3,11 @@ execute:
 
 project:
   type: website
+  # Notebooks and exercises live in a separate repository, atrium-school-ml-lessons.
+  # This site is the slides, the programme and the practical information.
+  render:
+    - "*.qmd"
+    - "materials/**/*.qmd"
 
 website:
   title: "Computer Vision in Archaeology"
@@ -27,9 +32,9 @@ website:
       - href: setup.qmd
         text: Setup
         icon: gear
-      # - href: materials.qmd
-      #   text: Materials
-      #   icon: book
+      - href: materials.qmd
+        text: Materials
+        icon: book
       # - href: report.qmd
       #   text: Recap
       #   icon: lightbulb

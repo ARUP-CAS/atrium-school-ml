@@ -66,3 +66,23 @@ rsconnect/
 /reports/*_comments.pdf
 
 **/*.quarto_ipynb
+
+# Pre-school survey: raw responses stay local, only aggregates are committed
+survey/*
+!survey/README.md
+!survey/aggregate.R
+!survey/summary/
+survey/raw/
+
+# Local Python environment
+.venv/
+
+# Datasets are never committed. They live in the lessons repository's
+# datasets.yml, and notebooks fetch them there.
+.cache/
+
+__pycache__/
+*.pyc
+
+# Source photographs and annotation exports for the slides (see materials/intro/make_images.py)
+/temp/

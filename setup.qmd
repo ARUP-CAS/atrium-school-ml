@@ -12,6 +12,17 @@ The instructions might change, please check this page shortly before the school 
 :::
 
 
+::: {.callout-tip}
+## In a hurry? You can skip most of this
+
+The notebooks run unchanged in [Google Colab](https://colab.research.google.com/){.external},
+on the school JupyterHub, and on your own machine — see
+[Materials](materials.qmd). If you only ever use Colab you need nothing on this
+page except a Google account, and Claude Code if you want coding help. Installing
+locally is still worth it: it is what you will use after the school.
+:::
+
+
 ## Python
 
 Install Python (3.10+), follow guidance on the official [website](https://www.python.org/){.external} or use your system's package manager.
@@ -186,3 +197,46 @@ Documentation [here](https://podman.io/){.external}.
 ## Accounts
 
 You might need a Google account (to access Google Colab) and a [HuggingFace](https://huggingface.co/){.external} account.
+
+## Course materials and Python packages
+
+Once Python and Git are in place, clone the lessons repository — the notebooks
+and exercises live there, separately from this website — and install the packages
+they need:
+
+```bash
+git clone --depth 1 https://github.com/arubrno/atrium-school-ml-lessons.git
+cd atrium-school-ml-lessons
+python -m venv .venv
+```
+
+Then, activate the environment (`.venv\Scripts\activate` on Windows,
+`source .venv/bin/activate` on macOS and Linux) and install:
+
+```bash
+pip install -r requirements.txt --index-url https://download.pytorch.org/whl/cpu --extra-index-url https://pypi.org/simple
+```
+
+::: {.callout-important}
+## Use the CPU index for PyTorch
+
+That `--index-url` matters. A plain `pip install torch` downloads the CUDA
+runtime — around **2.5 GB** — even on a laptop with no NVIDIA graphics card.
+With the CPU index the whole install finishes in well under a minute, and
+everything we do this week should run on a CPU.
+:::
+
+::: {.callout-tip}
+## Datasets come later
+
+Do **not** try to download the case-study data now. It is not in the repository —
+some of it is several gigabytes, and some cannot be redistributed. Each notebook
+fetches what it needs, and caches it so it downloads only once.
+:::
+
+Each notebook's first cell then finds this repository around it and installs
+nothing further.
+
+If none of this works on your machine, do not worry — the same notebooks run in
+Google Colab (one click, nothing to install) and on a JupyterHub we will give you
+access to on the first day.
