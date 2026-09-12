@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="440" viewBox="0 0 560 440" role="img" aria-label="Feature space with a decision boundary between two classes">
+  <defs>
+    <pattern id="d" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="16" height="16" fill="#f2f4f7"/>
+      <line x1="0" y1="0" x2="0" y2="16" stroke="#dfe3e8" stroke-width="6"/>
+    </pattern>
+  </defs>
+  <rect width="560" height="440" fill="url(#d)"/>
+  <rect x="4" y="4" width="552" height="432" fill="none" stroke="#2c7be5" stroke-width="3" stroke-dasharray="14 10"/>
+  <text x="280" y="196" font-family="Alegreya Sans, Helvetica, sans-serif" font-size="16" fill="#2c7be5" text-anchor="middle" font-weight="700" letter-spacing="1.5">PLACEHOLDER</text>
+  <text x="280" y="212" font-family="Alegreya Sans, Helvetica, sans-serif" font-size="12" fill="#5a6572" text-anchor="middle">Feature space with a decision boundary between two classes</text>
+</svg>

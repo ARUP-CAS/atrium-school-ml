@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-09-03">
 
-<title>Setup Guide – Computer Vision in Archaeology</title>
+<title>Materials – Computer Vision in Archaeology</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -320,9 +319,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Programme</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./setup.html" aria-current="page"> <i class="bi bi-gear" role="img">
+    <a class="nav-link" href="./setup.html"> <i class="bi bi-gear" role="img">
 </i> 
 <span class="menu-text">Setup</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./materials.html" aria-current="page"> <i class="bi bi-book" role="img">
+</i> 
+<span class="menu-text">Materials</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> <i class="bi bi-people" role="img">
@@ -345,19 +349,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#python" id="toc-python" class="nav-link active" data-scroll-target="#python">Python</a></li>
-  <li><a href="#git" id="toc-git" class="nav-link" data-scroll-target="#git">Git</a></li>
-  <li><a href="#ide" id="toc-ide" class="nav-link" data-scroll-target="#ide">IDE</a>
-  <ul class="collapse">
-  <li><a href="#zed" id="toc-zed" class="nav-link" data-scroll-target="#zed">Zed</a></li>
-  </ul></li>
-  <li><a href="#agent-integration" id="toc-agent-integration" class="nav-link" data-scroll-target="#agent-integration">Agent Integration</a>
-  <ul class="collapse">
-  <li><a href="#add-your-api-key-to-zed" id="toc-add-your-api-key-to-zed" class="nav-link" data-scroll-target="#add-your-api-key-to-zed">Add your API key to Zed</a></li>
-  <li><a href="#using-the-agent-in-zed" id="toc-using-the-agent-in-zed" class="nav-link" data-scroll-target="#using-the-agent-in-zed">Using the agent in Zed</a></li>
-  </ul></li>
-  <li><a href="#docker-or-podman" id="toc-docker-or-podman" class="nav-link" data-scroll-target="#docker-or-podman">Docker or Podman</a></li>
-  <li><a href="#accounts" id="toc-accounts" class="nav-link" data-scroll-target="#accounts">Accounts</a></li>
+  <li><a href="#three-ways-to-run-the-notebooks" id="toc-three-ways-to-run-the-notebooks" class="nav-link active" data-scroll-target="#three-ways-to-run-the-notebooks">Three ways to run the notebooks</a></li>
+  <li><a href="#monday-kick-off-python-for-cv" id="toc-monday-kick-off-python-for-cv" class="nav-link" data-scroll-target="#monday-kick-off-python-for-cv">Monday — Kick-off &amp; Python for CV</a></li>
+  <li><a href="#tuesday-artefacts" id="toc-tuesday-artefacts" class="nav-link" data-scroll-target="#tuesday-artefacts">Tuesday — Artefacts</a></li>
+  <li><a href="#wednesday-microscopic-use-wear" id="toc-wednesday-microscopic-use-wear" class="nav-link" data-scroll-target="#wednesday-microscopic-use-wear">Wednesday — Microscopic use-wear</a></li>
+  <li><a href="#thursday-satellite-imagery-rock-art" id="toc-thursday-satellite-imagery-rock-art" class="nav-link" data-scroll-target="#thursday-satellite-imagery-rock-art">Thursday — Satellite imagery &amp; rock art</a></li>
+  <li><a href="#friday-coins" id="toc-friday-coins" class="nav-link" data-scroll-target="#friday-coins">Friday — Coins</a></li>
   </ul>
 </nav>
 </nav>
@@ -371,7 +368,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Setup Guide</h1>
+<h1 class="title">Materials</h1>
 </div>
 
 
@@ -379,12 +376,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-title-meta">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">September 3, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -394,67 +385,60 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="callout callout-style-default callout-important callout-titled">
+<p>Slides and notebooks used during the school. This page grows as the week progresses — check back for updates.</p>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Alert!
+<span class="screen-reader-only">Note</span>Notebooks live in their own repository
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The instructions might change, please check this page shortly before the school begins.</p>
+<p>The notebooks and case-study exercises are in <a href="https://github.com/arubrno/atrium-school-ml-lessons" class="external"><strong>atrium-school-ml-lessons</strong></a>, so you can clone them, open them in Colab, and keep working after the school without dragging this website along. The slides stay here.</p>
 </div>
 </div>
-<section id="python" class="level2">
-<h2 class="anchored" data-anchor-id="python">Python</h2>
-<p>Install Python (3.10+), follow guidance on the official <a href="https://www.python.org/" class="external">website</a> or use your system’s package manager.</p>
-<!-- ### JupyterLab
-
-Install JupyterLab with `pip`:
-
-```python
-pip install jupyterlab
-``` -->
-</section>
-<section id="git" class="level2">
-<h2 class="anchored" data-anchor-id="git">Git</h2>
-<p>Install Git, on Windows foolow this <a href="https://gitforwindows.org/" class="external">guide</a>, on MacOS this <a href="https://git-scm.com/install/mac" class="external">one</a> and on Linux you probably already have it and presumably know what you are doing.</p>
-</section>
-<section id="ide" class="level2">
-<h2 class="anchored" data-anchor-id="ide">IDE</h2>
-<p>Install and use an IDE of your choice, preferably <a href="https://zed.dev/" class="external">Zed</a> or <a href="https://code.visualstudio.com/" class="external">VSCode</a>.</p>
-<section id="zed" class="level3">
-<h3 class="anchored" data-anchor-id="zed">Zed</h3>
-<div class="justify">
-<p><a href="https://zed.dev/" class="external">Zed</a> is a fast, open-source editor with a built-in AI agent, so you don’t need to install any extension to get coding assistance. We will use it during the school together with the API key you will be given, see <a href="#agent-integration">Agent Integration</a> below.</p>
-</div>
+<section id="three-ways-to-run-the-notebooks" class="level2">
+<h2 class="anchored" data-anchor-id="three-ways-to-run-the-notebooks">Three ways to run the notebooks</h2>
+<p>Every notebook starts with the same setup cell. It works out where it is running, fetches the repository if it has to, installs only what is missing, and puts the caches somewhere sensible. <strong>You do not have to edit anything to switch platforms.</strong></p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">macOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Linux</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Google Colab</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">School JupyterHub</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Your own machine</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>Download the installer from the <a href="https://zed.dev/download" class="external">download page</a>, or run in PowerShell:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>winget install <span class="op">-</span>e <span class="op">--</span>id ZedIndustries<span class="op">.</span><span class="fu">Zed</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Nothing to install. Click the <em>Open in Colab</em> badge on a notebook below, then run the first cell — it clones this repository into the session for you.</p>
+<p>Colab wipes its disk when the runtime is recycled, so model weights are re-downloaded in a new session. To keep them, change the last line of the setup cell to:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>setup(<span class="st">"torch"</span>, <span class="st">"transformers"</span>, drive<span class="op">=</span><span class="va">True</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>and approve the Google Drive prompt. The caches then live in <code>MyDrive/atrium-school</code>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The restricted datasets (satellite, rock art) are mounted on the school JupyterHub and are not downloadable. Those case studies need the hub; everything else runs anywhere.</p>
+</div>
+</div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>Download from the <a href="https://zed.dev/download" class="external">download page</a>, or run in Terminal:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-f</span> https://zed.dev/install.sh <span class="kw">|</span> <span class="fu">sh</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Nothing to install, and nothing to spawn. We will give you a URL on the first morning; open it and you are in JupyterLab with the server already running and this repository already there.</p>
+<p>Open the folder for the day in the file browser on the left and double-click the notebook you need. Run the first cell as usual — on the hub it finds everything in place and installs nothing.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>Run in a terminal:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-f</span> https://zed.dev/install.sh <span class="kw">|</span> <span class="fu">sh</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Your distribution may also package Zed, in which case feel free to use your package manager.</p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Your work is saved, the machine is not
 </div>
 </div>
+<div class="callout-body-container callout-body">
+<p>Your home directory persists, so notebooks you edit and files you save are still there tomorrow. The server itself may be restarted between sessions; if a notebook stops responding, <em>Kernel → Restart Kernel</em> and re-run from the top.</p>
 </div>
-<p>Zed keeps itself up to date, so you only need to do this once.</p>
-</section>
-</section>
-<section id="agent-integration" class="level2">
-<h2 class="anchored" data-anchor-id="agent-integration">Agent Integration</h2>
-<div class="justify">
-<p>During the school you will be granted access to LLM Agent via <a href="https://openrouter.ai/" class="external">OpenRouter</a> to support you in coding. OpenRouter is a gateway that gives you access to many models (Claude, GPT, Gemini, open-weight models, …) through a single API key – the one you will receive at the start of the school.</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -466,76 +450,36 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you already use a different coding assistant or have a Claude subscription, you can use your own settings, we do not require you to use this.</p>
-</div>
-</div>
-<section id="add-your-api-key-to-zed" class="level3">
-<h3 class="anchored" data-anchor-id="add-your-api-key-to-zed">Add your API key to Zed</h3>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Zed settings UI</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Environment variable</a></li></ul>
-<div class="tab-content">
-<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
-<p><em>This is the recommended way – the key is stored in your system keychain and survives restarts.</em></p>
-<ol type="1">
-<li><p>Open the settings from the menu: <code>Zed</code> &gt; <code>Open Settings</code> (<code>ctrl-,</code>, on macOS <code>cmd-,</code>).</p>
-<p><img src="figs/zed-open-settings.png" class="img-fluid" style="width:60.0%" alt="Zed menu with the Open Settings item"></p></li>
-<li><p>Pick <code>AI</code> in the left sidebar, and under <code>General</code> click <code>Configure</code> next to <code>LLM Providers</code>.</p>
-<p><img src="figs/zed-ai-settings.png" class="img-fluid" style="width:100.0%" alt="AI section of Zed settings with the LLM Providers row"></p></li>
-<li><p>Scroll down to the <strong>OpenRouter</strong> section and paste the key you were given into the <code>API Key</code> field, then confirm with <code>enter</code>.</p>
-<p><img src="figs/zed-openrouter-key.png" class="img-fluid" style="width:100.0%" alt="OpenRouter provider with the API Key field"></p></li>
-</ol>
-<p>Once the key is accepted, OpenRouter models show up in the model selector in the agent panel.</p>
-</div>
-<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
-<p>Instead of pasting the key into the settings, you can set the <code>OPENROUTER_API_KEY</code> environment variable – Zed reads it from the environment it was started in, so you have to <strong>restart Zed</strong> for it to take effect.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">macOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Linux</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>setx OPENROUTER_API_KEY <span class="st">"sk-or-v1-REPLACE-ME"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>setx</code> stores the variable permanently, but it only applies to programs started after you run it.</p>
-</div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">OPENROUTER_API_KEY</span><span class="op">=</span><span class="st">"sk-or-v1-REPLACE-ME"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>This is not permanent – it only applies to the current terminal session, so start Zed from that same terminal (<code>zed .</code>), or add the line to your <code>~/.zshrc</code>.</p>
-</div>
-<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">OPENROUTER_API_KEY</span><span class="op">=</span><span class="st">"sk-or-v1-REPLACE-ME"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>This is not permanent – it only applies to the current terminal session, so start Zed from that same terminal (<code>zed .</code>), or add the line to your <code>~/.bashrc</code>.</p>
+<p>If the URL asks you to choose a server configuration, or you land somewhere that looks nothing like the above, tell an instructor — do not guess.</p>
 </div>
 </div>
 </div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>Follow the <a href="./setup.html">setup guide</a>, then start Jupyter (or open the notebook in your IDE) anywhere inside the clone:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="at">--depth</span> 1 https://github.com/arubrno/atrium-school-ml-lessons.git</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> atrium-school-ml-lessons</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv .venv <span class="kw">&amp;&amp;</span> <span class="bu">source</span> .venv/bin/activate   <span class="co"># .venv\Scripts\activate on Windows</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt <span class="dt">\</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">--index-url</span> https://download.pytorch.org/whl/cpu <span class="dt">\</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">--extra-index-url</span> https://pypi.org/simple</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The setup cell finds the repository around it and installs nothing further.</p>
 </div>
 </div>
 </div>
-</section>
-<section id="using-the-agent-in-zed" class="level3">
-<h3 class="anchored" data-anchor-id="using-the-agent-in-zed">Using the agent in Zed</h3>
-<ul>
-<li><strong>Agent panel</strong> – click the ✨ icon in the status bar, or run <code>agent: new thread</code> from the command palette. This is the chat-style assistant that can read and edit files in your project.</li>
-<li><strong>Pick a model</strong> – use the model selector above the message box, or <code>cmd-alt-/</code> (macOS) / <code>ctrl-alt-/</code> (Windows/Linux). With the school key, only <strong>GLM 5.3 Flash</strong> and <strong>DeepSeek V4.1 Flash</strong> are available.</li>
-<li><strong>Inline assist</strong> – press <code>ctrl-enter</code> in the editor or terminal to ask for a change right where your cursor is; select a block of code first to have it rewritten.</li>
-</ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+<span class="screen-reader-only">Tip</span>Datasets are not in the repository
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you want to set a default model, so you don’t have to pick it in every new thread, you can edit Zed’s <code>settings.json</code> directly – <code>Zed</code> &gt; <code>Open Settings File</code> (<code>ctrl-alt-,</code>, on macOS <code>cmd-alt-,</code>):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"agent"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"default_model"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"provider"</span><span class="fu">:</span> <span class="st">"openrouter"</span><span class="fu">,</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"model"</span><span class="fu">:</span> <span class="st">"deepseek/deepseek-v4.1-flash"</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The other available model is <strong>GLM 5.3 Flash</strong> – you can copy its exact identifier from the model selector or from the <a href="https://openrouter.ai/models" class="external">OpenRouter models page</a>.</p>
+<p>They are too large, and some are not redistributable. Every notebook fetches its data the same way, and caches it so it is downloaded only once:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> atrium_data <span class="im">import</span> get_dataset</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> get_dataset(<span class="st">"coins"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Where each dataset actually lives is recorded in <a href="https://github.com/arubrno/atrium-school-ml-lessons/blob/main/datasets.yml" class="external"><code>datasets.yml</code></a>.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -544,38 +488,49 @@ Tip
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Attention
+<span class="screen-reader-only">Important</span>Work on a copy
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>Copy a notebook before you edit it (<code>cp intro.ipynb my-intro.ipynb</code>). We will push updates during the week, and <code>git pull</code> on a notebook you have changed produces a merge conflict in raw JSON that nobody enjoys resolving.</p>
+</div>
+</div>
+</section>
+<section id="monday-kick-off-python-for-cv" class="level2">
+<h2 class="anchored" data-anchor-id="monday-kick-off-python-for-cv">Monday — Kick-off &amp; Python for CV</h2>
 <ul>
-<li><strong>Never</strong> share your key or commit it to a repository.</li>
-<li>The key is time-limited, has a spending limit, and will stop working after the school.</li>
-<li>Only two models are available to you: <strong>GLM 5.3 Flash</strong> and <strong>DeepSeek V4.1 Flash</strong>.</li>
-<li><strong>Never</strong> put personal data or non-public information into the agent – whatever you send goes to a third-party service.</li>
+<li><a href="./materials/intro/intro.html"><strong>Introduction to computer vision</strong></a> — 90 min. What computer vision is, the family of tasks, discriminative vs.&nbsp;generative models, a live zero-shot demo with CLIP, and three rounds of group discussion.</li>
+<li><a href="https://github.com/arubrno/atrium-school-ml-lessons/blob/main/1-monday-intro/clip_zero_shot.ipynb" class="external"><strong>CLIP zero-shot classification</strong></a> — the notebook behind the demo. Classifying artefact photographs with no training and no annotation, and three ways it misleads you. <a href="https://colab.research.google.com/github/arubrno/atrium-school-ml-lessons/blob/main/1-monday-intro/clip_zero_shot.ipynb" class="external"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open in Colab"></a></li>
 </ul>
-</div>
-</div>
 </section>
+<section id="tuesday-artefacts" class="level2">
+<h2 class="anchored" data-anchor-id="tuesday-artefacts">Tuesday — Artefacts</h2>
+<p>Classification and detection of artefact types from photographs. <em>Notebooks to follow.</em></p>
 </section>
-<section id="docker-or-podman" class="level2">
-<h2 class="anchored" data-anchor-id="docker-or-podman">Docker or Podman</h2>
-<p>Install Docker or Podman:</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">Docker</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Podman</a></li></ul>
-<div class="tab-content">
-<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
-<p>Follow official documentation <a href="https://docs.docker.com/get-started/get-docker/" class="external">here</a>. On Windows, Docker is probably easier to install.</p>
-</div>
-<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
-<p>Documentation <a href="https://podman.io/" class="external">here</a>.</p>
-</div>
-</div>
-</div>
+<section id="wednesday-microscopic-use-wear" class="level2">
+<h2 class="anchored" data-anchor-id="wednesday-microscopic-use-wear">Wednesday — Microscopic use-wear</h2>
+<p>Segmentation of use-wear traces in microscopic images. <em>Notebooks to follow.</em></p>
 </section>
-<section id="accounts" class="level2">
-<h2 class="anchored" data-anchor-id="accounts">Accounts</h2>
-<p>You might need a Google account (to access Google Colab) and a <a href="https://huggingface.co/" class="external">HuggingFace</a> account.</p>
+<section id="thursday-satellite-imagery-rock-art" class="level2">
+<h2 class="anchored" data-anchor-id="thursday-satellite-imagery-rock-art">Thursday — Satellite imagery &amp; rock art</h2>
+<p>Object detection on remote-sensing data. <em>Notebooks to follow.</em></p>
+</section>
+<section id="friday-coins" class="level2">
+<h2 class="anchored" data-anchor-id="friday-coins">Friday — Coins</h2>
+<p>Combining methods, and vision-language models. <em>Notebooks to follow.</em></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Reading
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <a href="https://www.zotero.org/groups/5991067/maia_managing_ai_in_archaeology/library" class="external">MAIA COST Action Zotero library</a> is an open, shared bibliography on AI in archaeology. Most examples used in the slides come from there.</p>
+</div>
+</div>
 
 
 </section>
@@ -667,7 +622,7 @@ Tip
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/ARUP-CAS\.github\.io\/atrium-school-ml\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

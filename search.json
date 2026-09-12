@@ -25,14 +25,14 @@
     "href": "setup.html#ide",
     "title": "Setup Guide",
     "section": "IDE",
-    "text": "IDE\nInstall and use an IDE of your choice, preferably Zed or VSCode."
+    "text": "IDE\nInstall and use an IDE of your choice, preferably Zed or VSCode.\n\nZed\n\nZed is a fast, open-source editor with a built-in AI agent, so you don’t need to install any extension to get coding assistance. We will use it during the school together with the API key you will be given, see Agent Integration below.\n\n\nWindowsmacOSLinux\n\n\nDownload the installer from the download page, or run in PowerShell:\nwinget install -e --id ZedIndustries.Zed\n\n\nDownload from the download page, or run in Terminal:\ncurl -f https://zed.dev/install.sh | sh\n\n\nRun in a terminal:\ncurl -f https://zed.dev/install.sh | sh\nYour distribution may also package Zed, in which case feel free to use your package manager.\n\n\n\nZed keeps itself up to date, so you only need to do this once."
   },
   {
     "objectID": "setup.html#agent-integration",
     "href": "setup.html#agent-integration",
     "title": "Setup Guide",
     "section": "Agent Integration",
-    "text": "Agent Integration\n\nDuring the school you will be granted access to LLM Agent via Openrouter to support you in coding.\nIf you’re using Zed, add the API key provided at the start of the school in Zed settings &gt; AI &gt; General &gt; LLM Providers &gt; OpenRouter .\n\n\n\n\n\n\n\nNote\n\n\n\nIf you already use a different coding assistant or have a Claude subscription, you can use your own settings, we do not require you to use this."
+    "text": "Agent Integration\n\nDuring the school you will be granted access to LLM Agent via OpenRouter to support you in coding. OpenRouter is a gateway that gives you access to many models (Claude, GPT, Gemini, open-weight models, …) through a single API key – the one you will receive at the start of the school.\n\n\n\n\n\n\n\nNote\n\n\n\nIf you already use a different coding assistant or have a Claude subscription, you can use your own settings, we do not require you to use this.\n\n\n\nAdd your API key to Zed\n\nZed settings UIEnvironment variable\n\n\nThis is the recommended way – the key is stored in your system keychain and survives restarts.\n\nOpen the settings from the menu: Zed &gt; Open Settings (ctrl-,, on macOS cmd-,).\n\nPick AI in the left sidebar, and under General click Configure next to LLM Providers.\n\nScroll down to the OpenRouter section and paste the key you were given into the API Key field, then confirm with enter.\n\n\nOnce the key is accepted, OpenRouter models show up in the model selector in the agent panel.\n\n\nInstead of pasting the key into the settings, you can set the OPENROUTER_API_KEY environment variable – Zed reads it from the environment it was started in, so you have to restart Zed for it to take effect.\n\nWindowsmacOSLinux\n\n\nsetx OPENROUTER_API_KEY \"sk-or-v1-REPLACE-ME\"\nsetx stores the variable permanently, but it only applies to programs started after you run it.\n\n\nexport OPENROUTER_API_KEY=\"sk-or-v1-REPLACE-ME\"\nThis is not permanent – it only applies to the current terminal session, so start Zed from that same terminal (zed .), or add the line to your ~/.zshrc.\n\n\nexport OPENROUTER_API_KEY=\"sk-or-v1-REPLACE-ME\"\nThis is not permanent – it only applies to the current terminal session, so start Zed from that same terminal (zed .), or add the line to your ~/.bashrc.\n\n\n\n\n\n\n\n\nUsing the agent in Zed\n\nAgent panel – click the ✨ icon in the status bar, or run agent: new thread from the command palette. This is the chat-style assistant that can read and edit files in your project.\nPick a model – use the model selector above the message box, or cmd-alt-/ (macOS) / ctrl-alt-/ (Windows/Linux). With the school key, only GLM 5.3 Flash and DeepSeek V4.1 Flash are available.\nInline assist – press ctrl-enter in the editor or terminal to ask for a change right where your cursor is; select a block of code first to have it rewritten.\n\n\n\n\n\n\n\nTip\n\n\n\nIf you want to set a default model, so you don’t have to pick it in every new thread, you can edit Zed’s settings.json directly – Zed &gt; Open Settings File (ctrl-alt-,, on macOS cmd-alt-,):\n{\n  \"agent\": {\n    \"default_model\": {\n      \"provider\": \"openrouter\",\n      \"model\": \"deepseek/deepseek-v4.1-flash\"\n    }\n  }\n}\nThe other available model is GLM 5.3 Flash – you can copy its exact identifier from the model selector or from the OpenRouter models page.\n\n\n\n\n\n\n\n\nImportantAttention\n\n\n\n\nNever share your key or commit it to a repository.\nThe key is time-limited, has a spending limit, and will stop working after the school.\nOnly two models are available to you: GLM 5.3 Flash and DeepSeek V4.1 Flash.\nNever put personal data or non-public information into the agent – whatever you send goes to a third-party service."
   },
   {
     "objectID": "setup.html#docker-or-podman",
@@ -49,39 +49,32 @@
     "text": "Accounts\nYou might need a Google account (to access Google Colab) and a HuggingFace account."
   },
   {
-    "objectID": "info.html",
-    "href": "info.html",
-    "title": "General Information",
+    "objectID": "programme.html",
+    "href": "programme.html",
+    "title": "Training school programme",
     "section": "",
-    "text": "ImportantPre-school survey\n\n\n\nIf you are among selected participants, please fill in a pre-school survey here."
+    "text": "ImportantPre-school survey\n\n\n\nIf you are among selected participants, please fill in a pre-school survey here.\nThe programme is organised by topics and dataset types. Each topic builds on the previous one, guiding participants from foundational skills to advanced applications of computer vision in archaeology."
   },
   {
-    "objectID": "info.html#date-and-location",
-    "href": "info.html#date-and-location",
-    "title": "General Information",
-    "section": "Date and location",
-    "text": "Date and location\nThe school will be held from 14 to 18 September 2026 at the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/) at the address given below:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nTipNote\n\n\n\nPlease note that this is an on-site event only, and remote participation will not be possible."
+    "objectID": "programme.html#programme",
+    "href": "programme.html#programme",
+    "title": "Training school programme",
+    "section": "Programme",
+    "text": "Programme\n\n\n\nFinal programme\n\n\n\nMonday\nKick-off & Python for CV\nMorning\n\nKick-off, practicalities, and motivations\nIntroduction to the workshop structure\nIntroduction co computer vision and questions computer vision can answer\nSetting up the technical environment (Google Colab and tools)\n\nAfternoon\n\nCoding with agents\nPython fundamentals for computer vision tasks\n\nEvening\n\nIce-breaker event\n\n\n\nTuesday\nMorning\nArtefacts Dataset\n\nImage datasets and annotation – theory & practice\nDatasets, licensing, controlled vocabularies, and annotation challenges\n\nAfternoon\n\nPresentations of participants’ projects and datasets?\n\nDo you want to showcase anything? Present what you work on? Use this opportunity to showcase what you do and discuss the problems you encounter! We will discuss and try to find solutions together…\n\n\n\n\nWednesday\nMicroscopy Dataset\nMorning\n\nData standardization (brightness, contrast, size, RGB/grayscale) and image pre-processing\nData pre-processing and augmentation\nOpenCV: detection masks and data augmentation\n\nAfternoon\n\nPractical part: data standardization and augmentation\n\n\n\nThursday\nMorning\nSatellite Imagery\n\nSatellite imagery and remote sensing in theory and analysis\nObject detection on satellite images\n\nAfternoon\nRock Art dataset\n\n\n\n\n\nFriday\nMorning\nCoins Dataset\n\nAdvanced topics illustrated on coins dataset and combining methods\nLLMs and vision-language models\nBias, reproducibility, black-box models, attention maps, and causation–correlation problems\n\nAfternoon\n\nClosing and discussion"
   },
   {
-    "objectID": "info.html#grants",
-    "href": "info.html#grants",
-    "title": "General Information",
-    "section": "Grants",
-    "text": "Grants\nEach participant of the school is eligible to receive a grant to cover travel expenses, housing, and daily subsistence during the meeting. To receive the grant, participants need to:\n\nApply via the official form of the ATRIUM Project (see the Applications section for details).\nParticipate in person, i.e. sign attendance sheets for each training day.\nSubmit a report within a given time frame after the conclusion of the school with details of their participation. Please note that the grant will be disbursed only upon the successful submission of this report."
+    "objectID": "programme.html#case-studies",
+    "href": "programme.html#case-studies",
+    "title": "Training school programme",
+    "section": "Case Studies",
+    "text": "Case Studies\nThroughout the school, participants will work with four real-world archaeological datasets:\n\nArtefact types: classification and detection of archaeological artefacts from photographs\nMicroscopic use-wear analysis: identifying and classifying wear traces from microscopic images\nSatellite imagery: remote sensing and object detection on satellite data\nRock art:\nCoins: combining techniques on photographs and drawings of coins and exploring model interpretability"
   },
   {
-    "objectID": "info.html#prerequisites",
-    "href": "info.html#prerequisites",
-    "title": "General Information",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nBring your own laptop!\nSee page Setup for more info."
-  },
-  {
-    "objectID": "info.html#other-information",
-    "href": "info.html#other-information",
-    "title": "General Information",
-    "section": "Other information",
-    "text": "Other information\n\nTravelling to Brno\nBrno is easily reachable by trains or buses from Prague (approx. a 2 to 2.5-hour journey) and Vienna (approx. a 1.5 to 2-hour journey). Many overnight trains crossing a large part of Europe start or end in Vienna, and we recommend taking these trains as an alternative to flying.\n\n\nAccommodation\nNo accommodation is provided to participants. Please arrange your accommodation in one of many cities hotels or hostels.\n\n\nFood\nThere are several places around the institute, see map above for locations.\n\n\n\n\n\n\n\n\n\n\nplace\ncuisine\nnote\n\n\n\n\nLittle Saigon\nAsian/Vietnamese\nhas vegan/vegetarian options\n\n\nMasný růžek\nCzech\na lot of meaty foods and traditional heavy Czech cuisine\n\n\nBistro Nella\nCzech\nmight have vegetarian option\n\n\nJídelna Kocourek\nCzech\nmight have vegetarian option\n\n\nGrand Kitchen Vlněna\nCzech, International\nmight have vegetarian option\n\n\nBistro Bellavista\nItalian\nmostly does not have vegetarian/vegan options\n\n\nDelitree bistro\nItalian, Czech, Salads\nhas vegetarian options\n\n\nRamen Brno\nJapanese\nmight have vegetarian options\n\n\nLos Capolitos\nMexican\nhes vegetarian option\n\n\nSargam\nNepalese\nhas vegetarian options\n\n\nVeg8Cafe\nVegan\nvegan bistro\n\n\nForky’s Vlněna Foodtruck\nVegan\nvegan streetfood"
+    "objectID": "programme.html#social-events",
+    "href": "programme.html#social-events",
+    "title": "Training school programme",
+    "section": "Social Events",
+    "text": "Social Events\n\nIce-breaker on the first evening (Monday)\nWalking meeting on Tuesday evening, a short city tour of Brno\nSocial event on Wednesday evening"
   },
   {
     "objectID": "applications.html",
@@ -140,31 +133,38 @@
     "text": "NoteBasics\n\n\n\nWhen? 14–18 September 2026\nWhere? Brno, Czech Republic\nWhat? Training school on computer vision and machine learning in archaeology\n\n\n\n\n\n\n\n\nImportantPre-school survey\n\n\n\nIf you are among selected participants, please fill in a pre-school survey here.\n\n\n\nJoin us for an intensive one-week training school dedicated to computer vision in archaeology, where you will learn how to harness the power of modern machine learning techniques to detect, classify, and analyse archaeological features and artefacts in images. As visual data — from drone surveys and excavation photography to museum collections — continues to grow in volume, the ability to process and interpret it computationally is becoming an increasingly valuable skill in the archaeologist’s toolkit. Our programme guides you from the very foundations of Python programming through to hands-on experience with state-of-the-art object detection and image segmentation models, with dedicated sessions on dataset creation, model training, and evaluation. Participants should have basic experience with any programming or markup language and a general comfort with working in digital environments. No prior experience with machine learning is required, but curiosity and a willingness to engage with technical material are essential.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe training school is part of a trans-national access scheme provided by the ATRIUM Project, hosted by the Archaeological Information System of the Czech Republic (AIS CR) research infrastructure at the Institute of Archaeology, Czech Academy of Sciences, Brno. The school is co-organized by the MAIA COST Action project. MAIA provides funding to several of the school instructors.\nTo apply and learn more about the TNA, visit the ATRIUM TNA Application website."
   },
   {
-    "objectID": "programme.html",
-    "href": "programme.html",
-    "title": "Training school programme",
+    "objectID": "info.html",
+    "href": "info.html",
+    "title": "General Information",
     "section": "",
-    "text": "ImportantPre-school survey\n\n\n\nIf you are among selected participants, please fill in a pre-school survey here.\nThe programme is organised by topics and dataset types. Each topic builds on the previous one, guiding participants from foundational skills to advanced applications of computer vision in archaeology."
+    "text": "ImportantPre-school survey\n\n\n\nIf you are among selected participants, please fill in a pre-school survey here."
   },
   {
-    "objectID": "programme.html#programme",
-    "href": "programme.html#programme",
-    "title": "Training school programme",
-    "section": "Programme",
-    "text": "Programme\n\n\n\nFinal programme\n\n\n\nMonday\nKick-off & Python for CV\nMorning\n\nKick-off, practicalities, and motivations\nIntroduction to the workshop structure\nIntroduction co computer vision and questions computer vision can answer\nSetting up the technical environment (Google Colab and tools)\n\nAfternoon\n\nCoding with agents\nPython fundamentals for computer vision tasks\n\nEvening\n\nIce-breaker event\n\n\n\nTuesday\nMorning\nArtefacts Dataset\n\nImage datasets and annotation – theory & practice\nDatasets, licensing, controlled vocabularies, and annotation challenges\n\nAfternoon\n\nPresentations of participants’ projects and datasets?\n\nDo you want to showcase anything? Present what you work on? Use this opportunity to showcase what you do and discuss the problems you encounter! We will discuss and try to find solutions together…\n\n\n\n\nWednesday\nMicroscopy Dataset\nMorning\n\nData standardization (brightness, contrast, size, RGB/grayscale) and image pre-processing\nData pre-processing and augmentation\nOpenCV: detection masks and data augmentation\n\nAfternoon\n\nPractical part: data standardization and augmentation\n\n\n\nThursday\nMorning\nSatellite Imagery\n\nSatellite imagery and remote sensing in theory and analysis\nObject detection on satellite images\n\nAfternoon\nRock Art dataset\n\n\n\n\n\nFriday\nMorning\nCoins Dataset\n\nAdvanced topics illustrated on coins dataset and combining methods\nLLMs and vision-language models\nBias, reproducibility, black-box models, attention maps, and causation–correlation problems\n\nAfternoon\n\nClosing and discussion"
+    "objectID": "info.html#date-and-location",
+    "href": "info.html#date-and-location",
+    "title": "General Information",
+    "section": "Date and location",
+    "text": "Date and location\nThe school will be held from 14 to 18 September 2026 at the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/) at the address given below:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nTipNote\n\n\n\nPlease note that this is an on-site event only, and remote participation will not be possible."
   },
   {
-    "objectID": "programme.html#case-studies",
-    "href": "programme.html#case-studies",
-    "title": "Training school programme",
-    "section": "Case Studies",
-    "text": "Case Studies\nThroughout the school, participants will work with four real-world archaeological datasets:\n\nArtefact types: classification and detection of archaeological artefacts from photographs\nMicroscopic use-wear analysis: identifying and classifying wear traces from microscopic images\nSatellite imagery: remote sensing and object detection on satellite data\nRock art:\nCoins: combining techniques on photographs and drawings of coins and exploring model interpretability"
+    "objectID": "info.html#grants",
+    "href": "info.html#grants",
+    "title": "General Information",
+    "section": "Grants",
+    "text": "Grants\nEach participant of the school is eligible to receive a grant to cover travel expenses, housing, and daily subsistence during the meeting. To receive the grant, participants need to:\n\nApply via the official form of the ATRIUM Project (see the Applications section for details).\nParticipate in person, i.e. sign attendance sheets for each training day.\nSubmit a report within a given time frame after the conclusion of the school with details of their participation. Please note that the grant will be disbursed only upon the successful submission of this report."
   },
   {
-    "objectID": "programme.html#social-events",
-    "href": "programme.html#social-events",
-    "title": "Training school programme",
-    "section": "Social Events",
-    "text": "Social Events\n\nIce-breaker on the first evening (Monday)\nWalking meeting on Tuesday evening, a short city tour of Brno\nSocial event on Wednesday evening"
+    "objectID": "info.html#prerequisites",
+    "href": "info.html#prerequisites",
+    "title": "General Information",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nBring your own laptop!\nSee page Setup for more info."
+  },
+  {
+    "objectID": "info.html#other-information",
+    "href": "info.html#other-information",
+    "title": "General Information",
+    "section": "Other information",
+    "text": "Other information\n\nTravelling to Brno\nBrno is easily reachable by trains or buses from Prague (approx. a 2 to 2.5-hour journey) and Vienna (approx. a 1.5 to 2-hour journey). Many overnight trains crossing a large part of Europe start or end in Vienna, and we recommend taking these trains as an alternative to flying.\n\n\nAccommodation\nNo accommodation is provided to participants. Please arrange your accommodation in one of many cities hotels or hostels.\n\n\nFood\nThere are several places around the institute, see map above for locations.\n\n\n\n\n\n\n\n\n\n\nplace\ncuisine\nnote\n\n\n\n\nLittle Saigon\nAsian/Vietnamese\nhas vegan/vegetarian options\n\n\nMasný růžek\nCzech\na lot of meaty foods and traditional heavy Czech cuisine\n\n\nBistro Nella\nCzech\nmight have vegetarian option\n\n\nJídelna Kocourek\nCzech\nmight have vegetarian option\n\n\nGrand Kitchen Vlněna\nCzech, International\nmight have vegetarian option\n\n\nBistro Bellavista\nItalian\nmostly does not have vegetarian/vegan options\n\n\nDelitree bistro\nItalian, Czech, Salads\nhas vegetarian options\n\n\nRamen Brno\nJapanese\nmight have vegetarian options\n\n\nLos Capolitos\nMexican\nhes vegetarian option\n\n\nSargam\nNepalese\nhas vegetarian options\n\n\nVeg8Cafe\nVegan\nvegan bistro\n\n\nForky’s Vlněna Foodtruck\nVegan\nvegan streetfood"
   }
 ]

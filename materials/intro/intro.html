@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
+
+  <meta name="author" content="Petr Pajdla">
+  <title>Computer Vision in Archaeology</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-1e69045433a0d89cc8a2756b1c19414a.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&amp;family=Alegreya+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400;1,500&amp;display=swap" rel="stylesheet">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Computer Vision in Archaeology</h1>
+  <p class="subtitle">An introduction</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Petr Pajdla
+</div>
+        <p class="quarto-title-affiliation">
+            Institute of Archaeology, Czech Academy of Sciences, Brno
+          </p>
+    </div>
+</div>
+
+  <p class="date">14. 9. 2026</p>
+</section>
+<section id="section" class="slide level2 center">
+<h2></h2>
+<div class="logos">
+<p><a href="https://www.atrium-research.eu"><img data-src="../../figs/Clay.png"></a> <a href="https://www.maiacost.eu/"><img data-src="../../figs/maia.png"></a></p>
+</div>
+<div class="logos logos-small">
+<p><a href="https://www.aiscr.cz/en/"><img data-src="../../figs/aiscr.png"></a> <a href="https://www.arub.cz/"><img data-src="../../figs/arub.png"></a></p>
+</div>
+<!-- ::: {.aside}
+This training school is provided as transnational access under the **ATRIUM** project
+(*Advancing Frontier Research in the Arts and Humanities*, Horizon Europe grant No. 101132163),
+hosted by **AIS CR** at the **Institute of Archaeology, Czech Academy of Sciences, Brno**,
+and co-organised with the **MAIA** COST Action (*Managing AI in Archaeology*).
+::: -->
+<aside class="notes">
+<p>Thirty seconds on each project. ATRIUM pays for the school and your grants; MAIA funds several of the instructors. Both are collaborative infrastructures — you can join MAIA yourself.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-plan" class="slide level2">
+<h2>The plan</h2>
+<div class="smaller">
+<table class="caption-top">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 63%">
+<col style="width: 25%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><strong>1</strong></td>
+<td><strong>Welcome</strong> · who is in the room</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong>2</strong></td>
+<td>What <strong>computer vision</strong> is</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong>3</strong></td>
+<td><span class="disc"><strong>Discussion 1</strong> — your data, your question</span></td>
+<td style="text-align: right;"><em>groups 1 &amp; 2 report</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong>4</strong></td>
+<td>The family of <strong>tasks</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong>5</strong></td>
+<td><span class="disc"><strong>Discussion 2</strong> — which task, and what does it cost?</span></td>
+<td style="text-align: right;"><em>groups 3 &amp; 4 report</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong>6</strong></td>
+<td><strong>Two ways of learning</strong>: discriminative &amp; generative</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong>7</strong></td>
+<td>Live <strong>demo</strong> — zero-shot classification with CLIP</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong>8</strong></td>
+<td><span class="disc"><strong>Discussion 3</strong> — what may you claim?</span></td>
+<td style="text-align: right;"><em>groups 5 &amp; 6 report</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong>9</strong></td>
+<td><strong>Wrap-up</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="fragment">
+<blockquote>
+<p>Three short discussion rounds. You will be talking for a third of this session.</p>
+</blockquote>
+</div>
+<aside class="notes">
+<p>Say the structure out loud — people relax when they know a break from listening is never more than twelve minutes away.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="six-groups-of-five" class="slide level2">
+<h2>Six groups of five</h2>
+<ul>
+<li class="fragment">Please form <strong>six groups of five</strong>, sitting with people you do <strong>not</strong> already know</li>
+<li class="fragment">These groups stay together <strong>for the whole session</strong> — and are a good default for the week</li>
+<li class="fragment">Each round, <strong>two groups report back</strong>, so every group speaks <strong>once</strong></li>
+<li class="fragment">Nominate a <strong>note-taker</strong> now; the <strong>reporter</strong> can change each round</li>
+</ul>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Use your own material</strong></p>
+</div>
+<div class="callout-content">
+<p>Where a question says <em>“your data”</em>, use a project you actually work on. If you have nothing to hand, borrow one of the five datasets we work with this week.</p>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Groups: 1–2 report after round one, 3–4 after round two, 5–6 after round three. Write the group numbers on the board so nobody has to remember. Target: 4 minutes of plenary per round, roughly 2 minutes per group.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section>
+<section id="who-is-in-the-room" class="title-slide slide level1 center" data-background-color="#111111">
+<h1>Who is in the room?</h1>
+
+</section>
+<section id="what-you-told-us" class="slide level2">
+<h2>What you told us</h2>
+<div class="columns">
+<div class="column" style="width:47%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="intro_files/figure-revealjs/chart-ml-exposure-1.png" width="1000"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:53%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="intro_files/figure-revealjs/chart-cv-concepts-1.png" width="1120"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<div class="smaller">
+<p>Almost everyone has <strong>met</strong> machine learning; almost nobody <strong>does</strong> it. You know the vocabulary of detection and classification — and the two things this week actually turns on, <strong>annotation</strong> and <strong>evaluation</strong>, were not on the list.</p>
+</div>
+
+<aside class="notes">
+<p>Do not read the bars out. Make one point: the room’s self-reported knowledge is lopsided towards the glamorous end (detection, CNNs) and empty at the boring end that decides whether a project works. That is the argument for Tuesday.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><div>
+<p>Pre-school survey, n = 27. Aggregated; no individual responses shown.</p>
+</div></aside></section>
+<section id="two-numbers-worth-pausing-on" class="slide level2">
+<h2>Two numbers worth pausing on</h2>
+<div class="columns">
+<div class="column" style="width:49%;">
+<div class="box box-disc">
+<p><span class="stat">52%</span></p>
+<p>use an AI coding assistant <strong>regularly</strong> — but only <strong>19%</strong> rate their Python 4 or 5 out of 5.</p>
+</div>
+<div class="smaller">
+<p>More of you lean on an assistant daily than feel fluent in the language it writes. That is not a problem to apologise for; it is the working condition of this week, and it is why Monday afternoon is about <strong>coding with agents</strong> rather than syntax.</p>
+</div>
+</div><div class="column" style="width:49%;">
+<div class="box box-plain">
+<p><span class="stat">81%</span></p>
+<p>have <strong>never used an image annotation tool</strong>.</p>
+</div>
+<div class="smaller">
+<p>Annotation is the single largest cost in every project we will look at, and the one place where your expertise — not the model’s — decides the outcome. Most of the room is about to meet it for the first time on <strong>Tuesday</strong>.</p>
+</div>
+</div></div>
+<aside class="notes">
+<p>These two numbers are the honest summary of the room: comfortable with assistance, inexperienced with the groundwork. Say it without judgement — it is exactly the gap the week is shaped around.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-you-want-from-the-week" class="slide level2">
+<h2>What you want from the week</h2>
+<div class="columns">
+<div class="column" style="width:43%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="intro_files/figure-revealjs/chart-datasets-1.png" width="920"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="tiny">
+<p>Multiple answers allowed. <strong>48%</strong> have no dataset of their own to bring — borrow one of ours.</p>
+</div>
+</div><div class="column" style="width:55%;">
+<blockquote>
+<p>Confidently apply computer vision algorithms to detect archaeological features and micro-topographical anomalies, <strong>drastically reducing the manual processing time</strong>.</p>
+</blockquote>
+<blockquote>
+<p>Better understand the <strong>inner workings</strong> of a machine learning model, by learning to develop and train it myself.</p>
+</blockquote>
+<blockquote>
+<p>Even if I don’t have a large corpus, I would like to <strong>test AI methods on my dataset</strong> by the end of the week.</p>
+</blockquote>
+</div></div>
+
+<aside class="notes">
+<p>The three quotations are an arc: ambition, mechanism, constraint. The third one is the useful one — it is the small-corpus problem, and it is why we show zero-shot CLIP later this morning rather than only training from scratch.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><div>
+<p>Anonymised, lightly trimmed. Artefact photographs and satellite imagery draw the largest interest — which is also where most published archaeological work sits.</p>
+</div></aside></section></section>
+<section>
+<section id="what-is-computer-vision" class="title-slide slide level1 center" data-background-color="#111111">
+<h1>What is computer vision?</h1>
+
+</section>
+<section id="a-working-definition" class="slide level2">
+<h2>A working definition</h2>
+<blockquote>
+<p>Computer vision is getting a machine to produce, from an image, the kind of <strong>structured description</strong> a person would produce by looking at it.</p>
+</blockquote>
+<div class="fragment">
+<p>Three things hide in that sentence:</p>
+<ul>
+<li class="fragment">an <strong>image</strong> — which for a computer is only an array of numbers</li>
+<li class="fragment">a <strong>description</strong> — a label, a box, a mask, a measurement, a sentence</li>
+<li class="fragment"><strong>“the kind a person would produce”</strong> — someone decided what counts as correct</li>
+</ul>
+</div>
+<div class="fragment">
+<p>That last one is where archaeology enters. <strong>We</strong> define what the machine aims at.</p>
+</div>
+</section>
+<section id="an-image-is-an-array-of-numbers" class="slide level2">
+<h2>An image is an array of numbers</h2>
+<div class="placeholder placeholder-lg">
+<p><img data-src="img/ph-image-as-array.svg"></p>
+</div>
+<div class="smaller">
+<p>A 4000 × 3000 photograph of a sherd is 12 million numbers per colour channel — 36 million in all. Nothing in that array says <em>sherd</em>, <em>rim</em>, or <em>Neolithic</em>.</p>
+</div>
+<aside class="notes">
+<p>Every method this week operates on exactly this. All the sophistication lies in how the numbers are summarised — there is no built-in understanding anywhere in the stack.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-semantic-gap" class="slide level2">
+<h2>The semantic gap</h2>
+<div class="placeholder">
+<p><img data-src="img/ph-semantic-gap.svg"></p>
+</div>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><strong>A specialist sees</strong></p>
+<ul>
+<li>a rim sherd, wheel-thrown</li>
+<li>probably Roman</li>
+<li>worth three more photographs</li>
+</ul>
+</div><div class="column" style="width:48%;">
+<p><strong>The computer receives</strong></p>
+<ul>
+<li>a 4000 × 3000 × 3 array</li>
+<li>brightness gradients, edges, textures</li>
+<li>no notion of <em>sherd</em></li>
+</ul>
+</div></div>
+<div class="fragment">
+<p>Bridging that gap with <strong>learned statistical regularities</strong> is the whole enterprise.</p>
+</div>
+</section>
+<section id="why-now" class="slide level2">
+<h2>Why now?</h2>
+<div class="placeholder">
+<p><img data-src="img/ph-data-deluge.svg"></p>
+</div>
+<ul>
+<li class="fragment">Excavation photography is <strong>born-digital and effectively free</strong> — thousands of frames per season</li>
+<li class="fragment">Drone and satellite coverage is <strong>routine</strong>, not exceptional</li>
+<li class="fragment">Digitisation programmes produce <strong>collections nobody has time to look through</strong></li>
+<li class="fragment">Pre-trained models mean you no longer need a million labelled images to start</li>
+</ul>
+<div class="fragment">
+<p>The bottleneck moved from <strong>acquiring</strong> images to <strong>looking at</strong> them.</p>
+</div>
+<aside class="notes">
+<p>Worth saying: this is not a new ambition. Automatic feature recognition in airborne survey was being argued about a decade and more ago — what changed is that the methods now mostly work, and the data volume made ignoring them untenable.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="it-is-a-measurement-not-an-interpretation" class="slide level2">
+<h2>It is a measurement, not an interpretation</h2>
+<ul>
+<li class="fragment">A model gives you <strong>what</strong> and <strong>where</strong> — never <strong>why</strong></li>
+<li class="fragment">It reproduces whatever regularities are in its training data, including the unwelcome ones</li>
+<li class="fragment">It is a <strong>fast, consistent, literal-minded assistant</strong> who has seen your training set and nothing else</li>
+</ul>
+<div class="fragment">
+<blockquote>
+<p>Everything a model outputs is a number you still have to interpret. That interpretation is your job, and it stays your job.</p>
+</blockquote>
+</div>
+
+<aside><div>
+<p>We return to bias, black boxes and correlation on Friday.</p>
+</div></aside></section></section>
+<section>
+<section id="discussion-1" class="title-slide slide level1 discussion center" data-background-color="#111111">
+<h1>Discussion 1</h1>
+
+</section>
+<section id="your-data-your-question" class="slide level2 question discussion">
+<h2>Your data, your question</h2>
+<p><strong>8 minutes in your group. Groups 1 &amp; 2 report back.</strong></p>
+<ol type="1">
+<li class="fragment">Describe <strong>one visual dataset</strong> you work with, or would like to. How many images? Who made them? Are they public?</li>
+<li class="fragment">What question would you ask of it that currently takes <strong>too long to answer by hand</strong>?</li>
+<li class="fragment">If a machine handed you that answer tomorrow, <strong>how would you check whether it was wrong</strong>?</li>
+</ol>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Keep your notes. Questions 2 and 3 come back in the next two rounds.</p>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Circulate. Listen for questions that are really <em>interpretations</em> (“is this site Iron Age?”) — those are the productive ones to surface in the plenary, because they set up the “good and bad questions” slide later.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="the-family-of-tasks" class="title-slide slide level1 center" data-background-color="#111111">
+<h1>The family of tasks</h1>
+
+</section>
+<section id="four-questions-four-output-shapes" class="slide level2">
+<h2>Four questions, four output shapes</h2>
+<div class="columns">
+<div class="column" style="width:25%;">
+<div class="placeholder">
+<p><img data-src="img/ph-task-classification.svg"></p>
+</div>
+<p><strong>Classification</strong></p>
+<p><em>What is this?</em></p>
+<p>One label per image</p>
+</div><div class="column" style="width:25%;">
+<div class="placeholder">
+<p><img data-src="img/ph-task-detection.svg"></p>
+</div>
+<p><strong>Detection</strong></p>
+<p><em>What, and where?</em></p>
+<p>Boxes + labels</p>
+</div><div class="column" style="width:25%;">
+<div class="placeholder">
+<p><img data-src="img/ph-task-segmentation.svg"></p>
+</div>
+<p><strong>Segmentation</strong></p>
+<p><em>Which pixels?</em></p>
+<p>Per-pixel mask</p>
+</div><div class="column" style="width:25%;">
+<div class="placeholder">
+<p><img data-src="img/ph-task-keypoints.svg"></p>
+</div>
+<p><strong>Keypoints</strong></p>
+<p><em>Where are the landmarks?</em></p>
+<p>Coordinates</p>
+</div></div>
+<div class="fragment smaller">
+<p>The choice is not technical. It follows from <strong>the question you asked</strong> — and it determines <strong>how much annotation you will have to pay for</strong>.</p>
+</div>
+</section>
+<section id="the-same-photograph-five-questions" class="slide level2">
+<h2>The same photograph, five questions</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Task</th>
+<th>Asked of one coin photograph</th>
+<th>Annotation cost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Classification</td>
+<td><em>Is this an antoninianus?</em></td>
+<td>one label per image</td>
+</tr>
+<tr class="even">
+<td>Detection</td>
+<td><em>Where is the legend? Where is the portrait?</em></td>
+<td>a box per element</td>
+</tr>
+<tr class="odd">
+<td>Segmentation</td>
+<td><em>Which pixels are corrosion?</em></td>
+<td>a traced outline per region</td>
+</tr>
+<tr class="even">
+<td>Keypoints</td>
+<td><em>Where are the die-axis markers?</em></td>
+<td>a few points per image</td>
+</tr>
+<tr class="odd">
+<td>Retrieval</td>
+<td><em>Which coins in the corpus look like this one?</em></td>
+<td>none — but you need a corpus</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p>Cost rises steeply down the table. <strong>Start with the cheapest task that answers your question.</strong></p>
+</div>
+<aside class="notes">
+<p>The most practical slide in the session. Many people arrive wanting segmentation when classification would answer the question at a tenth of the annotation cost. Friday’s coins dataset is the worked example of the top four rows.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-same-four-shapes-across-archaeology" class="slide level2 smaller scrollable">
+<h2>The same four shapes, across archaeology</h2>
+<div class="smaller">
+<table class="caption-top">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 84%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Shape</th>
+<th>Published examples</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Classification</strong></td>
+<td>decorated ceramic typology from photographs <span class="citation" data-cites="pawlowicz2021">(<a href="#/the-same-four-shapes-across-archaeology" role="doc-biblioref" onclick="">Pawlowicz and Downum 2021</a>)</span>; amphora and faience fabrics <span class="citation" data-cites="santos2024">(<a href="#/the-same-four-shapes-across-archaeology" role="doc-biblioref" onclick="">Santos et al. 2024</a>)</span>; Celtic coin classification and die studies <span class="citation" data-cites="deligio2024">(<a href="#/the-same-four-shapes-across-archaeology" role="doc-biblioref" onclick="">Deligio et al. 2024</a>)</span></td>
+</tr>
+<tr class="even">
+<td><strong>Detection</strong></td>
+<td>potsherds in high-resolution drone imagery <span class="citation" data-cites="orengo2019">(<a href="#/the-same-four-shapes-across-archaeology" role="doc-biblioref" onclick="">Orengo and Garcia-Molsosa 2019</a>)</span>; burial mounds in historical maps <span class="citation" data-cites="berganzobesg2023">(<a href="#/the-same-four-shapes-across-archaeology" role="doc-biblioref" onclick="">Berganzo-Besga et al. 2023</a>)</span>; archaeological objects in LiDAR <span class="citation" data-cites="verschoofvan2019">(<a href="#/the-same-four-shapes-across-archaeology" role="doc-biblioref" onclick="">Verschoof-van Der Vaart and Lambers 2019</a>)</span>; illustrated objects in scanned catalogues <span class="citation" data-cites="klein2025">(<a href="#/the-same-four-shapes-across-archaeology" role="doc-biblioref" onclick="">Klein et al. 2025</a>)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>Segmentation</strong></td>
+<td>hollow roads traced in LiDAR <span class="citation" data-cites="verschoofvan2021">(<a href="#/the-same-four-shapes-across-archaeology" role="doc-biblioref" onclick="">Verschoof-van der Vaart and Landauer 2021</a>)</span>; agrarian field systems from satellite imagery <span class="citation" data-cites="kucukdemirci2025">(<a href="#/the-same-four-shapes-across-archaeology" role="doc-biblioref" onclick="">Küçükdemirci 2025</a>)</span>; anomalies in geophysical survey images <span class="citation" data-cites="kucukdemirci2020">(<a href="#/the-same-four-shapes-across-archaeology" role="doc-biblioref" onclick="">Küçükdemirci and Sarris 2020</a>)</span></td>
+</tr>
+<tr class="even">
+<td><strong>Retrieval</strong></td>
+<td>3D matching and retrieval of objects across collections <span class="citation" data-cites="jimenezbadil2023">(<a href="#/the-same-four-shapes-across-archaeology" role="doc-biblioref" onclick="">Jiménez-Badillo et al. 2023</a>)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="refs-inline">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-berganzobesg2023" class="csl-entry" role="listitem">
+Berganzo-Besga, Iban, Hector A. Orengo, Felipe Lumbreras, et al. 2023. <span>“Curriculum Learning-Based Strategy for Low-Density Archaeological Mound Detection from Historical Maps in <span>India</span> and <span>Pakistan</span>.”</span> <em>Scientific Reports</em> 13 (1): 11257. <a href="https://doi.org/10.1038/s41598-023-38190-x">https://doi.org/10.1038/s41598-023-38190-x</a>.
+</div>
+<div id="ref-deligio2024" class="csl-entry" role="listitem">
+Deligio, Chrisowalandis, Caroline von Nicolai, Markus Möller, et al. 2024. <em><span>IT</span>- and Machine Learning-Based Methods of Classification: <span>The</span> Cooperative Project <span>ClaReNet</span> – <span>Classification</span> and <span>Representation</span> for <span>Networks</span></em>. Zenodo. <a href="https://doi.org/10.24072/pci.archaeo.10031">https://doi.org/10.24072/pci.archaeo.10031</a>.
+</div>
+<div id="ref-jimenezbadil2023" class="csl-entry" role="listitem">
+Jiménez-Badillo, Diego, Omar Mendoza-Montoya, and Salvador Ruiz-Correa. 2023. <span>“Application of Computer Vision Techniques for <span>3D</span> Matching and Retrieval of Archaeological Objects.”</span> <em>F1000Research</em> 12: 182. <a href="https://doi.org/10.12688/f1000research.127095.1">https://doi.org/10.12688/f1000research.127095.1</a>.
+</div>
+<div id="ref-klein2025" class="csl-entry" role="listitem">
+Klein, Kevin, Antoine Muller, Alyssa Wohde, et al. 2025. <span>“An <span>AI</span>-Assisted Workflow for Object Detection and Data Collection from Archaeological Catalogues.”</span> <em>Journal of Archaeological Science</em> 179: 106244. <a href="https://doi.org/10.1016/j.jas.2025.106244">https://doi.org/10.1016/j.jas.2025.106244</a>.
+</div>
+<div id="ref-kucukdemirci2025" class="csl-entry" role="listitem">
+Küçükdemirci, Melda. 2025. <span>“Tracing Past Agrarian Field Systems Through <span>AI</span>-Based Analysis of Satellite Imagery in <span>Konya</span>, <span>Central</span> <span>Anatolia</span>, <span>Türkiye</span>.”</span> <em>Archaeological Prospection</em> 32 (4): 881–97. <a href="https://doi.org/10.1002/arp.2001">https://doi.org/10.1002/arp.2001</a>.
+</div>
+<div id="ref-kucukdemirci2020" class="csl-entry" role="listitem">
+Küçükdemirci, Melda, and Apostolos Sarris. 2020. <span>“Deep Learning Based Automated Analysis of Archaeo-Geophysical Images.”</span> <em>Archaeological Prospection</em> 27 (2): 107–18. <a href="https://doi.org/10.1002/arp.1763">https://doi.org/10.1002/arp.1763</a>.
+</div>
+<div id="ref-orengo2019" class="csl-entry" role="listitem">
+Orengo, H. A., and A. Garcia-Molsosa. 2019. <span>“A Brave New World for Archaeological Survey: <span>Automated</span> Machine Learning-Based Potsherd Detection Using High-Resolution Drone Imagery.”</span> <em>Journal of Archaeological Science</em> 112: 105013. <a href="https://doi.org/10.1016/j.jas.2019.105013">https://doi.org/10.1016/j.jas.2019.105013</a>.
+</div>
+<div id="ref-pawlowicz2021" class="csl-entry" role="listitem">
+Pawlowicz, Leszek M., and Christian E. Downum. 2021. <span>“Applications of Deep Learning to Decorated Ceramic Typology and Classification: <span>A</span> Case Study Using <span>Tusayan</span> <span>White</span> <span>Ware</span> from <span>Northeast</span> <span>Arizona</span>.”</span> <em>Journal of Archaeological Science</em> 130: 105375. <a href="https://doi.org/10.1016/j.jas.2021.105375">https://doi.org/10.1016/j.jas.2021.105375</a>.
+</div>
+<div id="ref-santos2024" class="csl-entry" role="listitem">
+Santos, Joel, Diogo A. P. Nunes, Ruslan Padnevych, et al. 2024. <span>“Automatic Ceramic Identification Using Machine Learning. <span>Lusitanian</span> Amphorae and <span>Faience</span>. <span>Two</span> <span>Portuguese</span> Case Studies.”</span> <em>STAR: Science &amp; Technology of Archaeological Research</em> 10 (1): e2343214. <a href="https://doi.org/10.1080/20548923.2024.2343214">https://doi.org/10.1080/20548923.2024.2343214</a>.
+</div>
+<div id="ref-verschoofvan2019" class="csl-entry" role="listitem">
+Verschoof-van Der Vaart, Wouter Baernd, and Karsten Lambers. 2019. <span>“Learning to <span>Look</span> at <span>LiDAR</span>: <span>The</span> <span>Use</span> of <span>R</span>-<span>CNN</span> in the <span>Automated</span> <span>Detection</span> of <span>Archaeological</span> <span>Objects</span> in <span>LiDAR</span> <span>Data</span> from the <span>Netherlands</span>.”</span> <em>Journal of Computer Applications in Archaeology</em> 2 (1): 31–40. <a href="https://doi.org/10.5334/jcaa.32">https://doi.org/10.5334/jcaa.32</a>.
+</div>
+<div id="ref-verschoofvan2021" class="csl-entry" role="listitem">
+Verschoof-van der Vaart, Wouter B., and Juergen Landauer. 2021. <span>“Using <span>CarcassonNet</span> to Automatically Detect and Trace Hollow Roads in <span>LiDAR</span> Data from the <span>Netherlands</span>.”</span> <em>Journal of Cultural Heritage</em> 47: 143–54. <a href="https://doi.org/10.1016/j.culher.2020.10.009">https://doi.org/10.1016/j.culher.2020.10.009</a>.
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>The point to make out loud: almost all of this is remote sensing and artefact photography. Excavation-context imagery is still largely untouched — which is where several of you are working. All of these sit in the MAIA Zotero library.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-pipeline-for-the-rest-of-the-week" class="slide level2">
+<h2>The pipeline for the rest of the week</h2>
+<div class="placeholder">
+<p><img data-src="img/ph-pipeline.svg"></p>
+</div>
+<div class="smaller">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Stage</th>
+<th>What you decide</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Question</strong></td>
+<td>what would count as an answer?</td>
+<td>today</td>
+</tr>
+<tr class="even">
+<td><strong>Data &amp; annotation</strong></td>
+<td>classes, vocabulary, licences</td>
+<td>Tuesday</td>
+</tr>
+<tr class="odd">
+<td><strong>Pre-processing</strong></td>
+<td>scale, colour, augmentation</td>
+<td>Wednesday</td>
+</tr>
+<tr class="even">
+<td><strong>Training</strong></td>
+<td>architecture, transfer learning</td>
+<td>Thursday</td>
+</tr>
+<tr class="odd">
+<td><strong>Evaluation</strong></td>
+<td>which errors you can live with</td>
+<td>Thursday–Friday</td>
+</tr>
+<tr class="even">
+<td><strong>Interpretation</strong></td>
+<td>what you may actually claim</td>
+<td>Friday</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="fragment">
+<p>Projects fail at <strong>stage one or two</strong>. Almost never at stage four.</p>
+</div>
+</section>
+<section id="good-and-bad-questions-for-a-model" class="slide level2">
+<h2>Good and bad questions for a model</h2>
+<div class="columns">
+<div class="column" style="width:49%;">
+<div class="box box-disc">
+<p><strong>Tractable</strong></p>
+<ul>
+<li><em>Which of these 8 000 photographs contain a scale bar?</em></li>
+<li><em>Where in this ortho-image are the circular anomalies?</em></li>
+<li><em>Which sherds share this decorative motif?</em></li>
+</ul>
+</div>
+</div><div class="column" style="width:49%;">
+<div class="box box-gen">
+<p><strong>Not (yet) tractable</strong></p>
+<ul>
+<li><em>Is this settlement Iron Age?</em> — from a photograph alone</li>
+<li><em>Was this tool used on hide or on bone?</em> — without a reference collection</li>
+<li><em>Which of these finds matters more?</em></li>
+</ul>
+</div>
+</div></div>
+<div class="fragment">
+<p>The test: <strong>could a competent colleague answer it from the image alone, consistently, in two seconds?</strong> If not, a model will not either — it will simply be confident about it.</p>
+</div>
+</section></section>
+<section>
+<section id="discussion-2" class="title-slide slide level1 discussion center" data-background-color="#111111">
+<h1>Discussion 2</h1>
+
+</section>
+<section id="which-task-and-what-does-it-cost" class="slide level2 question discussion">
+<h2>Which task, and what does it cost?</h2>
+<p><strong>8 minutes. Groups 3 &amp; 4 report back.</strong></p>
+<p>Take the question your group settled on in round one.</p>
+<ol type="1">
+<li class="fragment">Which of the <strong>four shapes</strong> does it map onto — classification, detection, segmentation, keypoints?</li>
+<li class="fragment">Write the <strong>class list</strong>. How many classes, and be specific. What happens to images that fit <strong>none</strong> or <strong>two</strong>?</li>
+<li class="fragment">Would <strong>two specialists</strong> independently give the same image the same label? Where exactly would they disagree?</li>
+<li class="fragment">Estimate the <strong>annotation bill</strong>: how many images × how long each. Say the number out loud.</li>
+<li class="fragment">Is there a <strong>cheaper task shape</strong> that would still answer your question?</li>
+</ol>
+<aside class="notes">
+<p>Question 4 is the one that changes people’s plans. Push groups to actually multiply the numbers rather than saying “a lot”. Question 3 is Tuesday’s session in miniature — flag the connection when they report back.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="two-ways-of-learning" class="title-slide slide level1 center" data-background-color="#111111">
+<h1>Two ways of learning</h1>
+
+</section>
+<section id="discriminative-vs.-generative" class="slide level2">
+<h2>Discriminative vs.&nbsp;generative</h2>
+<div class="columns">
+<div class="column" style="width:49%;">
+<div class="box box-disc">
+<p><span class="disc box-title">Discriminative</span></p>
+<p>Learns the <strong>boundary between classes</strong>.</p>
+<p><em>Given this image, what is the label?</em></p>
+<p>Answers questions <strong>about</strong> existing data.</p>
+</div>
+</div><div class="column" style="width:49%;">
+<div class="box box-gen">
+<p><span class="gen box-title">Generative</span></p>
+<p>Learns <strong>what the data look like</strong>.</p>
+<p><em>What does an image of this class look like?</em></p>
+<p><strong>Produces new</strong> data.</p>
+</div>
+</div></div>
+<div class="fragment">
+<blockquote>
+<p>A <span class="disc">discriminative</span> model can tell a Neolithic pot from an Iron Age one. A <span class="gen">generative</span> model can draw you a Neolithic pot. Only one of them has ever seen the pot you care about.</p>
+</blockquote>
+</div>
+
+<aside><div>
+<p>In notation: <span class="disc">discriminative</span> models learn <code>P(label | image)</code>; <span class="gen">generative</span> models learn <code>P(image)</code> or <code>P(image | label)</code>.</p>
+</div></aside></section>
+<section id="the-same-idea-drawn" class="slide level2">
+<h2>The same idea, drawn</h2>
+<div class="columns">
+<div class="column" style="width:49%;">
+<div class="placeholder">
+<p><img data-src="img/ph-decision-boundary.svg"></p>
+</div>
+<div class="box box-disc">
+<p><span class="disc">Discriminative</span> — draw a line separating the classes. Anything far from the line is ignored.</p>
+</div>
+</div><div class="column" style="width:49%;">
+<div class="placeholder">
+<p><img data-src="img/ph-density.svg"></p>
+</div>
+<div class="box box-gen">
+<p><span class="gen">Generative</span> — model where each class <em>lives</em>. You can then sample new points from it.</p>
+</div>
+</div></div>
+</section>
+<section id="discriminative-the-working-horse-of-the-week" class="slide level2">
+<h2><span class="disc">Discriminative</span> — the working horse of the week</h2>
+<div class="placeholder placeholder-sm">
+<p><img data-src="img/ph-discriminative.svg"></p>
+</div>
+<ul>
+<li class="fragment"><strong>Artefact classification</strong> — a typological class for a photographed find</li>
+<li class="fragment"><strong>Feature detection</strong> on LiDAR and satellite imagery — mounds, enclosures, field systems, hillforts</li>
+<li class="fragment"><strong>Use-wear segmentation</strong> — the pixels showing a particular polish or striation</li>
+<li class="fragment"><strong>Triage</strong> — separating scale-bar-only frames from find photographs</li>
+<li class="fragment"><strong>Retrieval</strong> — <em>“show me the twenty most similar sherds in the corpus”</em></li>
+</ul>
+<div class="fragment">
+<p>Common thread: the model <strong>points at evidence that already exists</strong>.</p>
+</div>
+</section>
+<section id="generative-a-smaller-part-of-the-picture" class="slide level2">
+<h2><span class="gen">Generative</span> — a smaller part of the picture</h2>
+<div class="columns">
+<div class="column" style="width:32%;">
+<div class="placeholder">
+<p><img data-src="img/ph-gen-restoration.svg"></p>
+</div>
+<p><strong>Restoration</strong></p>
+<p>Sharpening or completing degraded archive imagery</p>
+</div><div class="column" style="width:32%;">
+<div class="placeholder">
+<p><img data-src="img/ph-gen-synthetic.svg"></p>
+</div>
+<p><strong>Synthetic training data</strong></p>
+<p>Manufacturing examples for rare classes</p>
+</div><div class="column" style="width:32%;">
+<div class="placeholder">
+<p><img data-src="img/ph-gen-vlm.svg"></p>
+</div>
+<p><strong>Vision-language models</strong></p>
+<p>Describing an image, answering questions about it</p>
+</div></div>
+<div class="fragment">
+<p>Common thread: the model <strong>produces something that was not in the record</strong>.</p>
+</div>
+
+<aside class="notes">
+<p>Synthetic training data is where the two families meet productively: a generative model manufactures examples that train a discriminative one. Published work has done exactly this for Roman fine ware. Mention it, then move on — the room does not need a diffusion lecture.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><div>
+<p>We touch generative methods only where they are useful to us — synthetic data on Wednesday, vision-language models on Friday. This school is not about generative AI.</p>
+</div></aside></section>
+<section id="side-by-side" class="slide level2">
+<h2>Side by side</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><span class="disc">Discriminative</span></th>
+<th><span class="gen">Generative</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Learns</strong></td>
+<td>the boundary between classes</td>
+<td>the distribution of the data</td>
+</tr>
+<tr class="even">
+<td><strong>In → out</strong></td>
+<td>image → label / box / mask</td>
+<td>prompt or noise → image / text</td>
+</tr>
+<tr class="odd">
+<td><strong>Typical models</strong></td>
+<td>CNNs, YOLO, ResNet, SAM</td>
+<td>diffusion, GANs, VAEs, VLMs</td>
+</tr>
+<tr class="even">
+<td><strong>Needs</strong></td>
+<td>labelled examples</td>
+<td>many examples; labels optional</td>
+</tr>
+<tr class="odd">
+<td><strong>Fails by</strong></td>
+<td>confident wrong labels</td>
+<td>plausible fabrication</td>
+</tr>
+<tr class="even">
+<td><strong>Evidential status</strong></td>
+<td>a measurement to verify</td>
+<td>an illustration or a hypothesis</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>The asymmetry that matters</strong></p>
+</div>
+<div class="callout-content">
+<p>A <span class="disc">discriminative</span> error is <strong>visible</strong> — the box is in the wrong place. A <span class="gen">generative</span> error is <strong>invisible</strong> — a fabricated rim looks exactly as convincing as a real one.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="where-the-line-blurs" class="slide level2">
+<h2>Where the line blurs</h2>
+<ul>
+<li class="fragment"><strong>Vision-language models</strong> generate text — but you use them to <em>classify</em>: <em>“is there pottery in this photo?”</em></li>
+<li class="fragment"><strong>Segment Anything (SAM)</strong> is a foundation model <em>prompted</em> like a generative one, producing discriminative masks</li>
+<li class="fragment"><strong>Synthetic augmentation</strong> uses a generative model to feed a discriminative one</li>
+</ul>
+<div class="fragment">
+<p>The distinction is not a rigid taxonomy of architectures. It is about <strong>what the model outputs, and what you are entitled to claim from it</strong>.</p>
+</div>
+<div class="fragment">
+<p>That is exactly what the next eight minutes are for.</p>
+</div>
+</section></section>
+<section>
+<section id="live-demo" class="title-slide slide level1 center" data-background-color="#111111">
+<h1>Live demo</h1>
+
+</section>
+<section id="zero-shot-classification-with-clip" class="slide level2">
+<h2>Zero-shot classification with CLIP</h2>
+<p>You give the model an image and a <strong>list of candidate descriptions in plain English</strong>. It tells you which description fits best. <strong>No training. No annotation.</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a aria-label="1"></a>labels <span class="op">=</span> [<span class="st">"a photo of a potsherd"</span>,</span>
+<span id="cb1-2"><a aria-label="2"></a>          <span class="st">"a photo of a coin"</span>,</span>
+<span id="cb1-3"><a aria-label="3"></a>          <span class="st">"a photo of a stone tool"</span>,</span>
+<span id="cb1-4"><a aria-label="4"></a>          <span class="st">"a photo of a scale bar"</span>]</span>
+<span id="cb1-5"><a aria-label="5"></a></span>
+<span id="cb1-6"><a aria-label="6"></a>image <span class="op">=</span> load(<span class="st">"find_0042.jpg"</span>)</span>
+<span id="cb1-7"><a aria-label="7"></a>probs <span class="op">=</span> clip_zero_shot(image, labels)   <span class="co"># → [0.81, 0.05, 0.11, 0.03]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="fragment">
+<p><strong>Watch first — you will run this yourself later in the week.</strong></p>
+</div>
+
+<aside class="notes">
+<p>Run this live on two or three images from the artefact dataset. Then deliberately break it: feed it a sherd photograph with only the labels “a coin” / “a stone tool” and show that it answers confidently anyway. That failure is the seed of Discussion 3.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><div>
+<p>Notebook: <code>1-monday-intro/clip_zero_shot.ipynb</code> in the lessons repository, on the <a href="https://docs.cerit.io/en/docs/web-apps/jupyterhub" class="external">CERIT-SC JupyterHub</a>.</p>
+</div></aside></section>
+<section id="what-just-happened" class="slide level2">
+<h2>What just happened?</h2>
+<div class="placeholder placeholder-sm">
+<p><img data-src="img/ph-clip-output.svg"></p>
+</div>
+<ul>
+<li class="fragment">The model never saw an archaeological training set — it learned from <strong>image–caption pairs off the internet</strong></li>
+<li class="fragment">It is being used <strong><span class="disc">discriminatively</span></strong> (a label out) but was trained the way a <span class="gen">generative</span> model is</li>
+<li class="fragment">Change the wording of a label and the answer changes — <strong>the vocabulary is now a parameter</strong></li>
+<li class="fragment">Give it only wrong options and it will still pick one, <strong>confidently</strong></li>
+</ul>
+<div class="fragment">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>Zero-shot is a superb way to <strong>explore</strong> a collection. It is a poor way to <strong>report a number</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="discussion-3" class="title-slide slide level1 discussion center" data-background-color="#111111">
+<h1>Discussion 3</h1>
+
+</section>
+<section id="what-may-you-claim" class="slide level2 question discussion">
+<h2>What may you claim?</h2>
+<p><strong>6 minutes. Groups 5 &amp; 6 report back.</strong></p>
+<p>A colleague reports: <em>“Our model detected 340 previously unrecorded burial mounds in the survey area.”</em></p>
+<ol type="1">
+<li class="fragment">What do you need to know before you believe that number?</li>
+<li class="fragment">What is the difference between <strong>340 detections</strong> and <strong>340 mounds</strong>?</li>
+<li class="fragment">What if the model was trained on mounds from a <strong>different region</strong> entirely?</li>
+<li class="fragment">The paper includes a <strong>generated reconstruction</strong> of one mound. What must the caption say?</li>
+<li class="fragment">Now apply all of this to the <strong>CLIP result</strong> you just watched. Would you put it in a paper? With what caveat?</li>
+</ol>
+<aside class="notes">
+<p>The answer to (2) is precision and recall — do not give it away, let a group arrive at it, then name it. That is the hook into Thursday’s evaluation session.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="reporting-back" class="slide level2">
+<h2>Reporting back</h2>
+<p>Groups 5 &amp; 6, then everyone in one sentence:</p>
+<ul>
+<li class="fragment">The <strong>dataset</strong> and the <strong>question</strong> you settled on</li>
+<li class="fragment">The <strong>task shape</strong> and the <strong>annotation bill</strong></li>
+<li class="fragment">The <strong>one thing</strong> that would make it fail</li>
+</ul>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>These become our working problems for the week. If your question is tractable with one of our five datasets, we will try to get you to an answer by Friday — and you can present it on <strong>Tuesday afternoon</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="wrapping-up" class="title-slide slide level1 center" data-background-color="#111111">
+<h1>Wrapping up</h1>
+
+</section>
+<section id="five-datasets-five-questions" class="slide level2">
+<h2>Five datasets, five questions</h2>
+<div class="placeholder">
+<p><img data-src="img/ph-week-datasets.svg"></p>
+</div>
+<div class="smaller">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Dataset</th>
+<th>Day</th>
+<th>Task shape</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Artefacts</td>
+<td>Tuesday</td>
+<td>classification &amp; detection</td>
+</tr>
+<tr class="even">
+<td>Microscopy — use-wear</td>
+<td>Wednesday</td>
+<td>segmentation</td>
+</tr>
+<tr class="odd">
+<td>Satellite imagery</td>
+<td>Thursday</td>
+<td>detection</td>
+</tr>
+<tr class="even">
+<td>Rock art</td>
+<td>Thursday</td>
+<td><em>to be confirmed</em></td>
+</tr>
+<tr class="odd">
+<td>Coins</td>
+<td>Friday</td>
+<td>combined methods, vision-language models</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="five-things-to-carry-into-the-week" class="slide level2">
+<h2>Five things to carry into the week</h2>
+<ol type="1">
+<li class="fragment">An image is <strong>numbers</strong>; a model is a <strong>very literal assistant</strong></li>
+<li class="fragment">The <strong>task shape follows from the question</strong> — and it sets the <strong>annotation bill</strong></li>
+<li class="fragment"><span class="disc">Discriminative</span> models <strong>point at evidence</strong>; <span class="gen">generative</span> models <strong>manufacture plausibility</strong></li>
+<li class="fragment">Both are useful; only one of them is a <strong>measurement</strong></li>
+<li class="fragment">Projects fail at <strong>question and data</strong>, not at training</li>
+</ol>
+<div class="fragment">
+<h3 id="next-up">Next up</h3>
+<p>Setting up the environment — Google Colab and the tools we use for the rest of the week.</p>
+</div>
+</section>
+<section id="where-to-read-more" class="slide level2 smaller">
+<h2>Where to read more</h2>
+<p>The <strong>MAIA</strong> COST Action maintains a shared, open Zotero library on AI in archaeology — <a href="https://www.zotero.org/groups/5991067/maia_managing_ai_in_archaeology/library" class="external">zotero.org/groups/5991067</a></p>
+<div class="columns">
+<div class="column" style="width:49%;">
+<p><strong>Start here</strong></p>
+<ul>
+<li>Bellat et al.&nbsp;2025 — <em>Machine learning applications in archaeological practices: a review</em></li>
+<li>Gattiglia 2025 — <em>Managing Artificial Intelligence in Archaeology: an overview</em></li>
+<li>Bickler 2021 — <em>Machine Learning Arrives in Archaeology</em></li>
+<li>Tenzer et al.&nbsp;2024 — <em>Debating AI in Archaeology</em></li>
+<li>Calder et al.&nbsp;2022 — <em>Use and Misuse of Machine Learning in Anthropology</em></li>
+</ul>
+</div><div class="column" style="width:49%;">
+<p><strong>Worked case studies</strong></p>
+<ul>
+<li>Pawlowicz &amp; Downum 2021 — ceramic typology from photographs</li>
+<li>Orengo &amp; Garcia-Molsosa 2019 — potsherd detection on drone imagery</li>
+<li>Verschoof-van der Vaart &amp; Lambers 2019 — R-CNN on LiDAR</li>
+<li>Fiorucci et al.&nbsp;2022 — evaluation measures for detection on LiDAR</li>
+<li>Deligio et al.&nbsp;2024 — ClaReNet, classifying Celtic coinage</li>
+<li>Núñez Jareño et al.&nbsp;2021 — synthetic data for Roman fine ware</li>
+</ul>
+</div></div>
+
+
+
+<aside><div>
+<p>Slides, notebooks and datasets: <a href="https://github.com/arup-cas/atrium-school-ml">github.com/arup-cas/atrium-school-ml</a> · Licences: MIT (code) &amp; CC BY-SA 4.0 International (other content).</p>
+</div></aside></section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>Computer Vision in Archaeology · Brno 2026</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'print',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+
+        height: 760,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+                // target, if specified
+                link.setAttribute("target", "_blank");
+                if (link.getAttribute("rel") === null) {
+                  link.setAttribute("rel", "noopener");
+                }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
