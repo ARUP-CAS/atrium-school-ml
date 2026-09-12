@@ -5,14 +5,21 @@ title: "Materials"
 Slides and notebooks used during the school.
 This page grows as the week progresses — check back for updates.
 
-::: {.callout-note}
-## Notebooks live in their own repository
+::: {.callout-tip}
+## Notebooks with exercises
+
+**Notebooks live in their own repository**  
 The notebooks and case-study exercises are in
 [**atrium-school-ml-lessons**](https://github.com/arubrno/atrium-school-ml-lessons){.external}, so you can clone them,
 open them in Colab, and keep working after the school without dragging this
 website along. The slides stay here.
+
+**Most datasets are not in the repository**  
+Where each dataset actually lives is recorded in
+[`datasets.yml`](https://github.com/arubrno/atrium-school-ml-lessons/blob/main/datasets.yml){.external}.
 :::
 
+::::: {.callout-note collapse="true" icon="false"}
 ## Three ways to run the notebooks
 
 Every notebook starts with the same setup cell. It works out where it is running,
@@ -42,11 +49,6 @@ setup("torch", "transformers", drive=True)
 
 and approve the Google Drive prompt. The caches then live in `MyDrive/atrium-school`.
 
-::: {.callout-note}
-The restricted datasets (satellite, rock art) are mounted on the school
-JupyterHub and are not downloadable. Those case studies need the hub; everything
-else runs anywhere.
-:::
 
 ## School JupyterHub
 
@@ -67,23 +69,23 @@ into your own folder (right-click → *Copy*, then *Paste* in your folder), open
 the copy, and run the first cell as usual. It finds the shared repository and
 installs nothing — the packages, model weights and data are already in place.
 
-::: {.callout-tip}
-## Your work is saved, the machine is not
+::: {.callout-warning}
+## Caution
+
+**Your work is saved, the machine is not**  
 Your folder persists, so notebooks you edit and files you save are still there
 tomorrow. The server itself may be restarted between sessions; if a notebook
 stops responding, *Kernel → Restart Kernel* and re-run from the top.
-:::
 
-::: {.callout-warning}
-## Shared means shared
+**Shared means shared**  
 Everyone can see — and delete — everything in the home directory. Stay in your
 own folder.
-:::
 
-::: {.callout-note}
+**Something does not look right?**  
 If the URL asks you to choose a server configuration, or you land somewhere that
 looks nothing like the above, tell an instructor — do not guess.
 :::
+
 
 ::: {.content-hidden}
 ```
@@ -140,20 +142,8 @@ pip install -r requirements.txt \
 The setup cell finds the repository around it and installs nothing further.
 
 ::::
+:::::
 
-::: {.callout-tip}
-## Datasets are not in the repository
-They are too large, and some are not redistributable. Every notebook fetches its
-data the same way, and caches it so it is downloaded only once:
-
-```python
-from atrium_data import get_dataset
-path = get_dataset("coins")
-```
-
-Where each dataset actually lives is recorded in
-[`datasets.yml`](https://github.com/arubrno/atrium-school-ml-lessons/blob/main/datasets.yml){.external}.
-:::
 
 ::: {.callout-important}
 ## Work on a copy
@@ -163,17 +153,25 @@ produces a merge conflict in raw JSON that nobody enjoys resolving. On the hub,
 copy it into your own folder; on Colab, *Save a copy in Drive*.
 :::
 
-## Monday — Kick-off & Python for CV
+## Monday
 
-- [**Introduction to computer vision**](materials/intro/intro.qmd) — 90 min. What computer vision is,
+1. [**Introduction to computer vision**](materials/intro/intro.qmd) — What computer vision is,
   the family of tasks, discriminative vs. generative models, a live zero-shot demo with CLIP,
   and three rounds of group discussion.
-- [**CLIP zero-shot classification**](https://github.com/arubrno/atrium-school-ml-lessons/blob/main/1-monday-intro/clip_zero_shot.ipynb){.external} —
+2. [**CLIP zero-shot classification**](https://github.com/arubrno/atrium-school-ml-lessons/blob/main/1-monday-intro/clip_zero_shot.ipynb){.external} —
   the notebook behind the demo. Classifying artefact photographs with no training and no
   annotation, and three ways it misleads you.
   [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/arubrno/atrium-school-ml-lessons/blob/main/1-monday-intro/clip_zero_shot.ipynb){.external}
+   - **New to Python?** Use [**the beginner version**](https://github.com/arubrno/atrium-school-ml-lessons/blob/main/1-monday-intro/clip_zero_shot_v2.ipynb){.external} —
+     the same notebook with the code spelled out step by step and commented line by line,
+     plus an optional look inside the model.
+     [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/arubrno/atrium-school-ml-lessons/blob/main/1-monday-intro/clip_zero_shot_v2.ipynb){.external}
+3. Python for Computer Vision
+4. Coding with agents
 
-## Tuesday — Artefacts
+*Ice-breaker event in the evening.*
+
+<!-- ## Tuesday — Artefacts
 
 Classification and detection of artefact types from photographs.
 *Notebooks to follow.*
@@ -191,7 +189,7 @@ Object detection on remote-sensing data.
 ## Friday — Coins
 
 Combining methods, and vision-language models.
-*Notebooks to follow.*
+*Notebooks to follow.* -->
 
 ::: {.callout-note}
 ## Reading

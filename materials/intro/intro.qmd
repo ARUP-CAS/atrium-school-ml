@@ -116,9 +116,9 @@ Both are collaborative infrastructures — you can join MAIA yourself.
 : {tbl-colwidths="[12,63,25]"}
 :::
 
-::: {.fragment}
+<!-- ::: {.fragment}
 > Three short discussion rounds. You will be talking for a third of this session.
-:::
+::: -->
 
 ::: {.notes}
 Say the structure out loud — people relax when they know a break from listening is
@@ -138,7 +138,7 @@ never more than twelve minutes away.
 ::: {.callout-tip}
 ## Use your own material
 Where a question says *"your data"*, use a project you actually work on.
-If you have nothing to hand, borrow one of the five datasets we work with this week.
+If you have nothing to hand, think about one of the datasets we are going to work with this week.
 :::
 :::
 
@@ -179,12 +179,11 @@ p_bar(read_summary("cv_concepts.csv")) +
 
 ::: {.smaller}
 Almost everyone has **met** machine learning; almost nobody **does** it.
-You know the vocabulary of detection and classification — and the two things
-this week actually turns on, **annotation** and **evaluation**, were not on the list.
+You know the vocabulary of detection and classification.
 :::
 
 ::: {.aside}
-Pre-school survey, n = 27. Aggregated; no individual responses shown.
+Pre-school survey, n = 29.
 :::
 
 ::: {.notes}
@@ -198,10 +197,10 @@ that decides whether a project works. That is the argument for Tuesday.
 :::: {.columns}
 ::: {.column width="49%"}
 ::: {.box .box-disc}
-[52%]{.stat}
+[50%]{.stat}
 
-use an AI coding assistant **regularly** —
-but only **19%** rate their Python 4 or 5 out of 5.
+use an AI coding assistant **regularly** --
+and **19%** rate their Python 4 or 5 out of 5.
 :::
 
 ::: {.smaller}
@@ -212,15 +211,14 @@ and it is why Monday afternoon is about **coding with agents** rather than synta
 :::
 ::: {.column width="49%"}
 ::: {.box .box-plain}
-[81%]{.stat}
+[80%]{.stat}
 
 have **never used an image annotation tool**.
 :::
 
 ::: {.smaller}
-Annotation is the single largest cost in every project we will look at, and the
-one place where your expertise — not the model's — decides the outcome.
-Most of the room is about to meet it for the first time on **Tuesday**.
+Annotation is probably the single largest cost in every project we will look at, and the
+one place where your expertise -- not the model's -- decides the outcome.
 :::
 :::
 ::::
@@ -250,24 +248,24 @@ read_summary("dataset_interest.csv") |>
 ```
 
 ::: {.tiny}
-Multiple answers allowed. **48%** have no dataset of their own to bring — borrow one of ours.
+Multiple answers allowed. **48%** have no dataset of their own to bring.
 :::
 :::
 ::: {.column width="55%"}
 > Confidently apply computer vision algorithms to detect archaeological features
-> and micro-topographical anomalies, **drastically reducing the manual processing time**.
+> and micro-topographical anomalies, **drastically reducing the manual processing time**. (Árpád)
 
 > Better understand the **inner workings** of a machine learning model, by learning
-> to develop and train it myself.
+> to develop and train it myself. (Aaricia)
 
 > Even if I don't have a large corpus, I would like to **test AI methods on my
-> dataset** by the end of the week.
+> dataset** by the end of the week. (Hüseyin)
 :::
 ::::
 
 ::: {.aside}
-Anonymised, lightly trimmed. Artefact photographs and satellite imagery draw the
-largest interest — which is also where most published archaeological work sits.
+Artefact photographs and satellite imagery seem to draw the
+largest interest — which is also where most published archaeological work sits...
 :::
 
 ::: {.notes}
@@ -299,13 +297,15 @@ That last one is where archaeology enters. **We** define what the machine aims a
 
 ## An image is an array of numbers
 
-::: {.placeholder .placeholder-lg}
-![](img/ph-image-as-array.svg)
+::: {.figure .figure-lg}
+![](img/image-as-array.png){fig-alt="A terra sigillata sherd, a 36 by 36 pixel window of it, and an 8 by 8 grid of the red-channel values."}
+
+[Sherd: AMČR [M-202300130-N00020](https://doi.org/10.71928/M-202300130-N00020), CC BY-NC 4.0]{.credit}
 :::
 
 ::: {.smaller}
 A 4000 × 3000 photograph of a sherd is 12 million numbers per colour channel — 36 million in all.
-Nothing in that array says *sherd*, *rim*, or *Neolithic*.
+Nothing in that array says *sherd*, *terra sigilata*, or *Roman period*.
 :::
 
 ::: {.notes}
@@ -315,17 +315,19 @@ numbers are summarised — there is no built-in understanding anywhere in the st
 
 ## The semantic gap
 
-::: {.placeholder}
-![](img/ph-semantic-gap.svg)
+::: {.figure}
+![](img/semantic-gap.png){fig-alt="The same sherd as a colour photograph and as a map of brightness gradients."}
+
+[Sherd: AMČR [M-202300130-N00020](https://doi.org/10.71928/M-202300130-N00020), CC BY-NC 4.0]{.credit}
 :::
 
 :::: {.columns}
 ::: {.column width="48%"}
 **A specialist sees**
 
-- a rim sherd, wheel-thrown
-- probably Roman
-- worth three more photographs
+- a sherd, wheel-thrown
+- Roman,terra sigilata -- Rheinzabern
+- 2nd half of the 2nd century CE
 :::
 ::: {.column width="48%"}
 **The computer receives**
@@ -342,8 +344,10 @@ Bridging that gap with **learned statistical regularities** is the whole enterpr
 
 ## Why now?
 
-::: {.placeholder}
-![](img/ph-data-deluge.svg)
+::: {.figure}
+![](img/data-deluge.jpg){fig-alt="An aerial photograph of vegetation marks in a field, an excavation trench being photographed from above, and a 1984 archive photograph of a burial in a circular pit."}
+
+[M. Gojda, AMČR [C-DL-201000159](https://doi.org/10.60585/C-DL-201000159); N. Profantová, AMČR [C-200913914A-DT-05281](https://doi.org/10.60585/C-200913914A-DT-05281); AMČR [M-FT-900144861](https://doi.org/10.60585/M-FT-900144861) (1984); CC BY-NC 4.0]{.credit}
 :::
 
 ::: {.incremental}
@@ -410,8 +414,8 @@ Circulate. Listen for questions that are really *interpretations* ("is this site
 
 :::: {.columns}
 ::: {.column width="25%"}
-::: {.placeholder}
-![](img/ph-task-classification.svg)
+::: {.figure}
+![](img/task-classification.jpg){fig-alt="A Roman bronze coin with the single label coin."}
 :::
 **Classification**
 
@@ -420,8 +424,8 @@ Circulate. Listen for questions that are really *interpretations* ("is this site
 One label per image
 :::
 ::: {.column width="25%"}
-::: {.placeholder}
-![](img/ph-task-detection.svg)
+::: {.figure}
+![](img/task-detection.jpg){fig-alt="Twenty-four potsherds on graph paper, each inside a bounding box."}
 :::
 **Detection**
 
@@ -430,8 +434,8 @@ One label per image
 Boxes + labels
 :::
 ::: {.column width="25%"}
-::: {.placeholder}
-![](img/ph-task-segmentation.svg)
+::: {.figure}
+![](img/task-segmentation.jpg){fig-alt="A rosary with its chain, loose beads and cross each covered by a coloured mask."}
 :::
 **Segmentation**
 
@@ -440,8 +444,8 @@ Boxes + labels
 Per-pixel mask
 :::
 ::: {.column width="25%"}
-::: {.placeholder}
-![](img/ph-task-keypoints.svg)
+::: {.figure}
+![](img/task-keypoints.png){fig-alt="A vessel profile drawing with landmarks at the rim, neck, maximum diameter, base and base centre."}
 :::
 **Keypoints**
 
@@ -454,6 +458,13 @@ Coordinates
 ::: {.fragment .smaller}
 The choice is not technical. It follows from **the question you asked** —
 and it determines **how much annotation you will have to pay for**.
+:::
+
+::: {.aside}
+Photographs: Z. Omelka, AMČR [M-202101534-N00243](https://doi.org/10.71928/M-202101534-N00243);
+M. Martinek, AMČR [M-202300087-N00510](https://doi.org/10.71928/M-202300087-N00510);
+J. Machan, AMČR [M-202400071-N00083](https://doi.org/10.71928/M-202400071-N00083); CC BY-NC 4.0.
+Boxes and masks from the AMČR-PAS annotations.
 :::
 
 ## The same photograph, five questions
@@ -478,16 +489,17 @@ Friday's coins dataset is the worked example of the top four rows.
 
 ## The same four shapes, across archaeology
 
-::: {.smaller}
-| Shape | Published examples |
+
+| *Shape* | *Published example* |
 |---|---|
-| **Classification** | decorated ceramic typology from photographs [@pawlowicz2021]; amphora and faience fabrics [@santos2024]; Celtic coin classification and die studies [@deligio2024] |
+| **Classification** | decorated ceramic typology from photographs [@pawlowicz2021] |
 | **Detection** | potsherds in high-resolution drone imagery [@orengo2019]; burial mounds in historical maps [@berganzobesg2023]; archaeological objects in LiDAR [@verschoofvan2019]; illustrated objects in scanned catalogues [@klein2025] |
-| **Segmentation** | hollow roads traced in LiDAR [@verschoofvan2021]; agrarian field systems from satellite imagery [@kucukdemirci2025]; anomalies in geophysical survey images [@kucukdemirci2020] |
+| **Segmentation** | hollow roads traced in LiDAR [@verschoofvan2021]; agrarian field systems from satellite imagery [@kucukdemirci2025] |
+| **Keypoints** | tracing a knapper's movements, the motor side of knapping skill [@pargeter2022] |
 | **Retrieval** | 3D matching and retrieval of objects across collections [@jimenezbadil2023] |
 
 : {tbl-colwidths="[16,84]"}
-:::
+
 
 ::: {.refs-inline}
 ::: {#refs}
@@ -496,14 +508,13 @@ Friday's coins dataset is the worked example of the top four rows.
 
 ::: {.notes}
 The point to make out loud: almost all of this is remote sensing and artefact
-photography. Excavation-context imagery is still largely untouched — which is
-where several of you are working. All of these sit in the MAIA Zotero library.
+photography.
 :::
 
 ## The pipeline for the rest of the week
 
-::: {.placeholder}
-![](img/ph-pipeline.svg)
+::: {.figure}
+![](img/pipeline.png){fig-alt="Six stages in a row: question, data and annotation, pre-processing, training, evaluation, interpretation. The first two are highlighted."}
 :::
 
 ::: {.smaller}
@@ -614,8 +625,8 @@ In notation: [discriminative]{.disc} models learn `P(label | image)`; [generativ
 
 :::: {.columns}
 ::: {.column width="49%"}
-::: {.placeholder}
-![](img/ph-decision-boundary.svg)
+::: {.figure}
+![](img/decision-boundary.png){fig-alt="Two clusters of points, Neolithic and Iron Age, separated by a straight blue line."}
 :::
 ::: {.box .box-disc}
 [Discriminative]{.disc} — draw a line separating the classes.
@@ -623,8 +634,8 @@ Anything far from the line is ignored.
 :::
 :::
 ::: {.column width="49%"}
-::: {.placeholder}
-![](img/ph-density.svg)
+::: {.figure}
+![](img/density.png){fig-alt="The same two clusters with orange density contours around each, and a few new points sampled from them."}
 :::
 ::: {.box .box-gen}
 [Generative]{.gen} — model where each class *lives*.
@@ -635,8 +646,10 @@ You can then sample new points from it.
 
 ## [Discriminative]{.disc} — the working horse of the week
 
-::: {.placeholder .placeholder-sm}
-![](img/ph-discriminative.svg)
+::: {.figure .figure-sm}
+![](img/discriminative.png){fig-alt="A sherd photograph goes into a model, which returns a label, a bounding box, or a mask."}
+
+[Sherd: AMČR [M-202300130-N00020](https://doi.org/10.71928/M-202300130-N00020), CC BY-NC 4.0]{.credit}
 :::
 
 ::: {.incremental}
@@ -653,27 +666,24 @@ Common thread: the model **points at evidence that already exists**.
 
 ## [Generative]{.gen} — a smaller part of the picture
 
-:::: {.columns}
-::: {.column width="32%"}
-::: {.placeholder}
-![](img/ph-gen-restoration.svg)
+::: {.figure}
+![](img/gen-restoration.jpg){fig-alt="Two damaged medieval frescoes, each next to a version in which a neural network has filled in the missing paint."}
+
+[Merizzi et al. 2024, *Heritage Science* 12, 41, Figs. 12 & 17, [doi:10.1186/s40494-023-01116-x](https://doi.org/10.1186/s40494-023-01116-x), CC BY 4.0, modified]{.credit}
 :::
+
+:::: {.columns .smaller}
+::: {.column width="32%"}
 **Restoration**
 
-Sharpening or completing degraded archive imagery
+Sharpening or completing degraded imagery, as above
 :::
 ::: {.column width="32%"}
-::: {.placeholder}
-![](img/ph-gen-synthetic.svg)
-:::
 **Synthetic training data**
 
 Manufacturing examples for rare classes
 :::
 ::: {.column width="32%"}
-::: {.placeholder}
-![](img/ph-gen-vlm.svg)
-:::
 **Vision-language models**
 
 Describing an image, answering questions about it
@@ -693,6 +703,9 @@ vision-language models on Friday. This school is not about generative AI.
 Synthetic training data is where the two families meet productively: a generative model
 manufactures examples that train a discriminative one. Published work has done exactly this
 for Roman fine ware. Mention it, then move on — the room does not need a diffusion lecture.
+
+On the frescoes: ask the room which pixels in the "inpainted" panels are evidence.
+None of the filled areas are — they are the network's guess at what paint was there.
 :::
 
 ## Side by side
@@ -749,11 +762,11 @@ probs = clip_zero_shot(image, labels)   # → [0.81, 0.05, 0.11, 0.03]
 ```
 
 ::: {.fragment}
-**Watch first — you will run this yourself later in the week.**
+Try to run the notebook yourself...
 :::
 
 ::: {.aside}
-Notebook: `1-monday-intro/clip_zero_shot.ipynb` in the lessons repository, on the [CERIT-SC JupyterHub](https://docs.cerit.io/en/docs/web-apps/jupyterhub){.external}.
+Notebook: `1-monday-intro/clip_zero_shot.ipynb` (alternatively `clip_zero_shot_v2.ipynb`) in the lessons repository.
 :::
 
 ::: {.notes}
@@ -764,8 +777,10 @@ answers confidently anyway. That failure is the seed of Discussion 3.
 
 ## What just happened?
 
-::: {.placeholder .placeholder-sm}
-![](img/ph-clip-output.svg)
+::: {.figure .figure-sm}
+![](img/clip-output.png){fig-alt="CLIP output for two sherds. Terra sigillata with five sensible labels: 95% potsherd. A coarse sherd with the same labels: 51% potsherd, 48% stone tool. The coarse sherd offered only coin, stone tool and bicycle: stone tool at 100%."}
+
+[Sherds: AMČR [M-202300130-N00020](https://doi.org/10.71928/M-202300130-N00020); M. Španěl, AMČR [M-202300087-N00486](https://doi.org/10.71928/M-202300087-N00486); CC BY-NC 4.0]{.credit}
 :::
 
 ::: {.incremental}
@@ -824,10 +839,6 @@ on **Tuesday afternoon**.
 
 ## Five datasets, five questions
 
-::: {.placeholder}
-![](img/ph-week-datasets.svg)
-:::
-
 ::: {.smaller}
 | Dataset | Day | Task shape |
 |---|---|---|
@@ -884,5 +895,5 @@ The **MAIA** COST Action maintains a shared, open Zotero library on AI in archae
 ::: {.aside}
 Slides: [github.com/arup-cas/atrium-school-ml](https://github.com/arup-cas/atrium-school-ml) ·
 Notebooks and datasets: [github.com/arubrno/atrium-school-ml-lessons](https://github.com/arubrno/atrium-school-ml-lessons) ·
-Licences: MIT (code) & CC BY-SA 4.0 International (other content).
+Licences: MIT (code) & CC BY-SA 4.0 International (other content), if not stated otherwise.
 :::

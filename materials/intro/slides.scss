@@ -85,6 +85,19 @@ $link-color: #2c7be5;
 .reveal .placeholder { margin: 0.2em 0 0.4em 0; text-align: center; }
 .reveal .placeholder p { margin: 0; }
 
+/* Finished figures: the same px size budget as the placeholders they replace. */
+.reveal .figure img {
+  max-height: 250px;
+  max-width: 100%;
+  width: auto;
+  margin: 0;
+}
+.reveal .figure-lg img { max-height: 420px; }
+.reveal .figure-sm img { max-height: 175px; }
+.reveal .figure { margin: 0.2em 0 0.4em 0; text-align: center; }
+.reveal .figure p { margin: 0; }
+.reveal .figure .credit { margin-top: 0; font-size: 0.5em; }
+
 /* The two-family colour code used throughout the deck. */
 .reveal .disc { color: #2c7be5; font-weight: 700; }
 .reveal .gen  { color: #c2410c; font-weight: 700; }
@@ -181,6 +194,14 @@ $link-color: #2c7be5;
   text-indent: -1.1em;   /* hanging indent */
 }
 .reveal .refs-inline a { color: #5b6673; text-decoration: none; }
+
+/* Quarto adds `.smaller` (0.7em) and `.scrollable` to any slide that holds the
+   #refs div. That shrinks the whole slide, not just the references, so a table
+   there ends up at 0.7 x 0.78em. Undo it on those slides and keep the reference
+   list at the size it had (0.42em x 0.7). */
+.reveal .slides section.smaller:has(.refs-inline) { font-size: 1em; }
+.reveal .slides section.smaller:has(.refs-inline) h2 { font-size: var(--r-heading2-size); }
+.reveal .slides section.smaller:has(.refs-inline) .refs-inline #refs { font-size: 0.3em; }
 
 .reveal .smaller { font-size: 0.82em; }
 .reveal .tiny { font-size: 0.62em; }

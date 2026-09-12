@@ -1,8 +1,8 @@
 category,n,pct
-Object detection,17,63
-Image classification,15,56
-CNNs / neural networks in general,11,41
-Image segmentation,10,37
-Transfer learning,6,22
-None of the above,3,11
-Vision-language models (e.g. CLIP),3,11
+Object detection,19,66
+Image classification,17,59
+CNNs / neural networks in general,11,38
+Image segmentation,11,38
+Transfer learning,7,24
+None of the above,3,10
+Vision-language models (e.g. CLIP),3,10

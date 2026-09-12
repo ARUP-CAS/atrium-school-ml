@@ -83,3 +83,6 @@ survey/raw/
 
 __pycache__/
 *.pyc
+
+# Source photographs and annotation exports for the slides (see materials/intro/make_images.py)
+/temp/
