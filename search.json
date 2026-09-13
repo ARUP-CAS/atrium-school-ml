@@ -116,7 +116,7 @@
     "href": "materials/intro/intro.html#the-semantic-gap",
     "title": "Computer Vision in Archaeology",
     "section": "The semantic gap",
-    "text": "The semantic gap\n\n\nSherd: AMČR M-202300130-N00020, CC BY-NC 4.0\n\n\n\nA specialist sees\n\na sherd, wheel-thrown\nRoman,terra sigilata – Rheinzabern\n2nd half of the 2nd century CE\n\n\nThe computer receives\n\na 4000 × 3000 × 3 array\nbrightness gradients, edges, textures\nno notion of sherd\n\n\n\nBridging that gap with learned statistical regularities is the whole enterprise."
+    "text": "The semantic gap\n\n\nSherd: AMČR M-202300130-N00020, CC BY-NC 4.0\n\n\n\nA specialist sees\n\na sherd\nRoman, terra sigilata from Rheinzabern\n2nd half of the 2nd century CE\n\n\nThe computer receives\n\na 4000 × 3000 × 3 array\nbrightness gradients, edges, textures\nno notion of sherd\n\n\n\nBridging that gap with learned statistical regularities is the whole enterprise."
   },
   {
     "objectID": "materials/intro/intro.html#why-now",
@@ -249,21 +249,14 @@
     "href": "materials/intro/intro.html#reporting-back",
     "title": "Computer Vision in Archaeology",
     "section": "Reporting back",
-    "text": "Reporting back\nGroups 5 & 6, then everyone in one sentence:\n\nThe dataset and the question you settled on\nThe task shape and the annotation bill\nThe one thing that would make it fail\n\n\n\n\n\n\n\n\nNote\n\n\nThese become our working problems for the week. If your question is tractable with one of our five datasets, we will try to get you to an answer by Friday — and you can present it on Tuesday afternoon."
-  },
-  {
-    "objectID": "materials/intro/intro.html#five-datasets-five-questions",
-    "href": "materials/intro/intro.html#five-datasets-five-questions",
-    "title": "Computer Vision in Archaeology",
-    "section": "Five datasets, five questions",
-    "text": "Five datasets, five questions\n\n\n\n\nDataset\nDay\nTask shape\n\n\n\n\nArtefacts\nTuesday\nclassification & detection\n\n\nMicroscopy — use-wear\nWednesday\nsegmentation\n\n\nSatellite imagery\nThursday\ndetection\n\n\nRock art\nThursday\nto be confirmed\n\n\nCoins\nFriday\ncombined methods, vision-language models"
+    "text": "Reporting back\nGroups 5 & 6, then everyone in one sentence:\n\nThe dataset and the question you settled on\nThe task shape and the annotation bill\nThe one thing that would make it fail"
   },
   {
     "objectID": "materials/intro/intro.html#five-things-to-carry-into-the-week",
     "href": "materials/intro/intro.html#five-things-to-carry-into-the-week",
     "title": "Computer Vision in Archaeology",
     "section": "Five things to carry into the week",
-    "text": "Five things to carry into the week\n\nAn image is numbers; a model is a very literal assistant\nThe task shape follows from the question — and it sets the annotation bill\nDiscriminative models point at evidence; generative models manufacture plausibility\nBoth are useful; only one of them is a measurement\nProjects fail at question and data, not at training\n\n\nNext up\nSetting up the environment — Google Colab and the tools we use for the rest of the week."
+    "text": "Five things to carry into the week\n\nAn image is numbers; a model is a very literal assistant\nThe task shape follows from the question — and it sets the annotation bill\nDiscriminative models point at evidence; generative models manufacture plausibility\nBoth are useful; only one of them is a measurement\nProjects fail at question and data, not at training"
   },
   {
     "objectID": "materials/intro/intro.html#where-to-read-more",
