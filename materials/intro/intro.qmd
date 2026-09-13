@@ -325,8 +325,8 @@ numbers are summarised — there is no built-in understanding anywhere in the st
 ::: {.column width="48%"}
 **A specialist sees**
 
-- a sherd, wheel-thrown
-- Roman,terra sigilata -- Rheinzabern
+- a sherd
+- Roman, terra sigilata from Rheinzabern
 - 2nd half of the 2nd century CE
 :::
 ::: {.column width="48%"}
@@ -827,17 +827,17 @@ Groups 5 & 6, then everyone in one sentence:
 - The **one thing** that would make it fail
 :::
 
-::: {.fragment}
+<!-- ::: {.fragment}
 ::: {.callout-note}
 These become our working problems for the week. If your question is tractable with one of
 our five datasets, we will try to get you to an answer by Friday — and you can present it
 on **Tuesday afternoon**.
 :::
-:::
+::: -->
 
-# Wrapping up {background-color="#111111"}
+<!-- # Wrapping up {background-color="#111111"} -->
 
-## Five datasets, five questions
+<!-- ## Five datasets, five questions
 
 ::: {.smaller}
 | Dataset | Day | Task shape |
@@ -847,7 +847,7 @@ on **Tuesday afternoon**.
 | Satellite imagery | Thursday | detection |
 | Rock art | Thursday | *to be confirmed* |
 | Coins | Friday | combined methods, vision-language models |
-:::
+::: -->
 
 ## Five things to carry into the week
 
@@ -859,11 +859,11 @@ on **Tuesday afternoon**.
 5. Projects fail at **question and data**, not at training
 :::
 
-::: {.fragment}
+<!-- ::: {.fragment}
 ### Next up
 
 Setting up the environment — Google Colab and the tools we use for the rest of the week.
-:::
+::: -->
 
 ## Where to read more {.smaller}
 
