@@ -171,12 +171,20 @@ copy it into your own folder; on Colab, *Save a copy in Drive*.
 
 *Ice-breaker event in the evening.*
 
-<!-- ## Tuesday — Artefacts
+## Tuesday
 
-Classification and detection of artefact types from photographs.
-*Notebooks to follow.*
+1. [**Artefacts: datasets and annotation**](materials/artefacts/artefacts.qmd) — Where the
+  AMČR-PAS artefact photographs come from, what "annotated" actually means, the COCO, YOLO and
+  Pascal VOC formats, live demos of Label Studio, CVAT and SAM 2, and the three problems the
+  dataset has: class imbalance, vocabularies that do not line up, and the metadata nobody has
+  time to record.
+   - **Hands-on annotation** — we will give you the Label Studio URL in the session.
+     Everything after the hands-on block is a reading of what you annotate there.
+   - **ArchaeoTag** — the guessing game. Bring a phone.
 
-## Wednesday — Microscopic use-wear
+*Participants' project presentations in the afternoon; walking meeting in Brno in the evening.*
+
+<!-- ## Wednesday — Microscopic use-wear
 
 Segmentation of use-wear traces in microscopic images.
 *Notebooks to follow.*
