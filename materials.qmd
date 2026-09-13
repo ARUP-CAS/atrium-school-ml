@@ -166,7 +166,8 @@ copy it into your own folder; on Colab, *Save a copy in Drive*.
      the same notebook with the code spelled out step by step and commented line by line,
      plus an optional look inside the model.
      [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/arubrno/atrium-school-ml-lessons/blob/main/1-monday-intro/clip_zero_shot_v2.ipynb){.external}
-3. **Python for computer vision** — enough Python to read, change and debug the code an AI
+3. Coding with agents
+4. **Python for computer vision** — enough Python to read, change and debug the code an AI
   tool writes for you, then NumPy, Matplotlib and OpenCV. It ends with a first computer-vision
   workflow that separates the Venus of Dolní Věstonice from its background and measures it.
    - [**Introduction to Python for computer vision**](https://github.com/arubrno/atrium-school-ml-lessons/blob/main/1-monday-python/python_intro.ipynb){.external} —
@@ -180,7 +181,6 @@ copy it into your own folder; on Colab, *Save a copy in Drive*.
    - **Fallen behind?** Use [**the filled-in version**](https://github.com/arubrno/atrium-school-ml-lessons/blob/main/1-monday-python/python_for_cv_filled.ipynb){.external} —
      the same notebook with every cell filled in, for catching up or checking your version.
      [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/arubrno/atrium-school-ml-lessons/blob/main/1-monday-python/python_for_cv_filled.ipynb){.external}
-4. Coding with agents
 
 *Ice-breaker event in the evening.*
 
