@@ -539,11 +539,11 @@ no faster at all on hard ones.
 
 ::: {.smaller}
 1. Open **CVAT** at the address on the board → **Create an account**
-2. Download **`images.zip`** and **`labels.json`** from the link on the board
+2. **Pull** the lessons repository — everything is in **`2-tuesday-artefacts/`**
 3. **Projects → + → Create a new project** · give it a name · open the **Raw** tab ·
    replace everything in it with the contents of `labels.json` · **Done** · **Submit & Open**
-4. In the project: **+ → Create a new task** · give it a name · drop `images.zip` into
-   **Select files** · **Submit & Open**
+4. In the project: **+ → Create a new task** · give it a name · add the ten files from
+   `images/` under **Select files** · **Submit & Open**
 5. Click the **job** in the task — that opens the first photograph
 :::
 
@@ -555,9 +555,11 @@ one `]` at the end.
 :::
 
 ::: {.notes}
-Put CVAT's address and the download link on the board, as a QR code if you can. The two
-files are in `temp/annotation/hands-on/`: `images.zip` holds only the ten photographs, not
-the demo rosary.
+Put CVAT's address on the board, as a QR code if you can. The files are in
+[atrium-school-ml-lessons](https://github.com/arubrno/atrium-school-ml-lessons), folder
+`2-tuesday-artefacts/`: `images/` (the ten photographs, not the demo rosary),
+`labels.json`, and `credits.csv`; its README repeats these steps. Anyone who never cloned
+the repository can download it as a ZIP from GitHub (**Code → Download ZIP**).
 
 Walk the room during setup. Step 3 is where people get stuck: pasting `labels.json` after
 the `[]` that is already in the Raw box, instead of replacing it. Most people are done in
