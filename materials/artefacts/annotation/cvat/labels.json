@@ -1,0 +1,65 @@
+[
+  {"name": "fibula", "color": "#2c7be5", "type": "any", "attributes": [
+    {"name": "fragment", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "yes", "no", "unknown"]},
+    {"name": "damage", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "none", "minor", "major", "unknown"]},
+    {"name": "note", "mutable": false, "input_type": "text", "default_value": "", "values": [""]}
+  ]},
+  {"name": "clothing pin", "color": "#0e9f6e", "type": "any", "attributes": [
+    {"name": "fragment", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "yes", "no", "unknown"]},
+    {"name": "damage", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "none", "minor", "major", "unknown"]},
+    {"name": "note", "mutable": false, "input_type": "text", "default_value": "", "values": [""]}
+  ]},
+  {"name": "buckle", "color": "#c2410c", "type": "any", "attributes": [
+    {"name": "fragment", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "yes", "no", "unknown"]},
+    {"name": "damage", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "none", "minor", "major", "unknown"]},
+    {"name": "note", "mutable": false, "input_type": "text", "default_value": "", "values": [""]}
+  ]},
+  {"name": "spur", "color": "#7c3aed", "type": "any", "attributes": [
+    {"name": "fragment", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "yes", "no", "unknown"]},
+    {"name": "damage", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "none", "minor", "major", "unknown"]},
+    {"name": "note", "mutable": false, "input_type": "text", "default_value": "", "values": [""]}
+  ]},
+  {"name": "mount", "color": "#db2777", "type": "any", "attributes": [
+    {"name": "fragment", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "yes", "no", "unknown"]},
+    {"name": "damage", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "none", "minor", "major", "unknown"]},
+    {"name": "note", "mutable": false, "input_type": "text", "default_value": "", "values": [""]}
+  ]},
+  {"name": "pendant", "color": "#0891b2", "type": "any", "attributes": [
+    {"name": "fragment", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "yes", "no", "unknown"]},
+    {"name": "damage", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "none", "minor", "major", "unknown"]},
+    {"name": "note", "mutable": false, "input_type": "text", "default_value": "", "values": [""]}
+  ]},
+  {"name": "coin", "color": "#ca8a04", "type": "any", "attributes": [
+    {"name": "fragment", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "yes", "no", "unknown"]},
+    {"name": "damage", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "none", "minor", "major", "unknown"]},
+    {"name": "note", "mutable": false, "input_type": "text", "default_value": "", "values": [""]}
+  ]},
+  {"name": "token", "color": "#65a30d", "type": "any", "attributes": [
+    {"name": "fragment", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "yes", "no", "unknown"]},
+    {"name": "damage", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "none", "minor", "major", "unknown"]},
+    {"name": "note", "mutable": false, "input_type": "text", "default_value": "", "values": [""]}
+  ]},
+  {"name": "circle/ring", "color": "#4f46e5", "type": "any", "attributes": [
+    {"name": "fragment", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "yes", "no", "unknown"]},
+    {"name": "damage", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "none", "minor", "major", "unknown"]},
+    {"name": "note", "mutable": false, "input_type": "text", "default_value": "", "values": [""]}
+  ]},
+  {"name": "finger ring", "color": "#be123c", "type": "any", "attributes": [
+    {"name": "fragment", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "yes", "no", "unknown"]},
+    {"name": "damage", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "none", "minor", "major", "unknown"]},
+    {"name": "note", "mutable": false, "input_type": "text", "default_value": "", "values": [""]}
+  ]},
+  {"name": "amorphous fragment/object", "color": "#57534e", "type": "any", "attributes": [
+    {"name": "fragment", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "yes", "no", "unknown"]},
+    {"name": "damage", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "none", "minor", "major", "unknown"]},
+    {"name": "note", "mutable": false, "input_type": "text", "default_value": "", "values": [""]}
+  ]},
+  {"name": "other / not sure", "color": "#9ca3af", "type": "any", "attributes": [
+    {"name": "fragment", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "yes", "no", "unknown"]},
+    {"name": "damage", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "none", "minor", "major", "unknown"]},
+    {"name": "note", "mutable": false, "input_type": "text", "default_value": "", "values": [""]}
+  ]},
+  {"name": "photo", "color": "#1c2128", "type": "tag", "attributes": [
+    {"name": "scale", "mutable": false, "input_type": "radio", "default_value": "?", "values": ["?", "yes", "no"]}
+  ]}
+]

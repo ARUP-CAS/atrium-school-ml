@@ -202,7 +202,7 @@ record, and this dataset only ever sees the part of it that a detectorist finds.
 ## Four things people mean by it
 
 ::: {.figure .figure-xl}
-![](img/annotation-levels.jpg){fig-alt="One photograph of a rosary at four levels of annotation: an image-level label, ten bounding boxes, ten filled polygons, and the polygons with an attribute panel listing recognizable, occluded, and three unanswered fields."}
+![](img/annotation-levels.jpg){fig-alt="One photograph of a rosary at four levels of annotation: an image-level label, ten bounding boxes, ten filled polygons, and the polygons with an attribute panel listing recognizable and occluded, and three unanswered fields: damage, fragment and scale."}
 
 [Rosary: AMČR [M-202400071-N00083](https://doi.org/10.71928/M-202400071-N00083), CC BY-NC 4.0]{.credit}
 :::
@@ -414,7 +414,7 @@ the lost class name are the two things worth their slide space.
 
 ::: {.incremental}
 1. Look at the project you are about to work in
-2. Read its labelling config out loud — the classes and the three checkboxes
+2. Read its labelling config out loud — the classes and the three attributes
 3. Annotate one find, live
 4. Export it and open the JSON
 :::
@@ -428,6 +428,10 @@ the lost class name are the two things worth their slide space.
 ::: {.notes}
 Live. Keep it to five minutes: config, one annotation, one export. Resist the urge
 to tour the interface — they are about to use it themselves for sixteen minutes.
+
+Use the "Demo: rosary" project. Export it twice, JSON then COCO. The JSON has every
+answer and who gave it. The COCO has the box and the class, and the attributes are simply
+gone. That is the three-formats slide happening in front of them.
 :::
 
 ## CVAT {.smaller}
@@ -464,6 +468,11 @@ The AMČR-PAS annotations you have been looking at were made in **CVAT** — tha
 ::: {.notes}
 Four minutes, and this is the first thing to cut if the clock is against you: show
 the job/review split and the fact that our own data came out of it, then move on.
+
+If there is a minute: open a box's attributes. CVAT forces a default on every attribute,
+which is why ours start at `?`. Without that, an untouched box looks like an answer. The
+`occluded` flag is CVAT's own per-shape switch, off unless someone turns it on, and it is
+`false` on all `r format(summ$annotations, big.mark = " ")` annotations in the export.
 :::
 
 ## Why a polygon hurts
@@ -519,20 +528,20 @@ no faster at all on hard ones.
 :::: {.columns}
 ::: {.column width="54%"}
 ::: {.incremental}
-1. Open the URL on the board and sign in with the name on your badge
+1. Open the link on the board and sign up with your name, then **Label All Tasks**
 2. You have **10 photographs** from AMČR-PAS
-3. For each: draw a **box** around each artefact, pick a **class**, tick the **attributes**
+3. For each: pick a **class**, draw a **box** around each artefact, click the box and answer its **questions**
 4. If you are not sure what something is — **annotate it anyway** and note why
 :::
 :::
 ::: {.column width="44%"}
 ::: {.box .box-plain}
-[complete]{.box-title}
-is the whole object present?
+[fragment]{.box-title}
+a piece of an object, not a whole one?
 :::
 ::: {.box .box-plain}
-[corroded]{.box-title}
-can you see the surface?
+[damage]{.box-title}
+none, minor or major?
 :::
 ::: {.box .box-plain}
 [scale]{.box-title}
@@ -548,8 +557,10 @@ Do not compare with your neighbour. **The disagreement is the interesting part.*
 :::
 
 ::: {.notes}
-Write the URL on the board before the session starts. Walk the room; note out loud
-which images people hesitate on — those are the ones to pull up in the next block.
+Put the signup link on the board before the session starts, as a QR code if you can
+(`setup_labelstudio.py` prints it). Everyone gets all ten photos, in a different order
+each, so neighbours are rarely on the same one. Walk the room; note out loud which images
+people hesitate on — those are the ones to pull up in the next block.
 Give a two-minute warning at 14.
 :::
 
@@ -563,8 +574,8 @@ Pull up the same photograph annotated by five different people.
 ::: {.incremental}
 - The **boxes** will be close. Boxes usually are.
 - The **classes** will not, on two or three of the images — deliberately so
-- The **attributes** will be all over the place, because *complete* and *corroded* are
-  judgements and nobody defined them for you
+- The **attributes** will be all over the place, because *fragment* and *damage* are
+  judgements and nobody defined them for you — is a broken fibula a fragment, or damaged?
 :::
 
 ::: {.fragment}
@@ -573,9 +584,19 @@ Pull up the same photograph annotated by five different people.
 :::
 
 ::: {.notes}
-Pick the two planted ambiguous images. Ask the people who disagreed to say why —
-out loud, without defending themselves. The answers are always about the *definition*,
-never about the photograph.
+In the Data Manager, open a photo and click **Compare All**: every participant's
+annotation, side by side. Go to the planted ones:
+
+- **04**, a pierced coin, recorded in AMČR as a *pendant*
+  ([M-202101534-N00375](https://doi.org/10.71928/M-202101534-N00375))
+- **06**, a crescent, recorded as a *mount*, which most people will call a pendant
+  ([M-202300130-N00146](https://doi.org/10.71928/M-202300130-N00146))
+- **08**, coins fused into a corroded lump: one box or several, *coin* or *amorphous*?
+  ([M-202105567-N00005](https://doi.org/10.71928/M-202105567-N00005))
+
+The AMČR recorder's own answer for each is in `annotation/images.csv`. Ask the people who
+disagreed to say why — out loud, without defending themselves. The answers are always
+about the *definition*, never about the photograph.
 :::
 
 ## Agreement is a measurement
@@ -600,6 +621,11 @@ doubling your training set.
 Do not teach the kappa formula. The claim that matters is the ceiling: it reframes
 "our model only gets 82%" from a modelling problem into a data problem, which is where
 it usually belongs.
+
+If someone asks what a better definition looks like, our schema has one. `damage` is
+defined by what you can see: *minor* is mild corrosion or scars, *major* is heavy
+corrosion with contours you cannot identify. It also says outright that `fragment` is
+**distinct from** `damage`, which settles the broken-fibula argument from the last slide.
 :::
 
 # Three problems {background-color="#111111"}
@@ -790,7 +816,7 @@ mess is a published mapping file, not the merging itself.
 ## 3 · The metadata nobody has time for
 
 :::: {.columns}
-::: {.column width="48%"}
+::: {.column width="54%"}
 What the file records:
 
 ::: {.smaller}
@@ -801,36 +827,53 @@ What the file records:
 }
 ```
 :::
-:::
-::: {.column width="48%"}
-What you actually want:
-
-::: {.smaller}
-```json
-"attributes": {
-  "complete":  ?,
-  "corroded":  ?,
-  "has_scale": ?,
-  "material":  ?,
-  "view":      ?
-}
-```
-:::
-:::
-::::
 
 ::: {.fragment}
+::: {.smaller}
 ::: {.incremental}
 - Every one is a **seconds-long judgement** — and `r format(summ$annotations, big.mark = " ")` × several seconds is weeks of somebody's time
 - None of it needs a specialist. **Anyone can see** whether an object is broken or whether there is a ruler in the frame
 - Which makes it exactly the kind of work you can **ask a crowd** to do
 :::
 :::
+:::
+:::
+::: {.column width="44%"}
+What the schema asks for:
+
+::: {.smaller}
+```json
+"attributes": {
+  "type":           ?,
+  "context":        ?,
+  "view":           ?,
+  "recognizable":   true,
+  "damage":         ?,
+  "fragment":       ?,
+  "iconic":         ?,
+  "group":          ?,
+  "occluded":       false,
+  "truncated":      ?,
+  "composite":      ?,
+  "scale":          ?,
+  "colorReference": ?,
+  "markup":         ?
+}
+```
+:::
+:::
+::::
 
 ::: {.notes}
 Land the contrast: the polygons needed an expert and cost 677 clicks a photograph;
 these fields need no expertise at all and are the ones missing. That asymmetry is the
 argument for the next slide.
+
+The right-hand block is the schema ArchaeoTag collects into (`imagetag_schema.json` in
+arubrno/archiv-digilab): fourteen fields. The COCO export predates it, and it has two.
+Even those two are thinner than they look: `occluded` is `false` on every one of the
+`r format(summ$annotations, big.mark = " ")` annotations. It is CVAT's own per-shape
+switch, off unless someone turns it on, so it records a default, not a judgement.
 :::
 
 # ArchaeoTag {background-color="#111111"}
@@ -841,7 +884,7 @@ argument for the next slide.
 
 ::: {.incremental}
 - You are shown a **photograph of a find** and asked what it is
-- Along the way you answer the easy questions: *complete? corroded? is there a scale?*
+- Along the way you answer the easy questions: *a fragment? damaged? is there a scale?*
 - You find out whether you were right — that is the game
 - We get a **crowd-sourced answer** to the fields the file does not have
 :::
