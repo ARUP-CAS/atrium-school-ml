@@ -131,7 +131,7 @@ Follow the [setup guide](setup.qmd), then start Jupyter (or open the notebook in
 your IDE) anywhere inside the clone:
 
 ```bash
-git clone --depth 1 https://github.com/arubrno/atrium-school-ml-lessons.git
+git clone https://github.com/arubrno/atrium-school-ml-lessons.git
 cd atrium-school-ml-lessons
 python -m venv .venv && source .venv/bin/activate   # .venv\Scripts\activate on Windows
 pip install -r requirements.txt \
