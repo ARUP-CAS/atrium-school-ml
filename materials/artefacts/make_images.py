@@ -145,7 +145,9 @@ def annotation_levels():
             d.add_patch(Polygon((p - [x0, y0]) * s, closed=True, fill=False,
                                 ec=CLASS_COLOURS[cat], lw=2.0, alpha=0.9))
     attrs = anns[0][3]
-    lines = [f"{k}: {str(v).lower()}" for k, v in attrs.items()] + ["complete: ?", "corroded: ?", "has scale: ?"]
+    # The unanswered three are fields from the project schema (imagetag_schema.json in
+    # arubrno/archiv-digilab) that the COCO export never filled.
+    lines = [f"{k}: {str(v).lower()}" for k, v in attrs.items()] + ["damage: ?", "fragment: ?", "scale: ?"]
     # Top-left: the emptiest quarter of this photograph. Anywhere else the panel
     # sits on the cross or the medallion, which are the objects worth seeing.
     d.add_patch(FancyBboxPatch((18, 16), 360, 282, boxstyle="round,pad=8,rounding_size=10",

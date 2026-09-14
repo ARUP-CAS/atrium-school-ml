@@ -1,0 +1,63 @@
+<!--
+  Hands-on labelling config: AMČR-PAS artefact photographs.
+
+  Classes: the reference classes of the ten photographs plus near-miss distractors
+  (token, finger ring) and an explicit way out. Attribute keys and enum values (the
+  `alias`, which is what the export stores) follow imagetag_schema.json; the question
+  wording is ArchaeoTag's (src/lib/fieldQuestions.ts). Booleans are stored as yes/no,
+  not true/false: Label Studio turns the attribute string "true" into a boolean and
+  the interface then fails to load.
+
+  Deliberately no hints and no defaults: nobody is told what "minor" damage is, and
+  an unanswered field cannot be mistaken for a "no".
+-->
+<View>
+  <Header value="Pick a class, draw a box around each artefact, then click the box to answer its questions."/>
+  <RectangleLabels name="label" toName="image" strokeWidth="3">
+    <Label value="fibula" background="#2c7be5"/>
+    <Label value="clothing pin" background="#0e9f6e"/>
+    <Label value="buckle" background="#c2410c"/>
+    <Label value="spur" background="#7c3aed"/>
+    <Label value="mount" background="#db2777"/>
+    <Label value="pendant" background="#0891b2"/>
+    <Label value="coin" background="#ca8a04"/>
+    <Label value="token" background="#65a30d"/>
+    <Label value="circle/ring" background="#4f46e5"/>
+    <Label value="finger ring" background="#be123c"/>
+    <Label value="amorphous fragment/object" background="#57534e"/>
+    <Label value="other / not sure" background="#9ca3af"/>
+  </RectangleLabels>
+  <!-- Photo left, questions right: on a 1366 px laptop the questions stay on screen. -->
+  <View style="display: flex; gap: 1.2em; align-items: flex-start">
+    <View style="flex: 3; min-width: 0">
+      <Image name="image" value="$image" zoom="true" zoomControl="true"/>
+    </View>
+    <View style="flex: 1; min-width: 240px">
+      <Header value="Is there a scale bar or ruler in the photo?" size="6"/>
+      <Choices name="scale" toName="image" required="true" choice="single-radio">
+        <Choice value="Yes" alias="yes"/>
+        <Choice value="No" alias="no"/>
+      </Choices>
+      <View visibleWhen="region-selected">
+        <Header value="For the selected box" size="5"/>
+        <Header value="Is it a fragment (e.g. a sherd), not a whole artifact?" size="6"/>
+        <Choices name="fragment" toName="image" perRegion="true" required="true"
+                 choice="single-radio">
+          <Choice value="Yes" alias="yes"/>
+          <Choice value="No" alias="no"/>
+          <Choice value="Can't tell" alias="unknown"/>
+        </Choices>
+        <Header value="How damaged is the artifact?" size="6"/>
+        <Choices name="damage" toName="image" perRegion="true" required="true"
+                 choice="single-radio">
+          <Choice value="Undamaged" alias="none"/>
+          <Choice value="Minor" alias="minor"/>
+          <Choice value="Major" alias="major"/>
+          <Choice value="Can't tell" alias="unknown"/>
+        </Choices>
+        <TextArea name="note" toName="image" perRegion="true" editable="true"
+                  maxSubmissions="1" placeholder="Not sure what it is? Say why, then press Enter."/>
+      </View>
+    </View>
+  </View>
+</View>

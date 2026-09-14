@@ -1,0 +1,407 @@
+{
+ "info": {
+  "description": "AMČR-PAS reference annotations for the hands-on images, rescaled to the 1600 px copies. Source: amcr-pas_v0.json."
+ },
+ "images": [
+  {
+   "id": 1,
+   "file_name": "01_M202400098N00219F01.jpg",
+   "width": 1600,
+   "height": 1166
+  },
+  {
+   "id": 2,
+   "file_name": "02_M202400071N00009F01.jpg",
+   "width": 1600,
+   "height": 1571
+  },
+  {
+   "id": 3,
+   "file_name": "03_C202109132N00575F01.jpg",
+   "width": 1600,
+   "height": 1041
+  },
+  {
+   "id": 4,
+   "file_name": "04_M202101534N00375F02.jpg",
+   "width": 1600,
+   "height": 1208
+  },
+  {
+   "id": 5,
+   "file_name": "05_M202301170N00252F01.jpg",
+   "width": 1600,
+   "height": 900
+  },
+  {
+   "id": 6,
+   "file_name": "06_M202300130N00146F02.jpg",
+   "width": 1600,
+   "height": 1476
+  },
+  {
+   "id": 7,
+   "file_name": "07_M202105244N00015F01.jpg",
+   "width": 1600,
+   "height": 1108
+  },
+  {
+   "id": 8,
+   "file_name": "08_M202105567N00005F01.jpg",
+   "width": 1589,
+   "height": 1600
+  },
+  {
+   "id": 9,
+   "file_name": "09_M202400071N00027F02.jpg",
+   "width": 1600,
+   "height": 1086
+  },
+  {
+   "id": 10,
+   "file_name": "10_M202301170N00112F01.jpg",
+   "width": 1421,
+   "height": 1422
+  }
+ ],
+ "categories": [
+  {
+   "id": 2,
+   "name": "amorphous fragment/object"
+  },
+  {
+   "id": 37,
+   "name": "buckle"
+  },
+  {
+   "id": 45,
+   "name": "circle/ring"
+  },
+  {
+   "id": 48,
+   "name": "clothing pin"
+  },
+  {
+   "id": 51,
+   "name": "coin"
+  },
+  {
+   "id": 73,
+   "name": "fibula"
+  },
+  {
+   "id": 118,
+   "name": "mount"
+  },
+  {
+   "id": 135,
+   "name": "pendant"
+  },
+  {
+   "id": 179,
+   "name": "spur"
+  }
+ ],
+ "annotations": [
+  {
+   "id": 1,
+   "image_id": 1,
+   "category_id": 73,
+   "bbox": [
+    297.3,
+    135.5,
+    887.2,
+    731.8
+   ],
+   "attributes": {
+    "recognizable": "true",
+    "occluded": false
+   }
+  },
+  {
+   "id": 2,
+   "image_id": 2,
+   "category_id": 51,
+   "bbox": [
+    987.5,
+    665.4,
+    372.0,
+    376.3
+   ],
+   "attributes": {
+    "recognizable": "true",
+    "occluded": false
+   }
+  },
+  {
+   "id": 3,
+   "image_id": 2,
+   "category_id": 51,
+   "bbox": [
+    436.8,
+    662.9,
+    373.8,
+    369.5
+   ],
+   "attributes": {
+    "recognizable": "true",
+    "occluded": false
+   }
+  },
+  {
+   "id": 4,
+   "image_id": 2,
+   "category_id": 51,
+   "bbox": [
+    661.1,
+    185.0,
+    388.2,
+    393.8
+   ],
+   "attributes": {
+    "recognizable": "true",
+    "occluded": false
+   }
+  },
+  {
+   "id": 5,
+   "image_id": 3,
+   "category_id": 73,
+   "bbox": [
+    261.2,
+    364.4,
+    1285.9,
+    432.7
+   ],
+   "attributes": {
+    "recognizable": "true",
+    "occluded": false
+   }
+  },
+  {
+   "id": 6,
+   "image_id": 4,
+   "category_id": 135,
+   "bbox": [
+    608.8,
+    361.1,
+    430.7,
+    415.9
+   ],
+   "attributes": {
+    "recognizable": "true",
+    "occluded": false
+   }
+  },
+  {
+   "id": 7,
+   "image_id": 5,
+   "category_id": 37,
+   "bbox": [
+    811.0,
+    206.6,
+    497.6,
+    437.9
+   ],
+   "attributes": {
+    "recognizable": "true",
+    "occluded": false
+   }
+  },
+  {
+   "id": 8,
+   "image_id": 6,
+   "category_id": 118,
+   "bbox": [
+    203.6,
+    161.3,
+    1107.4,
+    937.9
+   ],
+   "attributes": {
+    "recognizable": "true",
+    "occluded": false
+   }
+  },
+  {
+   "id": 9,
+   "image_id": 7,
+   "category_id": 45,
+   "bbox": [
+    590.2,
+    233.9,
+    294.6,
+    302.2
+   ],
+   "attributes": {
+    "recognizable": "true",
+    "occluded": false
+   }
+  },
+  {
+   "id": 10,
+   "image_id": 7,
+   "category_id": 45,
+   "bbox": [
+    347.2,
+    66.3,
+    730.9,
+    728.4
+   ],
+   "attributes": {
+    "recognizable": "true",
+    "occluded": false
+   }
+  },
+  {
+   "id": 11,
+   "image_id": 7,
+   "category_id": 45,
+   "bbox": [
+    1171.3,
+    335.6,
+    279.9,
+    271.3
+   ],
+   "attributes": {
+    "recognizable": "true",
+    "occluded": false
+   }
+  },
+  {
+   "id": 12,
+   "image_id": 8,
+   "category_id": 2,
+   "bbox": [
+    336.8,
+    238.7,
+    855.6,
+    924.0
+   ],
+   "attributes": {
+    "recognizable": "true",
+    "occluded": false
+   }
+  },
+  {
+   "id": 13,
+   "image_id": 8,
+   "category_id": 51,
+   "bbox": [
+    639.1,
+    238.7,
+    348.6,
+    186.8
+   ],
+   "attributes": {
+    "recognizable": "true",
+    "occluded": false
+   }
+  },
+  {
+   "id": 14,
+   "image_id": 8,
+   "category_id": 51,
+   "bbox": [
+    884.0,
+    729.4,
+    308.4,
+    290.5
+   ],
+   "attributes": {
+    "recognizable": "true",
+    "occluded": false
+   }
+  },
+  {
+   "id": 15,
+   "image_id": 8,
+   "category_id": 51,
+   "bbox": [
+    391.5,
+    780.3,
+    313.7,
+    367.4
+   ],
+   "attributes": {
+    "recognizable": "true",
+    "occluded": false
+   }
+  },
+  {
+   "id": 16,
+   "image_id": 9,
+   "category_id": 179,
+   "bbox": [
+    219.5,
+    509.4,
+    266.0,
+    251.5
+   ],
+   "attributes": {
+    "recognizable": "true",
+    "occluded": false
+   }
+  },
+  {
+   "id": 17,
+   "image_id": 9,
+   "category_id": 179,
+   "bbox": [
+    240.0,
+    150.7,
+    822.0,
+    679.4
+   ],
+   "attributes": {
+    "recognizable": "true",
+    "occluded": false
+   }
+  },
+  {
+   "id": 18,
+   "image_id": 9,
+   "category_id": 37,
+   "bbox": [
+    1153.9,
+    548.8,
+    244.1,
+    149.2
+   ],
+   "attributes": {
+    "recognizable": "true",
+    "occluded": false
+   }
+  },
+  {
+   "id": 19,
+   "image_id": 9,
+   "category_id": 37,
+   "bbox": [
+    1140.1,
+    245.2,
+    251.2,
+    233.3
+   ],
+   "attributes": {
+    "recognizable": "true",
+    "occluded": false
+   }
+  },
+  {
+   "id": 20,
+   "image_id": 10,
+   "category_id": 48,
+   "bbox": [
+    408.0,
+    396.0,
+    338.6,
+    648.5
+   ],
+   "attributes": {
+    "recognizable": "false",
+    "occluded": false
+   }
+  }
+ ]
+}
