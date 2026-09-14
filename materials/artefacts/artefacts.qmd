@@ -141,7 +141,7 @@ Every step in that chain is a **filter**. Hold on to that — it comes back in p
 :::
 
 ::: {.aside}
-AMČR-PAS: [amcr-info.cz](https://amcr-info.cz){.external}. Photographs are published
+AMČR-PAS: [amcr-info.aiscr.cz](https://amcr-info.aiscr.cz){.external}. Photographs are published
 under CC BY-NC 4.0 with a DOI per record.
 :::
 
@@ -1004,7 +1004,7 @@ is a good place to start from.
 ::: {.column width="49%"}
 **Data and vocabularies**
 
-- AMČR-PAS — [amcr-info.cz](https://amcr-info.cz){.external}
+- AMČR-PAS — [amcr-info.aiscr.cz](https://amcr-info.aiscr.cz){.external}
 - Getty AAT — [getty.edu/research/tools/vocabularies/aat](https://www.getty.edu/research/tools/vocabularies/aat/){.external}
 - Portable Antiquities Scheme — [finds.org.uk](https://finds.org.uk){.external}
 - ARIADNE — [ariadne-research-infrastructure.eu](https://ariadne-research-infrastructure.eu){.external}
