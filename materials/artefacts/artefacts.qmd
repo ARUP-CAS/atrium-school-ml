@@ -1,8 +1,19 @@
 ---
 title: "Artefacts: datasets and annotation"
 subtitle: "Making the data a model can learn from"
-author: "Petr Pajdla"
-institute: "Institute of Archaeology, Czech Academy of Sciences, Brno"
+author:
+  - name: "Petr Pajdla"
+    affiliations:
+      - ref: iab
+  - name: "Ronald Harasim"
+    affiliations:
+      - ref: iab
+  - name: "David Spáčil"
+    affiliations:
+      - ref: iab
+affiliations:
+  - id: iab
+    name: "Institute of Archaeology, Czech Academy of Sciences, Brno"
 date: 2026-09-15
 date-format: "D. M. YYYY"
 bibliography: references.bib
