@@ -101,20 +101,20 @@ have **never used an image annotation tool**.
 :::
 ::: {.column width="52%"}
 ::: {.incremental}
-- It is the **largest single cost** in every project we look at this week
+- It is probably the **largest single cost** in every project we look at this week
 - It is the one place where **your expertise**, not the model's, decides the outcome
 - And it is where the decisions that sink a project get made — quietly, early, by whoever built the label set
 :::
 :::
 ::::
 
-::: {.fragment}
+<!-- ::: {.fragment}
 ::: {.callout-important}
 ## By 10:30
 You will have annotated a real archaeological dataset, and we will look at where
 the room **disagreed with itself**.
 :::
-:::
+::: -->
 
 ::: {.notes}
 Do not oversell. The point of the hands-on is not that they learn a tool — it is
@@ -128,10 +128,11 @@ disagreement in their own data ten minutes later.
 
 ::: {.incremental}
 - A **detectorist** finds an object in a field
-- They report it — findspot, a photograph, sometimes a guess at what it is
-- An **archaeologist** checks the record and assigns a type from a controlled list
-- The photograph lands in **AMČR-PAS**, the public portal of the Archaeological
-  Information System of the Czech Republic
+- They report it — findspot, a photograph, sometimes a guess at what it is and some other metadata
+- An **archaeologist** checks the record and assigns/confirms a type from a controlled list
+- The photograph lands in **AMČR-PAS**, the public portal of the [Archaeological
+  Information System of the Czech Republic](https://www.aiscr.cz/){.external}
+- Explore the data and images in the [Digital archive of the Archaeological Map of the Czech Republic](https://digiarchiv.aiscr.cz/results?entity=samostatny_nalez&sort=datestamp%20desc&page=0){.external}
 :::
 
 ::: {.fragment}
@@ -142,7 +143,7 @@ Every step in that chain is a **filter**. Hold on to that — it comes back in p
 
 ::: {.aside}
 AMČR-PAS: [amcr-info.aiscr.cz](https://amcr-info.aiscr.cz){.external}. Photographs are published
-under CC BY-NC 4.0 with a DOI per record.
+under CC BY-NC 4.0 with an IGSN (a DOI) per record.
 :::
 
 ::: {.notes}
@@ -151,7 +152,13 @@ what a finder thinks is worth reporting, and what survives in the ground at all.
 Do not develop it here — it is the imbalance slide's job.
 :::
 
-## What is in it
+##
+
+[Digital Archive of the AMCR -- Individual finds selected](https://digiarchiv.aiscr.cz/results?entity=samostatny_nalez&sort=datestamp%20desc&page=1){.external}
+
+![](img/digiarchiv.png){}
+
+## What is in our dataset?
 
 :::: {.columns}
 ::: {.column width="32%"}
@@ -182,7 +189,7 @@ artefact types used
 - Every annotation is a **polygon**, not just a box — `r format(summ$annotations, big.mark = " ")` of them
 - `r summ$categories_declared` types are **declared** in the file; `r summ$categories_never_used` of them
   are **never used once**
-- `r summ$images - summ$images_with_annotations` photographs carry **no annotation at all**
+<!-- - `r summ$images - summ$images_with_annotations` photographs carry **no annotation at all** -->
 - One photograph carries as many as **`r summ$max_annotations_per_image`** objects
 :::
 :::
@@ -217,7 +224,7 @@ four do you need? The honest answer is almost always "one level less than you as
 The orange fields in panel 4 are deliberate — they are the ArchaeoTag hook, come back to them.
 :::
 
-## The task shape sets the bill
+## The task shape sets the cost
 
 ::: {.smaller}
 | You want | You annotate | Roughly, per image |
@@ -315,11 +322,11 @@ lost for a second — that is the honest experience of a COCO file.
 :::
 ::::
 
-::: {.fragment}
+<!-- ::: {.fragment}
 ::: {.callout-warning}
 Four of those fields are places where two tools disagree about what the numbers mean.
 :::
-:::
+::: -->
 
 ::: {.notes}
 The `attributes` key is the important one: it is an extension, it round-trips through
