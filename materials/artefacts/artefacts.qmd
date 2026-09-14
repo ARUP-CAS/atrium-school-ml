@@ -285,25 +285,31 @@ lost for a second — that is the honest experience of a COCO file.
 ::: {.smaller}
 ```json
 {
-  "id": 1042,
-  "image_id": 388,
-  "category_id": 42,
-  "bbox": [837.8, 1760.0, 485.2, 445.9],
-  "area": 216350.7,
-  "segmentation": [[1301.3, 1762.7, 1279.0,
-                    1760.0, 1257.0, 1777.0, …]],
-  "iscrowd": 0,
-  "attributes": {"recognizable": "true",
-                 "occluded": false}
+  "categories": [
+    {"id": 58, "name": "cross"}, …
+  ],
+  "images": [
+    {"id": 8987, "file_name": "…/M202400071N00083F01.jpeg",
+     "width": 3978, "height": 2762}, …
+  ],
+  "annotations": [
+    {"id": 9872, "image_id": 8987, "category_id": 58,
+     "bbox": [837.8, 1760.0, 485.2, 445.9],
+     "area": 216350.7,
+     "segmentation": [[1301.3, 1762.7, 1279.0, 1760.0, …]],
+     "iscrowd": 0,
+     "attributes": {"recognizable": "true", "occluded": false}}, …
+  ]
 }
 ```
 :::
 :::
 ::: {.column width="40%"}
 ::: {.smaller}
+- `image_id` points into `images`, `category_id` into `categories` — the three lists are joined **only by id**
 - `bbox` is **x, y, width, height** — corner, not centre
 - `segmentation` is one **flat** list: `x1 y1 x2 y2 …`, here **47** vertices
-- `category_id` is a **number**. The word *cross* lives only in `categories`
+- `category_id` is just **`58`**. The word *cross* lives only in `categories`
 - `attributes` is **not** standard COCO — the tool added it
 :::
 :::
@@ -330,7 +336,7 @@ the useful archaeological metadata is exactly the part the format does not stand
 
 ::: {.smaller}
 ```json
-"category_id": 42,
+"category_id": 58,
 "bbox": [837.8, 1760.0,
          485.2, 445.9],
 "segmentation": [[…]]
