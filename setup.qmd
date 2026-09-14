@@ -205,7 +205,7 @@ and exercises live there, separately from this website — and install the packa
 they need:
 
 ```bash
-git clone --depth 1 https://github.com/arubrno/atrium-school-ml-lessons.git
+git clone https://github.com/arubrno/atrium-school-ml-lessons.git
 cd atrium-school-ml-lessons
 python -m venv .venv
 ```
