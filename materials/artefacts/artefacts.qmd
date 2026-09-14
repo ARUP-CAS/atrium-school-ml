@@ -69,9 +69,9 @@ MUTE <- "#6b7280"
 |---:|---|---:|
 | **1** | The **artefacts dataset** — where the photographs come from | |
 | **2** | What **"annotated"** means · **COCO**, YOLO, Pascal VOC | |
-| **3** | Live **demos** — Label Studio, CVAT, SAM 2 | |
-| **4** | [**You annotate**, on our server]{.disc} | *16 minutes* |
-| **5** | [Where **you disagreed**]{.disc} | *live, from your work* |
+| **3** | Annotation tools · live **demo** of CVAT with SAM 2 | |
+| **4** | [**You annotate**, in your own CVAT project]{.disc} | *16 minutes* |
+| **5** | [What **you** had to decide]{.disc} | *discussion* |
 | **6** | **Three problems** — imbalance · vocabularies · missing metadata | |
 | **7** | [**ArchaeoTag** — everyone plays a round]{.disc} | *phones out* |
 | **8** | [**Discussion** — your dataset, your label set]{.disc} | *groups 1 & 2 report* |
@@ -85,8 +85,8 @@ MUTE <- "#6b7280"
 
 ::: {.notes}
 Say the shape out loud. The single most important line is number 4: they will have
-annotated something before the break, and everything after block 5 is a reading of
-what they themselves produced.
+annotated something before the break, and block 5 is about decisions they themselves
+just made.
 :::
 
 ## Yesterday's number
@@ -402,67 +402,59 @@ YOLO also has a segmentation variant that keeps polygons (normalised `x y` pairs
 the class), so "the polygon is gone" is true of the detection format shown here.
 :::
 
-# Three tools {background-color="#111111"}
+# Annotation tools {background-color="#111111"}
 
-## Label Studio {.smaller}
+## Four tools, one job
+
+| Tool | Runs | Good for |
+|---|---|---|
+| **CVAT** — [cvat.ai](https://www.cvat.ai){.external} | a server, or cvat.ai | images and video, a team, **SAM 2 built in** · *what we use today* |
+| **Label Studio** — [labelstud.io](https://labelstud.io){.external} | a server | any data type — text, audio, time series as well as images |
+| **VIA** — [VGG Image Annotator](https://www.robots.ox.ac.uk/~vgg/software/via/via_demo.html){.external} | one HTML file in your browser | a small set, one person, no install, works offline |
+| **makesense.ai** — [makesense.ai](https://www.makesense.ai/){.external} | in your browser | quick boxes and polygons, no account, images stay on your computer |
+
+: {tbl-colwidths="[30,24,46]"}
+
+::: {.fragment}
+> They all do the same thing: **shapes, classes, attributes → a file**. Pick by team size
+> and data type, and check the export formats before you start.
+:::
+
+::: {.notes}
+One minute, no demos of the other three. The point is that the tool is the least
+important decision of the session: the label set and the definitions matter more, and
+every one of these writes COCO or something close to it.
+
+VIA is the one to recommend to anyone with a few hundred photos and no server: a single
+file, nothing to install. Open the demo link if someone asks.
+:::
+
+## CVAT: the demo
 
 :::: {.columns}
-::: {.column width="52%"}
-**What it is for**
+::: {.column width="50%"}
+**Why CVAT today**
 
-- Any data type, not only images — text, audio, time series
-- The label set is a small **XML config**, so the same project is reproducible
-- Multiple annotators on the same task out of the box
-- Exports COCO, YOLO, VOC and its own JSON
+- Built for **images and video**
+- **Projects → tasks → jobs**, split across people
+- **SAM 2** one click away, under AI Tools
 :::
-::: {.column width="46%"}
-**What we will do**
+::: {.column width="48%"}
+**Live — the steps you will do next**
 
 ::: {.incremental}
-1. Look at the project you are about to work in
-2. Read its labelling config out loud — the classes and the three attributes
-3. Annotate one find, live
-4. Export it and open the JSON
+1. Create a project and paste in `labels.json`: the classes and the three questions
+2. Create a task from the photographs
+3. Outline one find with SAM 2, give it a class, answer its questions
+4. Export as COCO and open the JSON
 :::
 :::
 ::::
 
 ::: {.fragment}
-> The config *is* the schema. If you can read it, you know exactly what the dataset will contain.
+> `labels.json` *is* the schema. If you can read it, you know exactly what the dataset
+> will contain.
 :::
-
-::: {.notes}
-Live. Keep it to five minutes: config, one annotation, one export. Resist the urge
-to tour the interface — they are about to use it themselves for sixteen minutes.
-
-Use the "Demo: rosary" project. Export it twice, JSON then COCO. The JSON has every
-answer and who gave it. The COCO has the box and the class, and the attributes are simply
-gone. That is the three-formats slide happening in front of them.
-:::
-
-## CVAT {.smaller}
-
-:::: {.columns}
-::: {.column width="52%"}
-**What it does differently**
-
-- Built for **images and video** only, and it shows — interpolation between frames,
-  keyboard-driven polygon editing
-- **Jobs and assignments**: a 9 000-image task split across people, with review
-- Model-assisted annotation is a first-class feature, not a plug-in
-:::
-::: {.column width="46%"}
-**When to choose which**
-
-::: {.smaller}
-| | |
-|---|---|
-| mixed data, many small projects | **Label Studio** |
-| one large image corpus, a team, a deadline | **CVAT** |
-| you need SAM in the loop | either — CVAT out of the box |
-:::
-:::
-::::
 
 ::: {.fragment}
 ::: {.callout-note}
@@ -472,13 +464,19 @@ The AMČR-PAS annotations you have been looking at were made in **CVAT** — tha
 :::
 
 ::: {.notes}
-Four minutes, and this is the first thing to cut if the clock is against you: show
-the job/review split and the fact that our own data came out of it, then move on.
+Live, five minutes. Do exactly the steps they are about to do — the setup slide after
+this repeats them — on the rosary (`temp/annotation/demo/`). Resist the urge to tour the
+interface.
 
-If there is a minute: open a box's attributes. CVAT forces a default on every attribute,
-which is why ours start at `?`. Without that, an untouched box looks like an answer. The
-`occluded` flag is CVAT's own per-shape switch, off unless someone turns it on, and it is
-`false` on all `r format(summ$annotations, big.mark = " ")` annotations in the export.
+Export as COCO 1.0: the polygon and the attributes are both in the JSON, which is where
+our dataset's `attributes` came from. If there is a minute, export a YOLO format as well
+and open the `.txt`: a number and four coordinates, no attributes, no class name. That is
+the three-formats slide happening in front of them.
+
+Worth saying: CVAT forces a default on every attribute, which is why ours start at `?`.
+Without that, an untouched object looks like an answer. The `occluded` flag is CVAT's own
+per-shape switch, off unless someone turns it on, and it is `false` on all
+`r format(summ$annotations, big.mark = " ")` annotations in the export.
 :::
 
 ## Why a polygon hurts
@@ -506,7 +504,8 @@ this is why model-assisted annotation is not a luxury.
   not need one
 - You give it a **point, a box or a scribble**; it returns a mask
 - It is **class-agnostic**: it finds the boundary, **you** supply the label
-- In CVAT and Label Studio it sits behind the polygon tool — one click, then you correct
+- In CVAT it is under **AI Tools → Interactors**: click the object, right-click what
+  should be left out, then correct the result
 :::
 
 ::: {.fragment}
@@ -527,17 +526,50 @@ no faster at all on hard ones.
 
 # Your turn {background-color="#111111"}
 
+## Set up your project {.discussion}
+
+**About 5 minutes. Everyone works on the same 10 photographs, each in their own project.**
+
+::: {.smaller}
+1. Open **CVAT** at the address on the board → **Create an account**
+2. Download **`images.zip`** and **`labels.json`** from the link on the board
+3. **Projects → + → Create a new project** · give it a name · open the **Raw** tab ·
+   replace everything in it with the contents of `labels.json` · **Done** · **Submit & Open**
+4. In the project: **+ → Create a new task** · give it a name · drop `images.zip` into
+   **Select files** · **Submit & Open**
+5. Click the **job** in the task — that opens the first photograph
+:::
+
+::: {.fragment}
+::: {.callout-tip}
+Stuck on step 3? The Raw tab must contain **only** `labels.json` — one `[` at the start,
+one `]` at the end.
+:::
+:::
+
+::: {.notes}
+Put CVAT's address and the download link on the board, as a QR code if you can. The two
+files are in `temp/annotation/hands-on/`: `images.zip` holds only the ten photographs, not
+the demo rosary.
+
+Walk the room during setup. Step 3 is where people get stuck: pasting `labels.json` after
+the `[]` that is already in the Raw box, instead of replacing it. Most people are done in
+three to five minutes; start the clock on the next slide when about two thirds of the
+room are looking at a photograph.
+:::
+
 ## Annotate {.discussion}
 
-**16 minutes. Everything after this slide is a reading of what you produce now.**
+**16 minutes. Everything after this slide is about decisions you make now.**
 
 :::: {.columns}
 ::: {.column width="54%"}
 ::: {.incremental}
-1. Open the link on the board and sign up with your name, then **Label All Tasks**
-2. You have **10 photographs** from AMČR-PAS
-3. For each: pick a **class**, draw a **box** around each artefact, click the box and answer its **questions**
-4. If you are not sure what something is — **annotate it anyway** and note why
+1. Outline each artefact — **SAM 2**, polygon or box — and give it a **class**
+2. In the **objects list**, answer **fragment** and **damage**
+3. Whole photo: **Setup tag → photo**, answer **scale**
+4. Not sure? **Annotate it anyway**, say why in **note**
+5. **Save** (Ctrl+S), next photo
 :::
 :::
 ::: {.column width="44%"}
@@ -558,46 +590,47 @@ is there a scale bar in the frame?
 
 ::: {.fragment}
 ::: {.callout-tip}
-Do not compare with your neighbour. **The disagreement is the interesting part.**
+Do not compare with your neighbour. **We will talk about what you decided, and why.**
 :::
 :::
 
 ::: {.notes}
-Put the signup link on the board before the session starts, as a QR code if you can
-(`setup_labelstudio.py` prints it). Everyone gets all ten photos, in a different order
-each, so neighbours are rarely on the same one. Walk the room; note out loud which images
-people hesitate on — those are the ones to pull up in the next block.
-Give a two-minute warning at 14.
+Everyone annotates in their own project, so nothing is shared and nothing is compared on
+screen afterwards — the next block is a discussion. Walk the room; note which photographs
+people hesitate on, and on 04, 06 and 08 what they chose. Those are what you ask about next.
+
+The scale question is a tag on the whole photo, not on an object: people will miss it.
+Point at the tag button once, early. Give a two-minute warning at 14.
 :::
 
-## Where you disagreed
+## What you had to decide {.discussion}
 
 ::: {.box .box-disc}
-[live]{.box-title}
-Pull up the same photograph annotated by five different people.
+[hands up]{.box-title}
+Photo **04**: coin or pendant? · Photo **06**: mount or pendant? · Photo **08**: one object, or several?
 :::
 
 ::: {.incremental}
-- The **boxes** will be close. Boxes usually are.
-- The **classes** will not, on two or three of the images — deliberately so
-- The **attributes** will be all over the place, because *fragment* and *damage* are
-  judgements and nobody defined them for you — is a broken fibula a fragment, or damaged?
+- Your **outlines** will be close — SAM 2 saw to that
+- Your **classes** will not, on two or three of the photographs — deliberately so
+- Your **attributes** even less: *fragment* and *damage* are judgements nobody defined
+  for you — is a broken fibula a fragment, or damaged?
 :::
 
 ::: {.fragment}
-> You have just produced, in sixteen minutes, the same disagreement that sits inside every
-> archaeological dataset you will ever download.
+> SAM made your outlines agree. It could not make your meanings agree — and that is the
+> disagreement inside every archaeological dataset you will ever download.
 :::
 
 ::: {.notes}
-In the Data Manager, open a photo and click **Compare All**: every participant's
-annotation, side by side. Go to the planted ones:
+No screens: a show of hands per photograph is enough to make the split visible, and
+nobody's work is on display. Go through the planted ones:
 
 - **04**, a pierced coin, recorded in AMČR as a *pendant*
   ([M-202101534-N00375](https://doi.org/10.71928/M-202101534-N00375))
 - **06**, a crescent, recorded as a *mount*, which most people will call a pendant
   ([M-202300130-N00146](https://doi.org/10.71928/M-202300130-N00146))
-- **08**, coins fused into a corroded lump: one box or several, *coin* or *amorphous*?
+- **08**, coins fused into a corroded lump: one object or several, *coin* or *amorphous*?
   ([M-202105567-N00005](https://doi.org/10.71928/M-202105567-N00005))
 
 The AMČR recorder's own answer for each is in `annotation/images.csv`. Ask the people who
@@ -1001,8 +1034,10 @@ is a good place to start from.
 ::: {.column width="49%"}
 **Tools**
 
-- Label Studio — [labelstud.io](https://labelstud.io){.external}
 - CVAT — [cvat.ai](https://www.cvat.ai){.external}
+- Label Studio — [labelstud.io](https://labelstud.io){.external}
+- VIA — [robots.ox.ac.uk/~vgg/software/via](https://www.robots.ox.ac.uk/~vgg/software/via/via_demo.html){.external}
+- makesense.ai — [makesense.ai](https://www.makesense.ai/){.external}
 - SAM 2 — [ai.meta.com/sam2](https://ai.meta.com/sam2/){.external}
 - COCO format — [cocodataset.org/#format-data](https://cocodataset.org/#format-data){.external}
 - SKOS primer — [w3.org/TR/skos-primer](https://www.w3.org/TR/skos-primer/){.external}
