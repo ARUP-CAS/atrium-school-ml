@@ -330,60 +330,58 @@ the useful archaeological metadata is exactly the part the format does not stand
 ## The same annotation, three formats
 
 :::: {.columns}
-::: {.column width="33%"}
-
-**COCO** · one file
+::: {.column width="55%"}
 
 ::: {.smaller}
-```json
-"category_id": 58,
-"bbox": [837.8, 1760.0,
-         485.2, 445.9],
-"segmentation": [[…]]
+**COCO** · one JSON file for the whole dataset
+
+```{.json filename="amcr-pas_v0.json · one entry of annotations"}
+{"id": 9872, "image_id": 8987, "category_id": 58,
+ "bbox": [837.8, 1760.0, 485.2, 445.9],
+ "segmentation": [[1301.3, 1762.7, 1279.0, 1760.0, …]]}
 ```
+
+`bbox` is the top-left corner plus width and height, in pixels. **The polygon is
+kept.** The image and the class name are found only by id.
 :::
 
 ::: {.smaller}
-Corner, absolute pixels. **Keeps the polygon.**
-:::
+**YOLO** · one `.txt` per image, one line per object
 
-:::
-::: {.column width="33%"}
-
-**YOLO** · one `.txt` per image
-
-::: {.smaller}
-```text
-2 0.271594 0.717940
-  0.121971 0.161441
+```{.text filename="labels/M202400071N00083F01.txt"}
+57 0.271594 0.717940 0.121971 0.161441
 ```
+
+```{.yaml filename="data.yaml"}
+names: {…, 57: cross, …}
+```
+
+Class, then centre x, y, width, height ÷ image size. 0-based, so **58 becomes 57**;
+*cross* is only in `data.yaml`. **The polygon is gone.**
 :::
+
+:::
+::: {.column width="45%"}
 
 ::: {.smaller}
-Centre, normalised 0–1. **The class is an index — the word *cross* is not in the file.**
-:::
-
-:::
-::: {.column width="33%"}
-
 **Pascal VOC** · one `.xml` per image
 
-::: {.smaller}
-```xml
-<object>
- <name>cross</name>
- <bndbox>
-  <xmin>838</xmin>
-  <ymin>1760</ymin>
-  <xmax>1323</xmax>
-  <ymax>2206</ymax>
- </bndbox>
-</object>
+```{.xml filename="Annotations/M202400071N00083F01.xml"}
+<annotation>
+  <filename>M202400071N00083F01.jpeg</filename>
+  <size><width>3978</width> <height>2762</height></size>
+  <object>
+    <name>cross</name>
+    <bndbox>
+      <xmin>838</xmin> <ymin>1760</ymin>
+      <xmax>1323</xmax> <ymax>2206</ymax>
+    </bndbox>
+  </object>
+</annotation>
 ```
-:::
 
-::: {.smaller}
-Two corners, absolute. **Keeps the name.**
+The box is two corners, in whole pixels. **The class name is written out**, and the
+file names its own image. **The polygon is gone.**
 :::
 
 :::
@@ -391,15 +389,17 @@ Two corners, absolute. **Keeps the name.**
 
 ::: {.fragment}
 ::: {.callout-important}
-Every conversion is **lossy in a different direction**. Export to YOLO and your
-polygons are gone; re-import and you cannot tell class `2` from class `20` without the
-original `categories` list.
+Every conversion is **lossy in a different direction** — and `57` means nothing
+without the `data.yaml` it came with.
 :::
 :::
 
 ::: {.notes}
-If time is short, cut the VOC column and keep COCO vs YOLO — the normalisation and
-the lost class name are the two things worth their slide space.
+If time is short, skip VOC and compare the two blocks on the left — the normalisation
+and the lost class name are the two things worth their slide space.
+
+YOLO also has a segmentation variant that keeps polygons (normalised `x y` pairs after
+the class), so "the polygon is gone" is true of the detection format shown here.
 :::
 
 # Three tools {background-color="#111111"}

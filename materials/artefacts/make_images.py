@@ -237,8 +237,10 @@ def format_example():
     cat, (x, y, w, h), polys, attrs = next(a for a in anns if a[0] == "cross")
     W, H = meta["width"], meta["height"]
     # YOLO: class index, then the box as centre-x, centre-y, width, height, all
-    # normalised to the image. The class *name* is not in the file.
-    yolo = f"2 {(x + w / 2) / W:.6f} {(y + h / 2) / H:.6f} {w / W:.6f} {h / H:.6f}"
+    # normalised to the image. The class *name* is not in the file. The index is
+    # 0-based, so a COCO → YOLO converter writes category_id - 1 (58 → 57).
+    cls = next(k for k, v in _cats.items() if v == cat) - 1
+    yolo = f"{cls} {(x + w / 2) / W:.6f} {(y + h / 2) / H:.6f} {w / W:.6f} {h / H:.6f}"
     # Pascal VOC: absolute corners, one XML file per image.
     voc = (f"<object>\n  <name>{cat}</name>\n  <bndbox>\n"
            f"    <xmin>{round(x)}</xmin> <ymin>{round(y)}</ymin>\n"
