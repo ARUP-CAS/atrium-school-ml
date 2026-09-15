@@ -436,6 +436,21 @@ VIA is the one to recommend to anyone with a few hundred photos and no server: a
 file, nothing to install. Open the demo link if someone asks.
 :::
 
+## Label Studio, on our server
+
+::: {.address}
+[[http://]{.address-scheme}172.16.16.214:8081](http://172.16.16.214:8081/){.external}
+:::
+
+::: {.address-note}
+Type it into your browser. It is a local address — it works only on the network here.
+:::
+
+::: {.notes}
+Leave this slide up while people type the address; read it out once, digit by digit.
+If a browser complains, check that it kept `http://` and did not switch to `https://`.
+:::
+
 ## CVAT: the demo
 
 :::: {.columns}
