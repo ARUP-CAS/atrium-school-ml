@@ -1,8 +1,10 @@
 # Annotation projects for the artefacts session
 
-Label Studio is for the 16-minute hands-on (everyone annotates the same ten AMČR-PAS
-photographs). CVAT is for the 4-minute demo and SAM. Both run on the machine on the venue
-network; nothing here needs internet access at the session.
+CVAT runs both the demo with SAM and the 16-minute hands-on (everyone annotates the same
+ten AMČR-PAS photographs, each in their own project). It runs on the machine on the venue
+network at **http://172.16.16.214:8081**; nothing here needs internet access at the
+session. Label Studio is only mentioned as an example in the deck; its setup is kept in
+section 2 as a fallback.
 
 | file | what it is |
 |---|---|
@@ -28,7 +30,7 @@ Reads `~/Documents/fiftyone/datasets/amcr-pas/` (override with `FIFTYONE_ROOT`) 
 `temp/annotation/`: `images/` (10), `demo/` (the rosary), `cvat-images.zip` (all 11) and
 `contact-sheet.jpg`.
 
-## 2. Label Studio
+## 2. Label Studio (fallback, not used in the session)
 
 1. On the Label Studio host: **Account & Settings → Personal Access Token → Create**.
    Since 1.23, legacy tokens are switched off by default; the script accepts either kind.
@@ -66,7 +68,11 @@ every attribute. **COCO** keeps the boxes and classes but **drops the attributes
 annotator**. Show both during the demo: it is the three-formats slide's "every conversion
 is lossy", live.
 
-## 3. CVAT (demo only)
+## 3. CVAT (demo and hands-on)
+
+Participants open **http://172.16.16.214:8081**, create an account, and set up their own
+project and task from the lessons repository (`2-tuesday-artefacts/`), following the
+*Set up your project* slide. The steps below are for your demo project.
 
 1. **Projects → + → Create a new project**, name `AMČR-PAS demo`. Under labels, switch to
    **Raw**, replace the content with `cvat/labels.json`, then **Done** and **Submit & Open**.
@@ -88,9 +94,10 @@ given a label.
 
 ## Before the session
 
-- [ ] Both URLs open from a **phone on the venue wifi**, not only from the host machine
-- [ ] Two test accounts each get all 10 photos; delete their annotations afterwards
-      (Data Manager → select all → Delete Annotations)
-- [ ] Signup link on the board / as a QR code
+- [ ] **http://172.16.16.214:8081** opens from a **phone on the venue wifi**, not only
+      from the host machine
+- [ ] A test account can register, create a project from `labels.json` and a task from
+      the ten photos
+- [ ] CVAT address on the board / as a QR code
 - [ ] CVAT: labels imported, task has 3 jobs, SAM listed under Interactors (or a plan B)
 - [ ] The demo projects are empty, so you can annotate the rosary live

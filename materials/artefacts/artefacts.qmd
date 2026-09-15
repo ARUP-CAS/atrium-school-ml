@@ -436,21 +436,6 @@ VIA is the one to recommend to anyone with a few hundred photos and no server: a
 file, nothing to install. Open the demo link if someone asks.
 :::
 
-## Label Studio, on our server
-
-::: {.address}
-[[http://]{.address-scheme}172.16.16.214:8081](http://172.16.16.214:8081/){.external}
-:::
-
-::: {.address-note}
-Type it into your browser. It is a local address — it works only on the network here.
-:::
-
-::: {.notes}
-Leave this slide up while people type the address; read it out once, digit by digit.
-If a browser complains, check that it kept `http://` and did not switch to `https://`.
-:::
-
 ## CVAT: the demo
 
 :::: {.columns}
@@ -548,12 +533,27 @@ no faster at all on hard ones.
 
 # Your turn {background-color="#111111"}
 
+## CVAT, on our server
+
+::: {.address}
+[[http://]{.address-scheme}172.16.16.214:8081](http://172.16.16.214:8081/){.external}
+:::
+
+::: {.address-note}
+Type it into your browser. It is a local address — it works only on the network here.
+:::
+
+::: {.notes}
+Leave this slide up while people type the address; read it out once, digit by digit.
+If a browser complains, check that it kept `http://` and did not switch to `https://`.
+:::
+
 ## Set up your project {.discussion}
 
 **About 5 minutes. Everyone works on the same 10 photographs, each in their own project.**
 
 ::: {.smaller}
-1. Open **CVAT** at the address on the board → **Create an account**
+1. Open **CVAT** at **`http://172.16.16.214:8081`** → **Create an account**
 2. **Pull** the lessons repository — everything is in **`2-tuesday-artefacts/`**
 3. **Projects → + → Create a new project** · give it a name · open the **Raw** tab ·
    replace everything in it with the contents of `labels.json` · **Done** · **Submit & Open**
@@ -570,7 +570,8 @@ one `]` at the end.
 :::
 
 ::: {.notes}
-Put CVAT's address on the board, as a QR code if you can. The files are in
+CVAT's address is on the previous slide and in step 1; put it on the board as well, as a
+QR code if you can. The files are in
 [atrium-school-ml-lessons](https://github.com/arubrno/atrium-school-ml-lessons), folder
 `2-tuesday-artefacts/`: `images/` (the ten photographs, not the demo rosary),
 `labels.json`, and `credits.csv`; its README repeats these steps. Anyone who never cloned
