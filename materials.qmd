@@ -197,6 +197,27 @@ copy it into your own folder; on Colab, *Save a copy in Drive*.
 
 *Participants' project presentations in the afternoon; walking meeting in Brno in the evening.*
 
+```{r}
+#| echo: false
+# "GH: url, Colab: url" -> "[GitHub](url){.external}, [Colab](url){.external}"
+note_links <- function(notes) {
+  vapply(strsplit(notes, ",\\s*"), function(parts) {
+    links <- sub("^([^:]+):\\s*(\\S+)$", "[\\1](\\2){.external}", parts)
+    paste(sub("[GH]", "[GitHub]", links, fixed = TRUE), collapse = ", ")
+  }, character(1))
+}
+
+read.csv("materials/presentations.csv") |>
+  dplyr::arrange(surname) |>
+  dplyr::mutate(
+    links = note_links(dplyr::coalesce(as.character(notes), "")),
+    topic = ifelse(links == "", topic, paste0(topic, " (", links, ")")),
+    timeslot = paste(timeslot, "min")
+  ) |>
+  dplyr::select(name, topic, timeslot) |>
+  knitr::kable(col.names = c("Name", "Topic", "Time"))
+```
+
 <!-- ## Wednesday — Microscopic use-wear
 
 Segmentation of use-wear traces in microscopic images.

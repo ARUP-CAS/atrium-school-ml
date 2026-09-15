@@ -1,0 +1,9 @@
+#,name,surname,topic,timeslot,notes
+1,Ákos Ekrik,Ekrik,CNN for Stone Carvings,10,
+2,Gianmarco Borgi,Borgi,CNN for hyperspectral reconstruction,10,
+3,Agata Maria Gaszka,Gaszka,Exploring Bipolar Technology through Deep Learning Methods: Biomechanical Analysis and Artefact Classification,20,
+4,Dionysios Danelatos,Danelatos,Approaching Stylistic Variation in Upper Palaeolithic Zoomorphic Figures Using Artificial Intelligence & Geometric Morphometrics,15,
+5,Aaron Dante Grados Bardales,Grados Bardales,Andean pottery,15,
+6,Cherene De Bruyn,De Bruyn,Locating Clandestine graves,15,
+7,Konstantita Eleftheriadi,Eleftheriadi,Leveraging Monocular Depth Estimation for the 3D Digitization of Cultural Heritage Artifacts,10,"GH: https://github.com/dinael2000/archaeo_mde_to_3D, Colab: https://colab.research.google.com/github/dinael2000/archaeo_mde_to_3D/blob/main/run_pipeline/full_workflow_colab.ipynb"
+8,Cheng Liu,Liu,Human Stone Toolmaking Action Grammar (HSTAG): A Challenging Benchmark for Fine-grained Motor Behavior Recognition,15,
