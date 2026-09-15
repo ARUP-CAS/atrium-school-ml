@@ -536,7 +536,7 @@ no faster at all on hard ones.
 ## CVAT, on our server
 
 ::: {.address}
-[[http://]{.address-scheme}172.16.16.214:8081](http://172.16.16.214:8081/){.external}
+[[http://]{.address-scheme}10.10.1.40:8081](http://10.10.1.40:8081/){.external}
 :::
 
 ::: {.address-note}
@@ -553,7 +553,7 @@ If a browser complains, check that it kept `http://` and did not switch to `http
 **About 5 minutes. Everyone works on the same 10 photographs, each in their own project.**
 
 ::: {.smaller}
-1. Open **CVAT** at **`http://172.16.16.214:8081`** → **Create an account**
+1. Open **CVAT** at **`http://10.10.1.40:8081`** → **Create an account**
 2. **Pull** the lessons repository — everything is in **`2-tuesday-artefacts/`**
 3. **Projects → + → Create a new project** · give it a name · open the **Raw** tab ·
    replace everything in it with the contents of `labels.json` · **Done** · **Submit & Open**

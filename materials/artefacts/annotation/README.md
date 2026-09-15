@@ -2,7 +2,7 @@
 
 CVAT runs both the demo with SAM and the 16-minute hands-on (everyone annotates the same
 ten AMČR-PAS photographs, each in their own project). It runs on the machine on the venue
-network at **http://172.16.16.214:8081**; nothing here needs internet access at the
+network at **http://10.10.1.40:8081**; nothing here needs internet access at the
 session. Label Studio is only mentioned as an example in the deck; its setup is kept in
 section 2 as a fallback.
 
@@ -70,7 +70,7 @@ is lossy", live.
 
 ## 3. CVAT (demo and hands-on)
 
-Participants open **http://172.16.16.214:8081**, create an account, and set up their own
+Participants open **http://10.10.1.40:8081**, create an account, and set up their own
 project and task from the lessons repository (`2-tuesday-artefacts/`), following the
 *Set up your project* slide. The steps below are for your demo project.
 
@@ -94,7 +94,7 @@ given a label.
 
 ## Before the session
 
-- [ ] **http://172.16.16.214:8081** opens from a **phone on the venue wifi**, not only
+- [ ] **http://10.10.1.40:8081** opens from a **phone on the venue wifi**, not only
       from the host machine
 - [ ] A test account can register, create a project from `labels.json` and a task from
       the ten photos
