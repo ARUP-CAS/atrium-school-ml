@@ -14,12 +14,16 @@ Reads the AMČR-PAS COCO export and its photographs from the FiftyOne copy of th
                                                      rescaled to the downscaled images
 
 Photographs are CC BY-NC 4.0 and stay in temp/ (not committed); images.csv carries the DOIs.
+
+With LESSONS_DIR set (the lessons repository's 2-tuesday-artefacts/ folder), it also
+refreshes what participants download: images/, labels.json and credits.csv.
 """
 
 import csv
 import json
 import os
 import re
+import shutil
 import zipfile
 from collections import defaultdict
 from pathlib import Path
@@ -119,6 +123,22 @@ def main():
     contact_sheet(thumbs, OUT / "contact-sheet.jpg")
     for r in rows:
         print(f"{r['order']:>2}  {r['record']}  {r['reference_classes']:<32} {r['why']}")
+    if os.environ.get("LESSONS_DIR"):
+        publish(rows, Path(os.environ["LESSONS_DIR"]))
+
+
+def publish(rows, dst):
+    """Copy what participants download into the lessons repository. No reference classes
+    and no 'why' column: the planted answers must not be in the participants' folder."""
+    (dst / "images").mkdir(parents=True, exist_ok=True)
+    for r in rows:
+        shutil.copyfile(OUT / "images" / r["file"], dst / "images" / r["file"])
+    shutil.copyfile(HERE / "cvat" / "labels.json", dst / "labels.json")
+    with (dst / "credits.csv").open("w", newline="") as f:
+        w = csv.writer(f, lineterminator="\n")
+        w.writerow(["filename", "doi"])
+        w.writerows([r["file"], r["doi"]] for r in rows)
+    print(f"published -> {dst}")
 
 
 def contact_sheet(thumbs, dst, cols=5, tw=340):
