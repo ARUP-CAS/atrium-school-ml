@@ -1,0 +1,44 @@
+image: datasets/amcr-pas/rosary_medallion/M202400071N00083F01.jpeg  3978 x 2762
+category: cross   vertices: 47
+
+--- COCO (one entry in `annotations`) ---
+{
+  "id": "\u2026",
+  "image_id": "\u2026",
+  "category_id": "\u2026",
+  "bbox": [
+    837.8,
+    1760.0,
+    485.2,
+    445.9
+  ],
+  "area": 216350.7,
+  "segmentation": [
+    [
+      1301.3,
+      1762.7,
+      1279.0,
+      1760.0,
+      1257.0,
+      1777.0,
+      "\u2026"
+    ]
+  ],
+  "iscrowd": 0,
+  "attributes": {
+    "recognizable": "true",
+    "occluded": false
+  }
+}
+
+--- YOLO (M202400071N00083F01.txt) ---
+57 0.271594 0.717940 0.121971 0.161441
+
+--- Pascal VOC (M202400071N00083F01.xml) ---
+<object>
+  <name>cross</name>
+  <bndbox>
+    <xmin>838</xmin> <ymin>1760</ymin>
+    <xmax>1323</xmax> <ymax>2206</ymax>
+  </bndbox>
+</object>

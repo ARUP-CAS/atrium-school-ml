@@ -1,0 +1,14 @@
+key,value
+images,9762
+images_with_annotations,9469
+annotations,10749
+categories_declared,207
+categories_used,112
+categories_never_used,95
+fibula,2320
+coin,1986
+fibula_coin_pct,40.1
+top5_pct,51.7
+categories_under_50,77
+under_50_pct,8.9
+max_annotations_per_image,29

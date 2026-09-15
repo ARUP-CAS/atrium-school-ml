@@ -1,0 +1,65 @@
+/*-- scss:rules --*/
+
+/* Everything visual is inherited from ../intro/slides.scss — see the `theme:` key
+   in artefacts.qmd. Only rules this deck actually needs go here. */
+
+/* The format-comparison slide puts three code blocks side by side. Reveal's default
+   code sizing assumes one block per slide and overflows the 760px canvas at three. */
+.reveal .columns pre code {
+  line-height: 1.25;
+  padding: 0.4em 0.55em;
+}
+.reveal .columns div.sourceCode {
+  margin: 0.3em 0;
+  overflow-x: auto;
+}
+
+/* JSON and XML samples read better with a little breathing room than the dense
+   default, but only where they are the slide's subject rather than an aside. */
+.reveal .slides section > div.sourceCode pre code {
+  padding: 0.5em 0.7em;
+}
+
+/* Four figures carry this deck's arguments — the four annotation levels, the 677
+   vertices, the crosswalk. The intro deck's largest size (.figure-lg, 420px) leaves
+   each of them small with 200px of dead slide beneath. These sit alone above a
+   single line of text, so they get the height budget that allows. */
+.reveal .figure-xl img { max-height: 540px; }
+
+/* Same problem for the generated charts: the intro deck caps them at 300px, which
+   is right for a survey bar chart in a narrow column and much too small for the
+   long-tail chart that carries the imbalance argument. Cap the width too, which the
+   intro deck does not — a wide figure otherwise runs past the slide edge. */
+.reveal .cell-output-display img {
+  max-height: 470px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Attribute boxes on the hands-on slide: three stacked .box-plain in a narrow
+   column, where the intro's default box padding wastes the vertical budget. */
+.reveal .column .box {
+  padding: 0.4em 0.7em;
+  margin: 0.3em 0;
+}
+.reveal .column .box .box-title {
+  font-size: 1.05em;
+  margin-bottom: 0.1em;
+}
+
+/* The CVAT address, for people typing it in from the back of the room:
+   one line, as wide as the canvas allows, the scheme greyed so the digits carry it. */
+.reveal .address {
+  font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 2.5em;
+  text-align: center;
+  white-space: nowrap;
+  margin: 1.9em 0 0.5em 0;
+}
+.reveal .address a { color: #14181d; font-weight: 700; }
+.reveal .address a::after { content: none; }
+.reveal .address .address-scheme { color: #9aa4b0; font-weight: 400; }
+.reveal .address-note {
+  text-align: center;
+  color: #5b6b82;
+}
