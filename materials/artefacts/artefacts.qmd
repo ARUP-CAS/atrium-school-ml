@@ -51,6 +51,9 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE,
 counts <- readr::read_csv("data/category_counts.csv", show_col_types = FALSE)
 summ <- readr::read_csv("data/dataset_summary.csv", show_col_types = FALSE) |>
   (\(d) setNames(as.list(d$value), d$key))()
+# PAS (FISH object types) -> AMČR-PAS SKOS mapping; counts are validated rows only.
+skos <- readr::read_csv("data/pas2amcr_summary.csv", show_col_types = FALSE) |>
+  (\(d) setNames(as.list(d$value), d$key))()
 
 # Fall back cleanly on a machine without the font (or without systemfonts).
 FAM <- tryCatch(
@@ -809,29 +812,32 @@ the second slide of the deck — they have now seen the number the filters produ
 ## 2 · Your labels are not their labels
 
 ::: {.figure .figure-xl}
-![](img/skos-crosswalk.png){fig-alt="Three columns of artefact terms — AMČR-PAS, another dataset, Getty AAT — joined by arrows labelled skos:exactMatch, skos:closeMatch and skos:broadMatch, with one row where a combined buckle/strap-end label cannot be mapped back."}
+![](img/skos-crosswalk.png){fig-alt="Eight Portable Antiquities Scheme object types joined to AMČR-PAS categories by SKOS relations: Brooch exactMatch fibula, Strap end exactMatch mordant, Harness pendant broadMatch harness component; Coin exactMatch, Token closeMatch, Coin hoard narrowMatch and Jetton relatedMatch all point at the one AMČR-PAS category coin; Seal has no AMČR-PAS category."}
 :::
 
 ::: {.smaller}
-You want to combine two datasets, or test a model trained on one against the other.
-**Nothing lines up, and the places it does not are not obvious.**
+The British PAS (FISH vocabulary) against AMČR-PAS: **`r skos$pas_terms` terms, and
+four different ways to land on *coin***. Strap end is *mordant* — no string match finds that.
 :::
 
 ::: {.notes}
-The identifiers behind these boxes need checking against the live vocabularies before
-this slide is shown — the terms are real, the mappings are the argument. See the
-prerequisites in the session plan.
+Real rows from the PAS → AMČR-PAS mapping sheet, all of them marked validated.
+Record counts are PAS database records for that object type. Walk down the coin box:
+the same target, four relations, four different things you may do with the data —
+merge coin, merge token with a note, do not relabel a hoard as *coin* (that rolls
+down — next slide), keep jettons out. Seal has 16,771 PAS records and nowhere to go.
 :::
 
 ## SKOS, in three predicates
 
 ::: {.smaller}
-| | means | safe to do |
-|---|---|---|
-| `skos:exactMatch` | interchangeable in **any** context | merge the two classes |
-| `skos:closeMatch` | interchangeable in **some** contexts | merge, and say so in the paper |
-| `skos:broadMatch` / `narrowMatch` | one is **wider** than the other | roll the narrow one up; never down |
-| `skos:relatedMatch` | associated, **not** substitutable | do not merge |
+| | means | safe to do | PAS → AMČR-PAS |
+|---|---|---|---:|
+| `skos:exactMatch` | interchangeable in **any** context | merge the two classes | `r skos$exactMatch` |
+| `skos:closeMatch` | interchangeable in **some** contexts | merge, and say so in the paper | `r skos$closeMatch` |
+| `skos:broadMatch` / `narrowMatch` | one is **wider** than the other | roll the narrow one up; never down | `r skos$broadMatch` / `r skos$narrowMatch` |
+| `skos:relatedMatch` | associated, **not** substitutable | do not merge | `r skos$relatedMatch` |
+| *(none)* | no counterpart | leave out, and count what you lost | `r skos$none` |
 :::
 
 ::: {.fragment}
@@ -853,12 +859,48 @@ labels in several languages, and typed links between vocabularies.
 `exactMatch` is transitive, `closeMatch` deliberately is not — that asymmetry is the
 whole practical content of the slide. If someone asks about OWL `sameAs`: SKOS is about
 concepts, not individuals, which is why it fits vocabularies and OWL does not.
+The PAS → AMČR-PAS column counts only the rows someone has validated.
+:::
+
+## The mapping, as a file
+
+```turtle
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix fish: <http://purl.org/heritagedata/schemes/mda_obj/concepts/> .
+@prefix amcr: <https://example.org/amcr-pas/> .    # placeholder, see below
+
+fish:96665   skos:prefLabel    "Brooch"@en ;
+             skos:exactMatch   amcr:fibula .
+
+fish:140465  skos:prefLabel    "Strap end"@en ;
+             skos:exactMatch   amcr:mordant .
+
+fish:97525   skos:prefLabel    "Coin hoard"@en ;
+             skos:narrowMatch  amcr:coin .
+
+fish:95426   skos:prefLabel    "Jetton"@en ;
+             skos:relatedMatch amcr:coin .
+```
+
+::: {.fragment}
+::: {.smaller}
+- One row of the sheet is **one triple** — Turtle, the W3C text format for RDF
+- `fish:` URIs are the FISH thesaurus' own; `amcr:` is a **placeholder** — the sheet has AMČR-PAS labels, not URIs
+- *validated* has no SKOS predicate: `r skos$unvalidated` of `r skos$pas_terms` rows are unchecked, so publish the checked ones, or say who checked what
+:::
+:::
+
+::: {.notes}
+Four rows straight from the mapping sheet (`fish` column → subject, `mappingRelation`
+→ predicate, `target` → object). Point out that the file is readable without any
+tooling — that is the argument for publishing it next to the dataset. The real
+AMČR-PAS concept URIs replace the placeholder once the categories are published.
 :::
 
 ## What a crosswalk buys you
 
 ::: {.incremental}
-- A **shared coarse level** — *fibula*, *pin*, *buckle* map cleanly; *buckle/strap-end* does not
+- A **shared coarse level** — *brooch*, *pin*, *buckle* map cleanly; *seal* has nowhere to go
 - Training on the union of two collections, honestly, with the merge **written down**
 - Evaluating a Czech-trained model on British data without silently renaming anything
 :::
@@ -866,9 +908,10 @@ concepts, not individuals, which is why it fits vocabularies and OWL does not.
 ::: {.fragment}
 ::: {.callout-note}
 ## The realistic outcome
-You will lose resolution. Two datasets at 112 and 90 types may share **30** that map
-`exactMatch`. That is still a far better dataset than either alone — and the mapping is
-a research output in its own right.
+You will lose resolution. Of the `r skos$amcr_used` AMČR-PAS categories in the dataset,
+only **`r skos$amcr_used_exact`** have a validated `exactMatch` in PAS — and `r skos$into_instrument`
+PAS types roll up into *instrument* alone. That is still a far better dataset than either
+alone — and the mapping is a research output in its own right.
 :::
 :::
 

@@ -1,0 +1,14 @@
+key,value
+pas_terms,841
+amcr_targets,165
+validated,453
+unvalidated,388
+exactMatch,119
+closeMatch,53
+broadMatch,232
+narrowMatch,7
+relatedMatch,17
+none,25
+amcr_used,112
+amcr_used_exact,63
+into_instrument,28

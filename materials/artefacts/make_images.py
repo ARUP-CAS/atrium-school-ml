@@ -263,52 +263,106 @@ def format_example():
 
 # --- 5. Mapping between vocabularies ----------------------------------------
 
-def skos_crosswalk():
-    """Three vocabularies, one concept, and the three ways they fail to line up.
+# The PAS → AMČR-PAS mapping: one row per FISH object type used by the Portable
+# Antiquities Scheme, with a SKOS relation to an AMČR-PAS category (by label — the
+# sheet carries no AMČR-PAS URIs) and a flag for whether a person has checked it.
+MAPPING = SRC / "vocab_ predmet_druh - pas2amcr.csv"
+RELATIONS = ["exactMatch", "closeMatch", "broadMatch", "narrowMatch", "relatedMatch"]
 
-    Term labels are real (AMCR-PAS categories are taken from the COCO file); the
-    identifiers belong on the slide only once they have been checked against the
-    live vocabularies — see the prerequisites in the session plan.
+
+def pas_mapping():
+    with MAPPING.open(newline="") as f:
+        rows = list(csv.DictReader(f))
+    for r in rows:
+        r["relation"] = r["mappingRelation"].removeprefix("skos:") or "none"
+        r["records"] = int(float(r["count"].replace(",", "") or 0))   # "59,432.00" and "542059"
+    return rows
+
+
+def skos_summary(rows):
+    """The numbers the SKOS slides quote. Validated rows only, as on the slides."""
+    ok = [r for r in rows if r["validated"] == "TRUE"]
+    rel = Counter(r["relation"] for r in ok)
+    used = {_cats[a["category_id"]] for a in _coco["annotations"]}
+    exact = {r["target"] for r in ok if r["relation"] == "exactMatch"}
+    s = {"pas_terms": len(rows),
+         "amcr_targets": len({r["target"] for r in rows if r["target"]}),
+         "validated": len(ok),
+         "unvalidated": len(rows) - len(ok),
+         **{r: rel[r] for r in RELATIONS + ["none"]},
+         "amcr_used": len(used),
+         "amcr_used_exact": len(used & exact),
+         "into_instrument": sum(r["target"] == "instrument" for r in ok)}
+    with (DATA / "pas2amcr_summary.csv").open("w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["key", "value"])
+        w.writerows(s.items())
+    return s
+
+
+def skos_crosswalk(rows):
+    """Eight real rows of the PAS → AMČR-PAS mapping, one or more per SKOS relation.
+
+    Four PAS types land on the one AMČR-PAS *coin*, each by a different relation —
+    that fan-in is the argument. All rows are validated in the source sheet.
     """
-    W, H = 1620, 780
+    by_source = {r["source"]: r for r in rows}
+    show = ["BROOCH", "STRAP END", "HARNESS PENDANT",
+            "COIN", "TOKEN", "COIN HOARD", "JETTON", "SEAL"]
+    shown = [by_source[s] for s in show]
+    assert all(r["validated"] == "TRUE" for r in shown), "only validated rows on the slide"
+
+    W, H = 1700, 745
     fig, ax = canvas(W, H)
     ax.set_xlim(0, W); ax.set_ylim(H, 0)
 
-    HALF = 178
-    cols = [(200, "AMČR-PAS", BLUE, ["fibula", "clothing pin", "buckle"]),
-            (810, "another dataset", ORANGE, ["brooch", "pin", "buckle/strap-end"]),
-            (1420, "Getty AAT", MUTE, ["fibulae (fasteners)", "pins (fasteners)", "buckles"])]
-    ys = [268, 428, 588]
+    XL, XR, HALF, BOX = 470, 1330, 190, 54
+    y0, step = 150, 78
+    ys = [y0 + i * step for i in range(len(shown))]
 
-    for x, title, colour, terms in cols:
-        ax.text(x, 168, title, fontsize=30, fontweight="bold", color=colour, ha="center")
-        for y, t in zip(ys, terms):
-            ax.add_patch(FancyBboxPatch((x - HALF, y - 33), 2 * HALF, 66,
-                                        boxstyle="round,pad=0,rounding_size=10",
-                                        fc="white", ec=colour, lw=2.2))
-            ax.text(x, y, t, fontsize=24, ha="center", va="center", color=INK)
+    ax.text(XL, 62, "Portable Antiquities Scheme", fontsize=28, fontweight="bold",
+            color=ORANGE, ha="center")
+    ax.text(XL, 100, "FISH object type", fontsize=19, color=MUTE, ha="center")
+    ax.text(XL - HALF - 22, 100, "PAS records", fontsize=19, color=MUTE, ha="right")
+    ax.text(XR, 62, "AMČR-PAS", fontsize=28, fontweight="bold", color=BLUE, ha="center")
+    ax.text(XR, 100, "category", fontsize=19, color=MUTE, ha="center")
 
-    def arrow(col_a, col_b, y, text, colour, style="<|-|>", dashed=False):
-        x1, x2 = cols[col_a][0] + HALF, cols[col_b][0] - HALF
-        ax.add_patch(FancyArrowPatch((x1, y), (x2, y), arrowstyle=style, mutation_scale=17,
-                                     lw=2, color=colour, shrinkA=6, shrinkB=6,
+    def box(x, y_top, y_bot, text, colour, dashed=False):
+        ax.add_patch(FancyBboxPatch((x - HALF, y_top), 2 * HALF, y_bot - y_top,
+                                    boxstyle="round,pad=0,rounding_size=10", fc="white",
+                                    ec=colour, lw=2.2, linestyle=(0, (5, 3)) if dashed else "solid"))
+        ax.text(x, (y_top + y_bot) / 2, text, fontsize=22, ha="center", va="center",
+                color=colour if dashed else INK, style="italic" if dashed else "normal")
+
+    # Relation → (colour, arrow style, dashed). Colour follows the "safe to do" column
+    # of the next slide: green merge, blue merge-with-a-note, orange roll up, grey don't.
+    style = {"exactMatch": (GREEN, "<|-|>", False), "closeMatch": (BLUE, "<|-|>", False),
+             "broadMatch": (ORANGE, "-|>", False), "narrowMatch": (ORANGE, "-|>", False),
+             "relatedMatch": (MUTE, "<|-|>", True), "none": (ORANGE, "-", True)}
+
+    for y, r in zip(ys, shown):
+        box(XL, y - BOX / 2, y + BOX / 2, r["label"], ORANGE)
+        ax.text(XL - HALF - 22, y, f"{r['records']:,}", fontsize=20, ha="right", va="center",
+                color=MUTE)
+        colour, arrowstyle, dashed = style[r["relation"]]
+        ax.add_patch(FancyArrowPatch((XL + HALF, y), (XR - HALF, y), arrowstyle=arrowstyle,
+                                     mutation_scale=17, lw=2, color=colour, shrinkA=6, shrinkB=6,
                                      linestyle=(0, (5, 3)) if dashed else "solid"))
-        ax.text((x1 + x2) / 2, y - 26, text, fontsize=20, ha="center", va="center",
+        text = "no mapping" if r["relation"] == "none" else "skos:" + r["relation"]
+        ax.text((XL + XR) / 2, y - 18, text, fontsize=19, ha="center", va="center",
                 color=colour, style="italic",
-                bbox=dict(boxstyle="round,pad=0.18", fc="white", ec="none"))
+                bbox=dict(boxstyle="round,pad=0.15", fc="white", ec="none"))
 
-    arrow(0, 1, ys[0], "skos:exactMatch", GREEN)
-    arrow(1, 2, ys[0], "skos:closeMatch", MUTE)
-    arrow(0, 1, ys[1], "skos:closeMatch", MUTE)
-    arrow(1, 2, ys[1], "skos:closeMatch", MUTE)
-    # The row that does not line up: one label covering two kinds of object.
-    arrow(0, 1, ys[2], "skos:broadMatch", ORANGE, style="-|>")
-    arrow(1, 2, ys[2], "?", ORANGE, style="-", dashed=True)
-    ax.text(810, 690, "“buckle/strap-end” is two objects in one label — no mapping recovers which",
-            fontsize=20, ha="center", color=ORANGE, style="italic")
+    # Right-hand boxes: one per distinct target, spanning every row that points at it.
+    targets = {}
+    for y, r in zip(ys, shown):
+        targets.setdefault(r["target"], []).append(y)
+    for target, yy in targets.items():
+        if target:
+            box(XR, min(yy) - BOX / 2, max(yy) + BOX / 2, target, BLUE)
+        else:
+            box(XR, yy[0] - BOX / 2, yy[0] + BOX / 2, "no AMČR-PAS category", ORANGE, dashed=True)
 
-    ax.text(W / 2, 62, "One concept, three vocabularies", fontsize=32, fontweight="bold",
-            ha="center", color=INK)
     save_png(fig, "skos-crosswalk.png", dpi=110, bbox=True)
 
 
@@ -317,10 +371,15 @@ if __name__ == "__main__":
     verts = polygon_cost()
     yolo, n_poly = format_example()
     annotation_levels()
-    skos_crosswalk()
+    mapping = pas_mapping()
+    skos = skos_summary(mapping)
+    skos_crosswalk(mapping)
     print(f"figures  -> {OUT}")
     print(f"data     -> {DATA}")
     print(f"vertices on the rosary photograph: {verts}")
     print(f"cross polygon: {n_poly} vertices; YOLO line: {yolo}")
     for k, v in summary.items():
+        print(f"  {k:32} {v}")
+    print("PAS -> AMCR-PAS mapping (validated rows):")
+    for k, v in skos.items():
         print(f"  {k:32} {v}")
