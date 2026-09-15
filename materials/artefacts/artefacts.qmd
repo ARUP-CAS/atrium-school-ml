@@ -138,11 +138,11 @@ disagreement in their own data ten minutes later.
 - Explore the data and images in the [Digital archive of the Archaeological Map of the Czech Republic](https://digiarchiv.aiscr.cz/results?entity=samostatny_nalez&sort=datestamp%20desc&page=0){.external}
 :::
 
-::: {.fragment}
+<!-- ::: {.fragment}
 ::: {.callout-note}
 Every step in that chain is a **filter**. Hold on to that — it comes back in problem 1.
 :::
-:::
+::: -->
 
 ::: {.aside}
 AMČR-PAS: [amcr-info.aiscr.cz](https://amcr-info.aiscr.cz){.external}. Photographs are published
@@ -247,7 +247,7 @@ annotating 2 000 images again. Going the other way is free.
 :::
 
 ::: {.fragment}
-Yesterday: *the task shape follows from the question*. Today: **and the question has a price.**
+Yesterday: *the task shape follows from the question*. Today: *and the question has a cost.*
 :::
 
 ::: {.notes}
@@ -345,7 +345,7 @@ the useful archaeological metadata is exactly the part the format does not stand
 ::: {.smaller}
 **COCO** · one JSON file for the whole dataset
 
-```{.json filename="amcr-pas_v0.json · one entry of annotations"}
+```{.json filename="amcr-pas_v0.json"}
 {"id": 9872, "image_id": 8987, "category_id": 58,
  "bbox": [837.8, 1760.0, 485.2, 445.9],
  "segmentation": [[1301.3, 1762.7, 1279.0, 1760.0, …]]}
@@ -542,8 +542,14 @@ no faster at all on hard ones.
 [[http://]{.address-scheme}10.10.1.40:8081](http://10.10.1.40:8081/){.external}
 :::
 
+or this one, it is misbehaving:
+
+::: {.address}
+[[http://]{.address-scheme}172.16.16.214:8081](http://172.16.16.214:8081/){.external}
+:::
+
 ::: {.address-note}
-Type it into your browser. It is a local address — it works only on the network here.
+Type it into your browser. It is a local address — it works only on the `c` network here.
 :::
 
 ::: {.notes}
