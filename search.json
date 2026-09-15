@@ -266,6 +266,83 @@
     "text": "Where to read more\nThe MAIA COST Action maintains a shared, open Zotero library on AI in archaeology — zotero.org/groups/5991067\n\n\nStart here\n\nBellat et al. 2025 — Machine learning applications in archaeological practices: a review\nGattiglia 2025 — Managing Artificial Intelligence in Archaeology: an overview\nBickler 2021 — Machine Learning Arrives in Archaeology\nTenzer et al. 2024 — Debating AI in Archaeology\nCalder et al. 2022 — Use and Misuse of Machine Learning in Anthropology\n\n\nWorked case studies\n\nPawlowicz & Downum 2021 — ceramic typology from photographs\nOrengo & Garcia-Molsosa 2019 — potsherd detection on drone imagery\nVerschoof-van der Vaart & Lambers 2019 — R-CNN on LiDAR\nFiorucci et al. 2022 — evaluation measures for detection on LiDAR\nDeligio et al. 2024 — ClaReNet, classifying Celtic coinage\nNúñez Jareño et al. 2021 — synthetic data for Roman fine ware\n\n\n\n\n\n\nSlides: github.com/arup-cas/atrium-school-ml · Notebooks and datasets: github.com/arubrno/atrium-school-ml-lessons · Licences: MIT (code) & CC BY-SA 4.0 International (other content), if not stated otherwise."
   },
   {
+    "objectID": "materials.html",
+    "href": "materials.html",
+    "title": "Materials",
+    "section": "",
+    "text": "Slides and notebooks used during the school. This page grows as the week progresses — check back for updates."
+  },
+  {
+    "objectID": "materials.html#monday",
+    "href": "materials.html#monday",
+    "title": "Materials",
+    "section": "Monday",
+    "text": "Monday\n\nIntroduction to computer vision — What computer vision is, the family of tasks, discriminative vs. generative models, a live zero-shot demo with CLIP, and three rounds of group discussion.\nCLIP zero-shot classification — the notebook behind the demo. Classifying artefact photographs with no training and no annotation, and three ways it misleads you. \n\nNew to Python? Use the beginner version — the same notebook with the code spelled out step by step and commented line by line, plus an optional look inside the model. \n\nCoding with agents\nPython for computer vision — enough Python to read, change and debug the code an AI tool writes for you, then NumPy, Matplotlib and OpenCV. It ends with a first computer-vision workflow that separates the Venus of Dolní Věstonice from its background and measures it.\n\nIntroduction to Python for computer vision — why learn Python when AI writes code, and how to turn a task into an algorithm before writing any. \nPython fundamentals for computer vision — the hands-on part. The code cells are empty and you fill them in with the instructor: notebooks, Python basics, NumPy, Matplotlib, and OpenCV on the Venus photograph. \nFallen behind? Use the filled-in version — the same notebook with every cell filled in, for catching up or checking your version. \n\n\nIce-breaker event in the evening."
+  },
+  {
+    "objectID": "materials.html#tuesday",
+    "href": "materials.html#tuesday",
+    "title": "Materials",
+    "section": "Tuesday",
+    "text": "Tuesday\n\nArtefacts: datasets and annotation — Where the AMČR-PAS artefact photographs come from, what “annotated” actually means, the COCO, YOLO and Pascal VOC formats, a live demo of CVAT and SAM 2, and the three problems the dataset has: class imbalance, vocabularies that do not line up, and the metadata nobody has time to record.\n\nHands-on annotation in CVAT — we will give you its address in the session. Everything after the hands-on block is a reading of what you annotate there.\nArchaeoTag — the guessing game. Bring a phone.\n\n\nParticipants’ project presentations in the afternoon; walking meeting in Brno in the evening.\n\n\n\n\n\n\n\nNoteReading\n\n\n\nThe MAIA COST Action Zotero library is an open, shared bibliography on AI in archaeology. Most examples used in the slides come from there."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Computer Vision in Archaeology",
+    "section": "",
+    "text": "NoteBasics\n\n\n\nWhen? 14–18 September 2026\nWhere? Brno, Czech Republic\nWhat? Training school on computer vision and machine learning in archaeology\n\n\n\n\n\n\n\n\nImportantPre-school survey\n\n\n\nIf you are among selected participants, please fill in a pre-school survey here.\n\n\n\nJoin us for an intensive one-week training school dedicated to computer vision in archaeology, where you will learn how to harness the power of modern machine learning techniques to detect, classify, and analyse archaeological features and artefacts in images. As visual data — from drone surveys and excavation photography to museum collections — continues to grow in volume, the ability to process and interpret it computationally is becoming an increasingly valuable skill in the archaeologist’s toolkit. Our programme guides you from the very foundations of Python programming through to hands-on experience with state-of-the-art object detection and image segmentation models, with dedicated sessions on dataset creation, model training, and evaluation. Participants should have basic experience with any programming or markup language and a general comfort with working in digital environments. No prior experience with machine learning is required, but curiosity and a willingness to engage with technical material are essential.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe training school is part of a trans-national access scheme provided by the ATRIUM Project, hosted by the Archaeological Information System of the Czech Republic (AIS CR) research infrastructure at the Institute of Archaeology, Czech Academy of Sciences, Brno. The school is co-organized by the MAIA COST Action project. MAIA provides funding to several of the school instructors.\nTo apply and learn more about the TNA, visit the ATRIUM TNA Application website."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About the training school",
+    "section": "",
+    "text": "Petr Pajdla  0000-0001-7050-9572\nCzech Academy of Sciences, Institute of Archaeology, Brno\nRonald Harasim\nCzech Academy of Sciences, Institute of Archaeology, Brno\nFilip Hájek  0009-0007-5953-8840\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\nAnastasia Eleftheriadou  0000-0002-8649-3752\nLudwig-Maximilians-Universität München\nAshely Green  0009-0005-4625-801X\nUniversity of Gothenburg\n\n\n\n\n\n\nZuzana Kopáčová\nCzech Academy of Sciences, Institute of Archaeology, Brno\nFinances, administration\nVít Kozák\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\nDavid Spáčil\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\n\nAnd other AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to Zuzana Kopáčová (kopacova [at] arub.cz), and/or Petr Pajdla (pajdla [at] arub.cz)."
+  },
+  {
+    "objectID": "about.html#instructors-organizers",
+    "href": "about.html#instructors-organizers",
+    "title": "About the training school",
+    "section": "",
+    "text": "Petr Pajdla  0000-0001-7050-9572\nCzech Academy of Sciences, Institute of Archaeology, Brno\nRonald Harasim\nCzech Academy of Sciences, Institute of Archaeology, Brno\nFilip Hájek  0009-0007-5953-8840\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\nAnastasia Eleftheriadou  0000-0002-8649-3752\nLudwig-Maximilians-Universität München\nAshely Green  0009-0005-4625-801X\nUniversity of Gothenburg\n\n\n\n\n\n\nZuzana Kopáčová\nCzech Academy of Sciences, Institute of Archaeology, Brno\nFinances, administration\nVít Kozák\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\nDavid Spáčil\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\n\nAnd other AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to Zuzana Kopáčová (kopacova [at] arub.cz), and/or Petr Pajdla (pajdla [at] arub.cz)."
+  },
+  {
+    "objectID": "about.html#organisations",
+    "href": "about.html#organisations",
+    "title": "About the training school",
+    "section": "Organisations",
+    "text": "Organisations\n\nATRIUM\n\nThe training school is organised as transnational access provision in the ATRIUM Project (Advancing Frontier Research in the Arts and Humanities) funded by the Horizon Europe research and innovation actions programme under grant agreement No. 101132163. ATRIUM project covers the organizational costs of the school and participator grants.\n\n\n\n\nMAIA\n\nMAIA (Managing Artificial Intelligence in Archaeology) is a COST Action (CA23141) funded by the European Union co-organizing the training school. MAIA COST Action covers travel and subsistence costs of two MAIA instructors.\n\n\n\n\nAIS CR\n\nThe Archaeological Information System of the Czech Republic (AIS CR) is a research infrastructure integrating digital resources and services on archaeology in the Czech Republic, and as such is one of many data providers in the ARIADNE Research Infrastructure. AIS CR is jointly operated by the Institutes of Archaeology of the Czech Academy of Sciences in Brno (IAB) and Prague (IAP). AIS CR/IAB provides the infrastructure and the venue for the training school."
+  },
+  {
+    "objectID": "applications.html",
+    "href": "applications.html",
+    "title": "Applications",
+    "section": "",
+    "text": "Important\n\n\n\n\nBoth ATRIUM and MAIA calls for applications are closed.\nThere were over 80 applications to the training school.\nAll applicants were notified whether they were successful by the end of July."
+  },
+  {
+    "objectID": "applications.html#who-should-apply",
+    "href": "applications.html#who-should-apply",
+    "title": "Applications",
+    "section": "Who should apply",
+    "text": "Who should apply\n\nWe welcome applications from early-career researchers and students who are enthusiastic about exploring the potential of computer vision and machine learning in archaeological research. This school will focus on the practical application of image analysis techniques to archaeological image data, from dataset preparation and model training to evaluation and emerging methods such as vision-language models.\nWhile applicants with prior experience in Python and/or machine learning are encouraged to apply, the first day of the training will be dedicated to the fundamentals of Python for image analysis tasks. Participants should have basic experience with any programming or markup language (e.g. HTML, R, Python or similar) and a general comfort with working in digital environments. No prior experience with Python or machine learning is strictly required, but curiosity and a willingness to engage with technical material are essential."
+  },
+  {
+    "objectID": "applications.html#atrium-tna-scheme",
+    "href": "applications.html#atrium-tna-scheme",
+    "title": "Applications",
+    "section": "ATRIUM TNA Scheme",
+    "text": "ATRIUM TNA Scheme\nMore details about the transnational access scheme (TNA) grants can be found on the ATRIUM Project website.\n\n\n\n\n\n\nNoteNote\n\n\n\nOnly applicants with institutional affiliation outside of the Czech Republic are eligible to receive funding from ATRIUM project due to the trans-national nature of the access to the infrastructure provided by the school.\n\n\n\nKey dates\n\n\n\nMarch 2026\nCall for participants opens\n\n\n31 May 2026\nDeadline for applications\n\n\nEnd of July 2026\nAcceptance notifications sent\n\n\n14–18 September 2026\nTraining school\n\n\nmid-October 2026 (?)\nDeadline for submission of reports\n\n\nend of November 2026\nGrants paid before this date\n\n\n\n\n\nHow to apply\nSubmit your applications through an online form. On the 4th page of the application (TNA Scheme), choose ‘Summer School Access’ and ‘Archaeological Information System of the Czech Republic, Institute of Archaeology of the Czech Academy of Sciences, Brno – AIS CR (ARUB)’ as the proposed host organisation. On the next page (Summer School Application) please explain why you believe this training would be valuable for your research and how you intend to integrate these newfound skills into your work.\nMore details on how to apply can be found here."
+  },
+  {
+    "objectID": "applications.html#maia-open-call",
+    "href": "applications.html#maia-open-call",
+    "title": "Applications",
+    "section": "MAIA Open Call",
+    "text": "MAIA Open Call\n\n\n\n\n\n\nNoteNote\n\n\n\nOnly members of MAIA COST Action are eligible to apply."
+  },
+  {
     "objectID": "info.html",
     "href": "info.html",
     "title": "General Information",
@@ -301,74 +378,235 @@
     "text": "Other information\n\nTravelling to Brno\nBrno is easily reachable by trains or buses from Prague (approx. a 2 to 2.5-hour journey) and Vienna (approx. a 1.5 to 2-hour journey). Many overnight trains crossing a large part of Europe start or end in Vienna, and we recommend taking these trains as an alternative to flying.\n\n\nAccommodation\nNo accommodation is provided to participants. Please arrange your accommodation in one of many cities hotels or hostels.\n\n\nFood\nThere are several places around the institute, see map above for locations.\n\n\n\n\n\n\n\n\n\n\nplace\ncuisine\nnote\n\n\n\n\nLittle Saigon\nAsian/Vietnamese\nhas vegan/vegetarian options\n\n\nMasný růžek\nCzech\na lot of meaty foods and traditional heavy Czech cuisine\n\n\nBistro Nella\nCzech\nmight have vegetarian option\n\n\nJídelna Kocourek\nCzech\nmight have vegetarian option\n\n\nGrand Kitchen Vlněna\nCzech, International\nmight have vegetarian option\n\n\nBistro Bellavista\nItalian\nmostly does not have vegetarian/vegan options\n\n\nDelitree bistro\nItalian, Czech, Salads\nhas vegetarian options\n\n\nRamen Brno\nJapanese\nmight have vegetarian options\n\n\nLos Capolitos\nMexican\nhes vegetarian option\n\n\nSargam\nNepalese\nhas vegetarian options\n\n\nVeg8Cafe\nVegan\nvegan bistro\n\n\nForky’s Vlněna Foodtruck\nVegan\nvegan streetfood"
   },
   {
-    "objectID": "applications.html",
-    "href": "applications.html",
-    "title": "Applications",
+    "objectID": "materials/artefacts/artefacts.html#the-plan",
+    "href": "materials/artefacts/artefacts.html#the-plan",
+    "title": "Artefacts: datasets and annotation",
+    "section": "The plan",
+    "text": "The plan\n\n\n\n\n\n\n\n\n\n1\nThe artefacts dataset — where the photographs come from\n\n\n\n2\nWhat “annotated” means · COCO, YOLO, Pascal VOC\n\n\n\n3\nAnnotation tools · live demo of CVAT with SAM 2\n\n\n\n4\nYou annotate, in your own CVAT project\n16 minutes\n\n\n5\nWhat you had to decide\ndiscussion\n\n\n6\nThree problems — imbalance · vocabularies · missing metadata\n\n\n\n7\nArchaeoTag — everyone plays a round\nphones out\n\n\n8\nDiscussion — your dataset, your label set\ngroups 1 & 2 report\n\n\n\n\n\n\nHalf of this session is you working, not me talking.\n\n\n\nSay the shape out loud. The single most important line is number 4: they will have annotated something before the break, and block 5 is about decisions they themselves just made."
+  },
+  {
+    "objectID": "materials/artefacts/artefacts.html#yesterdays-number",
+    "href": "materials/artefacts/artefacts.html#yesterdays-number",
+    "title": "Artefacts: datasets and annotation",
+    "section": "Yesterday’s number",
+    "text": "Yesterday’s number\n\n\n\n80%\nhave never used an image annotation tool.\n\n\n\nIt is probably the largest single cost in every project we look at this week\nIt is the one place where your expertise, not the model’s, decides the outcome\nAnd it is where the decisions that sink a project get made — quietly, early, by whoever built the label set\n\n\n\n\nDo not oversell. The point of the hands-on is not that they learn a tool — it is that they feel how much interpretation is packed into one click, and see the disagreement in their own data ten minutes later."
+  },
+  {
+    "objectID": "materials/artefacts/artefacts.html#where-these-photographs-come-from",
+    "href": "materials/artefacts/artefacts.html#where-these-photographs-come-from",
+    "title": "Artefacts: datasets and annotation",
+    "section": "Where these photographs come from",
+    "text": "Where these photographs come from\n\nA detectorist finds an object in a field\nThey report it — findspot, a photograph, sometimes a guess at what it is and some other metadata\nAn archaeologist checks the record and assigns/confirms a type from a controlled list\nThe photograph lands in AMČR-PAS, the public portal of the Archaeological Information System of the Czech Republic\nExplore the data and images in the Digital archive of the Archaeological Map of the Czech Republic\n\n\n\n\nThree filters worth naming out loud if a question comes: what the detector beeps at, what a finder thinks is worth reporting, and what survives in the ground at all. Do not develop it here — it is the imbalance slide’s job.\n\n\nAMČR-PAS: amcr-info.aiscr.cz. Photographs are published under CC BY-NC 4.0 with an IGSN (a DOI) per record."
+  },
+  {
+    "objectID": "materials/artefacts/artefacts.html#section",
+    "href": "materials/artefacts/artefacts.html#section",
+    "title": "Artefacts: datasets and annotation",
     "section": "",
-    "text": "Important\n\n\n\n\nBoth ATRIUM and MAIA calls for applications are closed.\nThere were over 80 applications to the training school.\nAll applicants were notified whether they were successful by the end of July."
+    "text": "Digital Archive of the AMCR – Individual finds selected"
   },
   {
-    "objectID": "applications.html#who-should-apply",
-    "href": "applications.html#who-should-apply",
-    "title": "Applications",
-    "section": "Who should apply",
-    "text": "Who should apply\n\nWe welcome applications from early-career researchers and students who are enthusiastic about exploring the potential of computer vision and machine learning in archaeological research. This school will focus on the practical application of image analysis techniques to archaeological image data, from dataset preparation and model training to evaluation and emerging methods such as vision-language models.\nWhile applicants with prior experience in Python and/or machine learning are encouraged to apply, the first day of the training will be dedicated to the fundamentals of Python for image analysis tasks. Participants should have basic experience with any programming or markup language (e.g. HTML, R, Python or similar) and a general comfort with working in digital environments. No prior experience with Python or machine learning is strictly required, but curiosity and a willingness to engage with technical material are essential."
+    "objectID": "materials/artefacts/artefacts.html#what-is-in-our-dataset",
+    "href": "materials/artefacts/artefacts.html#what-is-in-our-dataset",
+    "title": "Artefacts: datasets and annotation",
+    "section": "What is in our dataset?",
+    "text": "What is in our dataset?\n\n\n\n9 762\nphotographs\n\n\n\n10 749\nannotations\n\n\n\n112\nartefact types used\n\n\n\n\n\nEvery annotation is a polygon, not just a box — 10 749 of them\n207 types are declared in the file; 95 of them are never used once \nOne photograph carries as many as 29 objects\n\n\n\n\nThis is a real working dataset, with all the untidiness that implies. We will open the actual file in a minute.\n\n\nThe 95 declared-but-unused categories are the most revealing number here. They come from the national thesaurus: the vocabulary was designed for the whole archaeological record, and this dataset only ever sees the part of it that a detectorist finds."
   },
   {
-    "objectID": "applications.html#atrium-tna-scheme",
-    "href": "applications.html#atrium-tna-scheme",
-    "title": "Applications",
-    "section": "ATRIUM TNA Scheme",
-    "text": "ATRIUM TNA Scheme\nMore details about the transnational access scheme (TNA) grants can be found on the ATRIUM Project website.\n\n\n\n\n\n\nNoteNote\n\n\n\nOnly applicants with institutional affiliation outside of the Czech Republic are eligible to receive funding from ATRIUM project due to the trans-national nature of the access to the infrastructure provided by the school.\n\n\n\nKey dates\n\n\n\nMarch 2026\nCall for participants opens\n\n\n31 May 2026\nDeadline for applications\n\n\nEnd of July 2026\nAcceptance notifications sent\n\n\n14–18 September 2026\nTraining school\n\n\nmid-October 2026 (?)\nDeadline for submission of reports\n\n\nend of November 2026\nGrants paid before this date\n\n\n\n\n\nHow to apply\nSubmit your applications through an online form. On the 4th page of the application (TNA Scheme), choose ‘Summer School Access’ and ‘Archaeological Information System of the Czech Republic, Institute of Archaeology of the Czech Academy of Sciences, Brno – AIS CR (ARUB)’ as the proposed host organisation. On the next page (Summer School Application) please explain why you believe this training would be valuable for your research and how you intend to integrate these newfound skills into your work.\nMore details on how to apply can be found here."
+    "objectID": "materials/artefacts/artefacts.html#four-things-people-mean-by-it",
+    "href": "materials/artefacts/artefacts.html#four-things-people-mean-by-it",
+    "title": "Artefacts: datasets and annotation",
+    "section": "Four things people mean by it",
+    "text": "Four things people mean by it\n\n\nRosary: AMČR M-202400071-N00083, CC BY-NC 4.0\n\n\nSame photograph, same objects. The annotation is a choice, and it is the expensive one.\n\n\nWalk left to right, top to bottom, one sentence each. Then the question: which of the four do you need? The honest answer is almost always “one level less than you assumed”. The orange fields in panel 4 are deliberate — they are the ArchaeoTag hook, come back to them."
   },
   {
-    "objectID": "applications.html#maia-open-call",
-    "href": "applications.html#maia-open-call",
-    "title": "Applications",
-    "section": "MAIA Open Call",
-    "text": "MAIA Open Call\n\n\n\n\n\n\nNoteNote\n\n\n\nOnly members of MAIA COST Action are eligible to apply."
+    "objectID": "materials/artefacts/artefacts.html#the-task-shape-sets-the-cost",
+    "href": "materials/artefacts/artefacts.html#the-task-shape-sets-the-cost",
+    "title": "Artefacts: datasets and annotation",
+    "section": "The task shape sets the cost",
+    "text": "The task shape sets the cost\n\n\n\n\n\n\n\n\n\nYou want\nYou annotate\nRoughly, per image\n\n\n\n\nwhat is in this photograph?\none label\nseconds\n\n\nhow many, and where?\na box per object\ntens of seconds\n\n\nwhat is its exact outline / area?\na polygon per object\nminutes\n\n\nwhat condition is it in?\nattributes per object\nseconds — if you decided the fields in advance\n\n\n\n\n\n\n\n\n\n\n\nThe order matters\n\n\nGoing from boxes to polygons after you have annotated 2 000 images means annotating 2 000 images again. Going the other way is free.\n\n\n\n\n\nYesterday: the task shape follows from the question. Today: and the question has a cost.\n\n\nThis is the slide to slow down on. If they take one thing from the morning it is that the annotation schema is a commitment, not a setting, and it is made before anyone has trained anything."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About the training school",
-    "section": "",
-    "text": "Petr Pajdla  0000-0001-7050-9572\nCzech Academy of Sciences, Institute of Archaeology, Brno\nRonald Harasim\nCzech Academy of Sciences, Institute of Archaeology, Brno\nFilip Hájek  0009-0007-5953-8840\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\nAnastasia Eleftheriadou  0000-0002-8649-3752\nLudwig-Maximilians-Universität München\nAshely Green  0009-0005-4625-801X\nUniversity of Gothenburg\n\n\n\n\n\n\nZuzana Kopáčová\nCzech Academy of Sciences, Institute of Archaeology, Brno\nFinances, administration\nVít Kozák\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\nDavid Spáčil\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\n\nAnd other AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to Zuzana Kopáčová (kopacova [at] arub.cz), and/or Petr Pajdla (pajdla [at] arub.cz)."
+    "objectID": "materials/artefacts/artefacts.html#coco-four-keys-and-a-convention",
+    "href": "materials/artefacts/artefacts.html#coco-four-keys-and-a-convention",
+    "title": "Artefacts: datasets and annotation",
+    "section": "COCO: four keys and a convention",
+    "text": "COCO: four keys and a convention\n\n{\n  \"info\":        { ... },\n  \"licenses\":    [ ... ],\n  \"images\":      [ {\"id\": 1, \"file_name\": \"...\", \"width\": 3978, \"height\": 2762}, ... ],\n  \"categories\":  [ {\"id\": 1, \"name\": \"adornment\"}, {\"id\": 63, \"name\": \"fibula\"}, ... ],\n  \"annotations\": [ {\"image_id\": 1, \"category_id\": 63, \"bbox\": [...], \"segmentation\": [...]}, ... ]\n}\n\n\nOne file for the whole dataset — images, label set and annotations together\nannotations point at images and categories by id, so nothing is repeated\nIt carries boxes and polygons in the same record, which is why it is the default\n\n\n\n\n\n\n\n\nTip\n\n\nCommon Objects in Context — a benchmark dataset from 2014 whose file layout outlived it and became the de-facto interchange format.\n\n\n\n\n\nOpen the real file on screen now, not after the slide: categories first, then find the rosary in images, then filter annotations by its id. Let them watch you get lost for a second — that is the honest experience of a COCO file."
   },
   {
-    "objectID": "about.html#instructors-organizers",
-    "href": "about.html#instructors-organizers",
-    "title": "About the training school",
-    "section": "",
-    "text": "Petr Pajdla  0000-0001-7050-9572\nCzech Academy of Sciences, Institute of Archaeology, Brno\nRonald Harasim\nCzech Academy of Sciences, Institute of Archaeology, Brno\nFilip Hájek  0009-0007-5953-8840\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\nAnastasia Eleftheriadou  0000-0002-8649-3752\nLudwig-Maximilians-Universität München\nAshely Green  0009-0005-4625-801X\nUniversity of Gothenburg\n\n\n\n\n\n\nZuzana Kopáčová\nCzech Academy of Sciences, Institute of Archaeology, Brno\nFinances, administration\nVít Kozák\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\nDavid Spáčil\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\n\nAnd other AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to Zuzana Kopáčová (kopacova [at] arub.cz), and/or Petr Pajdla (pajdla [at] arub.cz)."
+    "objectID": "materials/artefacts/artefacts.html#one-annotation-as-it-really-is",
+    "href": "materials/artefacts/artefacts.html#one-annotation-as-it-really-is",
+    "title": "Artefacts: datasets and annotation",
+    "section": "One annotation, as it really is",
+    "text": "One annotation, as it really is\n\n\n\n{\n  \"categories\": [\n    {\"id\": 58, \"name\": \"cross\"}, …\n  ],\n  \"images\": [\n    {\"id\": 8987, \"file_name\": \"…/M202400071N00083F01.jpeg\",\n     \"width\": 3978, \"height\": 2762}, …\n  ],\n  \"annotations\": [\n    {\"id\": 9872, \"image_id\": 8987, \"category_id\": 58,\n     \"bbox\": [837.8, 1760.0, 485.2, 445.9],\n     \"area\": 216350.7,\n     \"segmentation\": [[1301.3, 1762.7, 1279.0, 1760.0, …]],\n     \"iscrowd\": 0,\n     \"attributes\": {\"recognizable\": \"true\", \"occluded\": false}}, …\n  ]\n}\n\n\n\n\nimage_id points into images, category_id into categories — the three lists are joined only by id\nbbox is x, y, width, height — corner, not centre\nsegmentation is one flat list: x1 y1 x2 y2 …, here 47 vertices\ncategory_id is just 58. The word cross lives only in categories\nattributes is not standard COCO — the tool added it\n\n\n\n\n\nThe attributes key is the important one: it is an extension, it round-trips through CVAT and Label Studio but not through most training code. That is the general lesson — the useful archaeological metadata is exactly the part the format does not standardise."
   },
   {
-    "objectID": "about.html#organisations",
-    "href": "about.html#organisations",
-    "title": "About the training school",
-    "section": "Organisations",
-    "text": "Organisations\n\nATRIUM\n\nThe training school is organised as transnational access provision in the ATRIUM Project (Advancing Frontier Research in the Arts and Humanities) funded by the Horizon Europe research and innovation actions programme under grant agreement No. 101132163. ATRIUM project covers the organizational costs of the school and participator grants.\n\n\n\n\nMAIA\n\nMAIA (Managing Artificial Intelligence in Archaeology) is a COST Action (CA23141) funded by the European Union co-organizing the training school. MAIA COST Action covers travel and subsistence costs of two MAIA instructors.\n\n\n\n\nAIS CR\n\nThe Archaeological Information System of the Czech Republic (AIS CR) is a research infrastructure integrating digital resources and services on archaeology in the Czech Republic, and as such is one of many data providers in the ARIADNE Research Infrastructure. AIS CR is jointly operated by the Institutes of Archaeology of the Czech Academy of Sciences in Brno (IAB) and Prague (IAP). AIS CR/IAB provides the infrastructure and the venue for the training school."
+    "objectID": "materials/artefacts/artefacts.html#the-same-annotation-three-formats",
+    "href": "materials/artefacts/artefacts.html#the-same-annotation-three-formats",
+    "title": "Artefacts: datasets and annotation",
+    "section": "The same annotation, three formats",
+    "text": "The same annotation, three formats\n\n\n\nCOCO · one JSON file for the whole dataset\n\n\namcr-pas_v0.json\n\n{\"id\": 9872, \"image_id\": 8987, \"category_id\": 58,\n \"bbox\": [837.8, 1760.0, 485.2, 445.9],\n \"segmentation\": [[1301.3, 1762.7, 1279.0, 1760.0, …]]}\n\nbbox is the top-left corner plus width and height, in pixels. The polygon is kept. The image and the class name are found only by id.\n\n\nYOLO · one .txt per image, one line per object\n\n\nlabels/M202400071N00083F01.txt\n\n57 0.271594 0.717940 0.121971 0.161441\n\n\n\ndata.yaml\n\nnames: {…, 57: cross, …}\n\nClass, then centre x, y, width, height ÷ image size. 0-based, so 58 becomes 57; cross is only in data.yaml. The polygon is gone.\n\n\n\nPascal VOC · one .xml per image\n\n\nAnnotations/M202400071N00083F01.xml\n\n&lt;annotation&gt;\n  &lt;filename&gt;M202400071N00083F01.jpeg&lt;/filename&gt;\n  &lt;size&gt;&lt;width&gt;3978&lt;/width&gt; &lt;height&gt;2762&lt;/height&gt;&lt;/size&gt;\n  &lt;object&gt;\n    &lt;name&gt;cross&lt;/name&gt;\n    &lt;bndbox&gt;\n      &lt;xmin&gt;838&lt;/xmin&gt; &lt;ymin&gt;1760&lt;/ymin&gt;\n      &lt;xmax&gt;1323&lt;/xmax&gt; &lt;ymax&gt;2206&lt;/ymax&gt;\n    &lt;/bndbox&gt;\n  &lt;/object&gt;\n&lt;/annotation&gt;\n\nThe box is two corners, in whole pixels. The class name is written out, and the file names its own image. The polygon is gone.\n\n\n\n\n\n\n\n\n\nImportant\n\n\nEvery conversion is lossy in a different direction — and 57 means nothing without the data.yaml it came with.\n\n\n\n\n\nIf time is short, skip VOC and compare the two blocks on the left — the normalisation and the lost class name are the two things worth their slide space.\nYOLO also has a segmentation variant that keeps polygons (normalised x y pairs after the class), so “the polygon is gone” is true of the detection format shown here."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Computer Vision in Archaeology",
-    "section": "",
-    "text": "NoteBasics\n\n\n\nWhen? 14–18 September 2026\nWhere? Brno, Czech Republic\nWhat? Training school on computer vision and machine learning in archaeology\n\n\n\n\n\n\n\n\nImportantPre-school survey\n\n\n\nIf you are among selected participants, please fill in a pre-school survey here.\n\n\n\nJoin us for an intensive one-week training school dedicated to computer vision in archaeology, where you will learn how to harness the power of modern machine learning techniques to detect, classify, and analyse archaeological features and artefacts in images. As visual data — from drone surveys and excavation photography to museum collections — continues to grow in volume, the ability to process and interpret it computationally is becoming an increasingly valuable skill in the archaeologist’s toolkit. Our programme guides you from the very foundations of Python programming through to hands-on experience with state-of-the-art object detection and image segmentation models, with dedicated sessions on dataset creation, model training, and evaluation. Participants should have basic experience with any programming or markup language and a general comfort with working in digital environments. No prior experience with machine learning is required, but curiosity and a willingness to engage with technical material are essential.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe training school is part of a trans-national access scheme provided by the ATRIUM Project, hosted by the Archaeological Information System of the Czech Republic (AIS CR) research infrastructure at the Institute of Archaeology, Czech Academy of Sciences, Brno. The school is co-organized by the MAIA COST Action project. MAIA provides funding to several of the school instructors.\nTo apply and learn more about the TNA, visit the ATRIUM TNA Application website."
+    "objectID": "materials/artefacts/artefacts.html#four-tools-one-job",
+    "href": "materials/artefacts/artefacts.html#four-tools-one-job",
+    "title": "Artefacts: datasets and annotation",
+    "section": "Four tools, one job",
+    "text": "Four tools, one job\n\n\n\n\n\n\n\n\nTool\nRuns\nGood for\n\n\n\n\nCVAT — cvat.ai\na server, or cvat.ai\nimages and video, a team, SAM 2 built in · what we use today\n\n\nLabel Studio — labelstud.io\na server\nany data type — text, audio, time series as well as images\n\n\nVIA — VGG Image Annotator\none HTML file in your browser\na small set, one person, no install, works offline\n\n\nmakesense.ai — makesense.ai\nin your browser\nquick boxes and polygons, no account, images stay on your computer\n\n\n\n\n\nThey all do the same thing: shapes, classes, attributes → a file. Pick by team size and data type, and check the export formats before you start.\n\n\n\nOne minute, no demos of the other three. The point is that the tool is the least important decision of the session: the label set and the definitions matter more, and every one of these writes COCO or something close to it.\nVIA is the one to recommend to anyone with a few hundred photos and no server: a single file, nothing to install. Open the demo link if someone asks."
   },
   {
-    "objectID": "materials.html",
-    "href": "materials.html",
-    "title": "Materials",
-    "section": "",
-    "text": "Slides and notebooks used during the school. This page grows as the week progresses — check back for updates."
+    "objectID": "materials/artefacts/artefacts.html#cvat-the-demo",
+    "href": "materials/artefacts/artefacts.html#cvat-the-demo",
+    "title": "Artefacts: datasets and annotation",
+    "section": "CVAT: the demo",
+    "text": "CVAT: the demo\n\n\nWhy CVAT today\n\nBuilt for images and video\nProjects → tasks → jobs, split across people\nSAM 2 one click away, under AI Tools\n\n\nLive — the steps you will do next\n\nCreate a project and paste in labels.json: the classes and the three questions\nCreate a task from the photographs\nOutline one find with SAM 2, give it a class, answer its questions\nExport as COCO and open the JSON\n\n\n\n\nlabels.json is the schema. If you can read it, you know exactly what the dataset will contain.\n\n\n\n\n\n\n\n\n\nNote\n\n\nThe AMČR-PAS annotations you have been looking at were made in CVAT — that is where recognizable and occluded come from.\n\n\n\n\n\nLive, five minutes. Do exactly the steps they are about to do — the setup slide after this repeats them — on the rosary (temp/annotation/demo/). Resist the urge to tour the interface.\nExport as COCO 1.0: the polygon and the attributes are both in the JSON, which is where our dataset’s attributes came from. If there is a minute, export a YOLO format as well and open the .txt: a number and four coordinates, no attributes, no class name. That is the three-formats slide happening in front of them.\nWorth saying: CVAT forces a default on every attribute, which is why ours start at ?. Without that, an untouched object looks like an answer. The occluded flag is CVAT’s own per-shape switch, off unless someone turns it on, and it is false on all 10 749 annotations in the export."
   },
   {
-    "objectID": "materials.html#monday",
-    "href": "materials.html#monday",
-    "title": "Materials",
-    "section": "Monday",
-    "text": "Monday\n\nIntroduction to computer vision — What computer vision is, the family of tasks, discriminative vs. generative models, a live zero-shot demo with CLIP, and three rounds of group discussion.\nCLIP zero-shot classification — the notebook behind the demo. Classifying artefact photographs with no training and no annotation, and three ways it misleads you. \n\nNew to Python? Use the beginner version — the same notebook with the code spelled out step by step and commented line by line, plus an optional look inside the model. \n\nCoding with agents\nPython for computer vision — enough Python to read, change and debug the code an AI tool writes for you, then NumPy, Matplotlib and OpenCV. It ends with a first computer-vision workflow that separates the Venus of Dolní Věstonice from its background and measures it.\n\nIntroduction to Python for computer vision — why learn Python when AI writes code, and how to turn a task into an algorithm before writing any. \nPython fundamentals for computer vision — the hands-on part. The code cells are empty and you fill them in with the instructor: notebooks, Python basics, NumPy, Matplotlib, and OpenCV on the Venus photograph. \nFallen behind? Use the filled-in version — the same notebook with every cell filled in, for catching up or checking your version. \n\n\nIce-breaker event in the evening.\n\n\n\n\n\n\n\nNoteReading\n\n\n\nThe MAIA COST Action Zotero library is an open, shared bibliography on AI in archaeology. Most examples used in the slides come from there."
+    "objectID": "materials/artefacts/artefacts.html#why-a-polygon-hurts",
+    "href": "materials/artefacts/artefacts.html#why-a-polygon-hurts",
+    "title": "Artefacts: datasets and annotation",
+    "section": "Why a polygon hurts",
+    "text": "Why a polygon hurts\n\n\nRosary: AMČR M-202400071-N00083, CC BY-NC 4.0\n\n\nOne photograph. At 10 749 annotations across the collection, that is the scale of what somebody already did by hand.\n\n\nLet this one sit for a beat before saying anything. The dots do the argument. Then: this is why model-assisted annotation is not a luxury."
+  },
+  {
+    "objectID": "materials/artefacts/artefacts.html#sam-2-click-instead-of-trace",
+    "href": "materials/artefacts/artefacts.html#sam-2-click-instead-of-trace",
+    "title": "Artefacts: datasets and annotation",
+    "section": "SAM 2: click instead of trace",
+    "text": "SAM 2: click instead of trace\n\nA foundation model for segmentation — it has no idea what a fibula is, and does not need one\nYou give it a point, a box or a scribble; it returns a mask\nIt is class-agnostic: it finds the boundary, you supply the label\nIn CVAT it is under AI Tools → Interactors: click the object, right-click what should be left out, then correct the result\n\n\n\n\n\n\n\n\nWatch it fail\n\n\nA corroded find on a background close to its own tone, and the mask leaks into the scale bar. Model-assisted is not model-decided — correcting a bad mask can cost more than drawing a good one.\n\n\n\n\n\nLive: one clean find (instant, convincing), then deliberately a corroded one on the grey card. Show the mask leaking, fix it with a negative point, and say the honest number — assisted annotation is perhaps three to five times faster on easy objects and no faster at all on hard ones."
+  },
+  {
+    "objectID": "materials/artefacts/artefacts.html#cvat-on-our-server",
+    "href": "materials/artefacts/artefacts.html#cvat-on-our-server",
+    "title": "Artefacts: datasets and annotation",
+    "section": "CVAT, on our server",
+    "text": "CVAT, on our server\n\nhttp://10.10.1.40:8081\n\nor this one, it is misbehaving:\n\nhttp://172.16.16.214:8081\n\n\nType it into your browser. It is a local address — it works only on the c network here.\n\n\nLeave this slide up while people type the address; read it out once, digit by digit. If a browser complains, check that it kept http:// and did not switch to https://."
+  },
+  {
+    "objectID": "materials/artefacts/artefacts.html#set-up-your-project",
+    "href": "materials/artefacts/artefacts.html#set-up-your-project",
+    "title": "Artefacts: datasets and annotation",
+    "section": "Set up your project",
+    "text": "Set up your project\nAbout 5 minutes. Everyone works on the same 10 photographs, each in their own project.\n\n\nOpen CVAT at http://10.10.1.40:8081 → Create an account\nPull the lessons repository — everything is in 2-tuesday-artefacts/\nProjects → + → Create a new project · give it a name · open the Raw tab · replace everything in it with the contents of labels.json · Done · Submit & Open\nIn the project: + → Create a new task · give it a name · add the ten files from images/ under Select files · Submit & Open\nClick the job in the task — that opens the first photograph\n\n\n\n\n\n\n\n\n\nTip\n\n\nStuck on step 3? The Raw tab must contain only labels.json — one [ at the start, one ] at the end.\n\n\n\n\n\nCVAT’s address is on the previous slide and in step 1; put it on the board as well, as a QR code if you can. The files are in atrium-school-ml-lessons, folder 2-tuesday-artefacts/: images/ (the ten photographs, not the demo rosary), labels.json, and credits.csv; its README repeats these steps. Anyone who never cloned the repository can download it as a ZIP from GitHub (Code → Download ZIP).\nWalk the room during setup. Step 3 is where people get stuck: pasting labels.json after the [] that is already in the Raw box, instead of replacing it. Most people are done in three to five minutes; start the clock on the next slide when about two thirds of the room are looking at a photograph."
+  },
+  {
+    "objectID": "materials/artefacts/artefacts.html#annotate",
+    "href": "materials/artefacts/artefacts.html#annotate",
+    "title": "Artefacts: datasets and annotation",
+    "section": "Annotate",
+    "text": "Annotate\n16 minutes. Everything after this slide is about decisions you make now.\n\n\n\nOutline each artefact — SAM 2, polygon or box — and give it a class\nIn the objects list, answer fragment and damage\nWhole photo: Setup tag → photo, answer scale\nNot sure? Annotate it anyway, say why in note\nSave (Ctrl+S), next photo\n\n\n\nfragment a piece of an object, not a whole one?\n\n\ndamage none, minor or major?\n\n\nscale is there a scale bar in the frame?\n\n\n\n\n\n\n\n\n\nTip\n\n\nDo not compare with your neighbour. We will talk about what you decided, and why.\n\n\n\n\n\nEveryone annotates in their own project, so nothing is shared and nothing is compared on screen afterwards — the next block is a discussion. Walk the room; note which photographs people hesitate on, and on 04, 06 and 08 what they chose. Those are what you ask about next.\nThe scale question is a tag on the whole photo, not on an object: people will miss it. Point at the tag button once, early. Give a two-minute warning at 14."
+  },
+  {
+    "objectID": "materials/artefacts/artefacts.html#what-you-had-to-decide",
+    "href": "materials/artefacts/artefacts.html#what-you-had-to-decide",
+    "title": "Artefacts: datasets and annotation",
+    "section": "What you had to decide",
+    "text": "What you had to decide\n\nhands up Photo 04: coin or pendant? · Photo 06: mount or pendant? · Photo 08: one object, or several?\n\n\nYour outlines will be close — SAM 2 saw to that\nYour classes will not, on two or three of the photographs — deliberately so\nYour attributes even less: fragment and damage are judgements nobody defined for you — is a broken fibula a fragment, or damaged?\n\n\n\nSAM made your outlines agree. It could not make your meanings agree — and that is the disagreement inside every archaeological dataset you will ever download.\n\n\n\nNo screens: a show of hands per photograph is enough to make the split visible, and nobody’s work is on display. Go through the planted ones:\n\n04, a pierced coin, recorded in AMČR as a pendant (M-202101534-N00375)\n06, a crescent, recorded as a mount, which most people will call a pendant (M-202300130-N00146)\n08, coins fused into a corroded lump: one object or several, coin or amorphous? (M-202105567-N00005)\n\nThe AMČR recorder’s own answer for each is in annotation/images.csv. Ask the people who disagreed to say why — out loud, without defending themselves. The answers are always about the definition, never about the photograph."
+  },
+  {
+    "objectID": "materials/artefacts/artefacts.html#agreement-is-a-measurement",
+    "href": "materials/artefacts/artefacts.html#agreement-is-a-measurement",
+    "title": "Artefacts: datasets and annotation",
+    "section": "Agreement is a measurement",
+    "text": "Agreement is a measurement\n\nIf two people disagree on 15% of images, no model trained on it can do better than 85% — the ceiling is in the data, not the architecture\nMeasure it: annotate an overlap set twice, report Cohen’s κ (two annotators) or Fleiss’ κ (more)\nWhere κ is low, the fix is not more annotators. It is a better definition, with pictures of the edge cases\n\n\n\n\n\n\n\n\nImportant\n\n\nAn annotation guide with worked examples of the hard cases is worth more than doubling your training set.\n\n\n\n\n\nDo not teach the kappa formula. The claim that matters is the ceiling: it reframes “our model only gets 82%” from a modelling problem into a data problem, which is where it usually belongs.\nIf someone asks what a better definition looks like, our schema has one. damage is defined by what you can see: minor is mild corrosion or scars, major is heavy corrosion with contours you cannot identify. It also says outright that fragment is distinct from damage, which settles the broken-fibula argument from the last slide."
+  },
+  {
+    "objectID": "materials/artefacts/artefacts.html#what-the-ground-gives-you",
+    "href": "materials/artefacts/artefacts.html#what-the-ground-gives-you",
+    "title": "Artefacts: datasets and annotation",
+    "section": "1 · What the ground gives you",
+    "text": "1 · What the ground gives you\n\n\n\n\n\n\n\n\n\n\nFibulae and coins are 40.1% of every annotation in the dataset.\n\n\nDo not read the bars. One sentence: two classes out of a hundred and twelve hold two fifths of the data, and that is before you ask whether the other hundred are usable at all."
+  },
+  {
+    "objectID": "materials/artefacts/artefacts.html#the-tail-is-the-dataset",
+    "href": "materials/artefacts/artefacts.html#the-tail-is-the-dataset",
+    "title": "Artefacts: datasets and annotation",
+    "section": "The tail is the dataset",
+    "text": "The tail is the dataset\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n77 of the 112 types have fewer than 50 annotations — together, 8.9% of the data\n95 types are in the label set and have never been seen\nA model trained on this learns 35 types well and the rest not at all\n\n\n\n\nA classifier that ignores the image and always answers fibula scores 22%. Always fibula or coin: 40.1%.\n\n\n\n\nThe always-fibula baseline is the one number to make them write down. Any reported accuracy on an imbalanced set has to be compared against it, and a surprising number of published figures are not."
+  },
+  {
+    "objectID": "materials/artefacts/artefacts.html#this-is-reporting-bias-not-the-past",
+    "href": "materials/artefacts/artefacts.html#this-is-reporting-bias-not-the-past",
+    "title": "Artefacts: datasets and annotation",
+    "section": "This is reporting bias, not the past",
+    "text": "This is reporting bias, not the past\n\nMetal detectors find metal — a fibula beeps, a potsherd does not\nFinders report what looks like a find: complete, decorated, recognisable\nRecorders assign the type they are confident about, and amorphous fragment when not\nArchives digitise what is already catalogued\n\n\n\n\n\n\n\n\nImportant\n\n\n40.1% fibulae and coins is a fact about detectorists, reporting and archives. It is not a fact about what was in the ground.\n\n\n\n\n\nA model trained here learns the collection process at least as well as it learns the artefacts.\n\n\nThis is the intellectual centre of the session. Connect it back to the filter chain from the second slide of the deck — they have now seen the number the filters produce."
+  },
+  {
+    "objectID": "materials/artefacts/artefacts.html#your-labels-are-not-their-labels",
+    "href": "materials/artefacts/artefacts.html#your-labels-are-not-their-labels",
+    "title": "Artefacts: datasets and annotation",
+    "section": "2 · Your labels are not their labels",
+    "text": "2 · Your labels are not their labels\n\n\n\n\nThe British PAS (FISH vocabulary) against AMČR-PAS: 841 terms, and four different ways to land on coin. Strap end is mordant — no string match finds that.\n\n\nReal rows from the PAS → AMČR-PAS mapping sheet, all of them marked validated. Record counts are PAS database records for that object type. Walk down the coin box: the same target, four relations, four different things you may do with the data — merge coin, merge token with a note, do not relabel a hoard as coin (that rolls down — next slide), keep jettons out. Seal has 16,771 PAS records and nowhere to go."
+  },
+  {
+    "objectID": "materials/artefacts/artefacts.html#skos-in-three-predicates",
+    "href": "materials/artefacts/artefacts.html#skos-in-three-predicates",
+    "title": "Artefacts: datasets and annotation",
+    "section": "SKOS, in three predicates",
+    "text": "SKOS, in three predicates\n\n\n\n\n\n\n\n\n\n\n\nmeans\nsafe to do\nPAS → AMČR-PAS\n\n\n\n\nskos:exactMatch\ninterchangeable in any context\nmerge the two classes\n119\n\n\nskos:closeMatch\ninterchangeable in some contexts\nmerge, and say so in the paper\n53\n\n\nskos:broadMatch / narrowMatch\none is wider than the other\nroll the narrow one up; never down\n232 / 7\n\n\nskos:relatedMatch\nassociated, not substitutable\ndo not merge\n17\n\n\n(none)\nno counterpart\nleave out, and count what you lost\n25\n\n\n\n\n\n\n\n\n\n\n\ncloseMatch does not chain\n\n\nA closeMatch B and B closeMatch C says nothing about A and C. Two hops through a crosswalk and you have a class that means whatever the path happened to be.\n\n\n\n\n\n\nSKOS is a W3C standard for publishing exactly this: concepts with stable URIs, their labels in several languages, and typed links between vocabularies.\n\n\n\nexactMatch is transitive, closeMatch deliberately is not — that asymmetry is the whole practical content of the slide. If someone asks about OWL sameAs: SKOS is about concepts, not individuals, which is why it fits vocabularies and OWL does not. The PAS → AMČR-PAS column counts only the rows someone has validated."
+  },
+  {
+    "objectID": "materials/artefacts/artefacts.html#the-mapping-as-a-file",
+    "href": "materials/artefacts/artefacts.html#the-mapping-as-a-file",
+    "title": "Artefacts: datasets and annotation",
+    "section": "The mapping, as a file",
+    "text": "The mapping, as a file\n@prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .\n@prefix fish: &lt;http://purl.org/heritagedata/schemes/mda_obj/concepts/&gt; .\n@prefix amcr: &lt;https://example.org/amcr-pas/&gt; .    # placeholder, see below\n\nfish:96665   skos:prefLabel    \"Brooch\"@en ;\n             skos:exactMatch   amcr:fibula .\n\nfish:140465  skos:prefLabel    \"Strap end\"@en ;\n             skos:exactMatch   amcr:mordant .\n\nfish:97525   skos:prefLabel    \"Coin hoard\"@en ;\n             skos:narrowMatch  amcr:coin .\n\nfish:95426   skos:prefLabel    \"Jetton\"@en ;\n             skos:relatedMatch amcr:coin .\n\n\n\nOne row of the sheet is one triple — Turtle, the W3C text format for RDF\nfish: URIs are the FISH thesaurus’ own; amcr: is a placeholder — the sheet has AMČR-PAS labels, not URIs\nvalidated has no SKOS predicate: 388 of 841 rows are unchecked, so publish the checked ones, or say who checked what\n\n\n\n\nFour rows straight from the mapping sheet (fish column → subject, mappingRelation → predicate, target → object). Point out that the file is readable without any tooling — that is the argument for publishing it next to the dataset. The real AMČR-PAS concept URIs replace the placeholder once the categories are published."
+  },
+  {
+    "objectID": "materials/artefacts/artefacts.html#what-a-crosswalk-buys-you",
+    "href": "materials/artefacts/artefacts.html#what-a-crosswalk-buys-you",
+    "title": "Artefacts: datasets and annotation",
+    "section": "What a crosswalk buys you",
+    "text": "What a crosswalk buys you\n\nA shared coarse level — brooch, pin, buckle map cleanly; seal has nowhere to go\nTraining on the union of two collections, honestly, with the merge written down\nEvaluating a Czech-trained model on British data without silently renaming anything\n\n\n\n\n\n\n\n\nThe realistic outcome\n\n\nYou will lose resolution. Of the 112 AMČR-PAS categories in the dataset, only 63 have a validated exactMatch in PAS — and 28 PAS types roll up into instrument alone. That is still a far better dataset than either alone — and the mapping is a research output in its own right.\n\n\n\n\n\nEmphasise “written down”. The difference between a defensible merged dataset and a mess is a published mapping file, not the merging itself."
+  },
+  {
+    "objectID": "materials/artefacts/artefacts.html#the-metadata-nobody-has-time-for",
+    "href": "materials/artefacts/artefacts.html#the-metadata-nobody-has-time-for",
+    "title": "Artefacts: datasets and annotation",
+    "section": "3 · The metadata nobody has time for",
+    "text": "3 · The metadata nobody has time for\n\n\nWhat the file records:\n\n\"attributes\": {\n  \"recognizable\": \"true\",\n  \"occluded\": false\n}\n\n\n\n\nEvery one is a seconds-long judgement — and 10 749 × several seconds is weeks of somebody’s time\nNone of it needs a specialist. Anyone can see whether an object is broken or whether there is a ruler in the frame\nWhich makes it exactly the kind of work you can ask a crowd to do\n\n\n\n\nWhat the schema asks for:\n\n\"attributes\": {\n  \"type\":           ?,\n  \"context\":        ?,\n  \"view\":           ?,\n  \"recognizable\":   true,\n  \"damage\":         ?,\n  \"fragment\":       ?,\n  \"iconic\":         ?,\n  \"group\":          ?,\n  \"occluded\":       false,\n  \"truncated\":      ?,\n  \"composite\":      ?,\n  \"scale\":          ?,\n  \"colorReference\": ?,\n  \"markup\":         ?\n}\n\n\n\nLand the contrast: the polygons needed an expert and cost 677 clicks a photograph; these fields need no expertise at all and are the ones missing. That asymmetry is the argument for the next slide.\nThe right-hand block is the schema ArchaeoTag collects into (imagetag_schema.json in arubrno/archiv-digilab): fourteen fields. The COCO export predates it, and it has two. Even those two are thinner than they look: occluded is false on every one of the 10 749 annotations. It is CVAT’s own per-shape switch, off unless someone turns it on, so it records a default, not a judgement."
+  },
+  {
+    "objectID": "materials/artefacts/artefacts.html#guess-what-this-is",
+    "href": "materials/artefacts/artefacts.html#guess-what-this-is",
+    "title": "Artefacts: datasets and annotation",
+    "section": "Guess what this is",
+    "text": "Guess what this is\nPhones out. Open the URL on the board — three minutes of play.\n\nYou are shown a photograph of a find and asked what it is\nAlong the way you answer the easy questions: a fragment? damaged? is there a scale?\nYou find out whether you were right — that is the game\nWe get a crowd-sourced answer to the fields the file does not have\n\n\n\n\n\n\n\n\nTip\n\n\nThe guessing is the incentive. The metadata is the point, and nobody playing has to care.\n\n\n\n\n\nThree minutes of play, then stop them firmly — they will not want to stop. Have the results view ready on the projector before you start."
+  },
+  {
+    "objectID": "materials/artefacts/artefacts.html#what-a-guess-is-worth",
+    "href": "materials/artefacts/artefacts.html#what-a-guess-is-worth",
+    "title": "Artefacts: datasets and annotation",
+    "section": "What a guess is worth",
+    "text": "What a guess is worth\n\nOne guess is noise. Twenty guesses on the same photograph is a distribution\nWhere players agree, you have a usable attribute at effectively zero cost\nWhere they disagree, you have found a genuinely ambiguous object — which is worth knowing, and is exactly what you want an expert to look at\nTheir guesses at the class are a free baseline: how hard is this dataset for a human?\n\n\n\nThe same logic as the last hour: disagreement is data, not failure.\n\n\n\n\n\n\n\n\n\nWarning\n\n\nCrowd labels are good for is there a scale bar in this photograph. They are not good for is this an Almgren 236 fibula. Know which question you are asking.\n\n\n\n\n\nShow the live results from the round they just played. If agreement on some attribute is poor, say so — it is the honest version of the same point they met in block 5."
+  },
+  {
+    "objectID": "materials/artefacts/artefacts.html#your-dataset-your-label-set",
+    "href": "materials/artefacts/artefacts.html#your-dataset-your-label-set",
+    "title": "Artefacts: datasets and annotation",
+    "section": "Your dataset, your label set",
+    "text": "Your dataset, your label set\n8 minutes in your group. Groups 1 & 2 report back.\n\nTake one dataset somebody in the group works with. What are its classes — and who decided them?\nWhat is the annotation bill? Number of images × the level you actually need. Give us hours.\nWhat in that dataset is over-represented for reasons that have nothing to do with the past — how it was collected, who reported it, what survives?\nWhich attributes would you want that nobody has recorded? Could a stranger answer them?\n\n\n\n\n\n\n\n\nNote\n\n\nQuestion 2 in hours, out loud. It is usually the moment a project’s scope becomes visible.\n\n\n\n\n\nPush hard on (3) — every dataset in the room has one and most people have never named it. The answers feed straight into this afternoon’s project presentations, so write them down."
+  },
+  {
+    "objectID": "materials/artefacts/artefacts.html#reporting-back",
+    "href": "materials/artefacts/artefacts.html#reporting-back",
+    "title": "Artefacts: datasets and annotation",
+    "section": "Reporting back",
+    "text": "Reporting back\nGroups 1 & 2, then anyone with a good answer to (3):\n\nThe dataset and who decided its classes\nThe bill, in hours\nThe bias you named\n\n\n\n\n\n\n\n\nTip\n\n\nThis afternoon is yours: present your own data and problems. Everything on this slide is a good place to start from."
+  },
+  {
+    "objectID": "materials/artefacts/artefacts.html#five-things-to-carry-into-the-week",
+    "href": "materials/artefacts/artefacts.html#five-things-to-carry-into-the-week",
+    "title": "Artefacts: datasets and annotation",
+    "section": "Five things to carry into the week",
+    "text": "Five things to carry into the week\n\nThe annotation schema is a commitment, not a setting — boxes to polygons means starting again\nEvery format is lossy in its own direction; keep the COCO and export from it\nDisagreement between annotators is the ceiling on any model you train\nAn imbalanced dataset describes how it was collected at least as much as what it contains\nLabels are local. Mapping between vocabularies is real work, and worth publishing\n\n\nNext up\nThis afternoon — your own projects and datasets. Tomorrow — microscopy, and what to do to images before a model ever sees them."
+  },
+  {
+    "objectID": "materials/artefacts/artefacts.html#where-to-read-more",
+    "href": "materials/artefacts/artefacts.html#where-to-read-more",
+    "title": "Artefacts: datasets and annotation",
+    "section": "Where to read more",
+    "text": "Where to read more\n\n\nTools\n\nCVAT — cvat.ai\nLabel Studio — labelstud.io\nVIA — robots.ox.ac.uk/~vgg/software/via\nmakesense.ai — makesense.ai\nSAM 2 — ai.meta.com/sam2\nCOCO format — cocodataset.org/#format-data\nSKOS primer — w3.org/TR/skos-primer\n\n\nData and vocabularies\n\nAMČR-PAS — amcr-info.aiscr.cz\nGetty AAT — getty.edu/research/tools/vocabularies/aat\nPortable Antiquities Scheme — finds.org.uk\nARIADNE — ariadne-research-infrastructure.eu\n\n\n\n\n\n\nSlides: github.com/arup-cas/atrium-school-ml · Photographs: AMČR, CC BY-NC 4.0 · Licences: MIT (code) & CC BY-SA 4.0 International (other content), if not stated otherwise."
   },
   {
     "objectID": "programme.html",
