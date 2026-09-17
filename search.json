@@ -56,326 +56,32 @@
     "text": "Course materials and Python packages\nOnce Python and Git are in place, clone the lessons repository — the notebooks and exercises live there, separately from this website — and install the packages they need:\ngit clone https://github.com/arubrno/atrium-school-ml-lessons.git\ncd atrium-school-ml-lessons\npython -m venv .venv\nThen, activate the environment (.venv\\Scripts\\activate on Windows, source .venv/bin/activate on macOS and Linux) and install:\npip install -r requirements.txt --index-url https://download.pytorch.org/whl/cpu --extra-index-url https://pypi.org/simple\n\n\n\n\n\n\nImportantUse the CPU index for PyTorch\n\n\n\nThat --index-url matters. A plain pip install torch downloads the CUDA runtime — around 2.5 GB — even on a laptop with no NVIDIA graphics card. With the CPU index the whole install finishes in well under a minute, and everything we do this week should run on a CPU.\n\n\n\n\n\n\n\n\nTipDatasets come later\n\n\n\nDo not try to download the case-study data now. It is not in the repository — some of it is several gigabytes, and some cannot be redistributed. Each notebook fetches what it needs, and caches it so it downloads only once.\n\n\nEach notebook’s first cell then finds this repository around it and installs nothing further.\nIf none of this works on your machine, do not worry — the same notebooks run in Google Colab (one click, nothing to install) and on a JupyterHub we will give you access to on the first day."
   },
   {
-    "objectID": "materials/intro/intro.html#section",
-    "href": "materials/intro/intro.html#section",
-    "title": "Computer Vision in Archaeology",
+    "objectID": "programme.html",
+    "href": "programme.html",
+    "title": "Training school programme",
     "section": "",
-    "text": "Thirty seconds on each project. ATRIUM pays for the school and your grants; MAIA funds several of the instructors. Both are collaborative infrastructures — you can join MAIA yourself."
+    "text": "ImportantPre-school survey\n\n\n\nIf you are among selected participants, please fill in a pre-school survey here.\nThe programme is organised by topics and dataset types. Each topic builds on the previous one, guiding participants from foundational skills to advanced applications of computer vision in archaeology."
   },
   {
-    "objectID": "materials/intro/intro.html#the-plan",
-    "href": "materials/intro/intro.html#the-plan",
-    "title": "Computer Vision in Archaeology",
-    "section": "The plan",
-    "text": "The plan\n\n\n\n\n\n\n\n\n\n1\nWelcome · who is in the room\n\n\n\n2\nWhat computer vision is\n\n\n\n3\nDiscussion 1 — your data, your question\ngroups 1 & 2 report\n\n\n4\nThe family of tasks\n\n\n\n5\nDiscussion 2 — which task, and what does it cost?\ngroups 3 & 4 report\n\n\n6\nTwo ways of learning: discriminative & generative\n\n\n\n7\nLive demo — zero-shot classification with CLIP\n\n\n\n8\nDiscussion 3 — what may you claim?\ngroups 5 & 6 report\n\n\n9\nWrap-up\n\n\n\n\n\n\n\nSay the structure out loud — people relax when they know a break from listening is never more than twelve minutes away."
+    "objectID": "programme.html#programme",
+    "href": "programme.html#programme",
+    "title": "Training school programme",
+    "section": "Programme",
+    "text": "Programme\n\n\n\nFinal programme\n\n\n\nMonday\nKick-off & Python for CV\nMorning\n\nKick-off, practicalities, and motivations\nIntroduction to the workshop structure\nIntroduction co computer vision and questions computer vision can answer\nSetting up the technical environment (Google Colab and tools)\n\nAfternoon\n\nCoding with agents\nPython fundamentals for computer vision tasks\n\nEvening\n\nIce-breaker event\n\n\n\nTuesday\nMorning\nArtefacts Dataset\n\nImage datasets and annotation – theory & practice\nDatasets, licensing, controlled vocabularies, and annotation challenges\n\nAfternoon\n\nPresentations of participants’ projects and datasets?\n\nDo you want to showcase anything? Present what you work on? Use this opportunity to showcase what you do and discuss the problems you encounter! We will discuss and try to find solutions together…\n\n\n\n\nWednesday\nMicroscopy Dataset\nMorning\n\nData standardization (brightness, contrast, size, RGB/grayscale) and image pre-processing\nData pre-processing and augmentation\nOpenCV: detection masks and data augmentation\n\nAfternoon\n\nPractical part: data standardization and augmentation\n\n\n\nThursday\nMorning\nSatellite Imagery\n\nSatellite imagery and remote sensing in theory and analysis\nObject detection on satellite images\n\nAfternoon\nRock Art dataset\n\n\n\n\n\nFriday\nMorning\nCoins Dataset\n\nAdvanced topics illustrated on coins dataset and combining methods\nLLMs and vision-language models\nBias, reproducibility, black-box models, attention maps, and causation–correlation problems\n\nAfternoon\n\nClosing and discussion"
   },
   {
-    "objectID": "materials/intro/intro.html#six-groups-of-five",
-    "href": "materials/intro/intro.html#six-groups-of-five",
-    "title": "Computer Vision in Archaeology",
-    "section": "Six groups of five",
-    "text": "Six groups of five\n\nPlease form six groups of five, sitting with people you do not already know\nThese groups stay together for the whole session — and are a good default for the week\nEach round, two groups report back, so every group speaks once\nNominate a note-taker now; the reporter can change each round\n\n\n\n\n\n\n\n\nUse your own material\n\n\nWhere a question says “your data”, use a project you actually work on. If you have nothing to hand, think about one of the datasets we are going to work with this week.\n\n\n\n\n\nGroups: 1–2 report after round one, 3–4 after round two, 5–6 after round three. Write the group numbers on the board so nobody has to remember. Target: 4 minutes of plenary per round, roughly 2 minutes per group."
+    "objectID": "programme.html#case-studies",
+    "href": "programme.html#case-studies",
+    "title": "Training school programme",
+    "section": "Case Studies",
+    "text": "Case Studies\nThroughout the school, participants will work with four real-world archaeological datasets:\n\nArtefact types: classification and detection of archaeological artefacts from photographs\nMicroscopic use-wear analysis: identifying and classifying wear traces from microscopic images\nSatellite imagery: remote sensing and object detection on satellite data\nRock art:\nCoins: combining techniques on photographs and drawings of coins and exploring model interpretability"
   },
   {
-    "objectID": "materials/intro/intro.html#what-you-told-us",
-    "href": "materials/intro/intro.html#what-you-told-us",
-    "title": "Computer Vision in Archaeology",
-    "section": "What you told us",
-    "text": "What you told us\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlmost everyone has met machine learning; almost nobody does it. You know the vocabulary of detection and classification.\n\n\n\nDo not read the bars out. Make one point: the room’s self-reported knowledge is lopsided towards the glamorous end (detection, CNNs) and empty at the boring end that decides whether a project works. That is the argument for Tuesday.\n\n\nPre-school survey, n = 29."
-  },
-  {
-    "objectID": "materials/intro/intro.html#two-numbers-worth-pausing-on",
-    "href": "materials/intro/intro.html#two-numbers-worth-pausing-on",
-    "title": "Computer Vision in Archaeology",
-    "section": "Two numbers worth pausing on",
-    "text": "Two numbers worth pausing on\n\n\n\n50%\nuse an AI coding assistant regularly – and 19% rate their Python 4 or 5 out of 5.\n\n\nMore of you lean on an assistant daily than feel fluent in the language it writes. That is not a problem to apologise for; it is the working condition of this week, and it is why Monday afternoon is about coding with agents rather than syntax.\n\n\n\n80%\nhave never used an image annotation tool.\n\n\nAnnotation is probably the single largest cost in every project we will look at, and the one place where your expertise – not the model’s – decides the outcome.\n\n\n\nThese two numbers are the honest summary of the room: comfortable with assistance, inexperienced with the groundwork. Say it without judgement — it is exactly the gap the week is shaped around."
-  },
-  {
-    "objectID": "materials/intro/intro.html#what-you-want-from-the-week",
-    "href": "materials/intro/intro.html#what-you-want-from-the-week",
-    "title": "Computer Vision in Archaeology",
-    "section": "What you want from the week",
-    "text": "What you want from the week\n\n\n\n\n\n\n\n\n\n\n\n\nMultiple answers allowed. 48% have no dataset of their own to bring.\n\n\n\nConfidently apply computer vision algorithms to detect archaeological features and micro-topographical anomalies, drastically reducing the manual processing time. (Árpád)\n\n\nBetter understand the inner workings of a machine learning model, by learning to develop and train it myself. (Aaricia)\n\n\nEven if I don’t have a large corpus, I would like to test AI methods on my dataset by the end of the week. (Hüseyin)\n\n\n\n\nThe three quotations are an arc: ambition, mechanism, constraint. The third one is the useful one — it is the small-corpus problem, and it is why we show zero-shot CLIP later this morning rather than only training from scratch.\n\n\nArtefact photographs and satellite imagery seem to draw the largest interest — which is also where most published archaeological work sits…"
-  },
-  {
-    "objectID": "materials/intro/intro.html#a-working-definition",
-    "href": "materials/intro/intro.html#a-working-definition",
-    "title": "Computer Vision in Archaeology",
-    "section": "A working definition",
-    "text": "A working definition\n\nComputer vision is getting a machine to produce, from an image, the kind of structured description a person would produce by looking at it.\n\n\nThree things hide in that sentence:\n\nan image — which for a computer is only an array of numbers\na description — a label, a box, a mask, a measurement, a sentence\n“the kind a person would produce” — someone decided what counts as correct\n\n\n\nThat last one is where archaeology enters. We define what the machine aims at."
-  },
-  {
-    "objectID": "materials/intro/intro.html#an-image-is-an-array-of-numbers",
-    "href": "materials/intro/intro.html#an-image-is-an-array-of-numbers",
-    "title": "Computer Vision in Archaeology",
-    "section": "An image is an array of numbers",
-    "text": "An image is an array of numbers\n\n\nSherd: AMČR M-202300130-N00020, CC BY-NC 4.0\n\n\nA 4000 × 3000 photograph of a sherd is 12 million numbers per colour channel — 36 million in all. Nothing in that array says sherd, terra sigilata, or Roman period.\n\n\nEvery method this week operates on exactly this. All the sophistication lies in how the numbers are summarised — there is no built-in understanding anywhere in the stack."
-  },
-  {
-    "objectID": "materials/intro/intro.html#the-semantic-gap",
-    "href": "materials/intro/intro.html#the-semantic-gap",
-    "title": "Computer Vision in Archaeology",
-    "section": "The semantic gap",
-    "text": "The semantic gap\n\n\nSherd: AMČR M-202300130-N00020, CC BY-NC 4.0\n\n\n\nA specialist sees\n\na sherd\nRoman, terra sigilata from Rheinzabern\n2nd half of the 2nd century CE\n\n\nThe computer receives\n\na 4000 × 3000 × 3 array\nbrightness gradients, edges, textures\nno notion of sherd\n\n\n\nBridging that gap with learned statistical regularities is the whole enterprise."
-  },
-  {
-    "objectID": "materials/intro/intro.html#why-now",
-    "href": "materials/intro/intro.html#why-now",
-    "title": "Computer Vision in Archaeology",
-    "section": "Why now?",
-    "text": "Why now?\n\n\nM. Gojda, AMČR C-DL-201000159; N. Profantová, AMČR C-200913914A-DT-05281; AMČR M-FT-900144861 (1984); CC BY-NC 4.0\n\n\nExcavation photography is born-digital and effectively free — thousands of frames per season\nDrone and satellite coverage is routine, not exceptional\nDigitisation programmes produce collections nobody has time to look through\nPre-trained models mean you no longer need a million labelled images to start\n\n\nThe bottleneck moved from acquiring images to looking at them.\n\n\nWorth saying: this is not a new ambition. Automatic feature recognition in airborne survey was being argued about a decade and more ago — what changed is that the methods now mostly work, and the data volume made ignoring them untenable."
-  },
-  {
-    "objectID": "materials/intro/intro.html#it-is-a-measurement-not-an-interpretation",
-    "href": "materials/intro/intro.html#it-is-a-measurement-not-an-interpretation",
-    "title": "Computer Vision in Archaeology",
-    "section": "It is a measurement, not an interpretation",
-    "text": "It is a measurement, not an interpretation\n\nA model gives you what and where — never why\nIt reproduces whatever regularities are in its training data, including the unwelcome ones\nIt is a fast, consistent, literal-minded assistant who has seen your training set and nothing else\n\n\n\nEverything a model outputs is a number you still have to interpret. That interpretation is your job, and it stays your job.\n\n\n\n\nWe return to bias, black boxes and correlation on Friday."
-  },
-  {
-    "objectID": "materials/intro/intro.html#your-data-your-question",
-    "href": "materials/intro/intro.html#your-data-your-question",
-    "title": "Computer Vision in Archaeology",
-    "section": "Your data, your question",
-    "text": "Your data, your question\n8 minutes in your group. Groups 1 & 2 report back.\n\nDescribe one visual dataset you work with, or would like to. How many images? Who made them? Are they public?\nWhat question would you ask of it that currently takes too long to answer by hand?\nIf a machine handed you that answer tomorrow, how would you check whether it was wrong?\n\n\n\n\n\n\n\n\nNote\n\n\nKeep your notes. Questions 2 and 3 come back in the next two rounds.\n\n\n\n\n\nCirculate. Listen for questions that are really interpretations (“is this site Iron Age?”) — those are the productive ones to surface in the plenary, because they set up the “good and bad questions” slide later."
-  },
-  {
-    "objectID": "materials/intro/intro.html#four-questions-four-output-shapes",
-    "href": "materials/intro/intro.html#four-questions-four-output-shapes",
-    "title": "Computer Vision in Archaeology",
-    "section": "Four questions, four output shapes",
-    "text": "Four questions, four output shapes\n\n\n\n\n\nClassification\nWhat is this?\nOne label per image\n\n\n\n\nDetection\nWhat, and where?\nBoxes + labels\n\n\n\n\nSegmentation\nWhich pixels?\nPer-pixel mask\n\n\n\n\nKeypoints\nWhere are the landmarks?\nCoordinates\n\n\nThe choice is not technical. It follows from the question you asked — and it determines how much annotation you will have to pay for.\n\n\n\nPhotographs: Z. Omelka, AMČR M-202101534-N00243; M. Martinek, AMČR M-202300087-N00510; J. Machan, AMČR M-202400071-N00083; CC BY-NC 4.0. Boxes and masks from the AMČR-PAS annotations."
-  },
-  {
-    "objectID": "materials/intro/intro.html#the-same-photograph-five-questions",
-    "href": "materials/intro/intro.html#the-same-photograph-five-questions",
-    "title": "Computer Vision in Archaeology",
-    "section": "The same photograph, five questions",
-    "text": "The same photograph, five questions\n\n\n\n\n\n\n\n\nTask\nAsked of one coin photograph\nAnnotation cost\n\n\n\n\nClassification\nIs this an antoninianus?\none label per image\n\n\nDetection\nWhere is the legend? Where is the portrait?\na box per element\n\n\nSegmentation\nWhich pixels are corrosion?\na traced outline per region\n\n\nKeypoints\nWhere are the die-axis markers?\na few points per image\n\n\nRetrieval\nWhich coins in the corpus look like this one?\nnone — but you need a corpus\n\n\n\n\nCost rises steeply down the table. Start with the cheapest task that answers your question.\n\n\nThe most practical slide in the session. Many people arrive wanting segmentation when classification would answer the question at a tenth of the annotation cost. Friday’s coins dataset is the worked example of the top four rows."
-  },
-  {
-    "objectID": "materials/intro/intro.html#the-same-four-shapes-across-archaeology",
-    "href": "materials/intro/intro.html#the-same-four-shapes-across-archaeology",
-    "title": "Computer Vision in Archaeology",
-    "section": "The same four shapes, across archaeology",
-    "text": "The same four shapes, across archaeology\n\n\n\n\n\n\n\nShape\nPublished example\n\n\n\n\nClassification\ndecorated ceramic typology from photographs (Pawlowicz and Downum 2021)\n\n\nDetection\npotsherds in high-resolution drone imagery (Orengo and Garcia-Molsosa 2019); burial mounds in historical maps (Berganzo-Besga et al. 2023); archaeological objects in LiDAR (Verschoof-van Der Vaart and Lambers 2019); illustrated objects in scanned catalogues (Klein et al. 2025)\n\n\nSegmentation\nhollow roads traced in LiDAR (Verschoof-van der Vaart and Landauer 2021); agrarian field systems from satellite imagery (Küçükdemirci 2025)\n\n\nKeypoints\ntracing a knapper’s movements, the motor side of knapping skill (Pargeter et al. 2022)\n\n\nRetrieval\n3D matching and retrieval of objects across collections (Jiménez-Badillo et al. 2023)\n\n\n\n\n\n\nBerganzo-Besga, Iban, Hector A. Orengo, Felipe Lumbreras, et al. 2023. “Curriculum Learning-Based Strategy for Low-Density Archaeological Mound Detection from Historical Maps in India and Pakistan.” Scientific Reports 13 (1): 11257. https://doi.org/10.1038/s41598-023-38190-x.\n\n\nJiménez-Badillo, Diego, Omar Mendoza-Montoya, and Salvador Ruiz-Correa. 2023. “Application of Computer Vision Techniques for 3D Matching and Retrieval of Archaeological Objects.” F1000Research 12: 182. https://doi.org/10.12688/f1000research.127095.1.\n\n\nKlein, Kevin, Antoine Muller, Alyssa Wohde, et al. 2025. “An AI-Assisted Workflow for Object Detection and Data Collection from Archaeological Catalogues.” Journal of Archaeological Science 179: 106244. https://doi.org/10.1016/j.jas.2025.106244.\n\n\nKüçükdemirci, Melda. 2025. “Tracing Past Agrarian Field Systems Through AI-Based Analysis of Satellite Imagery in Konya, Central Anatolia, Türkiye.” Archaeological Prospection 32 (4): 881–97. https://doi.org/10.1002/arp.2001.\n\n\nOrengo, H. A., and A. Garcia-Molsosa. 2019. “A Brave New World for Archaeological Survey: Automated Machine Learning-Based Potsherd Detection Using High-Resolution Drone Imagery.” Journal of Archaeological Science 112: 105013. https://doi.org/10.1016/j.jas.2019.105013.\n\n\nPargeter, Justin, Cheng Liu, Megan Beney Kilgore, Aditi Majoe, and Dietrich Stout. 2022. “Testing the Effect of Learning Conditions and Individual Motor/Cognitive Differences on Knapping Skill Acquisition.” Journal of Archaeological Method and Theory, ahead of print. https://doi.org/10.1007/s10816-022-09592-4.\n\n\nPawlowicz, Leszek M., and Christian E. Downum. 2021. “Applications of Deep Learning to Decorated Ceramic Typology and Classification: A Case Study Using Tusayan White Ware from Northeast Arizona.” Journal of Archaeological Science 130: 105375. https://doi.org/10.1016/j.jas.2021.105375.\n\n\nVerschoof-van Der Vaart, Wouter Baernd, and Karsten Lambers. 2019. “Learning to Look at LiDAR: The Use of R-CNN in the Automated Detection of Archaeological Objects in LiDAR Data from the Netherlands.” Journal of Computer Applications in Archaeology 2 (1): 31–40. https://doi.org/10.5334/jcaa.32.\n\n\nVerschoof-van der Vaart, Wouter B., and Juergen Landauer. 2021. “Using CarcassonNet to Automatically Detect and Trace Hollow Roads in LiDAR Data from the Netherlands.” Journal of Cultural Heritage 47: 143–54. https://doi.org/10.1016/j.culher.2020.10.009.\n\n\n\n\nThe point to make out loud: almost all of this is remote sensing and artefact photography."
-  },
-  {
-    "objectID": "materials/intro/intro.html#the-pipeline-for-the-rest-of-the-week",
-    "href": "materials/intro/intro.html#the-pipeline-for-the-rest-of-the-week",
-    "title": "Computer Vision in Archaeology",
-    "section": "The pipeline for the rest of the week",
-    "text": "The pipeline for the rest of the week\n\n\n\n\n\n\n\nStage\nWhat you decide\nWhen\n\n\n\n\nQuestion\nwhat would count as an answer?\ntoday\n\n\nData & annotation\nclasses, vocabulary, licences\nTuesday\n\n\nPre-processing\nscale, colour, augmentation\nWednesday\n\n\nTraining\narchitecture, transfer learning\nThursday\n\n\nEvaluation\nwhich errors you can live with\nThursday–Friday\n\n\nInterpretation\nwhat you may actually claim\nFriday\n\n\n\n\n\nProjects fail at stage one or two. Almost never at stage four."
-  },
-  {
-    "objectID": "materials/intro/intro.html#good-and-bad-questions-for-a-model",
-    "href": "materials/intro/intro.html#good-and-bad-questions-for-a-model",
-    "title": "Computer Vision in Archaeology",
-    "section": "Good and bad questions for a model",
-    "text": "Good and bad questions for a model\n\n\n\nTractable\n\nWhich of these 8 000 photographs contain a scale bar?\nWhere in this ortho-image are the circular anomalies?\nWhich sherds share this decorative motif?\n\n\n\n\nNot (yet) tractable\n\nIs this settlement Iron Age? — from a photograph alone\nWas this tool used on hide or on bone? — without a reference collection\nWhich of these finds matters more?\n\n\n\n\nThe test: could a competent colleague answer it from the image alone, consistently, in two seconds? If not, a model will not either — it will simply be confident about it."
-  },
-  {
-    "objectID": "materials/intro/intro.html#which-task-and-what-does-it-cost",
-    "href": "materials/intro/intro.html#which-task-and-what-does-it-cost",
-    "title": "Computer Vision in Archaeology",
-    "section": "Which task, and what does it cost?",
-    "text": "Which task, and what does it cost?\n8 minutes. Groups 3 & 4 report back.\nTake the question your group settled on in round one.\n\nWhich of the four shapes does it map onto — classification, detection, segmentation, keypoints?\nWrite the class list. How many classes, and be specific. What happens to images that fit none or two?\nWould two specialists independently give the same image the same label? Where exactly would they disagree?\nEstimate the annotation bill: how many images × how long each. Say the number out loud.\nIs there a cheaper task shape that would still answer your question?\n\n\nQuestion 4 is the one that changes people’s plans. Push groups to actually multiply the numbers rather than saying “a lot”. Question 3 is Tuesday’s session in miniature — flag the connection when they report back."
-  },
-  {
-    "objectID": "materials/intro/intro.html#discriminative-vs.-generative",
-    "href": "materials/intro/intro.html#discriminative-vs.-generative",
-    "title": "Computer Vision in Archaeology",
-    "section": "Discriminative vs. generative",
-    "text": "Discriminative vs. generative\n\n\n\nDiscriminative\nLearns the boundary between classes.\nGiven this image, what is the label?\nAnswers questions about existing data.\n\n\n\nGenerative\nLearns what the data look like.\nWhat does an image of this class look like?\nProduces new data.\n\n\n\n\nA discriminative model can tell a Neolithic pot from an Iron Age one. A generative model can draw you a Neolithic pot. Only one of them has ever seen the pot you care about.\n\n\n\n\nIn notation: discriminative models learn P(label | image); generative models learn P(image) or P(image | label)."
-  },
-  {
-    "objectID": "materials/intro/intro.html#the-same-idea-drawn",
-    "href": "materials/intro/intro.html#the-same-idea-drawn",
-    "title": "Computer Vision in Archaeology",
-    "section": "The same idea, drawn",
-    "text": "The same idea, drawn\n\n\n\n\n\n\nDiscriminative — draw a line separating the classes. Anything far from the line is ignored.\n\n\n\n\n\n\nGenerative — model where each class lives. You can then sample new points from it."
-  },
-  {
-    "objectID": "materials/intro/intro.html#discriminative-the-working-horse-of-the-week",
-    "href": "materials/intro/intro.html#discriminative-the-working-horse-of-the-week",
-    "title": "Computer Vision in Archaeology",
-    "section": "Discriminative — the working horse of the week",
-    "text": "Discriminative — the working horse of the week\n\n\nSherd: AMČR M-202300130-N00020, CC BY-NC 4.0\n\n\nArtefact classification — a typological class for a photographed find\nFeature detection on LiDAR and satellite imagery — mounds, enclosures, field systems, hillforts\nUse-wear segmentation — the pixels showing a particular polish or striation\nTriage — separating scale-bar-only frames from find photographs\nRetrieval — “show me the twenty most similar sherds in the corpus”\n\n\nCommon thread: the model points at evidence that already exists."
-  },
-  {
-    "objectID": "materials/intro/intro.html#generative-a-smaller-part-of-the-picture",
-    "href": "materials/intro/intro.html#generative-a-smaller-part-of-the-picture",
-    "title": "Computer Vision in Archaeology",
-    "section": "Generative — a smaller part of the picture",
-    "text": "Generative — a smaller part of the picture\n\n\nMerizzi et al. 2024, Heritage Science 12, 41, Figs. 12 & 17, doi:10.1186/s40494-023-01116-x, CC BY 4.0, modified\n\n\n\nRestoration\nSharpening or completing degraded imagery, as above\n\nSynthetic training data\nManufacturing examples for rare classes\n\nVision-language models\nDescribing an image, answering questions about it\n\n\nCommon thread: the model produces something that was not in the record.\n\n\n\nSynthetic training data is where the two families meet productively: a generative model manufactures examples that train a discriminative one. Published work has done exactly this for Roman fine ware. Mention it, then move on — the room does not need a diffusion lecture.\nOn the frescoes: ask the room which pixels in the “inpainted” panels are evidence. None of the filled areas are — they are the network’s guess at what paint was there.\n\n\nWe touch generative methods only where they are useful to us — synthetic data on Wednesday, vision-language models on Friday. This school is not about generative AI."
-  },
-  {
-    "objectID": "materials/intro/intro.html#side-by-side",
-    "href": "materials/intro/intro.html#side-by-side",
-    "title": "Computer Vision in Archaeology",
-    "section": "Side by side",
-    "text": "Side by side\n\n\n\n\n\n\n\n\n\nDiscriminative\nGenerative\n\n\n\n\nLearns\nthe boundary between classes\nthe distribution of the data\n\n\nIn → out\nimage → label / box / mask\nprompt or noise → image / text\n\n\nTypical models\nCNNs, YOLO, ResNet, SAM\ndiffusion, GANs, VAEs, VLMs\n\n\nNeeds\nlabelled examples\nmany examples; labels optional\n\n\nFails by\nconfident wrong labels\nplausible fabrication\n\n\nEvidential status\na measurement to verify\nan illustration or a hypothesis\n\n\n\n\n\n\n\n\n\n\nThe asymmetry that matters\n\n\nA discriminative error is visible — the box is in the wrong place. A generative error is invisible — a fabricated rim looks exactly as convincing as a real one."
-  },
-  {
-    "objectID": "materials/intro/intro.html#where-the-line-blurs",
-    "href": "materials/intro/intro.html#where-the-line-blurs",
-    "title": "Computer Vision in Archaeology",
-    "section": "Where the line blurs",
-    "text": "Where the line blurs\n\nVision-language models generate text — but you use them to classify: “is there pottery in this photo?”\nSegment Anything (SAM) is a foundation model prompted like a generative one, producing discriminative masks\nSynthetic augmentation uses a generative model to feed a discriminative one\n\n\nThe distinction is not a rigid taxonomy of architectures. It is about what the model outputs, and what you are entitled to claim from it.\n\n\nThat is exactly what the next eight minutes are for."
-  },
-  {
-    "objectID": "materials/intro/intro.html#zero-shot-classification-with-clip",
-    "href": "materials/intro/intro.html#zero-shot-classification-with-clip",
-    "title": "Computer Vision in Archaeology",
-    "section": "Zero-shot classification with CLIP",
-    "text": "Zero-shot classification with CLIP\nYou give the model an image and a list of candidate descriptions in plain English. It tells you which description fits best. No training. No annotation.\nlabels = [\"a photo of a potsherd\",\n          \"a photo of a coin\",\n          \"a photo of a stone tool\",\n          \"a photo of a scale bar\"]\n\nimage = load(\"find_0042.jpg\")\nprobs = clip_zero_shot(image, labels)   # → [0.81, 0.05, 0.11, 0.03]\n\nTry to run the notebook yourself…\n\n\n\nRun this live on two or three images from the artefact dataset. Then deliberately break it: feed it a sherd photograph with only the labels “a coin” / “a stone tool” and show that it answers confidently anyway. That failure is the seed of Discussion 3.\n\n\nNotebook: 1-monday-intro/clip_zero_shot.ipynb (alternatively clip_zero_shot_v2.ipynb) in the lessons repository."
-  },
-  {
-    "objectID": "materials/intro/intro.html#what-just-happened",
-    "href": "materials/intro/intro.html#what-just-happened",
-    "title": "Computer Vision in Archaeology",
-    "section": "What just happened?",
-    "text": "What just happened?\n\n\nSherds: AMČR M-202300130-N00020; M. Španěl, AMČR M-202300087-N00486; CC BY-NC 4.0\n\n\nThe model never saw an archaeological training set — it learned from image–caption pairs off the internet\nIt is being used discriminatively (a label out) but was trained the way a generative model is\nChange the wording of a label and the answer changes — the vocabulary is now a parameter\nGive it only wrong options and it will still pick one, confidently\n\n\n\n\n\n\n\n\nImportant\n\n\nZero-shot is a superb way to explore a collection. It is a poor way to report a number."
-  },
-  {
-    "objectID": "materials/intro/intro.html#what-may-you-claim",
-    "href": "materials/intro/intro.html#what-may-you-claim",
-    "title": "Computer Vision in Archaeology",
-    "section": "What may you claim?",
-    "text": "What may you claim?\n6 minutes. Groups 5 & 6 report back.\nA colleague reports: “Our model detected 340 previously unrecorded burial mounds in the survey area.”\n\nWhat do you need to know before you believe that number?\nWhat is the difference between 340 detections and 340 mounds?\nWhat if the model was trained on mounds from a different region entirely?\nThe paper includes a generated reconstruction of one mound. What must the caption say?\nNow apply all of this to the CLIP result you just watched. Would you put it in a paper? With what caveat?\n\n\nThe answer to (2) is precision and recall — do not give it away, let a group arrive at it, then name it. That is the hook into Thursday’s evaluation session."
-  },
-  {
-    "objectID": "materials/intro/intro.html#reporting-back",
-    "href": "materials/intro/intro.html#reporting-back",
-    "title": "Computer Vision in Archaeology",
-    "section": "Reporting back",
-    "text": "Reporting back\nGroups 5 & 6, then everyone in one sentence:\n\nThe dataset and the question you settled on\nThe task shape and the annotation bill\nThe one thing that would make it fail"
-  },
-  {
-    "objectID": "materials/intro/intro.html#five-things-to-carry-into-the-week",
-    "href": "materials/intro/intro.html#five-things-to-carry-into-the-week",
-    "title": "Computer Vision in Archaeology",
-    "section": "Five things to carry into the week",
-    "text": "Five things to carry into the week\n\nAn image is numbers; a model is a very literal assistant\nThe task shape follows from the question — and it sets the annotation bill\nDiscriminative models point at evidence; generative models manufacture plausibility\nBoth are useful; only one of them is a measurement\nProjects fail at question and data, not at training"
-  },
-  {
-    "objectID": "materials/intro/intro.html#where-to-read-more",
-    "href": "materials/intro/intro.html#where-to-read-more",
-    "title": "Computer Vision in Archaeology",
-    "section": "Where to read more",
-    "text": "Where to read more\nThe MAIA COST Action maintains a shared, open Zotero library on AI in archaeology — zotero.org/groups/5991067\n\n\nStart here\n\nBellat et al. 2025 — Machine learning applications in archaeological practices: a review\nGattiglia 2025 — Managing Artificial Intelligence in Archaeology: an overview\nBickler 2021 — Machine Learning Arrives in Archaeology\nTenzer et al. 2024 — Debating AI in Archaeology\nCalder et al. 2022 — Use and Misuse of Machine Learning in Anthropology\n\n\nWorked case studies\n\nPawlowicz & Downum 2021 — ceramic typology from photographs\nOrengo & Garcia-Molsosa 2019 — potsherd detection on drone imagery\nVerschoof-van der Vaart & Lambers 2019 — R-CNN on LiDAR\nFiorucci et al. 2022 — evaluation measures for detection on LiDAR\nDeligio et al. 2024 — ClaReNet, classifying Celtic coinage\nNúñez Jareño et al. 2021 — synthetic data for Roman fine ware\n\n\n\n\n\n\nSlides: github.com/arup-cas/atrium-school-ml · Notebooks and datasets: github.com/arubrno/atrium-school-ml-lessons · Licences: MIT (code) & CC BY-SA 4.0 International (other content), if not stated otherwise."
-  },
-  {
-    "objectID": "materials.html",
-    "href": "materials.html",
-    "title": "Materials",
-    "section": "",
-    "text": "Slides and notebooks used during the school. This page grows as the week progresses — check back for updates."
-  },
-  {
-    "objectID": "materials.html#monday",
-    "href": "materials.html#monday",
-    "title": "Materials",
-    "section": "Monday",
-    "text": "Monday\n\nIntroduction to computer vision — What computer vision is, the family of tasks, discriminative vs. generative models, a live zero-shot demo with CLIP, and three rounds of group discussion.\nCLIP zero-shot classification — the notebook behind the demo. Classifying artefact photographs with no training and no annotation, and three ways it misleads you. \n\nNew to Python? Use the beginner version — the same notebook with the code spelled out step by step and commented line by line, plus an optional look inside the model. \n\nCoding with agents\nPython for computer vision — enough Python to read, change and debug the code an AI tool writes for you, then NumPy, Matplotlib and OpenCV. It ends with a first computer-vision workflow that separates the Venus of Dolní Věstonice from its background and measures it.\n\nIntroduction to Python for computer vision — why learn Python when AI writes code, and how to turn a task into an algorithm before writing any. \nPython fundamentals for computer vision — the hands-on part. The code cells are empty and you fill them in with the instructor: notebooks, Python basics, NumPy, Matplotlib, and OpenCV on the Venus photograph. \nFallen behind? Use the filled-in version — the same notebook with every cell filled in, for catching up or checking your version. \n\n\nIce-breaker event in the evening."
-  },
-  {
-    "objectID": "materials.html#tuesday",
-    "href": "materials.html#tuesday",
-    "title": "Materials",
-    "section": "Tuesday",
-    "text": "Tuesday\n\nArtefacts: datasets and annotation — Where the AMČR-PAS artefact photographs come from, what “annotated” actually means, the COCO, YOLO and Pascal VOC formats, a live demo of CVAT and SAM 2, and the three problems the dataset has: class imbalance, vocabularies that do not line up, and the metadata nobody has time to record.\n\nHands-on annotation in CVAT — we will give you its address in the session. Everything after the hands-on block is a reading of what you annotate there.\nArchaeoTag — the guessing game. Bring a phone.\n\n\nParticipants’ project presentations in the afternoon; walking meeting in Brno in the evening.\n\n\n\n\n\nName\nTopic\nTime\n\n\n\n\nGianmarco Borgi\nCNN for hyperspectral reconstruction\n10 min\n\n\nDionysios Danelatos\nApproaching Stylistic Variation in Upper Palaeolithic Zoomorphic Figures Using Artificial Intelligence & Geometric Morphometrics\n15 min\n\n\nCherene De Bruyn\nLocating Clandestine graves\n15 min\n\n\nÁkos Ekrik\nCNN for Stone Carvings\n10 min\n\n\nKonstantina Eleftheriadi\nLeveraging Monocular Depth Estimation for the 3D Digitization of Cultural Heritage Artifacts (GitHub, Colab)\n10 min\n\n\nHüseyin Erdoğan\nRupe Magna petroglyphs (Zenodo)\n10 min\n\n\nAgata Maria Gaszka\nExploring Bipolar Technology through Deep Learning Methods: Biomechanical Analysis and Artefact Classification\n20 min\n\n\nCheng Liu\nHuman Stone Toolmaking Action Grammar (HSTAG): A Challenging Benchmark for Fine-grained Motor Behavior Recognition\n15 min\n\n\n\n\n\n\n\n\n\n\n\n\nNoteReading\n\n\n\nThe MAIA COST Action Zotero library is an open, shared bibliography on AI in archaeology. Most examples used in the slides come from there."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Computer Vision in Archaeology",
-    "section": "",
-    "text": "NoteBasics\n\n\n\nWhen? 14–18 September 2026\nWhere? Brno, Czech Republic\nWhat? Training school on computer vision and machine learning in archaeology\n\n\n\n\n\n\n\n\nImportantPre-school survey\n\n\n\nIf you are among selected participants, please fill in a pre-school survey here.\n\n\n\nJoin us for an intensive one-week training school dedicated to computer vision in archaeology, where you will learn how to harness the power of modern machine learning techniques to detect, classify, and analyse archaeological features and artefacts in images. As visual data — from drone surveys and excavation photography to museum collections — continues to grow in volume, the ability to process and interpret it computationally is becoming an increasingly valuable skill in the archaeologist’s toolkit. Our programme guides you from the very foundations of Python programming through to hands-on experience with state-of-the-art object detection and image segmentation models, with dedicated sessions on dataset creation, model training, and evaluation. Participants should have basic experience with any programming or markup language and a general comfort with working in digital environments. No prior experience with machine learning is required, but curiosity and a willingness to engage with technical material are essential.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe training school is part of a trans-national access scheme provided by the ATRIUM Project, hosted by the Archaeological Information System of the Czech Republic (AIS CR) research infrastructure at the Institute of Archaeology, Czech Academy of Sciences, Brno. The school is co-organized by the MAIA COST Action project. MAIA provides funding to several of the school instructors.\nTo apply and learn more about the TNA, visit the ATRIUM TNA Application website."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About the training school",
-    "section": "",
-    "text": "Petr Pajdla  0000-0001-7050-9572\nCzech Academy of Sciences, Institute of Archaeology, Brno\nRonald Harasim\nCzech Academy of Sciences, Institute of Archaeology, Brno\nFilip Hájek  0009-0007-5953-8840\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\nAnastasia Eleftheriadou  0000-0002-8649-3752\nLudwig-Maximilians-Universität München\nAshely Green  0009-0005-4625-801X\nUniversity of Gothenburg\n\n\n\n\n\n\nZuzana Kopáčová\nCzech Academy of Sciences, Institute of Archaeology, Brno\nFinances, administration\nVít Kozák\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\nDavid Spáčil\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\n\nAnd other AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to Zuzana Kopáčová (kopacova [at] arub.cz), and/or Petr Pajdla (pajdla [at] arub.cz)."
-  },
-  {
-    "objectID": "about.html#instructors-organizers",
-    "href": "about.html#instructors-organizers",
-    "title": "About the training school",
-    "section": "",
-    "text": "Petr Pajdla  0000-0001-7050-9572\nCzech Academy of Sciences, Institute of Archaeology, Brno\nRonald Harasim\nCzech Academy of Sciences, Institute of Archaeology, Brno\nFilip Hájek  0009-0007-5953-8840\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\nAnastasia Eleftheriadou  0000-0002-8649-3752\nLudwig-Maximilians-Universität München\nAshely Green  0009-0005-4625-801X\nUniversity of Gothenburg\n\n\n\n\n\n\nZuzana Kopáčová\nCzech Academy of Sciences, Institute of Archaeology, Brno\nFinances, administration\nVít Kozák\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\nDavid Spáčil\nCzech Academy of Sciences, Institute of Archaeology, Brno\n\n\nAnd other AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to Zuzana Kopáčová (kopacova [at] arub.cz), and/or Petr Pajdla (pajdla [at] arub.cz)."
-  },
-  {
-    "objectID": "about.html#organisations",
-    "href": "about.html#organisations",
-    "title": "About the training school",
-    "section": "Organisations",
-    "text": "Organisations\n\nATRIUM\n\nThe training school is organised as transnational access provision in the ATRIUM Project (Advancing Frontier Research in the Arts and Humanities) funded by the Horizon Europe research and innovation actions programme under grant agreement No. 101132163. ATRIUM project covers the organizational costs of the school and participator grants.\n\n\n\n\nMAIA\n\nMAIA (Managing Artificial Intelligence in Archaeology) is a COST Action (CA23141) funded by the European Union co-organizing the training school. MAIA COST Action covers travel and subsistence costs of two MAIA instructors.\n\n\n\n\nAIS CR\n\nThe Archaeological Information System of the Czech Republic (AIS CR) is a research infrastructure integrating digital resources and services on archaeology in the Czech Republic, and as such is one of many data providers in the ARIADNE Research Infrastructure. AIS CR is jointly operated by the Institutes of Archaeology of the Czech Academy of Sciences in Brno (IAB) and Prague (IAP). AIS CR/IAB provides the infrastructure and the venue for the training school."
-  },
-  {
-    "objectID": "applications.html",
-    "href": "applications.html",
-    "title": "Applications",
-    "section": "",
-    "text": "Important\n\n\n\n\nBoth ATRIUM and MAIA calls for applications are closed.\nThere were over 80 applications to the training school.\nAll applicants were notified whether they were successful by the end of July."
-  },
-  {
-    "objectID": "applications.html#who-should-apply",
-    "href": "applications.html#who-should-apply",
-    "title": "Applications",
-    "section": "Who should apply",
-    "text": "Who should apply\n\nWe welcome applications from early-career researchers and students who are enthusiastic about exploring the potential of computer vision and machine learning in archaeological research. This school will focus on the practical application of image analysis techniques to archaeological image data, from dataset preparation and model training to evaluation and emerging methods such as vision-language models.\nWhile applicants with prior experience in Python and/or machine learning are encouraged to apply, the first day of the training will be dedicated to the fundamentals of Python for image analysis tasks. Participants should have basic experience with any programming or markup language (e.g. HTML, R, Python or similar) and a general comfort with working in digital environments. No prior experience with Python or machine learning is strictly required, but curiosity and a willingness to engage with technical material are essential."
-  },
-  {
-    "objectID": "applications.html#atrium-tna-scheme",
-    "href": "applications.html#atrium-tna-scheme",
-    "title": "Applications",
-    "section": "ATRIUM TNA Scheme",
-    "text": "ATRIUM TNA Scheme\nMore details about the transnational access scheme (TNA) grants can be found on the ATRIUM Project website.\n\n\n\n\n\n\nNoteNote\n\n\n\nOnly applicants with institutional affiliation outside of the Czech Republic are eligible to receive funding from ATRIUM project due to the trans-national nature of the access to the infrastructure provided by the school.\n\n\n\nKey dates\n\n\n\nMarch 2026\nCall for participants opens\n\n\n31 May 2026\nDeadline for applications\n\n\nEnd of July 2026\nAcceptance notifications sent\n\n\n14–18 September 2026\nTraining school\n\n\nmid-October 2026 (?)\nDeadline for submission of reports\n\n\nend of November 2026\nGrants paid before this date\n\n\n\n\n\nHow to apply\nSubmit your applications through an online form. On the 4th page of the application (TNA Scheme), choose ‘Summer School Access’ and ‘Archaeological Information System of the Czech Republic, Institute of Archaeology of the Czech Academy of Sciences, Brno – AIS CR (ARUB)’ as the proposed host organisation. On the next page (Summer School Application) please explain why you believe this training would be valuable for your research and how you intend to integrate these newfound skills into your work.\nMore details on how to apply can be found here."
-  },
-  {
-    "objectID": "applications.html#maia-open-call",
-    "href": "applications.html#maia-open-call",
-    "title": "Applications",
-    "section": "MAIA Open Call",
-    "text": "MAIA Open Call\n\n\n\n\n\n\nNoteNote\n\n\n\nOnly members of MAIA COST Action are eligible to apply."
-  },
-  {
-    "objectID": "info.html",
-    "href": "info.html",
-    "title": "General Information",
-    "section": "",
-    "text": "ImportantPre-school survey\n\n\n\nIf you are among selected participants, please fill in a pre-school survey here."
-  },
-  {
-    "objectID": "info.html#date-and-location",
-    "href": "info.html#date-and-location",
-    "title": "General Information",
-    "section": "Date and location",
-    "text": "Date and location\nThe school will be held from 14 to 18 September 2026 at the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/) at the address given below:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nTipNote\n\n\n\nPlease note that this is an on-site event only, and remote participation will not be possible."
-  },
-  {
-    "objectID": "info.html#grants",
-    "href": "info.html#grants",
-    "title": "General Information",
-    "section": "Grants",
-    "text": "Grants\nEach participant of the school is eligible to receive a grant to cover travel expenses, housing, and daily subsistence during the meeting. To receive the grant, participants need to:\n\nApply via the official form of the ATRIUM Project (see the Applications section for details).\nParticipate in person, i.e. sign attendance sheets for each training day.\nSubmit a report within a given time frame after the conclusion of the school with details of their participation. Please note that the grant will be disbursed only upon the successful submission of this report."
-  },
-  {
-    "objectID": "info.html#prerequisites",
-    "href": "info.html#prerequisites",
-    "title": "General Information",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nBring your own laptop!\nSee page Setup for more info."
-  },
-  {
-    "objectID": "info.html#other-information",
-    "href": "info.html#other-information",
-    "title": "General Information",
-    "section": "Other information",
-    "text": "Other information\n\nTravelling to Brno\nBrno is easily reachable by trains or buses from Prague (approx. a 2 to 2.5-hour journey) and Vienna (approx. a 1.5 to 2-hour journey). Many overnight trains crossing a large part of Europe start or end in Vienna, and we recommend taking these trains as an alternative to flying.\n\n\nAccommodation\nNo accommodation is provided to participants. Please arrange your accommodation in one of many cities hotels or hostels.\n\n\nFood\nThere are several places around the institute, see map above for locations.\n\n\n\n\n\n\n\n\n\n\nplace\ncuisine\nnote\n\n\n\n\nLittle Saigon\nAsian/Vietnamese\nhas vegan/vegetarian options\n\n\nMasný růžek\nCzech\na lot of meaty foods and traditional heavy Czech cuisine\n\n\nBistro Nella\nCzech\nmight have vegetarian option\n\n\nJídelna Kocourek\nCzech\nmight have vegetarian option\n\n\nGrand Kitchen Vlněna\nCzech, International\nmight have vegetarian option\n\n\nBistro Bellavista\nItalian\nmostly does not have vegetarian/vegan options\n\n\nDelitree bistro\nItalian, Czech, Salads\nhas vegetarian options\n\n\nRamen Brno\nJapanese\nmight have vegetarian options\n\n\nLos Capolitos\nMexican\nhes vegetarian option\n\n\nSargam\nNepalese\nhas vegetarian options\n\n\nVeg8Cafe\nVegan\nvegan bistro\n\n\nForky’s Vlněna Foodtruck\nVegan\nvegan streetfood"
+    "objectID": "programme.html#social-events",
+    "href": "programme.html#social-events",
+    "title": "Training school programme",
+    "section": "Social Events",
+    "text": "Social Events\n\nIce-breaker on the first evening (Monday)\nWalking meeting on Tuesday evening, a short city tour of Brno\nSocial event on Wednesday evening"
   },
   {
     "objectID": "materials/artefacts/artefacts.html#the-plan",
@@ -609,31 +315,346 @@
     "text": "Where to read more\n\n\nTools\n\nCVAT — cvat.ai\nLabel Studio — labelstud.io\nVIA — robots.ox.ac.uk/~vgg/software/via\nmakesense.ai — makesense.ai\nSAM 2 — ai.meta.com/sam2\nCOCO format — cocodataset.org/#format-data\nSKOS primer — w3.org/TR/skos-primer\n\n\nData and vocabularies\n\nAMČR-PAS — amcr-info.aiscr.cz\nGetty AAT — getty.edu/research/tools/vocabularies/aat\nPortable Antiquities Scheme — finds.org.uk\nARIADNE — ariadne-research-infrastructure.eu\n\n\n\n\n\n\nSlides: github.com/arup-cas/atrium-school-ml · Photographs: AMČR, CC BY-NC 4.0 · Licences: MIT (code) & CC BY-SA 4.0 International (other content), if not stated otherwise."
   },
   {
-    "objectID": "programme.html",
-    "href": "programme.html",
-    "title": "Training school programme",
+    "objectID": "info.html",
+    "href": "info.html",
+    "title": "General Information",
     "section": "",
-    "text": "ImportantPre-school survey\n\n\n\nIf you are among selected participants, please fill in a pre-school survey here.\nThe programme is organised by topics and dataset types. Each topic builds on the previous one, guiding participants from foundational skills to advanced applications of computer vision in archaeology."
+    "text": "ImportantPre-school survey\n\n\n\nIf you are among selected participants, please fill in a pre-school survey here."
   },
   {
-    "objectID": "programme.html#programme",
-    "href": "programme.html#programme",
-    "title": "Training school programme",
-    "section": "Programme",
-    "text": "Programme\n\n\n\nFinal programme\n\n\n\nMonday\nKick-off & Python for CV\nMorning\n\nKick-off, practicalities, and motivations\nIntroduction to the workshop structure\nIntroduction co computer vision and questions computer vision can answer\nSetting up the technical environment (Google Colab and tools)\n\nAfternoon\n\nCoding with agents\nPython fundamentals for computer vision tasks\n\nEvening\n\nIce-breaker event\n\n\n\nTuesday\nMorning\nArtefacts Dataset\n\nImage datasets and annotation – theory & practice\nDatasets, licensing, controlled vocabularies, and annotation challenges\n\nAfternoon\n\nPresentations of participants’ projects and datasets?\n\nDo you want to showcase anything? Present what you work on? Use this opportunity to showcase what you do and discuss the problems you encounter! We will discuss and try to find solutions together…\n\n\n\n\nWednesday\nMicroscopy Dataset\nMorning\n\nData standardization (brightness, contrast, size, RGB/grayscale) and image pre-processing\nData pre-processing and augmentation\nOpenCV: detection masks and data augmentation\n\nAfternoon\n\nPractical part: data standardization and augmentation\n\n\n\nThursday\nMorning\nSatellite Imagery\n\nSatellite imagery and remote sensing in theory and analysis\nObject detection on satellite images\n\nAfternoon\nRock Art dataset\n\n\n\n\n\nFriday\nMorning\nCoins Dataset\n\nAdvanced topics illustrated on coins dataset and combining methods\nLLMs and vision-language models\nBias, reproducibility, black-box models, attention maps, and causation–correlation problems\n\nAfternoon\n\nClosing and discussion"
+    "objectID": "info.html#date-and-location",
+    "href": "info.html#date-and-location",
+    "title": "General Information",
+    "section": "Date and location",
+    "text": "Date and location\nThe school will be held from 14 to 18 September 2026 at the Institute of Archaeology, Czech Academy of Sciences, Brno (https://arub.cz/) at the address given below:\n\nČechyňská 363/19\n602 00 Brno\nCzech Republic\n\n\n\n\n\n\n\nTipNote\n\n\n\nPlease note that this is an on-site event only, and remote participation will not be possible."
   },
   {
-    "objectID": "programme.html#case-studies",
-    "href": "programme.html#case-studies",
-    "title": "Training school programme",
-    "section": "Case Studies",
-    "text": "Case Studies\nThroughout the school, participants will work with four real-world archaeological datasets:\n\nArtefact types: classification and detection of archaeological artefacts from photographs\nMicroscopic use-wear analysis: identifying and classifying wear traces from microscopic images\nSatellite imagery: remote sensing and object detection on satellite data\nRock art:\nCoins: combining techniques on photographs and drawings of coins and exploring model interpretability"
+    "objectID": "info.html#grants",
+    "href": "info.html#grants",
+    "title": "General Information",
+    "section": "Grants",
+    "text": "Grants\nEach participant of the school is eligible to receive a grant to cover travel expenses, housing, and daily subsistence during the meeting. To receive the grant, participants need to:\n\nApply via the official form of the ATRIUM Project (see the Applications section for details).\nParticipate in person, i.e. sign attendance sheets for each training day.\nSubmit a report within a given time frame after the conclusion of the school with details of their participation. Please note that the grant will be disbursed only upon the successful submission of this report."
   },
   {
-    "objectID": "programme.html#social-events",
-    "href": "programme.html#social-events",
-    "title": "Training school programme",
-    "section": "Social Events",
-    "text": "Social Events\n\nIce-breaker on the first evening (Monday)\nWalking meeting on Tuesday evening, a short city tour of Brno\nSocial event on Wednesday evening"
+    "objectID": "info.html#prerequisites",
+    "href": "info.html#prerequisites",
+    "title": "General Information",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nBring your own laptop!\nSee page Setup for more info."
+  },
+  {
+    "objectID": "info.html#other-information",
+    "href": "info.html#other-information",
+    "title": "General Information",
+    "section": "Other information",
+    "text": "Other information\n\nTravelling to Brno\nBrno is easily reachable by trains or buses from Prague (approx. a 2 to 2.5-hour journey) and Vienna (approx. a 1.5 to 2-hour journey). Many overnight trains crossing a large part of Europe start or end in Vienna, and we recommend taking these trains as an alternative to flying.\n\n\nAccommodation\nNo accommodation is provided to participants. Please arrange your accommodation in one of many cities hotels or hostels.\n\n\nFood\nThere are several places around the institute, see map above for locations.\n\n\n\n\n\n\n\n\n\n\nplace\ncuisine\nnote\n\n\n\n\nLittle Saigon\nAsian/Vietnamese\nhas vegan/vegetarian options\n\n\nMasný růžek\nCzech\na lot of meaty foods and traditional heavy Czech cuisine\n\n\nBistro Nella\nCzech\nmight have vegetarian option\n\n\nJídelna Kocourek\nCzech\nmight have vegetarian option\n\n\nGrand Kitchen Vlněna\nCzech, International\nmight have vegetarian option\n\n\nBistro Bellavista\nItalian\nmostly does not have vegetarian/vegan options\n\n\nDelitree bistro\nItalian, Czech, Salads\nhas vegetarian options\n\n\nRamen Brno\nJapanese\nmight have vegetarian options\n\n\nLos Capolitos\nMexican\nhes vegetarian option\n\n\nSargam\nNepalese\nhas vegetarian options\n\n\nVeg8Cafe\nVegan\nvegan bistro\n\n\nForky’s Vlněna Foodtruck\nVegan\nvegan streetfood"
+  },
+  {
+    "objectID": "applications.html",
+    "href": "applications.html",
+    "title": "Applications",
+    "section": "",
+    "text": "Important\n\n\n\n\nBoth ATRIUM and MAIA calls for applications are closed.\nThere were over 80 applications to the training school.\nAll applicants were notified whether they were successful by the end of July."
+  },
+  {
+    "objectID": "applications.html#who-should-apply",
+    "href": "applications.html#who-should-apply",
+    "title": "Applications",
+    "section": "Who should apply",
+    "text": "Who should apply\n\nWe welcome applications from early-career researchers and students who are enthusiastic about exploring the potential of computer vision and machine learning in archaeological research. This school will focus on the practical application of image analysis techniques to archaeological image data, from dataset preparation and model training to evaluation and emerging methods such as vision-language models.\nWhile applicants with prior experience in Python and/or machine learning are encouraged to apply, the first day of the training will be dedicated to the fundamentals of Python for image analysis tasks. Participants should have basic experience with any programming or markup language (e.g. HTML, R, Python or similar) and a general comfort with working in digital environments. No prior experience with Python or machine learning is strictly required, but curiosity and a willingness to engage with technical material are essential."
+  },
+  {
+    "objectID": "applications.html#atrium-tna-scheme",
+    "href": "applications.html#atrium-tna-scheme",
+    "title": "Applications",
+    "section": "ATRIUM TNA Scheme",
+    "text": "ATRIUM TNA Scheme\nMore details about the transnational access scheme (TNA) grants can be found on the ATRIUM Project website.\n\n\n\n\n\n\nNoteNote\n\n\n\nOnly applicants with institutional affiliation outside of the Czech Republic are eligible to receive funding from ATRIUM project due to the trans-national nature of the access to the infrastructure provided by the school.\n\n\n\nKey dates\n\n\n\nMarch 2026\nCall for participants opens\n\n\n31 May 2026\nDeadline for applications\n\n\nEnd of July 2026\nAcceptance notifications sent\n\n\n14–18 September 2026\nTraining school\n\n\nmid-October 2026 (?)\nDeadline for submission of reports\n\n\nend of November 2026\nGrants paid before this date\n\n\n\n\n\nHow to apply\nSubmit your applications through an online form. On the 4th page of the application (TNA Scheme), choose ‘Summer School Access’ and ‘Archaeological Information System of the Czech Republic, Institute of Archaeology of the Czech Academy of Sciences, Brno – AIS CR (ARUB)’ as the proposed host organisation. On the next page (Summer School Application) please explain why you believe this training would be valuable for your research and how you intend to integrate these newfound skills into your work.\nMore details on how to apply can be found here."
+  },
+  {
+    "objectID": "applications.html#maia-open-call",
+    "href": "applications.html#maia-open-call",
+    "title": "Applications",
+    "section": "MAIA Open Call",
+    "text": "MAIA Open Call\n\n\n\n\n\n\nNoteNote\n\n\n\nOnly members of MAIA COST Action are eligible to apply."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About the training school",
+    "section": "",
+    "text": "Petr Pajdla  0000-0001-7050-9572\nCzech Academy of Sciences, Institute of Archaeology, Brno ; Introductions, annotation & artefacts dataset\nRonald Harasim\nCzech Academy of Sciences, Institute of Archaeology, Brno\nCoding with agents & coins dataset\nFilip Hájek  0009-0007-5953-8840\nCzech Academy of Sciences, Institute of Archaeology, Brno\nIntro to Python & remote sensing data\n\nAnastasia Eleftheriadou  0000-0002-8649-3752\nLudwig-Maximilians-Universität München\nML basics & microscopic data\nAshely Green  0009-0005-4625-801X\nUniversity of Gothenburg\nRock art dataset\n\n\n\n\n\n\nZuzana Kopáčová\nCzech Academy of Sciences, Institute of Archaeology, Brno\nFinances, administration\nVít Kozák\nCzech Academy of Sciences, Institute of Archaeology, Brno\nHobbit bard\n\nDavid Spáčil\nCzech Academy of Sciences, Institute of Archaeology, Brno\nPhotos\nTereza Siková\nCzech Academy of Sciences, Institute of Archaeology, Brno\nCoding support\n\n\nAnd other AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to Zuzana Kopáčová (kopacova [at] arub.cz), and/or Petr Pajdla (pajdla [at] arub.cz)."
+  },
+  {
+    "objectID": "about.html#instructors-organizers",
+    "href": "about.html#instructors-organizers",
+    "title": "About the training school",
+    "section": "",
+    "text": "Petr Pajdla  0000-0001-7050-9572\nCzech Academy of Sciences, Institute of Archaeology, Brno ; Introductions, annotation & artefacts dataset\nRonald Harasim\nCzech Academy of Sciences, Institute of Archaeology, Brno\nCoding with agents & coins dataset\nFilip Hájek  0009-0007-5953-8840\nCzech Academy of Sciences, Institute of Archaeology, Brno\nIntro to Python & remote sensing data\n\nAnastasia Eleftheriadou  0000-0002-8649-3752\nLudwig-Maximilians-Universität München\nML basics & microscopic data\nAshely Green  0009-0005-4625-801X\nUniversity of Gothenburg\nRock art dataset\n\n\n\n\n\n\nZuzana Kopáčová\nCzech Academy of Sciences, Institute of Archaeology, Brno\nFinances, administration\nVít Kozák\nCzech Academy of Sciences, Institute of Archaeology, Brno\nHobbit bard\n\nDavid Spáčil\nCzech Academy of Sciences, Institute of Archaeology, Brno\nPhotos\nTereza Siková\nCzech Academy of Sciences, Institute of Archaeology, Brno\nCoding support\n\n\nAnd other AIS CR team members…\n\n\n\nPlease direct any of your possible questions or inquiries to Zuzana Kopáčová (kopacova [at] arub.cz), and/or Petr Pajdla (pajdla [at] arub.cz)."
+  },
+  {
+    "objectID": "about.html#organisations",
+    "href": "about.html#organisations",
+    "title": "About the training school",
+    "section": "Organisations",
+    "text": "Organisations\n\nATRIUM\n\nThe training school is organised as transnational access provision in the ATRIUM Project (Advancing Frontier Research in the Arts and Humanities) funded by the Horizon Europe research and innovation actions programme under grant agreement No. 101132163. ATRIUM project covers the organizational costs of the school and participator grants.\n\n\n\n\nMAIA\n\nMAIA (Managing Artificial Intelligence in Archaeology) is a COST Action (CA23141) funded by the European Union co-organizing the training school. MAIA COST Action covers travel and subsistence costs of two MAIA instructors.\n\n\n\n\nAIS CR\n\nThe Archaeological Information System of the Czech Republic (AIS CR) is a research infrastructure integrating digital resources and services on archaeology in the Czech Republic, and as such is one of many data providers in the ARIADNE Research Infrastructure. AIS CR is jointly operated by the Institutes of Archaeology of the Czech Academy of Sciences in Brno (IAB) and Prague (IAP). AIS CR/IAB provides the infrastructure and the venue for the training school."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Computer Vision in Archaeology",
+    "section": "",
+    "text": "NoteBasics\n\n\n\nWhen? 14–18 September 2026\nWhere? Brno, Czech Republic\nWhat? Training school on computer vision and machine learning in archaeology\n\n\n\n\n\n\n\n\nImportantPre-school survey\n\n\n\nIf you are among selected participants, please fill in a pre-school survey here.\n\n\n\nJoin us for an intensive one-week training school dedicated to computer vision in archaeology, where you will learn how to harness the power of modern machine learning techniques to detect, classify, and analyse archaeological features and artefacts in images. As visual data — from drone surveys and excavation photography to museum collections — continues to grow in volume, the ability to process and interpret it computationally is becoming an increasingly valuable skill in the archaeologist’s toolkit. Our programme guides you from the very foundations of Python programming through to hands-on experience with state-of-the-art object detection and image segmentation models, with dedicated sessions on dataset creation, model training, and evaluation. Participants should have basic experience with any programming or markup language and a general comfort with working in digital environments. No prior experience with machine learning is required, but curiosity and a willingness to engage with technical material are essential.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe training school is part of a trans-national access scheme provided by the ATRIUM Project, hosted by the Archaeological Information System of the Czech Republic (AIS CR) research infrastructure at the Institute of Archaeology, Czech Academy of Sciences, Brno. The school is co-organized by the MAIA COST Action project. MAIA provides funding to several of the school instructors.\nTo apply and learn more about the TNA, visit the ATRIUM TNA Application website."
+  },
+  {
+    "objectID": "materials.html",
+    "href": "materials.html",
+    "title": "Materials",
+    "section": "",
+    "text": "Slides and notebooks used during the school. This page grows as the week progresses — check back for updates."
+  },
+  {
+    "objectID": "materials.html#monday",
+    "href": "materials.html#monday",
+    "title": "Materials",
+    "section": "Monday",
+    "text": "Monday\n\nIntroduction to computer vision — What computer vision is, the family of tasks, discriminative vs. generative models, a live zero-shot demo with CLIP, and three rounds of group discussion.\nCLIP zero-shot classification — the notebook behind the demo. Classifying artefact photographs with no training and no annotation, and three ways it misleads you. \n\nNew to Python? Use the beginner version — the same notebook with the code spelled out step by step and commented line by line, plus an optional look inside the model. \n\nCoding with agents\nPython for computer vision — enough Python to read, change and debug the code an AI tool writes for you, then NumPy, Matplotlib and OpenCV. It ends with a first computer-vision workflow that separates the Venus of Dolní Věstonice from its background and measures it.\n\nIntroduction to Python for computer vision — why learn Python when AI writes code, and how to turn a task into an algorithm before writing any. \nPython fundamentals for computer vision — the hands-on part. The code cells are empty and you fill them in with the instructor: notebooks, Python basics, NumPy, Matplotlib, and OpenCV on the Venus photograph. \nFallen behind? Use the filled-in version — the same notebook with every cell filled in, for catching up or checking your version. \n\n\nIce-breaker event in the evening."
+  },
+  {
+    "objectID": "materials.html#tuesday",
+    "href": "materials.html#tuesday",
+    "title": "Materials",
+    "section": "Tuesday",
+    "text": "Tuesday\n\nArtefacts: datasets and annotation — Where the AMČR-PAS artefact photographs come from, what “annotated” actually means, the COCO, YOLO and Pascal VOC formats, a live demo of CVAT and SAM 2, and the three problems the dataset has: class imbalance, vocabularies that do not line up, and the metadata nobody has time to record.\n\nHands-on annotation in CVAT — we will give you its address in the session. Everything after the hands-on block is a reading of what you annotate there.\nArchaeoTag — the guessing game. Bring a phone.\n\n\nParticipants’ project presentations in the afternoon; walking meeting in Brno in the evening.\n\n\n\n\n\nName\nTopic\nTime\n\n\n\n\nZabya Abo Aljadayel\nReconstructing Palaeoenvironmental Change and Climatic Variability in Southwestern Portugal over the Last 2.500 years: A Multi-Proxy Geoarchaeological Study of Miróbriga and Barbaroxa de Baixo Wetland ( )\n10 min\n\n\nGianmarco Borgi\nCNN for hyperspectral reconstruction\n10 min\n\n\nDionysios Danelatos\nApproaching Stylistic Variation in Upper Palaeolithic Zoomorphic Figures Using Artificial Intelligence & Geometric Morphometrics\n15 min\n\n\nCherene De Bruyn\nThe Fast and the Shallow: Drone images for clandestine grave location\n15 min\n\n\nÁkos Ekrik\nCNN for Stone Carvings\n10 min\n\n\nKonstantina Eleftheriadi\nLeveraging Monocular Depth Estimation for the 3D Digitization of Cultural Heritage Artifacts (GitHub, Colab)\n10 min\n\n\nHüseyin Erdoğan\nRupe Magna petroglyphs (Zenodo)\n10 min\n\n\nAgata Maria Gaszka\nExploring Bipolar Technology through Deep Learning Methods: Biomechanical Analysis and Artefact Classification\n20 min\n\n\nCheng Liu\nHuman Stone Toolmaking Action Grammar (HSTAG): A Challenging Benchmark for Fine-grained Motor Behavior Recognition\n15 min\n\n\n\n\n\n\n\n\n\n\n\n\nNoteReading\n\n\n\nThe MAIA COST Action Zotero library is an open, shared bibliography on AI in archaeology. Most examples used in the slides come from there."
+  },
+  {
+    "objectID": "materials/intro/intro.html#section",
+    "href": "materials/intro/intro.html#section",
+    "title": "Computer Vision in Archaeology",
+    "section": "",
+    "text": "Thirty seconds on each project. ATRIUM pays for the school and your grants; MAIA funds several of the instructors. Both are collaborative infrastructures — you can join MAIA yourself."
+  },
+  {
+    "objectID": "materials/intro/intro.html#the-plan",
+    "href": "materials/intro/intro.html#the-plan",
+    "title": "Computer Vision in Archaeology",
+    "section": "The plan",
+    "text": "The plan\n\n\n\n\n\n\n\n\n\n1\nWelcome · who is in the room\n\n\n\n2\nWhat computer vision is\n\n\n\n3\nDiscussion 1 — your data, your question\ngroups 1 & 2 report\n\n\n4\nThe family of tasks\n\n\n\n5\nDiscussion 2 — which task, and what does it cost?\ngroups 3 & 4 report\n\n\n6\nTwo ways of learning: discriminative & generative\n\n\n\n7\nLive demo — zero-shot classification with CLIP\n\n\n\n8\nDiscussion 3 — what may you claim?\ngroups 5 & 6 report\n\n\n9\nWrap-up\n\n\n\n\n\n\n\nSay the structure out loud — people relax when they know a break from listening is never more than twelve minutes away."
+  },
+  {
+    "objectID": "materials/intro/intro.html#six-groups-of-five",
+    "href": "materials/intro/intro.html#six-groups-of-five",
+    "title": "Computer Vision in Archaeology",
+    "section": "Six groups of five",
+    "text": "Six groups of five\n\nPlease form six groups of five, sitting with people you do not already know\nThese groups stay together for the whole session — and are a good default for the week\nEach round, two groups report back, so every group speaks once\nNominate a note-taker now; the reporter can change each round\n\n\n\n\n\n\n\n\nUse your own material\n\n\nWhere a question says “your data”, use a project you actually work on. If you have nothing to hand, think about one of the datasets we are going to work with this week.\n\n\n\n\n\nGroups: 1–2 report after round one, 3–4 after round two, 5–6 after round three. Write the group numbers on the board so nobody has to remember. Target: 4 minutes of plenary per round, roughly 2 minutes per group."
+  },
+  {
+    "objectID": "materials/intro/intro.html#what-you-told-us",
+    "href": "materials/intro/intro.html#what-you-told-us",
+    "title": "Computer Vision in Archaeology",
+    "section": "What you told us",
+    "text": "What you told us\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlmost everyone has met machine learning; almost nobody does it. You know the vocabulary of detection and classification.\n\n\n\nDo not read the bars out. Make one point: the room’s self-reported knowledge is lopsided towards the glamorous end (detection, CNNs) and empty at the boring end that decides whether a project works. That is the argument for Tuesday.\n\n\nPre-school survey, n = 29."
+  },
+  {
+    "objectID": "materials/intro/intro.html#two-numbers-worth-pausing-on",
+    "href": "materials/intro/intro.html#two-numbers-worth-pausing-on",
+    "title": "Computer Vision in Archaeology",
+    "section": "Two numbers worth pausing on",
+    "text": "Two numbers worth pausing on\n\n\n\n50%\nuse an AI coding assistant regularly – and 19% rate their Python 4 or 5 out of 5.\n\n\nMore of you lean on an assistant daily than feel fluent in the language it writes. That is not a problem to apologise for; it is the working condition of this week, and it is why Monday afternoon is about coding with agents rather than syntax.\n\n\n\n80%\nhave never used an image annotation tool.\n\n\nAnnotation is probably the single largest cost in every project we will look at, and the one place where your expertise – not the model’s – decides the outcome.\n\n\n\nThese two numbers are the honest summary of the room: comfortable with assistance, inexperienced with the groundwork. Say it without judgement — it is exactly the gap the week is shaped around."
+  },
+  {
+    "objectID": "materials/intro/intro.html#what-you-want-from-the-week",
+    "href": "materials/intro/intro.html#what-you-want-from-the-week",
+    "title": "Computer Vision in Archaeology",
+    "section": "What you want from the week",
+    "text": "What you want from the week\n\n\n\n\n\n\n\n\n\n\n\n\nMultiple answers allowed. 48% have no dataset of their own to bring.\n\n\n\nConfidently apply computer vision algorithms to detect archaeological features and micro-topographical anomalies, drastically reducing the manual processing time. (Árpád)\n\n\nBetter understand the inner workings of a machine learning model, by learning to develop and train it myself. (Aaricia)\n\n\nEven if I don’t have a large corpus, I would like to test AI methods on my dataset by the end of the week. (Hüseyin)\n\n\n\n\nThe three quotations are an arc: ambition, mechanism, constraint. The third one is the useful one — it is the small-corpus problem, and it is why we show zero-shot CLIP later this morning rather than only training from scratch.\n\n\nArtefact photographs and satellite imagery seem to draw the largest interest — which is also where most published archaeological work sits…"
+  },
+  {
+    "objectID": "materials/intro/intro.html#a-working-definition",
+    "href": "materials/intro/intro.html#a-working-definition",
+    "title": "Computer Vision in Archaeology",
+    "section": "A working definition",
+    "text": "A working definition\n\nComputer vision is getting a machine to produce, from an image, the kind of structured description a person would produce by looking at it.\n\n\nThree things hide in that sentence:\n\nan image — which for a computer is only an array of numbers\na description — a label, a box, a mask, a measurement, a sentence\n“the kind a person would produce” — someone decided what counts as correct\n\n\n\nThat last one is where archaeology enters. We define what the machine aims at."
+  },
+  {
+    "objectID": "materials/intro/intro.html#an-image-is-an-array-of-numbers",
+    "href": "materials/intro/intro.html#an-image-is-an-array-of-numbers",
+    "title": "Computer Vision in Archaeology",
+    "section": "An image is an array of numbers",
+    "text": "An image is an array of numbers\n\n\nSherd: AMČR M-202300130-N00020, CC BY-NC 4.0\n\n\nA 4000 × 3000 photograph of a sherd is 12 million numbers per colour channel — 36 million in all. Nothing in that array says sherd, terra sigilata, or Roman period.\n\n\nEvery method this week operates on exactly this. All the sophistication lies in how the numbers are summarised — there is no built-in understanding anywhere in the stack."
+  },
+  {
+    "objectID": "materials/intro/intro.html#the-semantic-gap",
+    "href": "materials/intro/intro.html#the-semantic-gap",
+    "title": "Computer Vision in Archaeology",
+    "section": "The semantic gap",
+    "text": "The semantic gap\n\n\nSherd: AMČR M-202300130-N00020, CC BY-NC 4.0\n\n\n\nA specialist sees\n\na sherd\nRoman, terra sigilata from Rheinzabern\n2nd half of the 2nd century CE\n\n\nThe computer receives\n\na 4000 × 3000 × 3 array\nbrightness gradients, edges, textures\nno notion of sherd\n\n\n\nBridging that gap with learned statistical regularities is the whole enterprise."
+  },
+  {
+    "objectID": "materials/intro/intro.html#why-now",
+    "href": "materials/intro/intro.html#why-now",
+    "title": "Computer Vision in Archaeology",
+    "section": "Why now?",
+    "text": "Why now?\n\n\nM. Gojda, AMČR C-DL-201000159; N. Profantová, AMČR C-200913914A-DT-05281; AMČR M-FT-900144861 (1984); CC BY-NC 4.0\n\n\nExcavation photography is born-digital and effectively free — thousands of frames per season\nDrone and satellite coverage is routine, not exceptional\nDigitisation programmes produce collections nobody has time to look through\nPre-trained models mean you no longer need a million labelled images to start\n\n\nThe bottleneck moved from acquiring images to looking at them.\n\n\nWorth saying: this is not a new ambition. Automatic feature recognition in airborne survey was being argued about a decade and more ago — what changed is that the methods now mostly work, and the data volume made ignoring them untenable."
+  },
+  {
+    "objectID": "materials/intro/intro.html#it-is-a-measurement-not-an-interpretation",
+    "href": "materials/intro/intro.html#it-is-a-measurement-not-an-interpretation",
+    "title": "Computer Vision in Archaeology",
+    "section": "It is a measurement, not an interpretation",
+    "text": "It is a measurement, not an interpretation\n\nA model gives you what and where — never why\nIt reproduces whatever regularities are in its training data, including the unwelcome ones\nIt is a fast, consistent, literal-minded assistant who has seen your training set and nothing else\n\n\n\nEverything a model outputs is a number you still have to interpret. That interpretation is your job, and it stays your job.\n\n\n\n\nWe return to bias, black boxes and correlation on Friday."
+  },
+  {
+    "objectID": "materials/intro/intro.html#your-data-your-question",
+    "href": "materials/intro/intro.html#your-data-your-question",
+    "title": "Computer Vision in Archaeology",
+    "section": "Your data, your question",
+    "text": "Your data, your question\n8 minutes in your group. Groups 1 & 2 report back.\n\nDescribe one visual dataset you work with, or would like to. How many images? Who made them? Are they public?\nWhat question would you ask of it that currently takes too long to answer by hand?\nIf a machine handed you that answer tomorrow, how would you check whether it was wrong?\n\n\n\n\n\n\n\n\nNote\n\n\nKeep your notes. Questions 2 and 3 come back in the next two rounds.\n\n\n\n\n\nCirculate. Listen for questions that are really interpretations (“is this site Iron Age?”) — those are the productive ones to surface in the plenary, because they set up the “good and bad questions” slide later."
+  },
+  {
+    "objectID": "materials/intro/intro.html#four-questions-four-output-shapes",
+    "href": "materials/intro/intro.html#four-questions-four-output-shapes",
+    "title": "Computer Vision in Archaeology",
+    "section": "Four questions, four output shapes",
+    "text": "Four questions, four output shapes\n\n\n\n\n\nClassification\nWhat is this?\nOne label per image\n\n\n\n\nDetection\nWhat, and where?\nBoxes + labels\n\n\n\n\nSegmentation\nWhich pixels?\nPer-pixel mask\n\n\n\n\nKeypoints\nWhere are the landmarks?\nCoordinates\n\n\nThe choice is not technical. It follows from the question you asked — and it determines how much annotation you will have to pay for.\n\n\n\nPhotographs: Z. Omelka, AMČR M-202101534-N00243; M. Martinek, AMČR M-202300087-N00510; J. Machan, AMČR M-202400071-N00083; CC BY-NC 4.0. Boxes and masks from the AMČR-PAS annotations."
+  },
+  {
+    "objectID": "materials/intro/intro.html#the-same-photograph-five-questions",
+    "href": "materials/intro/intro.html#the-same-photograph-five-questions",
+    "title": "Computer Vision in Archaeology",
+    "section": "The same photograph, five questions",
+    "text": "The same photograph, five questions\n\n\n\n\n\n\n\n\nTask\nAsked of one coin photograph\nAnnotation cost\n\n\n\n\nClassification\nIs this an antoninianus?\none label per image\n\n\nDetection\nWhere is the legend? Where is the portrait?\na box per element\n\n\nSegmentation\nWhich pixels are corrosion?\na traced outline per region\n\n\nKeypoints\nWhere are the die-axis markers?\na few points per image\n\n\nRetrieval\nWhich coins in the corpus look like this one?\nnone — but you need a corpus\n\n\n\n\nCost rises steeply down the table. Start with the cheapest task that answers your question.\n\n\nThe most practical slide in the session. Many people arrive wanting segmentation when classification would answer the question at a tenth of the annotation cost. Friday’s coins dataset is the worked example of the top four rows."
+  },
+  {
+    "objectID": "materials/intro/intro.html#the-same-four-shapes-across-archaeology",
+    "href": "materials/intro/intro.html#the-same-four-shapes-across-archaeology",
+    "title": "Computer Vision in Archaeology",
+    "section": "The same four shapes, across archaeology",
+    "text": "The same four shapes, across archaeology\n\n\n\n\n\n\n\nShape\nPublished example\n\n\n\n\nClassification\ndecorated ceramic typology from photographs (Pawlowicz and Downum 2021)\n\n\nDetection\npotsherds in high-resolution drone imagery (Orengo and Garcia-Molsosa 2019); burial mounds in historical maps (Berganzo-Besga et al. 2023); archaeological objects in LiDAR (Verschoof-van Der Vaart and Lambers 2019); illustrated objects in scanned catalogues (Klein et al. 2025)\n\n\nSegmentation\nhollow roads traced in LiDAR (Verschoof-van der Vaart and Landauer 2021); agrarian field systems from satellite imagery (Küçükdemirci 2025)\n\n\nKeypoints\ntracing a knapper’s movements, the motor side of knapping skill (Pargeter et al. 2022)\n\n\nRetrieval\n3D matching and retrieval of objects across collections (Jiménez-Badillo et al. 2023)\n\n\n\n\n\n\nBerganzo-Besga, Iban, Hector A. Orengo, Felipe Lumbreras, et al. 2023. “Curriculum Learning-Based Strategy for Low-Density Archaeological Mound Detection from Historical Maps in India and Pakistan.” Scientific Reports 13 (1): 11257. https://doi.org/10.1038/s41598-023-38190-x.\n\n\nJiménez-Badillo, Diego, Omar Mendoza-Montoya, and Salvador Ruiz-Correa. 2023. “Application of Computer Vision Techniques for 3D Matching and Retrieval of Archaeological Objects.” F1000Research 12: 182. https://doi.org/10.12688/f1000research.127095.1.\n\n\nKlein, Kevin, Antoine Muller, Alyssa Wohde, et al. 2025. “An AI-Assisted Workflow for Object Detection and Data Collection from Archaeological Catalogues.” Journal of Archaeological Science 179: 106244. https://doi.org/10.1016/j.jas.2025.106244.\n\n\nKüçükdemirci, Melda. 2025. “Tracing Past Agrarian Field Systems Through AI-Based Analysis of Satellite Imagery in Konya, Central Anatolia, Türkiye.” Archaeological Prospection 32 (4): 881–97. https://doi.org/10.1002/arp.2001.\n\n\nOrengo, H. A., and A. Garcia-Molsosa. 2019. “A Brave New World for Archaeological Survey: Automated Machine Learning-Based Potsherd Detection Using High-Resolution Drone Imagery.” Journal of Archaeological Science 112: 105013. https://doi.org/10.1016/j.jas.2019.105013.\n\n\nPargeter, Justin, Cheng Liu, Megan Beney Kilgore, Aditi Majoe, and Dietrich Stout. 2022. “Testing the Effect of Learning Conditions and Individual Motor/Cognitive Differences on Knapping Skill Acquisition.” Journal of Archaeological Method and Theory, ahead of print. https://doi.org/10.1007/s10816-022-09592-4.\n\n\nPawlowicz, Leszek M., and Christian E. Downum. 2021. “Applications of Deep Learning to Decorated Ceramic Typology and Classification: A Case Study Using Tusayan White Ware from Northeast Arizona.” Journal of Archaeological Science 130: 105375. https://doi.org/10.1016/j.jas.2021.105375.\n\n\nVerschoof-van Der Vaart, Wouter Baernd, and Karsten Lambers. 2019. “Learning to Look at LiDAR: The Use of R-CNN in the Automated Detection of Archaeological Objects in LiDAR Data from the Netherlands.” Journal of Computer Applications in Archaeology 2 (1): 31–40. https://doi.org/10.5334/jcaa.32.\n\n\nVerschoof-van der Vaart, Wouter B., and Juergen Landauer. 2021. “Using CarcassonNet to Automatically Detect and Trace Hollow Roads in LiDAR Data from the Netherlands.” Journal of Cultural Heritage 47: 143–54. https://doi.org/10.1016/j.culher.2020.10.009.\n\n\n\n\nThe point to make out loud: almost all of this is remote sensing and artefact photography."
+  },
+  {
+    "objectID": "materials/intro/intro.html#the-pipeline-for-the-rest-of-the-week",
+    "href": "materials/intro/intro.html#the-pipeline-for-the-rest-of-the-week",
+    "title": "Computer Vision in Archaeology",
+    "section": "The pipeline for the rest of the week",
+    "text": "The pipeline for the rest of the week\n\n\n\n\n\n\n\nStage\nWhat you decide\nWhen\n\n\n\n\nQuestion\nwhat would count as an answer?\ntoday\n\n\nData & annotation\nclasses, vocabulary, licences\nTuesday\n\n\nPre-processing\nscale, colour, augmentation\nWednesday\n\n\nTraining\narchitecture, transfer learning\nThursday\n\n\nEvaluation\nwhich errors you can live with\nThursday–Friday\n\n\nInterpretation\nwhat you may actually claim\nFriday\n\n\n\n\n\nProjects fail at stage one or two. Almost never at stage four."
+  },
+  {
+    "objectID": "materials/intro/intro.html#good-and-bad-questions-for-a-model",
+    "href": "materials/intro/intro.html#good-and-bad-questions-for-a-model",
+    "title": "Computer Vision in Archaeology",
+    "section": "Good and bad questions for a model",
+    "text": "Good and bad questions for a model\n\n\n\nTractable\n\nWhich of these 8 000 photographs contain a scale bar?\nWhere in this ortho-image are the circular anomalies?\nWhich sherds share this decorative motif?\n\n\n\n\nNot (yet) tractable\n\nIs this settlement Iron Age? — from a photograph alone\nWas this tool used on hide or on bone? — without a reference collection\nWhich of these finds matters more?\n\n\n\n\nThe test: could a competent colleague answer it from the image alone, consistently, in two seconds? If not, a model will not either — it will simply be confident about it."
+  },
+  {
+    "objectID": "materials/intro/intro.html#which-task-and-what-does-it-cost",
+    "href": "materials/intro/intro.html#which-task-and-what-does-it-cost",
+    "title": "Computer Vision in Archaeology",
+    "section": "Which task, and what does it cost?",
+    "text": "Which task, and what does it cost?\n8 minutes. Groups 3 & 4 report back.\nTake the question your group settled on in round one.\n\nWhich of the four shapes does it map onto — classification, detection, segmentation, keypoints?\nWrite the class list. How many classes, and be specific. What happens to images that fit none or two?\nWould two specialists independently give the same image the same label? Where exactly would they disagree?\nEstimate the annotation bill: how many images × how long each. Say the number out loud.\nIs there a cheaper task shape that would still answer your question?\n\n\nQuestion 4 is the one that changes people’s plans. Push groups to actually multiply the numbers rather than saying “a lot”. Question 3 is Tuesday’s session in miniature — flag the connection when they report back."
+  },
+  {
+    "objectID": "materials/intro/intro.html#discriminative-vs.-generative",
+    "href": "materials/intro/intro.html#discriminative-vs.-generative",
+    "title": "Computer Vision in Archaeology",
+    "section": "Discriminative vs. generative",
+    "text": "Discriminative vs. generative\n\n\n\nDiscriminative\nLearns the boundary between classes.\nGiven this image, what is the label?\nAnswers questions about existing data.\n\n\n\nGenerative\nLearns what the data look like.\nWhat does an image of this class look like?\nProduces new data.\n\n\n\n\nA discriminative model can tell a Neolithic pot from an Iron Age one. A generative model can draw you a Neolithic pot. Only one of them has ever seen the pot you care about.\n\n\n\n\nIn notation: discriminative models learn P(label | image); generative models learn P(image) or P(image | label)."
+  },
+  {
+    "objectID": "materials/intro/intro.html#the-same-idea-drawn",
+    "href": "materials/intro/intro.html#the-same-idea-drawn",
+    "title": "Computer Vision in Archaeology",
+    "section": "The same idea, drawn",
+    "text": "The same idea, drawn\n\n\n\n\n\n\nDiscriminative — draw a line separating the classes. Anything far from the line is ignored.\n\n\n\n\n\n\nGenerative — model where each class lives. You can then sample new points from it."
+  },
+  {
+    "objectID": "materials/intro/intro.html#discriminative-the-working-horse-of-the-week",
+    "href": "materials/intro/intro.html#discriminative-the-working-horse-of-the-week",
+    "title": "Computer Vision in Archaeology",
+    "section": "Discriminative — the working horse of the week",
+    "text": "Discriminative — the working horse of the week\n\n\nSherd: AMČR M-202300130-N00020, CC BY-NC 4.0\n\n\nArtefact classification — a typological class for a photographed find\nFeature detection on LiDAR and satellite imagery — mounds, enclosures, field systems, hillforts\nUse-wear segmentation — the pixels showing a particular polish or striation\nTriage — separating scale-bar-only frames from find photographs\nRetrieval — “show me the twenty most similar sherds in the corpus”\n\n\nCommon thread: the model points at evidence that already exists."
+  },
+  {
+    "objectID": "materials/intro/intro.html#generative-a-smaller-part-of-the-picture",
+    "href": "materials/intro/intro.html#generative-a-smaller-part-of-the-picture",
+    "title": "Computer Vision in Archaeology",
+    "section": "Generative — a smaller part of the picture",
+    "text": "Generative — a smaller part of the picture\n\n\nMerizzi et al. 2024, Heritage Science 12, 41, Figs. 12 & 17, doi:10.1186/s40494-023-01116-x, CC BY 4.0, modified\n\n\n\nRestoration\nSharpening or completing degraded imagery, as above\n\nSynthetic training data\nManufacturing examples for rare classes\n\nVision-language models\nDescribing an image, answering questions about it\n\n\nCommon thread: the model produces something that was not in the record.\n\n\n\nSynthetic training data is where the two families meet productively: a generative model manufactures examples that train a discriminative one. Published work has done exactly this for Roman fine ware. Mention it, then move on — the room does not need a diffusion lecture.\nOn the frescoes: ask the room which pixels in the “inpainted” panels are evidence. None of the filled areas are — they are the network’s guess at what paint was there.\n\n\nWe touch generative methods only where they are useful to us — synthetic data on Wednesday, vision-language models on Friday. This school is not about generative AI."
+  },
+  {
+    "objectID": "materials/intro/intro.html#side-by-side",
+    "href": "materials/intro/intro.html#side-by-side",
+    "title": "Computer Vision in Archaeology",
+    "section": "Side by side",
+    "text": "Side by side\n\n\n\n\n\n\n\n\n\nDiscriminative\nGenerative\n\n\n\n\nLearns\nthe boundary between classes\nthe distribution of the data\n\n\nIn → out\nimage → label / box / mask\nprompt or noise → image / text\n\n\nTypical models\nCNNs, YOLO, ResNet, SAM\ndiffusion, GANs, VAEs, VLMs\n\n\nNeeds\nlabelled examples\nmany examples; labels optional\n\n\nFails by\nconfident wrong labels\nplausible fabrication\n\n\nEvidential status\na measurement to verify\nan illustration or a hypothesis\n\n\n\n\n\n\n\n\n\n\nThe asymmetry that matters\n\n\nA discriminative error is visible — the box is in the wrong place. A generative error is invisible — a fabricated rim looks exactly as convincing as a real one."
+  },
+  {
+    "objectID": "materials/intro/intro.html#where-the-line-blurs",
+    "href": "materials/intro/intro.html#where-the-line-blurs",
+    "title": "Computer Vision in Archaeology",
+    "section": "Where the line blurs",
+    "text": "Where the line blurs\n\nVision-language models generate text — but you use them to classify: “is there pottery in this photo?”\nSegment Anything (SAM) is a foundation model prompted like a generative one, producing discriminative masks\nSynthetic augmentation uses a generative model to feed a discriminative one\n\n\nThe distinction is not a rigid taxonomy of architectures. It is about what the model outputs, and what you are entitled to claim from it.\n\n\nThat is exactly what the next eight minutes are for."
+  },
+  {
+    "objectID": "materials/intro/intro.html#zero-shot-classification-with-clip",
+    "href": "materials/intro/intro.html#zero-shot-classification-with-clip",
+    "title": "Computer Vision in Archaeology",
+    "section": "Zero-shot classification with CLIP",
+    "text": "Zero-shot classification with CLIP\nYou give the model an image and a list of candidate descriptions in plain English. It tells you which description fits best. No training. No annotation.\nlabels = [\"a photo of a potsherd\",\n          \"a photo of a coin\",\n          \"a photo of a stone tool\",\n          \"a photo of a scale bar\"]\n\nimage = load(\"find_0042.jpg\")\nprobs = clip_zero_shot(image, labels)   # → [0.81, 0.05, 0.11, 0.03]\n\nTry to run the notebook yourself…\n\n\n\nRun this live on two or three images from the artefact dataset. Then deliberately break it: feed it a sherd photograph with only the labels “a coin” / “a stone tool” and show that it answers confidently anyway. That failure is the seed of Discussion 3.\n\n\nNotebook: 1-monday-intro/clip_zero_shot.ipynb (alternatively clip_zero_shot_v2.ipynb) in the lessons repository."
+  },
+  {
+    "objectID": "materials/intro/intro.html#what-just-happened",
+    "href": "materials/intro/intro.html#what-just-happened",
+    "title": "Computer Vision in Archaeology",
+    "section": "What just happened?",
+    "text": "What just happened?\n\n\nSherds: AMČR M-202300130-N00020; M. Španěl, AMČR M-202300087-N00486; CC BY-NC 4.0\n\n\nThe model never saw an archaeological training set — it learned from image–caption pairs off the internet\nIt is being used discriminatively (a label out) but was trained the way a generative model is\nChange the wording of a label and the answer changes — the vocabulary is now a parameter\nGive it only wrong options and it will still pick one, confidently\n\n\n\n\n\n\n\n\nImportant\n\n\nZero-shot is a superb way to explore a collection. It is a poor way to report a number."
+  },
+  {
+    "objectID": "materials/intro/intro.html#what-may-you-claim",
+    "href": "materials/intro/intro.html#what-may-you-claim",
+    "title": "Computer Vision in Archaeology",
+    "section": "What may you claim?",
+    "text": "What may you claim?\n6 minutes. Groups 5 & 6 report back.\nA colleague reports: “Our model detected 340 previously unrecorded burial mounds in the survey area.”\n\nWhat do you need to know before you believe that number?\nWhat is the difference between 340 detections and 340 mounds?\nWhat if the model was trained on mounds from a different region entirely?\nThe paper includes a generated reconstruction of one mound. What must the caption say?\nNow apply all of this to the CLIP result you just watched. Would you put it in a paper? With what caveat?\n\n\nThe answer to (2) is precision and recall — do not give it away, let a group arrive at it, then name it. That is the hook into Thursday’s evaluation session."
+  },
+  {
+    "objectID": "materials/intro/intro.html#reporting-back",
+    "href": "materials/intro/intro.html#reporting-back",
+    "title": "Computer Vision in Archaeology",
+    "section": "Reporting back",
+    "text": "Reporting back\nGroups 5 & 6, then everyone in one sentence:\n\nThe dataset and the question you settled on\nThe task shape and the annotation bill\nThe one thing that would make it fail"
+  },
+  {
+    "objectID": "materials/intro/intro.html#five-things-to-carry-into-the-week",
+    "href": "materials/intro/intro.html#five-things-to-carry-into-the-week",
+    "title": "Computer Vision in Archaeology",
+    "section": "Five things to carry into the week",
+    "text": "Five things to carry into the week\n\nAn image is numbers; a model is a very literal assistant\nThe task shape follows from the question — and it sets the annotation bill\nDiscriminative models point at evidence; generative models manufacture plausibility\nBoth are useful; only one of them is a measurement\nProjects fail at question and data, not at training"
+  },
+  {
+    "objectID": "materials/intro/intro.html#where-to-read-more",
+    "href": "materials/intro/intro.html#where-to-read-more",
+    "title": "Computer Vision in Archaeology",
+    "section": "Where to read more",
+    "text": "Where to read more\nThe MAIA COST Action maintains a shared, open Zotero library on AI in archaeology — zotero.org/groups/5991067\n\n\nStart here\n\nBellat et al. 2025 — Machine learning applications in archaeological practices: a review\nGattiglia 2025 — Managing Artificial Intelligence in Archaeology: an overview\nBickler 2021 — Machine Learning Arrives in Archaeology\nTenzer et al. 2024 — Debating AI in Archaeology\nCalder et al. 2022 — Use and Misuse of Machine Learning in Anthropology\n\n\nWorked case studies\n\nPawlowicz & Downum 2021 — ceramic typology from photographs\nOrengo & Garcia-Molsosa 2019 — potsherd detection on drone imagery\nVerschoof-van der Vaart & Lambers 2019 — R-CNN on LiDAR\nFiorucci et al. 2022 — evaluation measures for detection on LiDAR\nDeligio et al. 2024 — ClaReNet, classifying Celtic coinage\nNúñez Jareño et al. 2021 — synthetic data for Roman fine ware\n\n\n\n\n\n\nSlides: github.com/arup-cas/atrium-school-ml · Notebooks and datasets: github.com/arubrno/atrium-school-ml-lessons · Licences: MIT (code) & CC BY-SA 4.0 International (other content), if not stated otherwise."
+  },
+  {
+    "objectID": "report.html",
+    "href": "report.html",
+    "title": "Insights and recap",
+    "section": "",
+    "text": "We had 29 participants with affiliations across Europe working in fields like archaeology, forensic science, art history and restoration and more!"
+  },
+  {
+    "objectID": "report.html#photos",
+    "href": "report.html#photos",
+    "title": "Insights and recap",
+    "section": "Photos",
+    "text": "Photos\n\n\n\nGroup photo at the terrace of the institute.\n\n\nThere is a gallery here (will stay here for a couple of weeks, than we’ll archive it)"
+  },
+  {
+    "objectID": "report.html#reports-by-the-participants",
+    "href": "report.html#reports-by-the-participants",
+    "title": "Insights and recap",
+    "section": "Reports by the participants",
+    "text": "Reports by the participants\n\n\n\n\n\n\nImportantYou have to write a report!\n\n\n\nYou are obliged to hand in a written report. Only after you submit the report, we can pay you the grant money you are supposed to recieve.\nThe report can be anything in writing, we especially invite you to write a blog post for ATRIUM TNA Blog.\nExamples can be found on pages of previous training schools on R and Spatial data (atRium) and 3D models and photogrammetry. For example the one by Nicky Garland or by John Kanyingi."
   }
 ]
