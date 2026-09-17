@@ -25,7 +25,7 @@ ML basics & microscopic data
 
 **Ashely Green** [{{< ai orcid >}} 0009-0005-4625-801X](https://orcid.org/0009-0005-4625-801X)  
 *University of Gothenburg*  
-Rock art dataset  
+Rock art dataset & model training  
 :::
 ::::
 
@@ -45,7 +45,7 @@ Hobbit bard
 ::: {.column width=50%}
 **David Spáčil**  
 *Czech Academy of Sciences, Institute of Archaeology, Brno*  
-Photos  
+Hobbit & photos  
 
 **Tereza Siková**  
 *Czech Academy of Sciences, Institute of Archaeology, Brno*  

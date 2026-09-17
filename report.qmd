@@ -2,7 +2,15 @@
 title: "Insights and recap"
 ---
 
-We had 29 participants with affiliations across Europe working in fields like archaeology, forensic science, art history and restoration and more!
+::: {.callout-important}
+
+## Post-school survey
+
+If you participated, please **fill in a post-school survey** [here](https://forms.gle/zCKCoVHfb8aKJTaX7){.external}.
+
+:::
+
+We had 29 participants with affiliations across Europe and beyond working in fields like archaeology, forensic science, art history and restoration and more!
 
 ![Map of participants' countries](figs/map.png){fig-align="center" width="80%"}
 

@@ -2,11 +2,19 @@
 title: "General Information"
 ---
 
-::: {.callout-important}
+<!-- ::: {.callout-important}
 
 ## Pre-school survey
 
 If you are among selected participants, please **fill in a pre-school survey** [here](https://forms.gle/uBmkg5yMBCt1MSH18){.external}.
+
+::: -->
+
+::: {.callout-important}
+
+## Post-school survey
+
+If you participated, please **fill in a post-school survey** [here](https://forms.gle/zCKCoVHfb8aKJTaX7){.external}.
 
 :::
 

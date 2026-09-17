@@ -235,6 +235,7 @@ read.csv("materials/presentations.csv") |>
    - **Fallen behind?** Use [**the filled-in version**](https://github.com/arubrno/atrium-school-ml-lessons/blob/main/4-thursday-satellite/cropmarks_filled.ipynb){.external} —
      the same notebook with every cell filled in, for catching up or checking your version.
      [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/arubrno/atrium-school-ml-lessons/blob/main/4-thursday-satellite/cropmarks_filled.ipynb){.external}
+  2. [**Rock art case study ** (PDF)](materials/rockart/RockArtCaseStudy_Green_Red.pdf)
 
 <!-- ## Wednesday — Microscopic use-wear
 

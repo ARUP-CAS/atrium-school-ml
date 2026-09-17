@@ -67,10 +67,11 @@ rsconnect/
 
 **/*.quarto_ipynb
 
-# Pre-school survey: raw responses stay local, only aggregates are committed
+# Surveys: raw responses stay local, only aggregates and the form scripts are committed
 survey/*
 !survey/README.md
 !survey/aggregate.R
+!survey/post_school_survey.gs
 !survey/summary/
 survey/raw/
 

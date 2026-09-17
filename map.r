@@ -18,7 +18,7 @@ origins <- sh %>%
 ggplot() +
   geom_sf(data = co) +
   geom_sf(data = origins, aes(fill = n)) +
-  coord_sf(xlim = c(-10, 40), ylim = c(35, 65)) +
+  coord_sf(xlim = c(-10, 40), ylim = c(30, 65)) +
   scale_fill_brewer(palette = "YlGnBu") +
   theme_minimal() +
   guides(fill = guide_legend(position = "inside", title = "")) +
@@ -27,4 +27,4 @@ ggplot() +
 
 ggsave(here::here("figs/map.png"), width = 8, height = 7.3)  
 
-sh$name |> length()
+# sh$name |> length()
