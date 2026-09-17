@@ -38,7 +38,7 @@ Rock art dataset
 *Czech Academy of Sciences, Institute of Archaeology, Brno*  
 Finances, administration
 
-**Vít Kozák**  
+**Vít Kozák** [{{< ai orcid >}} 0009-0003-0070-1368](https://orcid.org/0009-0003-0070-1368)  
 *Czech Academy of Sciences, Institute of Archaeology, Brno*  
 Hobbit bard
 ::: 
