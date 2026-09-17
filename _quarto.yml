@@ -35,9 +35,9 @@ website:
       - href: materials.qmd
         text: Materials
         icon: book
-      # - href: report.qmd
-      #   text: Recap
-      #   icon: lightbulb
+      - href: report.qmd
+        text: Recap
+        icon: lightbulb
     # right: 
       - href: about.qmd
         text: About

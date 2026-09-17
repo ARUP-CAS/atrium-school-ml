@@ -7,20 +7,25 @@ title: "About the training school"
 :::: {.columns} 
 ::: {.column width=50%}
 **Petr Pajdla** [{{< ai orcid >}} 0000-0001-7050-9572](https://orcid.org/0000-0001-7050-9572)  
-*Czech Academy of Sciences, Institute of Archaeology, Brno*  
+*Czech Academy of Sciences, Institute of Archaeology, Brno*  ;
+Introductions, annotation & artefacts dataset  
 
 **Ronald Harasim**  
 *Czech Academy of Sciences, Institute of Archaeology, Brno*  
+Coding with agents & coins dataset  
 
 **Filip Hájek** [{{< ai orcid >}} 0009-0007-5953-8840](https://orcid.org/0009-0007-5953-8840)  
-*Czech Academy of Sciences, Institute of Archaeology, Brno*  
+*Czech Academy of Sciences, Institute of Archaeology, Brno*   
+Intro to Python & remote sensing data  
 ::: 
 ::: {.column width=50%}
 **Anastasia Eleftheriadou** [{{< ai orcid >}} 0000-0002-8649-3752](https://orcid.org/0000-0002-8649-3752)  
-*Ludwig-Maximilians-Universität München*
+*Ludwig-Maximilians-Universität München*  
+ML basics & microscopic data  
 
 **Ashely Green** [{{< ai orcid >}} 0009-0005-4625-801X](https://orcid.org/0009-0005-4625-801X)  
-*University of Gothenburg*
+*University of Gothenburg*  
+Rock art dataset  
 :::
 ::::
 
@@ -35,10 +40,16 @@ Finances, administration
 
 **Vít Kozák**  
 *Czech Academy of Sciences, Institute of Archaeology, Brno*  
+Hobbit bard
 ::: 
 ::: {.column width=50%}
 **David Spáčil**  
 *Czech Academy of Sciences, Institute of Archaeology, Brno*  
+Photos  
+
+**Tereza Siková**  
+*Czech Academy of Sciences, Institute of Archaeology, Brno*  
+Coding support  
 :::
 ::::
 

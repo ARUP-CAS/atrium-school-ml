@@ -201,6 +201,7 @@ copy it into your own folder; on Colab, *Save a copy in Drive*.
 #| echo: false
 # "GH: url, Colab: url" -> "[GitHub](url){.external}, [Colab](url){.external}"
 
+
 note_links <- function(notes) {
   vapply(strsplit(notes, ",\\s*"), function(parts) {
     links <- sub("^([^:]+):\\s*(\\S+)$", "[\\1](\\2){.external}", parts)
