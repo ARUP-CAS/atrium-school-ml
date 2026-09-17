@@ -220,14 +220,25 @@ read.csv("materials/presentations.csv") |>
   knitr::kable(col.names = c("Name", "Topic", "Time"))
 ```
 
+## Thursday
+
+1. [**Satellite imagery: cropmarks in Sentinel-2**](https://github.com/arubrno/atrium-school-ml-lessons/tree/main/4-thursday-satellite){.external} —
+  buried ditches and walls change how crops grow above them, and that shows from space.
+  Using Sentinel-2 imagery of the Bronze Age fortification at Cornești-Iarcuri (Romania),
+  you learn what spectral bands and NDVI are, make true- and false-colour composites,
+  bring out the cropmark with background removal and a ridge filter, train a Random Forest
+  on hand-placed points and retrain it with hard negatives, then export the result as
+  polygons for GIS.
+   - [**Cropmarks in Sentinel-2**](https://github.com/arubrno/atrium-school-ml-lessons/blob/main/4-thursday-satellite/cropmarks.ipynb){.external} —
+     the hands-on notebook. The code cells are empty and you fill them in with the instructor.
+     [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/arubrno/atrium-school-ml-lessons/blob/main/4-thursday-satellite/cropmarks.ipynb){.external}
+   - **Fallen behind?** Use [**the filled-in version**](https://github.com/arubrno/atrium-school-ml-lessons/blob/main/4-thursday-satellite/cropmarks_filled.ipynb){.external} —
+     the same notebook with every cell filled in, for catching up or checking your version.
+     [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/arubrno/atrium-school-ml-lessons/blob/main/4-thursday-satellite/cropmarks_filled.ipynb){.external}
+
 <!-- ## Wednesday — Microscopic use-wear
 
 Segmentation of use-wear traces in microscopic images.
-*Notebooks to follow.*
-
-## Thursday — Satellite imagery & rock art
-
-Object detection on remote-sensing data.
 *Notebooks to follow.*
 
 ## Friday — Coins
