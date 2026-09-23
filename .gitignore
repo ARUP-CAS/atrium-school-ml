@@ -58,12 +58,19 @@ rsconnect/
 /spatial/spatial_is_special/*
 /data/raw_data/*
 
+# freeze
+_freeze/*
 
 # certificates
 /certificates/*.pdf
 
+# attendance
+attendance/*
+
 # report comments
-/reports/*_comments.pdf
+reports/*
+!reports/list.csv
+!reports/reports.r
 
 **/*.quarto_ipynb
 
@@ -87,3 +94,6 @@ __pycache__/
 
 # Source photographs and annotation exports for the slides (see materials/intro/make_images.py)
 /temp/
+
+# materials
+materials_files/*

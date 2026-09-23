@@ -25,7 +25,7 @@ The credit goes to our David and Zuzana!
 ## Reports by the participants
 
 ::: {.callout-important}
-## You have to write a report!
+## You have to submit a report!
 
 You are obliged to hand in a written report.
 Only after you submit the report, we can pay you the grant money you are supposed to recieve.
@@ -34,14 +34,13 @@ The report can be anything in writing, we especially invite you to write a **blo
 
 Examples can be found on pages of previous training schools on [R and Spatial data (atRium)](https://petrpajdla.github.io/atRium/report.html){.external} and [3D models and photogrammetry](https://arup-cas.github.io/atrium-school3d/report.html){.external}.
 For example the one by [Nicky Garland](https://atrium-research.eu/blog/computational-archaeology-summer-school-in-brno-czech-republic/){.external} or by [John Kanyingi](https://atrium-research.eu/blog/exploring-3-d-reconstruction-at-the-brno-institute-of-social-sciences-a-transformative-training-journey/){.external}.
-
-
 :::
 
-<!--
+
 
 ```{r}
 #| echo: false
+#| freeze: false
 read.csv(here::here("reports/list.csv")) |>
   knitr::kable()
-``` -->
+```
