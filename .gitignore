@@ -71,6 +71,7 @@ attendance/*
 reports/*
 !reports/list.csv
 !reports/reports.r
+!reports/*.pdf
 
 **/*.quarto_ipynb
 
