@@ -1,30 +1,30 @@
-Name,Country,Report
-"Abballe, Michele",Italy,[Report (PDF)](reports/abballe.pdf)
-"Abo Aljadayel, Zabya",Portugal,[Report (PDF)](reports/abo-aljadayel.pdf)
-"Altun, Onur",Germany,*To be submitted.*
-"Balogh, Arpád",Hungary,[Report (PDF)](reports/balogh.pdf)
-"Banchelli, Alessandra",Poland,[Report (PDF)](reports/banchelli.pdf)
-"Bantavanou, Panagiota",Greece,[Report (PDF)](reports/bantavanou.pdf)
-"Belošić, Anamarija",Germany,[Report (PDF)](reports/belosic.pdf)
-"Blevis, Rachel",Israel,*To be submitted.*
-"Borghi, Gianmarco",Poland,[Report (PDF)](reports/borghi.pdf)
-"Carrero-Pazos, Miguel",Spain,[Report (PDF)](reports/carrero-pazos.pdf)
-"Danelatos, Dionysios",Portugal,[Report (PDF)](reports/danelatos.pdf)
-"Di Lorito, Constanza",Italy,*To be submitted.*
-"Ekrik, Ákos",Hungary,*To be submitted.*
-"Eleftheriadi, Konstantina",Germany,[Report (PDF)](reports/eleftheriadi.pdf)
-"Erdoğan, Hüseyin",Italy,*To be submitted.*
-"Garzón Rodríguez, Judit",Germany,*To be submitted.*
-"Gaszka, Agata",Portugal,*To be submitted.*
-"Grados, Aaron",Spain,*To be submitted.*
-"Heller, Grace",United Kingdom,*To be submitted.*
-"Khachatryan, Naira",Germany,[Report (PDF)](reports/khachatryan.pdf)
-"Kuiters, Aaricia",Netherlands,*To be submitted.*
-"Liu, Cheng",France,[Report (PDF)](reports/liu.pdf)
-"Louka, Charalampos",Cyprus,[Report (PDF)](reports/louka.pdf)
-"Mohamad, Lava",Germany,*To be submitted.*
-"Moitinho de Almeida, Vera",Portugal,*To be submitted.*
-"Szederkényi, Róbert",Hungary,[Report (PDF)](reports/szederkenyi.pdf)
-"Sørensen, Kristoffer",Denmark,*To be submitted.*
-"Wainshtein, Daniel",Israel,*To be submitted.*
-"de Bruyn, Cherene",United Kingdom,[Report (PDF)](reports/de-bruyn.pdf)
+Name,Country,Funding,Report
+"Abballe, Michele",Italy,MAIA,[Report (PDF)](reports/abballe.pdf)
+"Abo Aljadayel, Zabya",Portugal,ATRIUM,[Report (PDF)](reports/abo-aljadayel.pdf)
+"Altun, Onur",Germany,ATRIUM,*To be submitted.*
+"Balogh, Arpád",Hungary,ATRIUM,[Report (PDF)](reports/balogh.pdf)
+"Banchelli, Alessandra",Poland,MAIA,[Report (PDF)](reports/banchelli.pdf)
+"Bantavanou, Panagiota",Greece,ATRIUM,[Report (PDF)](reports/bantavanou.pdf)
+"Belošić, Anamarija",Germany,ATRIUM,[Report (PDF)](reports/belosic.pdf)
+"Blevis, Rachel",Israel,ATRIUM,*To be submitted.*
+"Borghi, Gianmarco",Poland,MAIA,[Report (PDF)](reports/borghi.pdf)
+"Carrero-Pazos, Miguel",Spain,ATRIUM,[Report (PDF)](reports/carrero-pazos.pdf)
+"Danelatos, Dionysios",Portugal,ATRIUM,[Report (PDF)](reports/danelatos.pdf)
+"Di Lorito, Constanza",Italy,ATRIUM,Blogpost (TBA) & [Report (PDF)](reports/di-lorito.pdf)
+"Ekrik, Ákos",Hungary,MAIA,*To be submitted.*
+"Eleftheriadi, Konstantina",Germany,ATRIUM,[Report (PDF)](reports/eleftheriadi.pdf)
+"Erdoğan, Hüseyin",Italy,ATRIUM,*To be submitted.*
+"Garzón Rodríguez, Judit",Germany,ATRIUM,[Report (PDF)](reports/garzon-rodriguez.pdf)
+"Gaszka, Agata",Portugal,MAIA,*To be submitted.*
+"Grados, Aaron",Spain,ATRIUM,[Report (PDF)](reports/grados.pdf)
+"Heller, Grace",United Kingdom,ATRIUM,*To be submitted.*
+"Khachatryan, Naira",Germany,ATRIUM,[Report (PDF)](reports/khachatryan.pdf)
+"Kuiters, Aaricia",Netherlands,ATRIUM,Blogpost (TBA) & [Report (PDF)](reports/kuiters.pdf)
+"Liu, Cheng",France,MAIA,[Report (PDF)](reports/liu.pdf)
+"Louka, Charalampos",Cyprus,ATRIUM,[Report (PDF)](reports/louka.pdf)
+"Mohamad, Lava",Germany,ATRIUM,*To be submitted.*
+"Moitinho de Almeida, Vera",Portugal,MAIA,*To be submitted.*
+"Szederkényi, Róbert",Hungary,ATRIUM,[Report (PDF)](reports/szederkenyi.pdf)
+"Sørensen, Kristoffer",Denmark,ATRIUM,[Report (PDF)](reports/sorensen.pdf)
+"Wainshtein, Daniel",Israel,ATRIUM,*To be submitted.*
+"de Bruyn, Cherene",United Kingdom,ATRIUM,[Report (PDF)](reports/de-bruyn.pdf)

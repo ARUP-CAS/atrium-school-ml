@@ -42,7 +42,7 @@ No prior experience with machine learning is required, but curiosity and a willi
 
 <!-- [![](figs/Clay.png){fig-align="center" width=60%}](https://atrium-research.eu) -->
 
-:::: {.columns}
+:::: {.columns .logos}
 ::: {.column width=50%}
 [![](figs/Clay.png)](https://www.atrium-research.eu)
 :::
@@ -53,7 +53,7 @@ No prior experience with machine learning is required, but curiosity and a willi
 :::
 ::::
 
-:::: {.columns}
+:::: {.columns .logos}
 ::: {.column width=40%}
 [![](figs/aiscr.png)](https://www.aiscr.cz/en/)
 :::

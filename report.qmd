@@ -41,7 +41,10 @@ For example the one by [Nicky Garland](https://atrium-research.eu/blog/computati
 ```{r}
 #| echo: false
 #| freeze: false
-
 read.csv(here::here("reports/list.csv")) |>
   knitr::kable()
+
+
+
+
 ```
