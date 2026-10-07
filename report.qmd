@@ -43,8 +43,4 @@ For example the one by [Nicky Garland](https://atrium-research.eu/blog/computati
 #| freeze: false
 read.csv(here::here("reports/list.csv")) |>
   knitr::kable()
-
-
-
-
 ```
