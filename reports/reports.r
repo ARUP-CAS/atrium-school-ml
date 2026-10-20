@@ -18,10 +18,10 @@ blogs <- read_csv(here::here("reports/blogs.txt"))
 full_join(sh, fl, by = join_by("p")) |> 
   left_join(blogs, by = join_by("p" == "name")) |> 
   mutate(path = if_else(!is.na(value), paste0("reports/", value), NA),
-        Report = if_else(!is.na(value), paste0("[Report (PDF)](", path, ")"), "*To be submitted.*"),
+        Report = if_else(!is.na(value), paste0("[Report (PDF)](", path, ")"), "*Not submitted*"),
         Report = if_else(!is.na(blog), blog, Report),
-        Report = if_else(!is.na(blog) & !is.na(value), paste0(blog, " & [Report (PDF)](", path, ")"), Report)) |> 
+        Report = if_else(!is.na(blog) & !is.na(value), paste0("[Blogpost](", blog, "){.externmal} & [Report (PDF)](", path, ")"), Report)) |> 
   select(Name = name, Country = country, Funding = fundedBy, Report) |> 
-  arrange(Name) |> 
+  dplyr::arrange(Name, .locale = "en") |> 
   write_csv(here::here("reports/list.csv"))
   
