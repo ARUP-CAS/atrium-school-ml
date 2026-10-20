@@ -52,6 +52,7 @@ website:
         text: "Built with &#9825; in Quarto."
     center:
       - text: "Licenses: MIT (code) & CC BY-SA 4.0 Int. (other content)."
+      - text: "Parts of the content were created with the assistance of AI and reviewed by the authors."
     right: 
       - icon: github
         href: https://github.com/arup-cas/atrium-school-ml
