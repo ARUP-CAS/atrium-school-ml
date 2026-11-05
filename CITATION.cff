@@ -47,6 +47,8 @@ keywords:
   - ML
   - Computer Vision
   - Archaeology
-license: CC-BY-SA-4.0
-version: v1.0
-date-released: '2026-02-27'
+license:
+  - MIT
+  - CC-BY-SA-4.0
+version: 1.0.0
+date-released: '2026-11-05'

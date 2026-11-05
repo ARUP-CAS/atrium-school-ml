@@ -1,0 +1,63 @@
+{
+  "title": "Computer Vision in Archaeology Training School",
+  "version": "1.0.0",
+  "upload_type": "lesson",
+  "description": "<p>Website and teaching materials of the AIS CR Computer Vision in Archaeology Training School, held in Brno, Czech Republic, on 14–18 September 2026. The repository contains the programme, practical information, setup guide, session slides, annotation materials, and participant reports.</p><p>The notebooks and case-study exercises are archived separately in the atrium-school-ml-lessons repository.</p><p>The training school was organised as transnational access provision in the ATRIUM project, funded by the Horizon Europe research and innovation actions programme under grant agreement No. 101132163.</p>",
+  "notes": "Code is licensed under the MIT License; all other content is licensed under CC BY-SA 4.0. Parts of the content were created with the assistance of AI and reviewed by the authors.",
+  "creators": [
+    {
+      "name": "Pajdla, Petr",
+      "affiliation": "Czech Academy of Sciences, Institute of Archaeology, Brno",
+      "orcid": "0000-0001-7050-9572"
+    },
+    {
+      "name": "Harasim, Ronald",
+      "affiliation": "Czech Academy of Sciences, Institute of Archaeology, Brno"
+    },
+    {
+      "name": "Hájek, Filip",
+      "affiliation": "Czech Academy of Sciences, Institute of Archaeology, Brno",
+      "orcid": "0009-0007-5953-8840"
+    },
+    {
+      "name": "Eleftheriadou, Anastasia",
+      "affiliation": "Ludwig-Maximilians-Universität München",
+      "orcid": "0000-0002-8649-3752"
+    },
+    {
+      "name": "Green, Ashely",
+      "affiliation": "University of Gothenburg",
+      "orcid": "0009-0005-4625-801X"
+    }
+  ],
+  "license": "cc-by-sa-4.0",
+  "keywords": [
+    "AI",
+    "machine learning",
+    "computer vision",
+    "archaeology",
+    "training school",
+    "ATRIUM"
+  ],
+  "grants": [
+    {
+      "id": "10.13039/501100000780::101132163"
+    }
+  ],
+  "communities": [
+    {"identifier": "aiscr"},
+    {"identifier": "atrium"},
+    {"identifier": "arub"}
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/arubrno/atrium-school-ml-lessons",
+      "relation": "isSupplementedBy",
+      "resource_type": "lesson"
+    },
+    {
+      "identifier": "https://arup-cas.github.io/atrium-school-ml/",
+      "relation": "isDocumentedBy"
+    }
+  ]
+}
