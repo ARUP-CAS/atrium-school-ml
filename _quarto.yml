@@ -53,6 +53,8 @@ website:
     center:
       - text: "Licenses: MIT (code) & CC BY-SA 4.0 Int. (other content)."
       - text: "Parts of the content were created with the assistance of AI and reviewed by the authors."
+      - href: https://doi.org/10.5281/zenodo.23982045
+        text: "DOI: 10.5281/zenodo.23982045"
     right: 
       - icon: github
         href: https://github.com/arup-cas/atrium-school-ml

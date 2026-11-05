@@ -92,6 +92,10 @@ AIS CR is jointly operated by the Institutes of Archaeology of the Czech Academy
 
 {{< video https://youtu.be/PKao-u3rRrU?si=PWbhaQ8KC2YrXvoK >}}
 
+## How to cite
+
+Pajdla, P., Harasim, R., Hájek, F., Eleftheriadou, A., & Green, A. (2026). *Computer Vision in Archaeology Training School*. Zenodo. [https://doi.org/10.5281/zenodo.23982045](https://doi.org/10.5281/zenodo.23982045){.external}
+
 
 ### 
 

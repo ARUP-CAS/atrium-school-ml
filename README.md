@@ -3,6 +3,7 @@
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 [![MIT][mit-shield]][mit]
 [![AI-assisted][ai-shield]](#license)
+[![DOI][doi-shield]][doi]
 
 Website for the AIS CR Computer Vision Training School: programme, practical
 information, setup guide and slides.
@@ -37,6 +38,11 @@ quarto publish gh-pages
 ```
 
 
+## Citation
+
+The repository is archived on Zenodo: [doi:10.5281/zenodo.23982045][doi] (all versions, resolves to the latest).
+Citation metadata is in `CITATION.cff`; use GitHub's *Cite this repository* button.
+
 ## License 
 
 Code in this work is licensed under a [MIT License][mit], all other content is licensed under a
@@ -50,3 +56,5 @@ Parts of the content were created with the assistance of AI and reviewed by the 
 [mit-shield]: https://img.shields.io/badge/License-MIT-yellow.svg
 [mit]: https://opensource.org/licenses/MIT
 [ai-shield]: https://img.shields.io/badge/AI-assisted-blue.svg
+[doi]: https://doi.org/10.5281/zenodo.23982045
+[doi-shield]: https://zenodo.org/badge/DOI/10.5281/zenodo.23982045.svg
