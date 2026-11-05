@@ -11,7 +11,7 @@ at the end as a fallback.
 | file | what it is |
 |---|---|
 | `select_images.py` | picks the 10 photos from the AMČR-PAS COCO export, downscales them to 1600 px, and optionally publishes them to the lessons repository |
-| `images.csv` | the 10: record, DOI, the AMČR recorder's class, and why each one is there. **Instructor-only**: it holds the answers to the planted photos |
+| `images.csv` | the 10: record, DOI, the AMČR recorder's class, and why each one is there. **Instructor-only**: it holds the answers to the planted photos, so it is gitignored and not in the repository. `select_images.py` regenerates it (needs the AMČR-PAS export), or ask the organisers for a copy |
 | `reference_coco.json` | the original AMČR-PAS annotations for the 10, rescaled to the 1600 px copies |
 | `cvat/labels.json` | the CVAT label set: 12 classes with `fragment`, `damage` and `note`, plus a `photo` tag with `scale` |
 | `labelstudio/config.xml`, `setup_labelstudio.py` | the Label Studio fallback (section 5) |
@@ -81,7 +81,7 @@ outline it, give it a class, and answer `fragment` and `damage`. For each photo,
 - **Nothing is shared.** Every project is private, so *What you had to decide* is a show of
   hands, not a screen. The planted photos are **04** (a pierced coin, recorded as a
   pendant), **06** (a crescent, recorded as a mount) and **08** (coins fused into a lump:
-  one object or several?). The recorder's answers are in `images.csv`.
+  one object or several?). The recorder's answers are in `images.csv` (instructor-only, see the table above).
 
 ## 4. Before the session
 

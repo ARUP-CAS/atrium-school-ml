@@ -1,0 +1,4 @@
+# Excluded from GitHub source archives (and so from Zenodo)
+/materials/artefacts/annotation/images.csv export-ignore
+/_freeze export-ignore
+/.claude export-ignore

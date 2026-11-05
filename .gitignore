@@ -98,3 +98,5 @@ __pycache__/
 
 # materials
 materials_files/*
+# Instructor-only answer key for the artefacts annotation session (regenerate with select_images.py)
+materials/artefacts/annotation/images.csv
