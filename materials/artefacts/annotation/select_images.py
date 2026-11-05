@@ -9,7 +9,7 @@ Reads the AMČR-PAS COCO export and its photographs from the FiftyOne copy of th
   temp/annotation/demo/          the rosary, for the live demo
   temp/annotation/cvat-images.zip  all 11, for the CVAT task
   temp/annotation/contact-sheet.jpg  the 10 with their reference boxes, for checking by eye
-  materials/artefacts/annotation/images.csv          what was picked and why (committed)
+  materials/artefacts/annotation/images.csv          what was picked and why (instructor-only answer key, gitignored)
   materials/artefacts/annotation/reference_coco.json the original annotations for the 10,
                                                      rescaled to the downscaled images
 
