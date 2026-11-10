@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Slides (PDF) by Ronald Harasim: *Coding with agents* (Monday) and
+  *Seeing without understanding* (Friday, coins).
+
 ## 1.0.0 (2026-11-05)
 
 First archived release, after the school was held in Brno on 14–18 September 2026.
