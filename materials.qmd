@@ -167,6 +167,7 @@ copy it into your own folder; on Colab, *Save a copy in Drive*.
      plus an optional look inside the model.
      [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/arubrno/atrium-school-ml-lessons/blob/main/1-monday-intro/clip_zero_shot_v2.ipynb){.external}
 3. [**Coding with agents**](https://github.com/arubrno/atrium-school-ml-lessons/tree/main/1-monday-agents){.external}
+   - [**Slides** (PDF)](materials/coding-with-agents/Harasim-Coding-With-Agents-summer-school.pdf) — Ronald Harasim.
 4. **Python for computer vision** — enough Python to read, change and debug the code an AI
   tool writes for you, then NumPy, Matplotlib and OpenCV. It ends with a first computer-vision
   workflow that separates the Venus of Dolní Věstonice from its background and measures it.
@@ -235,16 +236,17 @@ read.csv("materials/presentations.csv") |>
    - **Fallen behind?** Use [**the filled-in version**](https://github.com/arubrno/atrium-school-ml-lessons/blob/main/4-thursday-satellite/cropmarks_filled.ipynb){.external} —
      the same notebook with every cell filled in, for catching up or checking your version.
      [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/arubrno/atrium-school-ml-lessons/blob/main/4-thursday-satellite/cropmarks_filled.ipynb){.external}
-  2. [**Rock art case study ** (PDF)](materials/rockart/RockArtCaseStudy_Green_Red.pdf)
+  2. [**Rock art case study** (PDF)](materials/rockart/RockArtCaseStudy_Green_Red.pdf)
+
+## Friday
+
+1. [**Seeing without understanding** (PDF)](materials/coins/Harasim-Seeing-Without-Understanding-summer-school.pdf) —
+  Ronald Harasim. Advanced topics on the coins dataset: combining methods, vision-language
+  models, and bias, reproducibility and interpretability of black-box models.
 
 <!-- ## Wednesday — Microscopic use-wear
 
 Segmentation of use-wear traces in microscopic images.
-*Notebooks to follow.*
-
-## Friday — Coins
-
-Combining methods, and vision-language models.
 *Notebooks to follow.* -->
 
 ::: {.callout-note}
