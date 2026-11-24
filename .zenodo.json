@@ -1,6 +1,6 @@
 {
   "title": "Computer Vision in Archaeology Training School",
-  "version": "1.0.0",
+  "version": "1.1",
   "upload_type": "lesson",
   "description": "<p>Website and teaching materials of the AIS CR Computer Vision in Archaeology Training School, held in Brno, Czech Republic, on 14–18 September 2026. The repository contains the programme, practical information, setup guide, session slides, annotation materials, and participant reports.</p><p>The notebooks and case-study exercises are archived separately in the atrium-school-ml-lessons repository.</p><p>The training school was organised as transnational access provision in the ATRIUM project, funded by the Horizon Europe research and innovation actions programme under grant agreement No. 101132163.</p>",
   "notes": "Code is licensed under the MIT License; all other content is licensed under CC BY-SA 4.0. Parts of the content were created with the assistance of AI and reviewed by the authors.",
